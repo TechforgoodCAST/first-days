@@ -19,6 +19,13 @@ defmodule FirstSteps.Web.Router do
     get "/", PageController, :index
   end
 
+  scope "/forms", FirstSteps.Web do
+    pipe_through :browser
+
+    get "/role-description", FormController, :role_description
+    get "/confirmation-agreement", FormController, :confirmation_agreement
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", FirstSteps.Web do
   #   pipe_through :api
