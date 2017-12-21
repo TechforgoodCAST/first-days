@@ -6,6 +6,6 @@ defmodule FirstSteps.Email do
     |> to("ivan@wearecast.org.uk")
     |> from("ivan@wearecast.org.uk")
     |> subject("Welcome to the service!")
-    |> render(:email)
+    |> render(:role_description)
   end
 end
