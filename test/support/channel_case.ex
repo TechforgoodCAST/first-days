@@ -1,4 +1,4 @@
-defmodule FirstSteps.Web.ChannelCase do
+defmodule FirstDaysWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,15 +21,15 @@ defmodule FirstSteps.Web.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint FirstSteps.Web.Endpoint
+      @endpoint FirstDaysWeb.Endpoint
     end
   end
 
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(FirstSteps.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(FirstDays.Repo)
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(FirstSteps.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(FirstDays.Repo, {:shared, self()})
     end
     :ok
   end

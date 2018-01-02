@@ -6,7 +6,7 @@ use Mix.Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
-config :first_steps, FirstSteps.Web.Endpoint,
+config :first_days, FirstDaysWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -31,13 +31,13 @@ config :first_steps, FirstSteps.Web.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :first_steps, FirstSteps.Web.Endpoint,
+config :first_days, FirstDaysWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
-      ~r{lib/first_steps/web/views/.*(ex)$},
-      ~r{lib/first_steps/web/templates/.*(eex)$}
+      ~r{lib/first_days_web/views/.*(ex)$},
+      ~r{lib/first_days_web/templates/.*(eex)$}
     ]
   ]
 
@@ -49,10 +49,10 @@ config :logger, :console, format: "[$level] $message\n"
 config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
-config :first_steps, FirstSteps.Repo,
+config :first_days, FirstDays.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "first_steps_dev",
+  database: "first_days_dev",
   hostname: "localhost",
   pool_size: 10
