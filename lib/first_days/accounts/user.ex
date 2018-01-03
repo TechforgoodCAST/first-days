@@ -9,6 +9,7 @@ defmodule FirstDays.Accounts.User do
     field :email, :string
     field :password, :string, virtual: true
     field :password_hash, :string
+    field :stage_id, :id
 
     timestamps()
   end
