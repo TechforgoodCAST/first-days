@@ -23,7 +23,7 @@ defmodule FirstDaysWeb.Router do
   end
 
   scope "/forms", FirstDaysWeb do
-    pipe_through :browser
+    pipe_through [:browser, :authenticate_user]
 
     get "/role-description", FormController, :role_description_form
     post "/role-description", FormController, :role_description_answers
