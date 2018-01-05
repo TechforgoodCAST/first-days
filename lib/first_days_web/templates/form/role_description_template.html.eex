@@ -1,0 +1,2 @@
+<div>This is the role description template</div>
+<p> <%= @answers["area"] %> </p>

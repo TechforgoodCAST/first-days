@@ -5,7 +5,7 @@ defmodule FirstDays.UserData.Answer do
 
 
   schema "answers" do
-    field :answer, :map
+    field :answers, :map
     field :stage_id, :id
     field :user_id, :id
 
@@ -15,7 +15,7 @@ defmodule FirstDays.UserData.Answer do
   @doc false
   def changeset(%Answer{} = answer, attrs) do
     answer
-    |> cast(attrs, [:answer])
-    |> validate_required([:answer])
+    |> cast(attrs, [:answers])
+    |> validate_required([:answers])
   end
 end

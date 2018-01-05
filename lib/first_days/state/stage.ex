@@ -6,8 +6,6 @@ defmodule FirstDays.State.Stage do
 
   schema "stages" do
     field :stage, :string
-
-    timestamps()
   end
 
   @doc false

@@ -3,7 +3,7 @@ defmodule FirstDays.Repo.Migrations.CreateAnswers do
 
   def change do
     create table(:answers) do
-      add :answer, :map
+      add :answers, :map
       add :stage_id, references(:stages, on_delete: :nothing)
       add :user_id, references(:users, on_delete: :nothing)
 
