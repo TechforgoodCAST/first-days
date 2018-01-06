@@ -14,4 +14,17 @@ defmodule FirstDays.State.Stage do
     |> cast(attrs, [:stage])
     |> validate_required([:stage])
   end
+
+  def stages do
+    [
+    "role_description_form",
+    "role_description_template",
+    "confirmation_agreement_template",
+    "document_checklist_form",
+    "document_checklist_template",
+    "preparation_checklist_form",
+    "preparation_checklist_template",
+    "feedback_form"
+    ]
+  end
 end

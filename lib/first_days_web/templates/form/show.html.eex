@@ -1,0 +1,6 @@
+<div>This is the role description template</div>
+<p> <%= @answers["area"] %> </p>
+
+<span><%= link "Edit", to: form_path(@conn, :edit_role_description) %></span>
+</br>
+<span><%= link "Move to next step", to: form_path(@conn, :confirmation_agreement) %></span>
