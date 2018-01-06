@@ -25,11 +25,14 @@ defmodule FirstDaysWeb.Router do
   scope "/forms", FirstDaysWeb do
     pipe_through [:browser, :authenticate_user]
 
-    get "/new-role-description", FormController, :new_role_description
-    post "/create-role-description", FormController, :create_role_description
-    get "/edit-role-description", FormController, :edit_role_description
-    put "/update-role-description", FormController, :update_role_description
+    get "/role-description-new", FormController, :role_description_new
+    post "/role-description-create", FormController, :role_description_create
+    get "/role-description-edit", FormController, :role_description_edit
+    put "/role-description-update", FormController, :role_description_update
+
     get "/confirmation-agreement", FormController, :confirmation_agreement
+
+    get "/document-checklist-new", FormController, :document_checklist_new
   end
 
   # Other scopes may use custom stacks.

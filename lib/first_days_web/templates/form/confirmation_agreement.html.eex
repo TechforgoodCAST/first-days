@@ -1,1 +1,3 @@
 <p>this is is the confirmation agreement</p>
+
+<span><%= link "Move to next step", to: form_path(@conn, :document_checklist_new) %></span>
