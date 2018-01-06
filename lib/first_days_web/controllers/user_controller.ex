@@ -15,6 +15,7 @@ defmodule FirstDaysWeb.UserController do
     render(conn, "new.html", changeset: changeset)
   end
 
+  # TODO: set the default user stage to be "role_description_form"
   def create(conn, %{"user" => user_params}) do
     case Accounts.create_user(user_params) do
       {:ok, user} ->
