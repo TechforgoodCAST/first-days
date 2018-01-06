@@ -1,7 +1,7 @@
 defmodule FirstDays.Accounts.User do
   use Ecto.Schema
   import Ecto.Changeset
-  alias FirstDays.Accounts.User
+  alias FirstDays.{UserData.Answer, Accounts.User, Stage.Stage}
 
 
   schema "users" do
@@ -9,7 +9,8 @@ defmodule FirstDays.Accounts.User do
     field :email, :string
     field :password, :string, virtual: true
     field :password_hash, :string
-    field :stage_id, :id
+    belongs_to :stage, Stage
+    has_many :answer, Answer
 
     timestamps()
   end
