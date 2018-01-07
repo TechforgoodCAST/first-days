@@ -1,7 +1,7 @@
-defmodule FirstDays.RoleDescription do
+defmodule FirstDays.DocumentChecklist do
   use Ecto.Schema
   import Ecto.Changeset
-  alias FirstDays.RoleDescription
+  alias FirstDays.DocumentChecklist
 
   embedded_schema do
     field :area, :string
@@ -36,7 +36,7 @@ defmodule FirstDays.RoleDescription do
           ]
 
   @doc false
-  def changeset(%RoleDescription{} = document_checklist, attrs) do
+  def changeset(%DocumentChecklist{} = document_checklist, attrs) do
     document_checklist
     |> cast(attrs, @fields)
     |> validate_required(@fields)

@@ -30,9 +30,14 @@ defmodule FirstDaysWeb.Router do
     get "/role-description-edit", FormController, :role_description_edit
     put "/role-description-update", FormController, :role_description_update
 
-    get "/confirmation-agreement", FormController, :confirmation_agreement
+    get "/confirmation-agreement-show", FormController, :confirmation_agreement_show
 
     get "/document-checklist-new", FormController, :document_checklist_new
+    post "/document-checklist-create", FormController, :document_checklist_create
+    get "/document-checklist-edit", FormController, :document_checklist_edit
+    put "/document-checklist-update", FormController, :document_checklist_update
+
+    get "/preparation-checklist-new", FormController, :preparation_checklist_new
   end
 
   # Other scopes may use custom stacks.

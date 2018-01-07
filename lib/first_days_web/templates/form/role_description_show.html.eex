@@ -3,4 +3,4 @@
 
 <span><%= link "Edit", to: form_path(@conn, :role_description_edit) %></span>
 </br>
-<span><%= link "Move to next step", to: form_path(@conn, :confirmation_agreement) %></span>
+<span><%= link "Move to next step", to: form_path(@conn, :confirmation_agreement_show) %></span>
