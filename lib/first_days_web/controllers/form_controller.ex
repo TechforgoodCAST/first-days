@@ -10,13 +10,12 @@ defmodule FirstDaysWeb.FormController do
   end
 
   def role_description_create(%{assigns: %{current_user: user}} = conn, %{"role_description" => role_description}) do
-    role_description_changeset = RoleDescription.changeset(%RoleDescription{}, role_description)
-
     case RoleDescription.validate_form(%RoleDescription{}, role_description) do
       {:ok, _role_description_changeset} ->
         stage = Repo.get_by!(Stage, stage: "role_description_form")
         answer = %Answer{answers: role_description, user: user, stage: stage}
         answer_changeset = Answer.changeset(answer, %{})
+        role_description_changeset = RoleDescription.changeset(%RoleDescription{}, role_description)
         case Repo.insert(answer_changeset) do
           {:ok, answer} ->
             conn
@@ -42,14 +41,13 @@ defmodule FirstDaysWeb.FormController do
   end
 
   def role_description_update(%{assigns: %{current_user: user}} = conn, %{"role_description" => role_description}) do
-    role_description_changeset = RoleDescription.changeset(%RoleDescription{}, role_description)
-
     case RoleDescription.validate_form(%RoleDescription{}, role_description) do
       {:ok, _role_description_changeset} ->
         stage = Repo.get_by!(Stage, stage: "role_description_form")
         answer = Repo.get_by!(Answer, stage_id: stage.id, user_id: user.id)
         updated_answer = %{answers: role_description, user: user, stage: stage}
         answer_changeset = Answer.changeset(answer, updated_answer)
+        role_description_changeset = RoleDescription.changeset(%RoleDescription{}, role_description)
         case Repo.update(answer_changeset) do
           {:ok, answer} ->
             conn
@@ -78,15 +76,23 @@ defmodule FirstDaysWeb.FormController do
   end
 
   def document_checklist_create(%{assigns: %{current_user: user}} = conn, %{"document_checklist" => document_checklist}) do
-    stage = Repo.get_by!(Stage, stage: "document_checklist_form")
-    answer = %Answer{answers: document_checklist, user: user, stage: stage}
-    changeset = Answer.changeset(answer, %{})
-    case Repo.insert(changeset) do
-      {:ok, answer} ->
-        conn
-        |> render("document_checklist_show.html", answers: answer.answers)
-      {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "document_checklist_new.html", changeset: changeset)
+    case DocumentChecklist.validate_form(%DocumentChecklist{}, document_checklist) do
+      {:ok, _document_checklist_changeset} ->
+        stage = Repo.get_by!(Stage, stage: "document_checklist_form")
+        answer = %Answer{answers: document_checklist, user: user, stage: stage}
+        answer_changeset = Answer.changeset(answer, %{})
+        document_checklist_changeset = DocumentChecklist.changeset(%DocumentChecklist{}, document_checklist)
+        case Repo.insert(answer_changeset) do
+          {:ok, answer} ->
+            conn
+            |> render("document_checklist_show.html", answers: answer.answers)
+          {:error, _changeset} ->
+            conn
+            |> put_flash(:error, "Something went wrong, please try again")
+            |> render "document_checklist_new.html", changeset: document_checklist_changeset
+        end
+      {:error, document_checklist_changeset} ->
+        render(conn, "document_checklist_new.html", changeset: %{document_checklist_changeset | action: :send})
     end
   end
 
@@ -101,16 +107,24 @@ defmodule FirstDaysWeb.FormController do
   end
 
   def document_checklist_update(%{assigns: %{current_user: user}} = conn, %{"document_checklist" => document_checklist}) do
-    stage = Repo.get_by!(Stage, stage: "document_checklist_form")
-    answer = Repo.get_by!(Answer, stage_id: stage.id, user_id: user.id)
-    updated_answer = %{answers: document_checklist, user: user, stage: stage}
-    changeset = Answer.changeset(answer, updated_answer)
-    case Repo.update(changeset) do
-      {:ok, answer} ->
-        conn
-        |> render("document_checklist_show.html", answers: answer.answers)
-      {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "document_checklist_edit.html", changeset: changeset)
+    case DocumentChecklist.validate_form(%DocumentChecklist{}, document_checklist) do
+      {:ok, _document_checklist_changeset} ->
+        stage = Repo.get_by!(Stage, stage: "document_checklist_form")
+        answer = Repo.get_by!(Answer, stage_id: stage.id, user_id: user.id)
+        updated_answer = %{answers: document_checklist, user: user, stage: stage}
+        answer_changeset = Answer.changeset(answer, updated_answer)
+        document_checklist_changeset = DocumentChecklist.changeset(%DocumentChecklist{}, document_checklist)
+        case Repo.update(answer_changeset) do
+          {:ok, answer} ->
+            conn
+            |> render("document_checklist_show.html", answers: answer.answers)
+          {:error, changeset} ->
+            conn
+            |> put_flash(:error, "Something went wrong, please try again")
+            |> render "document_checklist_edit.html", changeset: document_checklist_changeset
+        end
+      {:error, document_checklist_changeset} ->
+        render(conn, "document_checklist_edit.html", changeset: %{document_checklist_changeset | action: :send})
     end
   end
 
