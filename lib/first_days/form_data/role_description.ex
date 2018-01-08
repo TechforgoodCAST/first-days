@@ -43,4 +43,22 @@ defmodule FirstDays.RoleDescription do
     |> cast(attrs, @fields)
     |> validate_required(@fields)
   end
+
+  def validate_form(%RoleDescription{} = struct, params) do
+    change =
+      struct
+      |> changeset(params)
+      |> update_embedded_action(:validated)
+
+    case change do
+      %Ecto.Changeset{valid?: true} = changeset ->
+        {:ok, changeset}
+      changeset ->
+        {:error, changeset}
+    end
+  end
+
+  defp update_embedded_action(changeset, action) do
+    %{changeset | action: action}
+  end
 end

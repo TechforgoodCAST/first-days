@@ -10,15 +10,24 @@ defmodule FirstDaysWeb.FormController do
   end
 
   def role_description_create(%{assigns: %{current_user: user}} = conn, %{"role_description" => role_description}) do
-    stage = Repo.get_by!(Stage, stage: "role_description_form")
-    answer = %Answer{answers: role_description, user: user, stage: stage}
-    changeset = Answer.changeset(answer, %{})
-    case Repo.insert(changeset) do
-      {:ok, answer} ->
-        conn
-        |> render("role_description_show.html", answers: answer.answers)
-      {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "role_description_new.html", changeset: changeset)
+    role_description_changeset = RoleDescription.changeset(%RoleDescription{}, role_description)
+
+    case RoleDescription.validate_form(%RoleDescription{}, role_description) do
+      {:ok, _role_description_changeset} ->
+        stage = Repo.get_by!(Stage, stage: "role_description_form")
+        answer = %Answer{answers: role_description, user: user, stage: stage}
+        answer_changeset = Answer.changeset(answer, %{})
+        case Repo.insert(answer_changeset) do
+          {:ok, answer} ->
+            conn
+            |> render("role_description_show.html", answers: answer.answers)
+          {:error, _changeset} ->
+            conn
+            |> put_flash(:error, "Something went wrong, please try again")
+            |> render "role_description_new.html", changeset: role_description_changeset
+        end
+      {:error, role_description_changeset} ->
+        render(conn, "role_description_new.html", changeset: %{role_description_changeset | action: :send})
     end
   end
 
@@ -33,16 +42,25 @@ defmodule FirstDaysWeb.FormController do
   end
 
   def role_description_update(%{assigns: %{current_user: user}} = conn, %{"role_description" => role_description}) do
-    stage = Repo.get_by!(Stage, stage: "role_description_form")
-    answer = Repo.get_by!(Answer, stage_id: stage.id, user_id: user.id)
-    updated_answer = %{answers: role_description, user: user, stage: stage}
-    changeset = Answer.changeset(answer, updated_answer)
-    case Repo.update(changeset) do
-      {:ok, answer} ->
-        conn
-        |> render("role_description_show.html", answers: answer.answers)
-      {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "role_description_edit.html", changeset: changeset)
+    role_description_changeset = RoleDescription.changeset(%RoleDescription{}, role_description)
+
+    case RoleDescription.validate_form(%RoleDescription{}, role_description) do
+      {:ok, _role_description_changeset} ->
+        stage = Repo.get_by!(Stage, stage: "role_description_form")
+        answer = Repo.get_by!(Answer, stage_id: stage.id, user_id: user.id)
+        updated_answer = %{answers: role_description, user: user, stage: stage}
+        answer_changeset = Answer.changeset(answer, updated_answer)
+        case Repo.update(answer_changeset) do
+          {:ok, answer} ->
+            conn
+            |> render("role_description_show.html", answers: answer.answers)
+          {:error, changeset} ->
+            conn
+            |> put_flash(:error, "Something went wrong, please try again")
+            |> render "role_description_edit.html", changeset: role_description_changeset
+        end
+      {:error, role_description_changeset} ->
+        render(conn, "role_description_edit.html", changeset: %{role_description_changeset | action: :send})
     end
   end
 
