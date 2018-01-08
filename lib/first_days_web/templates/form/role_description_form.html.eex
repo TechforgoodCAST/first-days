@@ -5,24 +5,99 @@
     </div>
   <% end %>
 
+  <h3>About the role</h3>
+
   <div class="form-group">
-    <%= label f, :area, class: "control-label" %>
-    <%= text_input f, :area, class: "form-control" %>
+    <%= label f, :description, "What is the role you're looking for? (a one sentence overview)", class: "control-label" %>
+    <%= text_input f, :description, class: "form-control" %>
+    <%= error_tag f, :description %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :area, "What area is the role in?", class: "control-label" %>
+    <%= multiple_select f, :area, ["Finance", "Legal", "HR", "IT"], class: "form-control" %>
     <%= error_tag f, :area %>
   </div>
 
-  <!-- <div class="form-group">
-    <%= label f, :email, class: "control-label" %>
-    <%= text_input f, :email, class: "form-control" %>
-    <%= error_tag f, :email %>
+  <div class="form-group">
+    <%= label f, :finance_skills, "What are the specific finance skills you require?", class: "control-label" %>
+    <%= multiple_select f, :finance_skills, finance_skills(), class: "form-control" %>
+    <%= error_tag f, :finance_skills %>
   </div>
 
   <div class="form-group">
-    <%= label f, :password, class: "control-label" %>
-    <%= password_input f, :password, class: "form-control" %>
-    <%= error_tag f, :password %>
+    <%= label f, :work_frequency, "How frequently will the volunteer be needed to work? (for example, once a week, once a month, quarterly board meetings etc)", class: "control-label" %>
+    <%= text_input f, :work_frequency, class: "form-control" %>
+    <%= error_tag f, :work_frequency %>
   </div>
- -->
+
+  <div class="form-group">
+    <%= label f, :work_length, "What is the total length fo the opportunity? (e.g. 1 month, 6 months, 1 year, ongoing)", class: "control-label" %>
+    <%= text_input f, :work_length, class: "form-control" %>
+    <%= error_tag f, :work_length %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :contact_details, "What are the contact details if a potential volunteer wants to speak further?", class: "control-label" %>
+    <%= text_input f, :contact_details, class: "form-control" %>
+    <%= error_tag f, :contact_details %>
+  </div>
+
+  <h3>About the organisation</h3>
+  <p>It's good for the potential volunteer to understand what your organisation does. Knowing this can really motivate volunteers to apply.</p>
+
+  <div class="form-group">
+    <%= label f, :organisation_name, "What is the name of your organisation?", class: "control-label" %>
+    <%= text_input f, :organisation_name, class: "form-control" %>
+    <%= error_tag f, :organisation_name %>
+  </div>
+
+
+  <div class="form-group">
+    <%= label f, :organisation_mission, "In a few sentences, what does your organisation do?", class: "control-label" %>
+    <%= text_input f, :organisation_mission, class: "form-control" %>
+    <%= error_tag f, :organisation_mission %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :organisation_achievements, "What if any notable achievements has your organisation had? e.g. awards, membership of professional bodies (this can help attract volunteers to your organisation)", class: "control-label" %>
+    <%= text_input f, :organisation_achievements, class: "form-control" %>
+    <%= error_tag f, :organisation_achievements %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :charity_number, "Please write your charity number", class: "control-label" %>
+    <%= text_input f, :charity_number, class: "form-control" %>
+    <%= error_tag f, :charity_number %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :charity_number, "and a link to your website (if you have one)", class: "control-label" %>
+    <%= text_input f, :charity_number, class: "form-control" %>
+    <%= error_tag f, :charity_number %>
+  </div>
+
+  <h3>The benefits of the volunteering role</h3>
+  <p>Volunteers are motivated not just by the help they can give, but also how volunteering can develop them professionally and personally.</p>
+
+  <div class="form-group">
+    <%= label f, :how_will_this_work_help, "How will this work help the organisation? (1 sentence, jargon free)", class: "control-label" %>
+    <%= text_input f, :how_will_this_work_help, class: "form-control" %>
+    <%= error_tag f, :how_will_this_work_help %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :skills_to_be_gained, "What skills or experience will the volunteer gain from doing this role?", class: "control-label" %>
+    <%= text_input f, :skills_to_be_gained, class: "form-control" %>
+    <%= error_tag f, :skills_to_be_gained %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :charity_number, "and a link to your website (if you have one)", class: "control-label" %>
+    <%= text_input f, :charity_number, class: "form-control" %>
+    <%= error_tag f, :charity_number %>
+  </div>
+
   <div class="form-group">
     <%= submit "Submit", class: "btn btn-primary" %>
   </div>

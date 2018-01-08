@@ -13,6 +13,7 @@ defmodule FirstDays.RoleDescription do
     field :location, :string
     field :organisation_achievements, :string
     field :organisation_mission, :string
+    field :organisation_name, :string
     field :skills_to_be_gained, :string
     field :website_link, :string
     field :work_frequency, :string
@@ -27,6 +28,7 @@ defmodule FirstDays.RoleDescription do
           :work_length,
           :location,
           :contact_details,
+          :organisation_name,
           :organisation_mission,
           :organisation_achievements,
           :charity_number,
