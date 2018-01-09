@@ -4,14 +4,24 @@ defmodule FirstDays.Preparation do
   alias FirstDays.Preparation
 
   embedded_schema do
-    field :documents, {:array, :string}
+    field :first_day_date, :date
+    field :dress_code, :string
+    field :first_day_expectations, :string
+    field :other_details, :string
   end
+
+  @fields [
+          :first_day_date,
+          :dress_code,
+          :first_day_expectations,
+          :other_details
+          ]
 
   @doc false
   def changeset(%Preparation{} = preparation, attrs) do
     preparation
-    |> cast(attrs, [:documents])
-    |> validate_required([:documents])
+    |> cast(attrs, @fields)
+    |> validate_required(@fields)
   end
 
   def validate_form(%Preparation{} = struct, params) do
