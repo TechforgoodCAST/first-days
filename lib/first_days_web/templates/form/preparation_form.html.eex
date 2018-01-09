@@ -8,7 +8,7 @@
   <h3>Documents</h3>
 
   <div class="form-group">
-    <%= label f, :documents, "What documents is the role in?", class: "control-label" %>
+    <%= label f, :documents, "What documents or paperwork do you need from the volunteer to be able to start the role? (Please tick all that apply)", class: "control-label" %>
     <%= multiple_select f, :documents, documents(), class: "form-control", prompt: "" %>
     <%= error_tag f, :documents %>
   </div>

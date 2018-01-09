@@ -37,7 +37,10 @@ defmodule FirstDaysWeb.Router do
     get "/document-checklist-edit", FormController, :document_checklist_edit
     put "/document-checklist-update", FormController, :document_checklist_update
 
-    get "/preparation-checklist-new", FormController, :preparation_checklist_new
+    get "/preparation-new", FormController, :preparation_new
+    post "/preparation-create", FormController, :preparation_create
+    get "/preparation-edit", FormController, :preparation_edit
+    put "/preparation-update", FormController, :preparation_update
   end
 
   # Other scopes may use custom stacks.

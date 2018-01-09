@@ -1,0 +1,4 @@
+<h2>Preparation</h2>
+<p>It's important that your volunteer is prepped for the first day and has completed or sent through any paperwork they need to fill out for the role.</p>
+ 
+<%= render "preparation_form.html", Map.merge(assigns, %{action: form_path(@conn, :preparation_create), method: :post}) %>

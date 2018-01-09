@@ -1,6 +1,15 @@
 defmodule FirstDaysWeb.FormController do
   use FirstDaysWeb, :controller
-  alias FirstDays.{Repo, UserData, State.Stage, UserData.Answer, RoleDescription, Accounts.User, DocumentChecklist}
+  alias FirstDays.{
+                  Repo,
+                  UserData,
+                  State.Stage,
+                  UserData.Answer,
+                  RoleDescription,
+                  Accounts.User,
+                  DocumentChecklist,
+                  Preparation
+                  }
 
   # ROLE DESCRIPTION ACTIONS
 
@@ -128,10 +137,63 @@ defmodule FirstDaysWeb.FormController do
     end
   end
 
-  # PREPARATION CHECKLIST ACTION.
+  # PREPARATION ACTIONS
 
-  def preparation_checklist_new(conn, _params) do
-    changeset = DocumentChecklist.changeset(%DocumentChecklist{}, %{})
-    render(conn, "preparation_checklist_new.html", changeset: changeset)
+  def preparation_new(conn, _params) do
+    changeset = Preparation.changeset(%Preparation{}, %{})
+    render(conn, "preparation_new.html", changeset: changeset)
+  end
+
+  def preparation_create(%{assigns: %{current_user: user}} = conn, %{"preparation" => preparation}) do
+    case Preparation.validate_form(%Preparation{}, preparation) do
+      {:ok, _preparation_changeset} ->
+        stage = Repo.get_by!(Stage, stage: "preparation_form")
+        answer = %Answer{answers: preparation, user: user, stage: stage}
+        answer_changeset = Answer.changeset(answer, %{})
+        preparation_changeset = Preparation.changeset(%Preparation{}, preparation)
+        case Repo.insert(answer_changeset) do
+          {:ok, answer} ->
+            conn
+            |> render("preparation_show.html", answers: answer.answers)
+          {:error, _changeset} ->
+            conn
+            |> put_flash(:error, "Something went wrong, please try again")
+            |> render "preparation_new.html", changeset: preparation_changeset
+        end
+      {:error, preparation_changeset} ->
+        render(conn, "preparation_new.html", changeset: %{preparation_changeset | action: :send})
+    end
+  end
+
+  def preparation_edit(%{assigns: %{current_user: user}} = conn, params) do
+    stage = Repo.get_by!(Stage, stage: "preparation_form")
+    changeset =
+      Repo.get_by!(Answer, stage_id: stage.id, user_id: user.id)
+      |> Map.get(:answers)
+      |> (&Preparation.changeset(%Preparation{}, &1)).()
+
+    render(conn, "preparation_edit.html", changeset: changeset)
+  end
+
+  def preparation_update(%{assigns: %{current_user: user}} = conn, %{"preparation" => preparation}) do
+    case Preparation.validate_form(%Preparation{}, preparation) do
+      {:ok, _preparation_changeset} ->
+        stage = Repo.get_by!(Stage, stage: "preparation_form")
+        answer = Repo.get_by!(Answer, stage_id: stage.id, user_id: user.id)
+        updated_answer = %{answers: preparation, user: user, stage: stage}
+        answer_changeset = Answer.changeset(answer, updated_answer)
+        preparation_changeset = Preparation.changeset(%Preparation{}, preparation)
+        case Repo.update(answer_changeset) do
+          {:ok, answer} ->
+            conn
+            |> render("preparation_show.html", answers: answer.answers)
+          {:error, changeset} ->
+            conn
+            |> put_flash(:error, "Something went wrong, please try again")
+            |> render "preparation_edit.html", changeset: preparation_changeset
+        end
+      {:error, preparation_changeset} ->
+        render(conn, "preparation_edit.html", changeset: %{preparation_changeset | action: :send})
+    end
   end
 end

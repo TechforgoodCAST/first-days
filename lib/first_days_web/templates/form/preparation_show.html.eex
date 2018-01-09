@@ -1,0 +1,5 @@
+<div>Preparation</div>
+<p> <%= @answers["documents"] %> </p>
+
+<span><%= link "Edit", to: form_path(@conn, :preparation_edit) %></span>
+</br>

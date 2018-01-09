@@ -22,8 +22,8 @@ defmodule FirstDays.State.Stage do
     "confirmation_agreement_template",
     "document_checklist_form",
     "document_checklist_template",
-    "preparation_checklist_form",
-    "preparation_checklist_template",
+    "preparation_form",
+    "preparation_template",
     "feedback_form"
     ]
   end

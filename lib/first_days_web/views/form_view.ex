@@ -10,4 +10,18 @@ defmodule FirstDaysWeb.FormView do
     "Pensions, Insurances, Investments"
     ]
   end
+
+  def documents do
+    [
+    "Photo id",
+    "Proof of identity",
+    "Proof of address",
+    "Volunteer requirements e.g. dietary, medical or religious needs",
+    "Emergency contact details",
+    "DBS (Disclosure and Barring Service) check",
+    "Proof of residency",
+    "Bank/Building Society details (for paying expenses)",
+    "Proof of qualifications"
+    ]
+  end
 end

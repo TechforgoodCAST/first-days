@@ -3,4 +3,4 @@
 
 <span><%= link "Edit", to: form_path(@conn, :document_checklist_edit) %></span>
 </br>
-<span><%= link "Move to next step", to: form_path(@conn, :preparation_checklist_new) %></span>
+<span><%= link "Move to next step", to: form_path(@conn, :preparation_new) %></span>
