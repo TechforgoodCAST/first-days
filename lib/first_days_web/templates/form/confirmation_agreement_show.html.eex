@@ -1,0 +1,41 @@
+<h2>Confirmation & Agreement</h2>
+
+<p>Congratulations on recruiting your volunteer!</p>
+<p>An important part of building your volunteer relationship is a ensuring that there’s a clear understanding of what is expected from each party. This is particularly important when a private sector individual is working in the third sector for the first time.  It’s quite common for their to be differences in working culture that may surprise the volunteer.</p>
+<p>It’s good to get a signed agreement up front to help with this process.</p>
+<p>We’d recommend you personalise and send the agreement below to the volunteer as part of the confirmation process. We’ve also included some links that you might want to send through to them as they may help them prepare.</p>
+
+<h3>Confirmation & Agreement (to edit and send to the volunteer)</h3>
+
+<p>Dear [NAME],</p>
+
+<p>We're delighted that you've agreed to volunteer with us.</p>
+<p>As part of the process we find it’s useful to set up a agreement between you and the organisation so that it’s clear what you can expect from us, and us from you.  We’ve created an non-legal honour bound agreement below. Please read this, and if you’re happy, sign it and send it back to us by [DATE]</p>
+<p>Linked to this, if you’ve not volunteered in third sector before, you might find some differences in working culture to other sectors.  To help you prepare for this, we’ve given you a few links that it may be useful for you to look at.</p>
+<p>[LINKS]</p>
+<p>We look forward to working with you.</p>
+<p>Many Thanks</p>
+
+<h3>Confirmation & Agreement</h3>
+<p>Volunteers are an important and valued part of [name of organisation]. We hope that you enjoy volunteering with us and feel a full part of our team.</p>
+<p>This agreement tells you what you can expect from us, and what we hope from you. We aim to be flexible, so please let us know if you would like to make any changes and we will do our best.</p>
+<p>We, [name of organisation], will do our best to introduce you to how the organisation works and your role in it and to provide any training you need. The initial training agreed is:</p>
+
+<ol>
+  <li>to provide regular meetings with your manager so that you can tell us if you are happy with how your work is organised and get feedback from us. Your manager’s name is.[name of manager]</li>
+  <li>to respect your skills, dignity and individual wishes and to do our best to meet them.</li>
+  <li>to reimburse your travel and meal costs up to our current maximum.</li>
+  <li>to consult with you and keep you informed of possible changes.</li>
+  <li>to insure you against injury you suffer or cause due to negligence.</li>
+  <li>to provide a safe environment.</li>
+  <li>to apply our equal opportunities policy</li>
+  <li>to apply our complaints procedure if there is any problem</li>
+</ol>
+
+<h3>For the volunteer</h3>
+<p>I [name of volunteer], agree to do my best, to work reliably to the best of my ability, and to give as much warning as possible whenever I cannot volunteer as expected to follow [name of organisation]’s rules and procedures, including health and safety, equal opportunities and confidentially.</p>
+<p>Note: this agreement is in honour only and is not itended to be a legally binding contract of employment</p>
+<p>Signed:</p>
+<p>Date:</p>
+
+<%= link "Home", to: page_path(@conn, :first_days_index), class: "btn btn-primary" %>

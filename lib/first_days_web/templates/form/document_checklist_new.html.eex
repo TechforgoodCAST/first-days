@@ -1,0 +1,6 @@
+<h2>Documents</h2>
+
+<p>Now that your volunteer has agreed to take up the role you can begin the preparations.</p>
+<p>Before your volunteer can start, you’ll likely need them to provide certain paperwork. What is needed varies for different organisations and different roles. Completing this process ahead of time is really important as it can often slow down the volunteering process and create frustrations on both sides.</p>
+
+<%= render "document_checklist_form.html", Map.merge(assigns, %{action: form_path(@conn, :document_checklist_create), method: :post}) %>

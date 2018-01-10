@@ -1,0 +1,78 @@
+<%= form_for @changeset, @action, [method: @method], fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <p>It's important your volunteer is prepped for their first day and has completed or sent through any paperwork they need to fill out for the role.</p>
+
+  <h3>Document Checklist</h3>
+
+  <label class="control-label">What documents or paperwork do you need from the volunteer to be able to start the role? (Please tick all that apply)</label>
+
+  <div class="form-group">
+    <%= checkbox f, :photo_id %>
+    <%= label f, :photo_id, "Photo Id" %>
+    <%= error_tag f, :photo_id %>
+  </div>
+
+  <div class="form-group">
+    <%= checkbox f, :proof_of_identity %>
+    <%= label f, :proof_of_identity, "Proof of identity" %>
+    <%= error_tag f, :proof_of_identity %>
+  </div>
+
+  <div class="form-group">
+    <%= checkbox f, :proof_of_address %>
+    <%= label f, :proof_of_address, "Proof of address" %>
+    <%= error_tag f, :proof_of_address %>
+  </div>
+
+  <div class="form-group">
+    <%= checkbox f, :volunteer_requirements %>
+    <%= label f, :volunteer_requirements, "Volunteer requirements e.g. dietary, medical or religious needs" %>
+    <%= error_tag f, :volunteer_requirements %>
+  </div>
+
+  <div class="form-group">
+    <%= checkbox f, :emergency_contact_details %>
+    <%= label f, :emergency_contact_details, "Emergency contact details" %>
+    <%= error_tag f, :emergency_contact_details %>
+  </div>
+
+  <div class="form-group">
+    <%= checkbox f, :dbs_check %>
+    <%= label f, :dbs_check, "DBS (Disclosure and Barring Service) check" %>
+    <%= error_tag f, :dbs_check %>
+  </div>
+
+  <div class="form-group">
+    <%= checkbox f, :proof_of_residency %>
+    <%= label f, :proof_of_residency, "Proof of residency" %>
+    <%= error_tag f, :proof_of_residency %>
+  </div>
+
+  <div class="form-group">
+    <%= checkbox f, :bank_details %>
+    <%= label f, :bank_details, "Bank/Building Society details (for paying expenses)" %>
+    <%= error_tag f, :bank_details %>
+  </div>
+
+  <div class="form-group">
+    <%= checkbox f, :proof_of_qualifications %>
+    <%= label f, :proof_of_qualifications, "Proof of qualifications" %>
+    <%= error_tag f, :proof_of_qualifications %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :other_document, "Other" %>
+    <%= text_input f, :other_document, class: "form-control" %>
+    <%= error_tag f, :other_document %>
+  </div>
+
+
+  <%= submit "Submit", class: "btn btn-primary" %>
+  <span></span>
+  <%= link "Home", to: page_path(@conn, :first_days_index), class: "btn btn-primary" %>
+<% end %>

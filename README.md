@@ -1,4 +1,4 @@
-# FirstSteps
+# FirstDays
 
 To start your Phoenix server:
 
