@@ -1,6 +1,27 @@
-<div>Document Checklist</div>
-<p> <%= @answers["documents"] %> </p>
+<h2>Document Checklist</h2>
 
-<span><%= link "Edit", to: form_path(@conn, :document_checklist_edit) %></span>
-</br>
-<span><%= link "Move to next step", to: form_path(@conn, :preparation_new) %></span>
+<p>Thanks for completing the preparation checklist.</p>
+<p>Your email text to send to the volunteer is below. Please edit this as you feel is appropriate and send it through to them.</p>
+<p>When you have completed the paperwork part of the process, please log back on and we'll help you prepare a personalised email to support the volunteer.</p>
+
+<h3>Email template</h3>
+<p>Dearn [NAME],</p>
+<p>Thanks very much for signing up to be a volunteer. As you may expect, there is some paperwork involved in starting the position.  We’ve listed what we need to receive from you below.</p>
+<p>It’s important that we get this process underway so we’d be grateful if you could send us the documents we need by the [DATE].</p>
+
+<p>Could you please send us:</p>
+
+<ul>
+  <%= for document <- get_document_list(@answers) do %>
+    <li><%= document %></li>
+  <% end %>
+    <li><%= @answers["other_document"] %></li>
+</ul>
+
+<p>Please also let us know when you are available to start.</p>
+
+<p>Many thanks</p>
+
+<%= link "Edit", to: form_path(@conn, :document_checklist_edit), class: "btn btn-primary" %>
+<span></span>
+<%= link "Home", to: page_path(@conn, :first_days_index), class: "btn btn-primary" %>

@@ -105,7 +105,8 @@
     <%= error_tag f, :skills_to_be_gained %>
   </div>
 
-  <div class="form-group">
-    <%= submit "Submit", class: "btn btn-primary" %>
-  </div>
+
+  <%= submit "Submit", class: "btn btn-primary" %>
+  <span></span>
+  <%= link "Home", to: page_path(@conn, :first_days_index), class: "btn btn-primary" %>
 <% end %>

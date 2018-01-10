@@ -22,7 +22,7 @@ defmodule FirstDaysWeb.UserController do
         conn
         |> FirstDaysWeb.Auth.login(user)
         |> put_flash(:info, "User created successfully.")
-        |> redirect(to: user_path(conn, :show, user))
+        |> redirect(to: page_path(conn, :first_days_index))
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "new.html", changeset: changeset)
     end

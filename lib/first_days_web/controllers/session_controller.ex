@@ -6,7 +6,7 @@ defmodule FirstDaysWeb.SessionController do
     if conn.assigns.current_user do
       conn
       |> put_flash(:info, "You are already signed in!")
-      |> redirect(to: page_path(conn, :index))
+      |> redirect(to: page_path(conn, :first_days_index))
     else
       render conn, "new.html"
     end
@@ -17,7 +17,7 @@ defmodule FirstDaysWeb.SessionController do
       {:ok, conn} ->
         conn
         |> put_flash(:info, "Welcome back!")
-        |> redirect(to: page_path(conn, :index))
+        |> redirect(to: page_path(conn, :first_days_index))
       {:error, _reason, conn} ->
         conn
         |> put_flash(:error, "Invalid email/password combination")

@@ -31,8 +31,8 @@
     <%= text_input f, :other_details, class: "form-control" %>
     <%= error_tag f, :other_details %>
   </div>
-  
-  <div class="form-group">
-    <%= submit "Submit", class: "btn btn-primary" %>
-  </div>
+
+  <%= submit "Submit", class: "btn btn-primary" %>
+  <span></span>
+  <%= link "Home", to: page_path(@conn, :first_days_index), class: "btn btn-primary" %>
 <% end %>

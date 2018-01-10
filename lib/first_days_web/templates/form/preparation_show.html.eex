@@ -14,5 +14,6 @@
 <p>We look forward to seeing you then.</p>
 <p>Many thanks</p>
 
-<span><%= link "Edit", to: form_path(@conn, :preparation_edit) %></span>
-</br>
+<%= link "Edit", to: form_path(@conn, :preparation_edit), class: "btn btn-primary" %>
+<span></span>
+<%= link "Home", to: page_path(@conn, :first_days_index), class: "btn btn-primary" %>

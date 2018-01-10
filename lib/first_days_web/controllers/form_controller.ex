@@ -46,7 +46,7 @@ defmodule FirstDaysWeb.FormController do
       nil ->
         conn
         |> put_flash(:error, "You need to fill out the role description questions before seeing the template")
-        |> redirect(to: page_path(conn, :index))
+        |> redirect(to: page_path(conn, :first_days_index))
       answer ->
         render(conn, "role_description_show.html", answers: answer.answers)
     end
@@ -124,7 +124,7 @@ defmodule FirstDaysWeb.FormController do
       nil ->
         conn
         |> put_flash(:error, "You need to fill out the document checklist questions before seeing the template")
-        |> redirect(to: page_path(conn, :index))
+        |> redirect(to: page_path(conn, :first_days_index))
       answer ->
         render(conn, "document_checklist_show.html", answers: answer.answers)
     end
@@ -196,7 +196,7 @@ defmodule FirstDaysWeb.FormController do
       nil ->
         conn
         |> put_flash(:error, "You need to fill out the first day preparation questions before seeing the template")
-        |> redirect(to: page_path(conn, :index))
+        |> redirect(to: page_path(conn, :first_days_index))
       answer ->
         render(conn, "preparation_show.html", answers: answer.answers)
     end

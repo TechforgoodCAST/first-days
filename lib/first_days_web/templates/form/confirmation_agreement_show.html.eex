@@ -38,4 +38,4 @@
 <p>Signed:</p>
 <p>Date:</p>
 
-<span><%= link "Move to next step", to: form_path(@conn, :document_checklist_new) %></span>
+<%= link "Home", to: page_path(@conn, :first_days_index), class: "btn btn-primary" %>

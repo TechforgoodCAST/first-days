@@ -1,12 +1,5 @@
 <h1>First Days</h1>
 
-<p>First Days helps you to support volunteers through the recruitment process, from assessing your needs, right through to getting feedback on the volunteers first day.</p>
-
-
-<div><%= link "1. Answer questions to help us create a role description for the volunteer", to: form_path(@conn, :role_description_new) %></div>
-<div><%= link "2. See Role Description template", to: form_path(@conn, :role_description_show) %></div>
-<div><%= link "3. Volunteer agreement", to: form_path(@conn, :confirmation_agreement_show) %></div>
-<div><%= link "4. Answer questions to help us create a list of documents the volunteer needs to provide", to: form_path(@conn, :document_checklist_new) %></div>
-<div><%= link "5. See Document Checklist template", to: form_path(@conn, :document_checklist_show) %></div>
-<div><%= link "6. Answer questions to help us create an email informing the volunteer of everything they need to prepare for their first day", to: form_path(@conn, :preparation_new) %></div>
-<div><%= link "7. See first day preparation email template", to: form_path(@conn, :preparation_show) %></div>
+<p>Welcome to First Days - the volunteering onboarding service</p>
+<p>To get started click Register</p>
+<p>If you have already registered click Log in</p>
