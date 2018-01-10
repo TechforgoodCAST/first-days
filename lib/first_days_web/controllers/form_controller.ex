@@ -28,14 +28,27 @@ defmodule FirstDaysWeb.FormController do
         case Repo.insert(answer_changeset) do
           {:ok, answer} ->
             conn
-            |> render("role_description_show.html", answers: answer.answers)
+            |> redirect(to: form_path(conn, :role_description_show))
           {:error, _changeset} ->
             conn
             |> put_flash(:error, "Something went wrong, please try again")
             |> render "role_description_new.html", changeset: role_description_changeset
         end
       {:error, role_description_changeset} ->
-        render(conn, "role_description_new.html", changeset: %{role_description_changeset | action: :send})
+        render(conn, "role_description_new.html", changeset: role_description_changeset)
+    end
+  end
+
+  def role_description_show(%{assigns: %{current_user: user}} = conn, _params) do
+    stage = Repo.get_by!(Stage, stage: "role_description_form")
+    # answer = Repo.get_by!(Answer, stage_id: stage.id, user_id: user.id)
+    case Repo.get_by(Answer, stage_id: stage.id, user_id: user.id) do
+      nil ->
+        conn
+        |> put_flash(:error, "You need to fill out the role description questions before seeing the template")
+        |> redirect(to: page_path(conn, :index))
+      answer ->
+        render(conn, "role_description_show.html", answers: answer.answers)
     end
   end
 
@@ -60,14 +73,14 @@ defmodule FirstDaysWeb.FormController do
         case Repo.update(answer_changeset) do
           {:ok, answer} ->
             conn
-            |> render("role_description_show.html", answers: answer.answers)
+            |> redirect(to: form_path(conn, :role_description_show))
           {:error, changeset} ->
             conn
             |> put_flash(:error, "Something went wrong, please try again")
-            |> render "role_description_edit.html", changeset: role_description_changeset
+            |> redirect(to: form_path(conn, :role_description_show))
         end
       {:error, role_description_changeset} ->
-        render(conn, "role_description_edit.html", changeset: %{role_description_changeset | action: :send})
+        render(conn, "role_description_edit.html", changeset: role_description_changeset)
     end
   end
 
@@ -94,14 +107,26 @@ defmodule FirstDaysWeb.FormController do
         case Repo.insert(answer_changeset) do
           {:ok, answer} ->
             conn
-            |> render("document_checklist_show.html", answers: answer.answers)
+            |> redirect(to: form_path(conn, :document_checklist_show))
           {:error, _changeset} ->
             conn
             |> put_flash(:error, "Something went wrong, please try again")
             |> render "document_checklist_new.html", changeset: document_checklist_changeset
         end
       {:error, document_checklist_changeset} ->
-        render(conn, "document_checklist_new.html", changeset: %{document_checklist_changeset | action: :send})
+        render(conn, "document_checklist_new.html", changeset: document_checklist_changeset)
+    end
+  end
+
+  def document_checklist_show(%{assigns: %{current_user: user}} = conn, _params) do
+    stage = Repo.get_by!(Stage, stage: "document_checklist_form")
+    case Repo.get_by(Answer, stage_id: stage.id, user_id: user.id) do
+      nil ->
+        conn
+        |> put_flash(:error, "You need to fill out the document checklist questions before seeing the template")
+        |> redirect(to: page_path(conn, :index))
+      answer ->
+        render(conn, "document_checklist_show.html", answers: answer.answers)
     end
   end
 
@@ -126,14 +151,14 @@ defmodule FirstDaysWeb.FormController do
         case Repo.update(answer_changeset) do
           {:ok, answer} ->
             conn
-            |> render("document_checklist_show.html", answers: answer.answers)
+            |> redirect(to: form_path(conn, :document_checklist_show))
           {:error, changeset} ->
             conn
             |> put_flash(:error, "Something went wrong, please try again")
             |> render "document_checklist_edit.html", changeset: document_checklist_changeset
         end
       {:error, document_checklist_changeset} ->
-        render(conn, "document_checklist_edit.html", changeset: %{document_checklist_changeset | action: :send})
+        render(conn, "document_checklist_edit.html", changeset: document_checklist_changeset)
     end
   end
 
@@ -154,14 +179,26 @@ defmodule FirstDaysWeb.FormController do
         case Repo.insert(answer_changeset) do
           {:ok, answer} ->
             conn
-            |> render("preparation_show.html", answers: answer.answers)
+            |> redirect(to: form_path(conn, :preparation_show))
           {:error, _changeset} ->
             conn
             |> put_flash(:error, "Something went wrong, please try again")
             |> render "preparation_new.html", changeset: preparation_changeset
         end
       {:error, preparation_changeset} ->
-        render(conn, "preparation_new.html", changeset: %{preparation_changeset | action: :send})
+        render(conn, "preparation_new.html", changeset: preparation_changeset)
+    end
+  end
+
+  def preparation_show(%{assigns: %{current_user: user}} = conn, _params) do
+    stage = Repo.get_by!(Stage, stage: "preparation_form")
+    case Repo.get_by(Answer, stage_id: stage.id, user_id: user.id) do
+      nil ->
+        conn
+        |> put_flash(:error, "You need to fill out the first day preparation questions before seeing the template")
+        |> redirect(to: page_path(conn, :index))
+      answer ->
+        render(conn, "preparation_show.html", answers: answer.answers)
     end
   end
 
@@ -186,14 +223,14 @@ defmodule FirstDaysWeb.FormController do
         case Repo.update(answer_changeset) do
           {:ok, answer} ->
             conn
-            |> render("preparation_show.html", answers: answer.answers)
+            |> redirect(to: form_path(conn, :preparation_show))
           {:error, changeset} ->
             conn
             |> put_flash(:error, "Something went wrong, please try again")
             |> render "preparation_edit.html", changeset: preparation_changeset
         end
       {:error, preparation_changeset} ->
-        render(conn, "preparation_edit.html", changeset: %{preparation_changeset | action: :send})
+        render(conn, "preparation_edit.html", changeset: preparation_changeset)
     end
   end
 end

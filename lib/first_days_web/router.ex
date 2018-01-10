@@ -27,6 +27,7 @@ defmodule FirstDaysWeb.Router do
 
     get "/role-description-new", FormController, :role_description_new
     post "/role-description-create", FormController, :role_description_create
+    get "/role-description-show", FormController, :role_description_show
     get "/role-description-edit", FormController, :role_description_edit
     put "/role-description-update", FormController, :role_description_update
 
@@ -34,11 +35,13 @@ defmodule FirstDaysWeb.Router do
 
     get "/document-checklist-new", FormController, :document_checklist_new
     post "/document-checklist-create", FormController, :document_checklist_create
+    get "/document-checklist-show", FormController, :document_checklist_show
     get "/document-checklist-edit", FormController, :document_checklist_edit
     put "/document-checklist-update", FormController, :document_checklist_update
 
     get "/preparation-new", FormController, :preparation_new
     post "/preparation-create", FormController, :preparation_create
+    get "/preparation-show", FormController, :preparation_show
     get "/preparation-edit", FormController, :preparation_edit
     put "/preparation-update", FormController, :preparation_update
   end
