@@ -32,7 +32,7 @@ defmodule FirstDaysWeb.FormController do
           {:error, _changeset} ->
             conn
             |> put_flash(:error, "Something went wrong, please try again")
-            |> render "role_description_new.html", changeset: role_description_changeset
+            |> render("role_description_new.html", changeset: role_description_changeset)
         end
       {:error, role_description_changeset} ->
         render(conn, "role_description_new.html", changeset: role_description_changeset)
@@ -54,12 +54,17 @@ defmodule FirstDaysWeb.FormController do
 
   def role_description_edit(%{assigns: %{current_user: user}} = conn, params) do
     stage = Repo.get_by!(Stage, stage: "role_description_form")
-    changeset =
-      Repo.get_by!(Answer, stage_id: stage.id, user_id: user.id)
-      |> Map.get(:answers)
-      |> (&RoleDescription.changeset(%RoleDescription{}, &1)).()
-
-    render(conn, "role_description_edit.html", changeset: changeset)
+    case Repo.get_by(Answer, stage_id: stage.id, user_id: user.id) do
+      nil ->
+        conn
+        |> redirect(to: form_path(conn, :role_description_new))
+      answer ->
+        changeset =
+          answer
+          |> Map.get(:answers)
+          |> (&RoleDescription.changeset(%RoleDescription{}, &1)).()
+        render(conn, "role_description_edit.html", changeset: changeset)
+    end
   end
 
   def role_description_update(%{assigns: %{current_user: user}} = conn, %{"role_description" => role_description}) do
@@ -111,7 +116,7 @@ defmodule FirstDaysWeb.FormController do
           {:error, _changeset} ->
             conn
             |> put_flash(:error, "Something went wrong, please try again")
-            |> render "document_checklist_new.html", changeset: document_checklist_changeset
+            |> render("document_checklist_new.html", changeset: document_checklist_changeset)
         end
       {:error, document_checklist_changeset} ->
         render(conn, "document_checklist_new.html", changeset: document_checklist_changeset)
@@ -132,12 +137,17 @@ defmodule FirstDaysWeb.FormController do
 
   def document_checklist_edit(%{assigns: %{current_user: user}} = conn, params) do
     stage = Repo.get_by!(Stage, stage: "document_checklist_form")
-    changeset =
-      Repo.get_by!(Answer, stage_id: stage.id, user_id: user.id)
-      |> Map.get(:answers)
-      |> (&DocumentChecklist.changeset(%DocumentChecklist{}, &1)).()
-
-    render(conn, "document_checklist_edit.html", changeset: changeset)
+    case Repo.get_by(Answer, stage_id: stage.id, user_id: user.id) do
+      nil ->
+        conn
+        |> redirect(to: form_path(conn, :document_checklist_new))
+      answer ->
+        changeset =
+          answer
+          |> Map.get(:answers)
+          |> (&DocumentChecklist.changeset(%DocumentChecklist{}, &1)).()
+        render(conn, "document_checklist_edit.html", changeset: changeset)
+    end
   end
 
   def document_checklist_update(%{assigns: %{current_user: user}} = conn, %{"document_checklist" => document_checklist}) do
@@ -155,7 +165,7 @@ defmodule FirstDaysWeb.FormController do
           {:error, changeset} ->
             conn
             |> put_flash(:error, "Something went wrong, please try again")
-            |> render "document_checklist_edit.html", changeset: document_checklist_changeset
+            |> render("document_checklist_edit.html", changeset: document_checklist_changeset)
         end
       {:error, document_checklist_changeset} ->
         render(conn, "document_checklist_edit.html", changeset: document_checklist_changeset)
@@ -183,7 +193,7 @@ defmodule FirstDaysWeb.FormController do
           {:error, _changeset} ->
             conn
             |> put_flash(:error, "Something went wrong, please try again")
-            |> render "preparation_new.html", changeset: preparation_changeset
+            |> render("preparation_new.html", changeset: preparation_changeset)
         end
       {:error, preparation_changeset} ->
         render(conn, "preparation_new.html", changeset: preparation_changeset)
@@ -204,12 +214,17 @@ defmodule FirstDaysWeb.FormController do
 
   def preparation_edit(%{assigns: %{current_user: user}} = conn, params) do
     stage = Repo.get_by!(Stage, stage: "preparation_form")
-    changeset =
-      Repo.get_by!(Answer, stage_id: stage.id, user_id: user.id)
-      |> Map.get(:answers)
-      |> (&Preparation.changeset(%Preparation{}, &1)).()
-
-    render(conn, "preparation_edit.html", changeset: changeset)
+    case Repo.get_by(Answer, stage_id: stage.id, user_id: user.id) do
+      nil ->
+        conn
+        |> redirect(to: form_path(conn, :preparation_new))
+      answer ->
+        changeset =
+          answer
+          |> Map.get(:answers)
+          |> (&Preparation.changeset(%Preparation{}, &1)).()
+        render(conn, "preparation_edit.html", changeset: changeset)
+    end
   end
 
   def preparation_update(%{assigns: %{current_user: user}} = conn, %{"preparation" => preparation}) do
@@ -227,7 +242,7 @@ defmodule FirstDaysWeb.FormController do
           {:error, changeset} ->
             conn
             |> put_flash(:error, "Something went wrong, please try again")
-            |> render "preparation_edit.html", changeset: preparation_changeset
+            |> render("preparation_edit.html", changeset: preparation_changeset)
         end
       {:error, preparation_changeset} ->
         render(conn, "preparation_edit.html", changeset: preparation_changeset)
