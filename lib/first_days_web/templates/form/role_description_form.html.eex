@@ -8,7 +8,13 @@
   <h3>About the role</h3>
 
   <div class="form-group">
-    <%= label f, :description, "What is the role you're looking for? (a one sentence overview)", class: "control-label" %>
+    <%= label f, :role_title, "What is the role title?", class: "control-label" %>
+    <%= text_input f, :role_title, class: "form-control" %>
+    <%= error_tag f, :role_title %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :description, "Please give a one sentence description of the role", class: "control-label" %>
     <%= text_input f, :description, class: "form-control" %>
     <%= error_tag f, :description %>
   </div>
@@ -23,6 +29,12 @@
     <%= label f, :finance_skills, "What are the specific finance skills you require?", class: "control-label" %>
     <%= select f, :finance_skills, finance_skills(), class: "form-control", prompt: "" %>
     <%= error_tag f, :finance_skills %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :additional_info, "Is there any other info you'd like to add?", class: "control-label" %>
+    <%= text_input f, :additional_info, class: "form-control" %>
+    <%= error_tag f, :additional_info %>
   </div>
 
   <div class="form-group">
@@ -74,12 +86,6 @@
 
   <div class="form-group">
     <%= label f, :charity_number, "Please write your charity number", class: "control-label" %>
-    <%= text_input f, :charity_number, class: "form-control" %>
-    <%= error_tag f, :charity_number %>
-  </div>
-
-  <div class="form-group">
-    <%= label f, :charity_number, "and a link to your website (if you have one)", class: "control-label" %>
     <%= text_input f, :charity_number, class: "form-control" %>
     <%= error_tag f, :charity_number %>
   </div>

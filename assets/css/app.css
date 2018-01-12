@@ -1,1 +1,36 @@
 /* This file is for your main application css. */
+
+body p {
+  font-size: 20px;
+}
+
+body label {
+  font-size: 18px;
+}
+
+body a {
+  font-size: 20px;
+}
+
+body li {
+  font-size: 20px;
+}
+
+body .btn {
+  font-size: 20px;
+}
+
+body .form-control {
+  font-size: 18px;
+  height: 40px;
+  margin: 10px 0;
+}
+
+body h3 {
+  font-size: 27px;
+}
+
+.my-date .form-control {
+  width: 150px;
+  display: inline-block;
+}

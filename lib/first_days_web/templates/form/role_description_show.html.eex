@@ -1,22 +1,34 @@
 <h2>Role Description Template</h2>
 
 <p>Thanks very much for telling us about the role.</p>
-<p>The text for your role description is below. Please edit this as you see fit. Then copy it into a new document so that you can share it with your network. Good luck finding the right candidate!</p>
+<p class="alert alert-info">The text for your role description is below. Please copy it into a new document so that you can edit it as you see fit, then share it with your network. Good luck finding the right candidate!</p>
 <p>When you’ve selected the appropriate person, simply sign back on and we'll take you through the remaining steps of the process.</p>
 
 <h3>Role Description (please edit as you see fit)</h3>
+<br/>
 
-<p>A(n) <%= @answers["area"] %> assistant volunteer is needed for <%= @answers["organisation_name"] %> to <%= @answers["description"] %>.</p>
+<p><b>Role</b>: <%= @answers["area"] %></p>
+
+<p>A(n) <%= @answers["role_title"] %> volunteer is needed for <%= @answers["organisation_name"] %> to help us with <%= @answers["description"] %>.</p>
 <p>We are looking for an individual with skills in <%= @answers["finance_skills"] %>. As well as these aspects of the role, the volunteer will be able to learn about the charity’s work (and) <%= @answers["additional_info"] %>.</p>
 
+<p><b>What we do</b></p>
+
 <p><%= @answers["organisation_mission"] %>. <%= @answers["organisation_achievements"] %></p>
+
+<p><b>Details of the role</b></p>
 
 <p>The role is needed for <%= @answers["work_length"] %> and will involve working <%= @answers["work_frequency"] %>. Travel expenses will be paid.</p>
 
 <p>It will be based in <%= @answers["location"] %>.</p>
 
+<p><b>What you'll gain</b></p>
+
 <p>Doing this you could gain <%= @answers["skills_to_be_gained"] %>.</p>
+
+<p><b>The impact for us</b></p>
 <p><%= @answers["how_will_work_help"] %></p>
+
 
 <p>Want to speak further? Contact <%= @answers["contact_details"] %>.</p>
 <p>Charity number: <%= @answers["charity_number"] %></p>

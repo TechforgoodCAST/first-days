@@ -30,4 +30,14 @@ defmodule FirstDaysWeb.FormView do
     |> Enum.filter(fn({doc, string_bool}) -> string_bool != "false" end)
     |> Enum.map(fn({doc, _string_bool}) -> Map.get(@humanised_documents, doc) end)
   end
+
+  def my_datetime_select(form, field, opts \\ []) do
+    builder = fn b ->
+      ~e"""
+      <%= b.(:day, [ class: "form-control" ]) %> / <%= b.(:month, [ class: "form-control" ]) %> / <%= b.(:year, [ class: "form-control" ]) %>
+      """
+    end
+
+    date_select(form, field, [builder: builder] ++ opts)
+  end
 end

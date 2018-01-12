@@ -5,12 +5,14 @@
     </div>
   <% end %>
 
-  <h3>Prepping for their first day</h3>
-  <p>It's important your volunteer is prepped for the first day. It can be intimidating to start in a new organisation, so help them to prepare by filling out the details below.</p>
+  <h3>Preparing volunteer for their first day</h3>
+  <p>It's important your volunteer is prepared for their first day. It can be intimidating to start in a new organisation, so help them to prepare by filling out the details below.</p>
 
   <div class="form-group">
-    <%= label f, :first_day_date, "When is the volunteer's first day? (if you don't know, please provide us the best guess as we'll use this to send you a reminder email)", class: "control-label" %>
-    <%= date_select f, :first_day_date, class: "form-control", default: {2018, 2, 13} %>
+    <%= label f, :first_day_date, "When is the volunteer's first day? (if you don't know, please provide us with your best guess)", class: "control-label" %>
+    <div class="my-date">
+      <%= my_datetime_select f, :first_day_date, default: {2018, 2, 13} %>
+    </div>
     <%= error_tag f, :first_day_date %>
   </div>
 

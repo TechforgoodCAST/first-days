@@ -4,6 +4,7 @@ defmodule FirstDays.RoleDescription do
   alias FirstDays.RoleDescription
 
   embedded_schema do
+    field :additional_info, :string
     field :area, :string
     field :charity_number, :string
     field :contact_details, :string
@@ -14,6 +15,7 @@ defmodule FirstDays.RoleDescription do
     field :organisation_achievements, :string
     field :organisation_mission, :string
     field :organisation_name, :string
+    field :role_title, :string
     field :skills_to_be_gained, :string
     field :website_link, :string
     field :work_frequency, :string
@@ -21,9 +23,11 @@ defmodule FirstDays.RoleDescription do
   end
 
   @fields [
+          :role_title,
           :description,
           :area,
           :finance_skills,
+          :additional_info,
           :work_frequency,
           :work_length,
           :location,

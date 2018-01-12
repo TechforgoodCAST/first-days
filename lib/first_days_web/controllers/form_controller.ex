@@ -26,7 +26,7 @@ defmodule FirstDaysWeb.FormController do
         answer_changeset = Answer.changeset(answer, %{})
         role_description_changeset = RoleDescription.changeset(%RoleDescription{}, role_description)
         case Repo.insert(answer_changeset) do
-          {:ok, answer} ->
+          {:ok, _answer} ->
             conn
             |> redirect(to: form_path(conn, :role_description_show))
           {:error, _changeset} ->
@@ -41,7 +41,6 @@ defmodule FirstDaysWeb.FormController do
 
   def role_description_show(%{assigns: %{current_user: user}} = conn, _params) do
     stage = Repo.get_by!(Stage, stage: "role_description_form")
-    # answer = Repo.get_by!(Answer, stage_id: stage.id, user_id: user.id)
     case Repo.get_by(Answer, stage_id: stage.id, user_id: user.id) do
       nil ->
         conn
