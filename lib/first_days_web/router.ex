@@ -45,6 +45,8 @@ defmodule FirstDaysWeb.Router do
     get "/preparation-show", FormController, :preparation_show
     get "/preparation-edit", FormController, :preparation_edit
     put "/preparation-update", FormController, :preparation_update
+
+    get "/feedback-show", FormController, :feedback_show
   end
 
   # Other scopes may use custom stacks.

@@ -2,6 +2,8 @@
 
 <p>First Days helps you to support volunteers through the recruitment process, from assessing your needs, right through to getting feedback on the volunteers first day.</p>
 
+<p class="alert alert-info">Click on section one to begin. Once you have completed the activities of each section, return to this page and move on to the next.</p>
+
 <br/>
 
 <div><%= link "1. Answer questions to help us create a role description for the volunteer", to: form_path(@conn, :role_description_edit) %></div>
@@ -18,3 +20,4 @@
 <br/>
 <div><%= link "7. First day preparation email template", to: form_path(@conn, :preparation_show) %></div>
 <br/>
+<div><%= link "8. Volunteer feedback email template", to: form_path(@conn, :feedback_show) %></div>

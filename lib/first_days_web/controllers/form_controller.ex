@@ -247,4 +247,9 @@ defmodule FirstDaysWeb.FormController do
         render(conn, "preparation_edit.html", changeset: preparation_changeset)
     end
   end
+
+  def feedback_show(conn, _params) do
+    render conn, "feedback_show.html"
+  end
+
 end
