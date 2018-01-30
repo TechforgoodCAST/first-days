@@ -5,9 +5,9 @@ defmodule FirstDays.UserData.Answer do
 
 
   schema "answers" do
-    embeds_one :role_description, RoleDescription
-    embeds_one :document_checklist, DocumentChecklist
-    embeds_one :preparation, Preparation
+    embeds_one :role_description, RoleDescription, on_replace: :update
+    embeds_one :document_checklist, DocumentChecklist, on_replace: :update
+    embeds_one :preparation, Preparation, on_replace: :update
     belongs_to :user, User
 
     timestamps()

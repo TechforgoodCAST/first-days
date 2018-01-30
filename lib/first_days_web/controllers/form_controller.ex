@@ -59,6 +59,7 @@ defmodule FirstDaysWeb.FormController do
         changeset =
           answer
           |> Map.get(:role_description)
+          |> Map.from_struct
           |> (&RoleDescription.changeset(%RoleDescription{}, &1)).()
         render(conn, "role_description_edit.html", changeset: changeset)
     end
@@ -68,7 +69,7 @@ defmodule FirstDaysWeb.FormController do
     case RoleDescription.validate_form(%RoleDescription{}, role_description) do
       {:ok, _role_description_changeset} ->
         answer = Repo.get_by!(Answer, user_id: user.id)
-        updated_answer = %{role_description: role_description, user: user}
+        updated_answer = %{role_description: role_description}
         answer_changeset = Answer.changeset(answer, updated_answer)
         role_description_changeset = RoleDescription.changeset(%RoleDescription{}, role_description)
         case Repo.update(answer_changeset) do
@@ -86,167 +87,162 @@ defmodule FirstDaysWeb.FormController do
   end
 
   # CONFIRMATION AGREEMENT ACTIONS
-#
-#   def confirmation_agreement_show(conn, _params) do
-#     render conn, "confirmation_agreement_show.html"
-#   end
-#
+
+  def confirmation_agreement_show(conn, _params) do
+    render conn, "confirmation_agreement_show.html"
+  end
+
 #   # DOCUMENT CHECKLIST ACTION.
-#
-#   def document_checklist_new(conn, _params) do
-#     changeset = DocumentChecklist.changeset(%DocumentChecklist{}, %{})
-#     render(conn, "document_checklist_new.html", changeset: changeset)
-#   end
-#
-#   def document_checklist_create(%{assigns: %{current_user: user}} = conn, %{"document_checklist" => document_checklist}) do
-#     case DocumentChecklist.validate_form(%DocumentChecklist{}, document_checklist) do
-#       {:ok, _document_checklist_changeset} ->
-#         stage = Repo.get_by!(Stage, stage: "document_checklist_form")
-#         answer = %Answer{answers: document_checklist, user: user, stage: stage}
-#         answer_changeset = Answer.changeset(answer, %{})
-#         document_checklist_changeset = DocumentChecklist.changeset(%DocumentChecklist{}, document_checklist)
-#         case Repo.insert(answer_changeset) do
-#           {:ok, answer} ->
-#             conn
-#             |> redirect(to: form_path(conn, :document_checklist_show))
-#           {:error, _changeset} ->
-#             conn
-#             |> put_flash(:error, "Something went wrong, please try again")
-#             |> render("document_checklist_new.html", changeset: document_checklist_changeset)
-#         end
-#       {:error, document_checklist_changeset} ->
-#         render(conn, "document_checklist_new.html", changeset: document_checklist_changeset)
-#     end
-#   end
-#
-#   def document_checklist_show(%{assigns: %{current_user: user}} = conn, _params) do
-#     stage = Repo.get_by!(Stage, stage: "document_checklist_form")
-#     case Repo.get_by(Answer, stage_id: stage.id, user_id: user.id) do
-#       nil ->
-#         conn
-#         |> put_flash(:error, "You need to fill out the document checklist questions before seeing the template")
-#         |> redirect(to: page_path(conn, :first_days_index))
-#       answer ->
-#         render(conn, "document_checklist_show.html", answers: answer.answers)
-#     end
-#   end
-#
-#   def document_checklist_edit(%{assigns: %{current_user: user}} = conn, params) do
-#     stage = Repo.get_by!(Stage, stage: "document_checklist_form")
-#     case Repo.get_by(Answer, stage_id: stage.id, user_id: user.id) do
-#       nil ->
-#         conn
-#         |> redirect(to: form_path(conn, :document_checklist_new))
-#       answer ->
-#         changeset =
-#           answer
-#           |> Map.get(:answers)
-#           |> (&DocumentChecklist.changeset(%DocumentChecklist{}, &1)).()
-#         render(conn, "document_checklist_edit.html", changeset: changeset)
-#     end
-#   end
-#
-#   def document_checklist_update(%{assigns: %{current_user: user}} = conn, %{"document_checklist" => document_checklist}) do
-#     case DocumentChecklist.validate_form(%DocumentChecklist{}, document_checklist) do
-#       {:ok, _document_checklist_changeset} ->
-#         stage = Repo.get_by!(Stage, stage: "document_checklist_form")
-#         answer = Repo.get_by!(Answer, stage_id: stage.id, user_id: user.id)
-#         updated_answer = %{answers: document_checklist, user: user, stage: stage}
-#         answer_changeset = Answer.changeset(answer, updated_answer)
-#         document_checklist_changeset = DocumentChecklist.changeset(%DocumentChecklist{}, document_checklist)
-#         case Repo.update(answer_changeset) do
-#           {:ok, answer} ->
-#             conn
-#             |> redirect(to: form_path(conn, :document_checklist_show))
-#           {:error, changeset} ->
-#             conn
-#             |> put_flash(:error, "Something went wrong, please try again")
-#             |> render("document_checklist_edit.html", changeset: document_checklist_changeset)
-#         end
-#       {:error, document_checklist_changeset} ->
-#         render(conn, "document_checklist_edit.html", changeset: document_checklist_changeset)
-#     end
-#   end
-#
+
+  def document_checklist_new(conn, _params) do
+    changeset = DocumentChecklist.changeset(%DocumentChecklist{}, %{})
+    render(conn, "document_checklist_new.html", changeset: changeset)
+  end
+
+  def document_checklist_create(%{assigns: %{current_user: user}} = conn, %{"document_checklist" => document_checklist}) do
+    case DocumentChecklist.validate_form(%DocumentChecklist{}, document_checklist) do
+      {:ok, _document_checklist_changeset} ->
+        answer = %Answer{user: user}
+        answer_changeset = Answer.changeset(answer, %{document_checklist: document_checklist})
+        document_checklist_changeset = DocumentChecklist.changeset(%DocumentChecklist{}, document_checklist)
+        case Repo.insert(answer_changeset) do
+          {:ok, answer} ->
+            conn
+            |> redirect(to: form_path(conn, :document_checklist_show))
+          {:error, _changeset} ->
+            conn
+            |> put_flash(:error, "Something went wrong, please try again")
+            |> render("document_checklist_new.html", changeset: document_checklist_changeset)
+        end
+      {:error, document_checklist_changeset} ->
+        render(conn, "document_checklist_new.html", changeset: document_checklist_changeset)
+    end
+  end
+
+  def document_checklist_show(%{assigns: %{current_user: user}} = conn, _params) do
+    case Repo.get_by(Answer, user_id: user.id) do
+      nil ->
+        conn
+        |> put_flash(:error, "You need to fill out the document checklist questions before seeing the template")
+        |> redirect(to: page_path(conn, :first_days_index))
+      answer ->
+        render(conn, "document_checklist_show.html", answers: answer.document_checklist)
+    end
+  end
+
+  def document_checklist_edit(%{assigns: %{current_user: user}} = conn, params) do
+    case Repo.get_by(Answer, user_id: user.id) do
+      nil ->
+        conn
+        |> redirect(to: form_path(conn, :document_checklist_new))
+      answer ->
+        changeset =
+          answer
+          |> Map.get(:document_checklist)
+          |> Map.from_struct
+          |> (&DocumentChecklist.changeset(%DocumentChecklist{}, &1)).()
+        render(conn, "document_checklist_edit.html", changeset: changeset)
+    end
+  end
+
+  def document_checklist_update(%{assigns: %{current_user: user}} = conn, %{"document_checklist" => document_checklist}) do
+    case DocumentChecklist.validate_form(%DocumentChecklist{}, document_checklist) do
+      {:ok, _document_checklist_changeset} ->
+        answer = Repo.get_by!(Answer, user_id: user.id)
+        updated_answer = %{document_checklist: document_checklist}
+        answer_changeset = Answer.changeset(answer, updated_answer)
+        document_checklist_changeset = DocumentChecklist.changeset(%DocumentChecklist{}, document_checklist)
+        case Repo.update(answer_changeset) do
+          {:ok, answer} ->
+            conn
+            |> redirect(to: form_path(conn, :document_checklist_show))
+          {:error, changeset} ->
+            conn
+            |> put_flash(:error, "Something went wrong, please try again")
+            |> render("document_checklist_edit.html", changeset: document_checklist_changeset)
+        end
+      {:error, document_checklist_changeset} ->
+        render(conn, "document_checklist_edit.html", changeset: document_checklist_changeset)
+    end
+  end
+
 #   # PREPARATION ACTIONS
-#
-#   def preparation_new(conn, _params) do
-#     changeset = Preparation.changeset(%Preparation{}, %{})
-#     render(conn, "preparation_new.html", changeset: changeset)
-#   end
-#
-#   def preparation_create(%{assigns: %{current_user: user}} = conn, %{"preparation" => preparation}) do
-#     case Preparation.validate_form(%Preparation{}, preparation) do
-#       {:ok, _preparation_changeset} ->
-#         stage = Repo.get_by!(Stage, stage: "preparation_form")
-#         answer = %Answer{answers: preparation, user: user, stage: stage}
-#         answer_changeset = Answer.changeset(answer, %{})
-#         preparation_changeset = Preparation.changeset(%Preparation{}, preparation)
-#         case Repo.insert(answer_changeset) do
-#           {:ok, answer} ->
-#             conn
-#             |> redirect(to: form_path(conn, :preparation_show))
-#           {:error, _changeset} ->
-#             conn
-#             |> put_flash(:error, "Something went wrong, please try again")
-#             |> render("preparation_new.html", changeset: preparation_changeset)
-#         end
-#       {:error, preparation_changeset} ->
-#         render(conn, "preparation_new.html", changeset: preparation_changeset)
-#     end
-#   end
-#
-#   def preparation_show(%{assigns: %{current_user: user}} = conn, _params) do
-#     stage = Repo.get_by!(Stage, stage: "preparation_form")
-#     case Repo.get_by(Answer, stage_id: stage.id, user_id: user.id) do
-#       nil ->
-#         conn
-#         |> put_flash(:error, "You need to fill out the first day preparation questions before seeing the template")
-#         |> redirect(to: page_path(conn, :first_days_index))
-#       answer ->
-#         render(conn, "preparation_show.html", answers: answer.answers)
-#     end
-#   end
-#
-#   def preparation_edit(%{assigns: %{current_user: user}} = conn, params) do
-#     stage = Repo.get_by!(Stage, stage: "preparation_form")
-#     case Repo.get_by(Answer, stage_id: stage.id, user_id: user.id) do
-#       nil ->
-#         conn
-#         |> redirect(to: form_path(conn, :preparation_new))
-#       answer ->
-#         changeset =
-#           answer
-#           |> Map.get(:answers)
-#           |> (&Preparation.changeset(%Preparation{}, &1)).()
-#         render(conn, "preparation_edit.html", changeset: changeset)
-#     end
-#   end
-#
-#   def preparation_update(%{assigns: %{current_user: user}} = conn, %{"preparation" => preparation}) do
-#     case Preparation.validate_form(%Preparation{}, preparation) do
-#       {:ok, _preparation_changeset} ->
-#         stage = Repo.get_by!(Stage, stage: "preparation_form")
-#         answer = Repo.get_by!(Answer, stage_id: stage.id, user_id: user.id)
-#         updated_answer = %{answers: preparation, user: user, stage: stage}
-#         answer_changeset = Answer.changeset(answer, updated_answer)
-#         preparation_changeset = Preparation.changeset(%Preparation{}, preparation)
-#         case Repo.update(answer_changeset) do
-#           {:ok, answer} ->
-#             conn
-#             |> redirect(to: form_path(conn, :preparation_show))
-#           {:error, changeset} ->
-#             conn
-#             |> put_flash(:error, "Something went wrong, please try again")
-#             |> render("preparation_edit.html", changeset: preparation_changeset)
-#         end
-#       {:error, preparation_changeset} ->
-#         render(conn, "preparation_edit.html", changeset: preparation_changeset)
-#     end
-#   end
-#
-#   def feedback_show(conn, _params) do
-#     render conn, "feedback_show.html"
-#   end
-#
+
+  def preparation_new(conn, _params) do
+    changeset = Preparation.changeset(%Preparation{}, %{})
+    render(conn, "preparation_new.html", changeset: changeset)
+  end
+
+  def preparation_create(%{assigns: %{current_user: user}} = conn, %{"preparation" => preparation}) do
+    case Preparation.validate_form(%Preparation{}, preparation) do
+      {:ok, _preparation_changeset} ->
+        answer = %Answer{user: user}
+        answer_changeset = Answer.changeset(answer, %{preparation: preparation})
+        preparation_changeset = Preparation.changeset(%Preparation{}, preparation)
+        case Repo.insert(answer_changeset) do
+          {:ok, answer} ->
+            conn
+            |> redirect(to: form_path(conn, :preparation_show))
+          {:error, _changeset} ->
+            conn
+            |> put_flash(:error, "Something went wrong, please try again")
+            |> render("preparation_new.html", changeset: preparation_changeset)
+        end
+      {:error, preparation_changeset} ->
+        render(conn, "preparation_new.html", changeset: preparation_changeset)
+    end
+  end
+
+  def preparation_show(%{assigns: %{current_user: user}} = conn, _params) do
+    case Repo.get_by(Answer, user_id: user.id) do
+      nil ->
+        conn
+        |> put_flash(:error, "You need to fill out the first day preparation questions before seeing the template")
+        |> redirect(to: page_path(conn, :first_days_index))
+      answer ->
+        render(conn, "preparation_show.html", answers: answer.answers)
+    end
+  end
+
+  def preparation_edit(%{assigns: %{current_user: user}} = conn, params) do
+    case Repo.get_by(Answer, user_id: user.id) do
+      nil ->
+        conn
+        |> redirect(to: form_path(conn, :preparation_new))
+      answer ->
+        IO.inspect answer, label: "answerwoo"
+        changeset =
+          answer
+          |> Map.get(:preparation)
+          |> Map.from_struct
+          |> (&Preparation.changeset(%Preparation{}, &1)).()
+        render(conn, "preparation_edit.html", changeset: changeset)
+    end
+  end
+
+  def preparation_update(%{assigns: %{current_user: user}} = conn, %{"preparation" => preparation}) do
+    case Preparation.validate_form(%Preparation{}, preparation) do
+      {:ok, _preparation_changeset} ->
+        answer = Repo.get_by!(Answer, user_id: user.id)
+        updated_answer = %{answers: preparation}
+        answer_changeset = Answer.changeset(answer, updated_answer)
+        preparation_changeset = Preparation.changeset(%Preparation{}, preparation)
+        case Repo.update(answer_changeset) do
+          {:ok, answer} ->
+            conn
+            |> redirect(to: form_path(conn, :preparation_show))
+          {:error, changeset} ->
+            conn
+            |> put_flash(:error, "Something went wrong, please try again")
+            |> render("preparation_edit.html", changeset: preparation_changeset)
+        end
+      {:error, preparation_changeset} ->
+        render(conn, "preparation_edit.html", changeset: preparation_changeset)
+    end
+  end
+
+  def feedback_show(conn, _params) do
+    render conn, "feedback_show.html"
+  end
+
 end
