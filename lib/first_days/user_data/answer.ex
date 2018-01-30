@@ -1,24 +1,22 @@
 defmodule FirstDays.UserData.Answer do
   use Ecto.Schema
   import Ecto.Changeset
-  alias FirstDays.{UserData.Answer, Accounts.User, State.Stage}
+  alias FirstDays.{UserData.Answer, Accounts.User, RoleDescription, DocumentChecklist, Preparation}
 
 
   schema "answers" do
-    field :answers, :map
+    embeds_one :role_description, RoleDescription
+    embeds_one :document_checklist, DocumentChecklist
+    embeds_one :preparation, Preparation
     belongs_to :user, User
-    belongs_to :stage, Stage
 
     timestamps()
   end
 
-  @service_quote_error_message "There are already answers for that use                                        r"
-
   @doc false
   def changeset(%Answer{} = answer, attrs) do
     answer
-    |> cast(attrs, [:answers])
-    |> unique_constraint(:unique_user_stage_pair, name: :unique_user_stage_pair, message: @user_stage_error_message)
-    |> validate_required([:answers])
+    |> cast(attrs, [])
+    |> Ecto.Changeset.cast_embed(:role_description)
   end
 end
