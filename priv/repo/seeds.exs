@@ -9,13 +9,3 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
-alias FirstDays.{State.Stage, Repo}
-alias Ecto.Multi
-
-stages =
-  Stage.stages()
-  |> Enum.map(fn x -> %{stage: x} end)
-
-Multi.new
-|> Multi.insert_all(:add_stages, Stage, stages)
-|> Repo.transaction
