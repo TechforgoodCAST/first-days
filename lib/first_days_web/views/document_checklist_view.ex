@@ -1,4 +1,4 @@
-defmodule FirstDaysWeb.FormView do
+defmodule FirstDaysWeb.DocumentChecklistView do
   use FirstDaysWeb, :view
 
   @humanised_documents %{
@@ -13,31 +13,11 @@ defmodule FirstDaysWeb.FormView do
     "proof_of_qualifications" => "Proof of qualifications"
   }
 
-  def finance_skills do
-    [
-    "Day to day bookkeeping. e.g. managing receipts, petty cash etc",
-    "Analysing/communicating management accounts e.g. to the trustees",
-    "Financial forecasting",
-    "Payroll",
-    "Pensions, Insurances, Investments"
-    ]
-  end
-
   def get_document_list(documents) do
     documents
     |> Map.delete("other_document")
     |> Map.to_list
     |> Enum.filter(fn({doc, string_bool}) -> string_bool != "false" end)
     |> Enum.map(fn({doc, _string_bool}) -> Map.get(@humanised_documents, doc) end)
-  end
-
-  def my_datetime_select(form, field, opts \\ []) do
-    builder = fn b ->
-      ~e"""
-      <%= b.(:day, [ class: "form-control" ]) %> / <%= b.(:month, [ class: "form-control" ]) %> / <%= b.(:year, [ class: "form-control" ]) %>
-      """
-    end
-
-    date_select(form, field, [builder: builder] ++ opts)
   end
 end

@@ -34,6 +34,6 @@
 <p>Charity number: <%= @answers.charity_number %></p>
 <p>Website: <%= @answers.website_link %></p>
 
-<%= link "Edit", to: form_path(@conn, :role_description_edit), class: "btn btn-primary" %>
+<%= link "Edit", to: role_description_path(@conn, :role_description_edit), class: "btn btn-primary" %>
 <span></span>
 <%= link "Home", to: page_path(@conn, :first_days_index), class: "btn btn-primary" %>

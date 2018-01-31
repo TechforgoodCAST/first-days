@@ -18,5 +18,7 @@ defmodule FirstDays.UserData.Answer do
     answer
     |> cast(attrs, [])
     |> Ecto.Changeset.cast_embed(:role_description)
+    |> Ecto.Changeset.cast_embed(:document_checklist)
+    |> Ecto.Changeset.cast_embed(:preparation)
   end
 end
