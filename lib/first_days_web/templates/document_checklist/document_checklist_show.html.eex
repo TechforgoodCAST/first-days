@@ -15,8 +15,8 @@
   <%= for document <- get_document_list(@answers) do %>
     <li><%= document %></li>
   <% end %>
-  <%= if @answers["other_document"] != "" do %>
-    <li><%= @answers["other_document"] %></li>
+  <%= if @answers.other_document != nil do %>
+    <li><%= @answers.other_document %></li>
   <% end %>
 </ul>
 

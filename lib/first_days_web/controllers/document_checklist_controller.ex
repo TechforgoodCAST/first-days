@@ -11,10 +11,10 @@ defmodule FirstDaysWeb.DocumentChecklistController do
   def document_checklist_create(%{assigns: %{current_user: user}} = conn, %{"document_checklist" => document_checklist}) do
     case DocumentChecklist.validate_form(%DocumentChecklist{}, document_checklist) do
       {:ok, _document_checklist_changeset} ->
-        answer = %Answer{user: user}
+        answer = Repo.get_by(Answer, user_id: user.id)
         answer_changeset = Answer.changeset(answer, %{document_checklist: document_checklist})
         document_checklist_changeset = DocumentChecklist.changeset(%DocumentChecklist{}, document_checklist)
-        case Repo.insert(answer_changeset) do
+        case Repo.update(answer_changeset) do
           {:ok, _answer} ->
             conn
             |> redirect(to: document_checklist_path(conn, :document_checklist_show))
@@ -58,8 +58,7 @@ defmodule FirstDaysWeb.DocumentChecklistController do
     case DocumentChecklist.validate_form(%DocumentChecklist{}, document_checklist) do
       {:ok, _document_checklist_changeset} ->
         answer = Repo.get_by!(Answer, user_id: user.id)
-        updated_answer = %{document_checklist: document_checklist}
-        answer_changeset = Answer.changeset(answer, updated_answer)
+        answer_changeset = Answer.changeset(answer, %{document_checklist: document_checklist})
         document_checklist_changeset = DocumentChecklist.changeset(%DocumentChecklist{}, document_checklist)
         case Repo.update(answer_changeset) do
           {:ok, _answer} ->
