@@ -1,6 +1,5 @@
 defmodule FirstDaysWeb.PreparationController do
   use FirstDaysWeb, :controller
-  import Ecto.Changeset
   alias FirstDays.{Repo, UserData.Answer, Preparation}
 
   def preparation_new(conn, _params) do
@@ -11,11 +10,11 @@ defmodule FirstDaysWeb.PreparationController do
   def preparation_create(%{assigns: %{current_user: user}} = conn, %{"preparation" => preparation}) do
     case Preparation.validate_form(%Preparation{}, preparation) do
       {:ok, _preparation_changeset} ->
-        answer = %Answer{user: user}
+        answer = Repo.get_by(Answer, user_id: user.id)
         answer_changeset = Answer.changeset(answer, %{preparation: preparation})
         preparation_changeset = Preparation.changeset(%Preparation{}, preparation)
-        case Repo.insert(answer_changeset) do
-          {:ok, answer} ->
+        case Repo.update(answer_changeset) do
+          {:ok, _answer} ->
             conn
             |> redirect(to: preparation_path(conn, :preparation_show))
           {:error, _changeset} ->
@@ -35,17 +34,16 @@ defmodule FirstDaysWeb.PreparationController do
         |> put_flash(:error, "You need to fill out the first day preparation questions before seeing the template")
         |> redirect(to: page_path(conn, :first_days_index))
       answer ->
-        render(conn, "preparation_show.html", answers: answer.answers)
+        render(conn, "preparation_show.html", answers: answer.preparation)
     end
   end
 
-  def preparation_edit(%{assigns: %{current_user: user}} = conn, params) do
+  def preparation_edit(%{assigns: %{current_user: user}} = conn, _params) do
     case Repo.get_by(Answer, user_id: user.id) do
       nil ->
         conn
         |> redirect(to: preparation_path(conn, :preparation_new))
       answer ->
-        IO.inspect answer, label: "answerwoo"
         changeset =
           answer
           |> Map.get(:preparation)
@@ -59,14 +57,13 @@ defmodule FirstDaysWeb.PreparationController do
     case Preparation.validate_form(%Preparation{}, preparation) do
       {:ok, _preparation_changeset} ->
         answer = Repo.get_by!(Answer, user_id: user.id)
-        updated_answer = %{answers: preparation}
-        answer_changeset = Answer.changeset(answer, updated_answer)
+        answer_changeset = Answer.changeset(answer, %{preparation: preparation})
         preparation_changeset = Preparation.changeset(%Preparation{}, preparation)
         case Repo.update(answer_changeset) do
-          {:ok, answer} ->
+          {:ok, _answer} ->
             conn
             |> redirect(to: preparation_path(conn, :preparation_show))
-          {:error, changeset} ->
+          {:error, _changeset} ->
             conn
             |> put_flash(:error, "Something went wrong, please try again")
             |> render("preparation_edit.html", changeset: preparation_changeset)
