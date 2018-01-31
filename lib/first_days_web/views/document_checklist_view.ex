@@ -18,7 +18,7 @@ defmodule FirstDaysWeb.DocumentChecklistView do
     |> Map.from_struct
     |> Map.drop([:id, :other_document])
     |> Map.to_list
-    |> Enum.filter(fn({doc, string_bool}) -> string_bool != false end)
+    |> Enum.filter(fn({_doc, string_bool}) -> string_bool != false end)
     |> Enum.map(fn({doc, _string_bool}) -> Map.get(@humanised_documents, doc) end)
   end
 end

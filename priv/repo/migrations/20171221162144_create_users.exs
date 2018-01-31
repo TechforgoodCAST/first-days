@@ -9,6 +9,7 @@ defmodule FirstDays.Repo.Migrations.CreateUsers do
       add :role_description, :map
       add :document_checklist, :map
       add :preparation, :map
+      add :stages, {:map, :boolean}
 
       timestamps()
     end

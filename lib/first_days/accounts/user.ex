@@ -9,12 +9,21 @@ defmodule FirstDays.Accounts.User do
     field :email, :string
     field :password, :string, virtual: true
     field :password_hash, :string
+    field :stages, {:map, :boolean}
     embeds_one :role_description, RoleDescription, on_replace: :update
     embeds_one :document_checklist, DocumentChecklist, on_replace: :update
     embeds_one :preparation, Preparation, on_replace: :update
 
     timestamps()
   end
+
+  @stages %{
+    "role_description" => false,
+    "confirmation_agreement" => false,
+    "document_checklist" => false,
+    "preparation" => false,
+    "feedback" => false
+  }
 
   @doc false
   def changeset(%User{} = user, attrs) do
@@ -24,6 +33,7 @@ defmodule FirstDays.Accounts.User do
     |> validate_required([:name, :email, :password])
     |> validate_length(:password, min: 6, max: 100)
     |> put_pass_hash()
+    |> put_change(:stages, @stages)
   end
 
   def answer_changeset(%User{} = user, attrs) do
