@@ -1,7 +1,7 @@
 defmodule FirstDays.Accounts.User do
   use Ecto.Schema
   import Ecto.Changeset
-  alias FirstDays.{UserData.Answer, Accounts.User}
+  alias FirstDays.{Accounts.User, RoleDescription, DocumentChecklist, Preparation}
 
 
   schema "users" do
@@ -9,7 +9,9 @@ defmodule FirstDays.Accounts.User do
     field :email, :string
     field :password, :string, virtual: true
     field :password_hash, :string
-    has_many :answer, Answer
+    embeds_one :role_description, RoleDescription, on_replace: :update
+    embeds_one :document_checklist, DocumentChecklist, on_replace: :update
+    embeds_one :preparation, Preparation, on_replace: :update
 
     timestamps()
   end
@@ -22,6 +24,14 @@ defmodule FirstDays.Accounts.User do
     |> validate_required([:name, :email, :password])
     |> validate_length(:password, min: 6, max: 100)
     |> put_pass_hash()
+  end
+
+  def answer_changeset(%User{} = user, attrs) do
+    user
+    |> cast(attrs, [])
+    |> Ecto.Changeset.cast_embed(:role_description)
+    |> Ecto.Changeset.cast_embed(:document_checklist)
+    |> Ecto.Changeset.cast_embed(:preparation)
   end
 
   defp put_pass_hash(changeset) do
