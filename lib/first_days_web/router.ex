@@ -18,7 +18,11 @@ defmodule FirstDaysWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    get "/first-days-index", PageController, :first_days_index
+    get "/landing", PageController, :landing
+    get "/finding-volunteer", PageController, :finding_volunteer
+    get "/preparation", PageController, :preparation
+    get "/feedback", PageController, :feedback
+    
     resources "/users", UserController
     resources "/sessions", SessionController, only: [:new, :create, :delete]
   end

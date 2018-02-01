@@ -114,5 +114,5 @@
 
   <%= submit "Submit", class: "btn btn-primary" %>
   <span></span>
-  <%= link "Home", to: page_path(@conn, :first_days_index), class: "btn btn-primary" %>
+  <%= link "Home", to: page_path(@conn, :landing), class: "btn btn-primary" %>
 <% end %>

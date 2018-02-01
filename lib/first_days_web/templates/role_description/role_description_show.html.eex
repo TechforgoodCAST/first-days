@@ -36,4 +36,4 @@
 
 <%= link "Edit", to: role_description_path(@conn, :role_description_edit), class: "btn btn-primary" %>
 <span></span>
-<%= link "Home", to: page_path(@conn, :first_days_index), class: "btn btn-primary" %>
+<%= link "Home", to: page_path(@conn, :landing), class: "btn btn-primary" %>
