@@ -41,6 +41,7 @@ defmodule FirstDaysWeb do
       import FirstDaysWeb.Router.Helpers
       import FirstDaysWeb.ErrorHelpers
       import FirstDaysWeb.Gettext
+      import FirstDaysWeb.ComponentHelpers
     end
   end
 
