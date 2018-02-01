@@ -2,10 +2,17 @@
 
 <p>First Days helps you to support volunteers through the recruitment process, from assessing your needs, right through to getting feedback on the volunteers first day.</p>
 
-<%= link "Finding a volunteer", to: page_path(@conn, :finding_volunteer), class: "btn btn-primary" %>
-<br/>
-<br/>
-<%= link "Getting your volunteer ready to start", to: page_path(@conn, :preparation), class: "btn btn-primary" %>
-<br/>
-<br/>
-<%= link "Collecting Feedback", to: page_path(@conn, :feedback), class: "btn btn-primary" %>
+<%= if @current_user.stages["role_description"] do %>
+  <%= link "Finding a volunteer", to: role_description_path(@conn, :role_description_show), class: "btn btn-primary" %>
+<% else %>
+  <%= link "Finding a volunteer", to: role_description_path(@conn, :role_description_new), class: "btn btn-primary" %>
+<% end %>
+
+<%= if @current_user.stages["document_checklist"] do %>
+  <%= link "Getting your volunteer ready to start", to: document_checklist_path(@conn, :document_checklist_show), class: "btn btn-primary" %>
+<% else %>
+  <%= link "Getting your volunteer ready to start", to: document_checklist_path(@conn, :document_checklist_new), class: "btn btn-primary" %>
+<% end %>
+
+
+<%= link "Collecting feedback", to: feedback_path(@conn, :feedback_show), class: "btn btn-primary" %>

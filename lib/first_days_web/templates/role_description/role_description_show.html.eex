@@ -35,6 +35,4 @@
 <p>Website: <%= @answers.website_link %></p>
 
 <%= link "Edit", to: role_description_path(@conn, :role_description_edit), class: "btn btn-primary" %>
-<span></span>
-<%= button "Send", to: stage_path(@conn, :update_stage), class: "btn btn-primary" %>
 <%= shared_component("post.html", action: stage_path(@conn, :update_stage), conn: @conn, field: :role_description, value: "true") %>
