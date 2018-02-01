@@ -44,6 +44,11 @@ defmodule FirstDays.Accounts.User do
     |> Ecto.Changeset.cast_embed(:preparation)
   end
 
+  def stage_changeset(%User{} = user, attrs) do
+    user
+    |> cast(attrs, [:stages])
+  end
+
   defp put_pass_hash(changeset) do
     case changeset do
       %Ecto.Changeset{valid?: true, changes: %{password: pass}} ->

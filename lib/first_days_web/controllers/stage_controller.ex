@@ -1,0 +1,27 @@
+defmodule FirstDaysWeb.StageController do
+  use FirstDaysWeb, :controller
+  alias FirstDays.Accounts
+
+  def update_stage(%{assigns: %{current_user: user}} = conn, params) do
+    update_stages =
+      params
+      |> Enum.map(fn({k, v}) -> {k, string_to_bool(v)} end)
+      |> Enum.into(%{})
+      |> Map.take(["role_description", "confirmation_agreement", "document_checklist", "preparation", "feedback"])
+
+    updated_stages = Map.merge(user.stages, update_stages)
+
+    case Accounts.update_user_stage(user, %{stages: updated_stages}) do
+      {:ok, _user} ->
+        conn
+        |> redirect(to: page_path(conn, :landing))
+      {:error, _changeset} ->
+        conn
+        |> put_flash(:error, "Something went wrong, please try again")
+        |> redirect(to: page_path(conn, :landing))
+    end
+  end
+
+  defp string_to_bool("true"), do: true
+  defp string_to_bool(_string), do: false
+end

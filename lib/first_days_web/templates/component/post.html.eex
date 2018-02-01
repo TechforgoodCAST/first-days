@@ -1,0 +1,4 @@
+<%= form_for @conn, @action, [], fn f -> %>
+    <%= hidden_input f, @field, value: @value %>
+  <%= submit "Save", class: "btn btn-primary" %>
+<% end %>
