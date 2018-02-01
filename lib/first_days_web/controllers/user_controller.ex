@@ -2,8 +2,7 @@ defmodule FirstDaysWeb.UserController do
   use FirstDaysWeb, :controller
   plug :authenticate_user when action in [:index, :show]
 
-  alias FirstDays.Accounts
-  alias FirstDays.Accounts.User
+  alias FirstDays.{Accounts, Accounts.User, Email, Mailer}
 
   def index(conn, _params) do
     users = Accounts.list_users()
@@ -15,10 +14,10 @@ defmodule FirstDaysWeb.UserController do
     render(conn, "new.html", changeset: changeset)
   end
 
-  # TODO: set the default user stage to be "role_description_form"
   def create(conn, %{"user" => user_params}) do
     case Accounts.create_user(user_params) do
       {:ok, user} ->
+        Email.welcome_email(%{current_user: user}) |> Mailer.deliver_later
         conn
         |> FirstDaysWeb.Auth.login(user)
         |> put_flash(:success, "Thank you for signing up!")
