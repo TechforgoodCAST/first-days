@@ -12,11 +12,11 @@
 <br/>
 <div><%= link "3. Volunteer agreement", to: confirmation_agreement_path(@conn, :confirmation_agreement_show) %></div>
 <br/>
-<div><%= link "4. Answer questions to help us create a list of documents the volunteer needs to provide", to: document_checklist_path(@conn, :document_checklist_edit) %></div>
+<div><%= link "4. Answer questions to help us create a list of documents the volunteer needs to provide", to: document_checklist_path(@conn, :document_checklist_new) %></div>
 <br/>
 <div><%= link "5. Document Checklist template", to: document_checklist_path(@conn, :document_checklist_show) %></div>
 <br/>
-<div><%= link "6. Answer questions to help us create an email informing the volunteer of everything they need to prepare for their first day", to: preparation_path(@conn, :preparation_edit) %></div>
+<div><%= link "6. Answer questions to help us create an email informing the volunteer of everything they need to prepare for their first day", to: preparation_path(@conn, :preparation_new) %></div>
 <br/>
 <div><%= link "7. First day preparation email template", to: preparation_path(@conn, :preparation_show) %></div>
 <br/>
