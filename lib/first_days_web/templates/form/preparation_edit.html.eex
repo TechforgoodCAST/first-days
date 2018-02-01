@@ -1,3 +1,0 @@
-<h2>Edit Preparation Answers</h2>
-
-<%= render "preparation_form.html", Map.merge(assigns, %{action: form_path(@conn, :preparation_update), method: :put}) %>

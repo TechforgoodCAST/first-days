@@ -26,27 +26,27 @@ defmodule FirstDaysWeb.Router do
   scope "/forms", FirstDaysWeb do
     pipe_through [:browser, :authenticate_user]
 
-    get "/role-description-new", FormController, :role_description_new
-    post "/role-description-create", FormController, :role_description_create
-    get "/role-description-show", FormController, :role_description_show
-    get "/role-description-edit", FormController, :role_description_edit
-    put "/role-description-update", FormController, :role_description_update
+    get "/role-description-new", RoleDescriptionController, :role_description_new
+    post "/role-description-create", RoleDescriptionController, :role_description_create
+    get "/role-description-show", RoleDescriptionController, :role_description_show
+    get "/role-description-edit", RoleDescriptionController, :role_description_edit
+    put "/role-description-update", RoleDescriptionController, :role_description_update
 
-    get "/confirmation-agreement-show", FormController, :confirmation_agreement_show
+    get "/confirmation-agreement-show", ConfirmationAgreementController, :confirmation_agreement_show
 
-    get "/document-checklist-new", FormController, :document_checklist_new
-    post "/document-checklist-create", FormController, :document_checklist_create
-    get "/document-checklist-show", FormController, :document_checklist_show
-    get "/document-checklist-edit", FormController, :document_checklist_edit
-    put "/document-checklist-update", FormController, :document_checklist_update
+    get "/document-checklist-new", DocumentChecklistController, :document_checklist_new
+    post "/document-checklist-create", DocumentChecklistController, :document_checklist_create
+    get "/document-checklist-show", DocumentChecklistController, :document_checklist_show
+    get "/document-checklist-edit", DocumentChecklistController, :document_checklist_edit
+    put "/document-checklist-update", DocumentChecklistController, :document_checklist_update
 
-    get "/preparation-new", FormController, :preparation_new
-    post "/preparation-create", FormController, :preparation_create
-    get "/preparation-show", FormController, :preparation_show
-    get "/preparation-edit", FormController, :preparation_edit
-    put "/preparation-update", FormController, :preparation_update
+    get "/preparation-new", PreparationController, :preparation_new
+    post "/preparation-create", PreparationController, :preparation_create
+    get "/preparation-show", PreparationController, :preparation_show
+    get "/preparation-edit", PreparationController, :preparation_edit
+    put "/preparation-update", PreparationController, :preparation_update
 
-    get "/feedback-show", FormController, :feedback_show
+    get "/feedback-show", FeedbackController, :feedback_show
   end
 
   # Other scopes may use custom stacks.

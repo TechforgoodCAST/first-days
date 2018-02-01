@@ -15,8 +15,8 @@
   <%= for document <- get_document_list(@answers) do %>
     <li><%= document %></li>
   <% end %>
-  <%= if @answers["other_document"] != "" do %>
-    <li><%= @answers["other_document"] %></li>
+  <%= if @answers.other_document != nil do %>
+    <li><%= @answers.other_document %></li>
   <% end %>
 </ul>
 
@@ -24,6 +24,6 @@
 
 <p>Many thanks</p>
 
-<%= link "Edit", to: form_path(@conn, :document_checklist_edit), class: "btn btn-primary" %>
+<%= link "Edit", to: document_checklist_path(@conn, :document_checklist_edit), class: "btn btn-primary" %>
 <span></span>
 <%= link "Home", to: page_path(@conn, :first_days_index), class: "btn btn-primary" %>
