@@ -21,6 +21,7 @@ defmodule FirstDaysWeb.Router do
     get "/first-days-index", PageController, :first_days_index
     resources "/users", UserController
     resources "/sessions", SessionController, only: [:new, :create, :delete]
+    resources "/forgot-password", PasswordController, only: [:new, :create, :edit, :update]
   end
 
   scope "/forms", FirstDaysWeb do

@@ -44,6 +44,13 @@ defmodule FirstDays.Accounts.User do
     |> Ecto.Changeset.cast_embed(:preparation)
   end
 
+  def email_changeset(%User{} = user, attrs \\ %{}) do
+    user
+    |> cast(attrs, [:email])
+    |> validate_required([:email])
+  end
+
+
   defp put_pass_hash(changeset) do
     case changeset do
       %Ecto.Changeset{valid?: true, changes: %{password: pass}} ->
