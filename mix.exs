@@ -20,7 +20,7 @@ defmodule FirstDays.Mixfile do
   def application do
     [
       mod: {FirstDays.Application, []},
-      extra_applications: [:logger, :runtime_tools, :comeonin, :bamboo]
+      extra_applications: [:logger, :runtime_tools]
     ]
   end
 
@@ -43,7 +43,8 @@ defmodule FirstDays.Mixfile do
       {:cowboy, "~> 1.0"},
       {:comeonin, "~> 4.0.0"},
       {:bcrypt_elixir, "~> 0.12"},
-      {:bamboo, "~> 0.8"}
+      {:bamboo, "~> 0.8"},
+      {:timex, "~> 3.0"}
     ]
   end
 
