@@ -13,6 +13,8 @@ defmodule FirstDays.Accounts.User do
     embeds_one :role_description, RoleDescription, on_replace: :update
     embeds_one :document_checklist, DocumentChecklist, on_replace: :update
     embeds_one :preparation, Preparation, on_replace: :update
+    field :reset_password_token, :string
+    field :reset_token_sent_at, :utc_datetime
 
     timestamps()
   end
@@ -31,7 +33,7 @@ defmodule FirstDays.Accounts.User do
     |> cast(attrs, [:name, :email, :password])
     |> unique_constraint(:email)
     |> validate_required([:name, :email, :password])
-    |> validate_length(:password, min: 6, max: 100)
+    |> validate_password()
     |> put_pass_hash()
     |> put_change(:stages, @stages)
   end
@@ -43,6 +45,34 @@ defmodule FirstDays.Accounts.User do
     |> Ecto.Changeset.cast_embed(:document_checklist)
     |> Ecto.Changeset.cast_embed(:preparation)
   end
+
+  def email_changeset(%User{} = user, attrs \\ %{}) do
+    user
+    |> cast(attrs, [:email])
+    |> validate_required([:email])
+  end
+
+  def password_token_changeset(%User{} = user, attrs \\ %{}) do
+    user
+    |> cast(attrs, [:reset_password_token, :reset_token_sent_at])
+  end
+
+  def new_password_changeset(%User{} = user, params \\ %{}) do
+    message = "Passwords do not match"
+    user
+    |> cast(params, [:password])
+    |> validate_required([:password])
+    |> validate_confirmation(:password, required: true, message: message)
+    |> validate_password()
+    |> put_pass_hash()
+  end
+
+  defp validate_password(changeset) do
+    changeset
+    |> validate_required([:password])
+    |> validate_length(:password, min: 6, max: 100)
+  end
+
 
   defp put_pass_hash(changeset) do
     case changeset do

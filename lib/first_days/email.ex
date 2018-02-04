@@ -9,4 +9,12 @@ defmodule FirstDays.Email do
     |> assign(:current_user, current_user)
     |> render(:welcome_email)
   end
+
+  def reset_password_email(to_email, token) do
+    new_email()
+    |> to(to_email)
+    |> from("ivan@wearecast.org.uk")
+    |> subject("Reset passwords instructions")
+    |> text_body("Please visit http://localhost:4000/forgot-password/#{token}/edit to reset your password")
+  end
 end

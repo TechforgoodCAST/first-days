@@ -76,7 +76,7 @@ defmodule FirstDays.Accounts do
   def update_user_answers(%User{} = user, attrs) do
     user
     |> User.answer_changeset(attrs)
-    |> Repo.update
+    |> Repo.update()
   end
 
 

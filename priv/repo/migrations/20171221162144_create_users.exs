@@ -10,6 +10,8 @@ defmodule FirstDays.Repo.Migrations.CreateUsers do
       add :document_checklist, :map
       add :preparation, :map
       add :stages, {:map, :boolean}
+      add :reset_password_token, :string
+      add :reset_token_sent_at, :utc_datetime
 
       timestamps()
     end
