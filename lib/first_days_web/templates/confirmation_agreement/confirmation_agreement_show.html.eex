@@ -41,4 +41,4 @@
 <p>Signed:</p>
 <p>Date:</p>
 
-<%= link "Home", to: page_path(@conn, :first_days_index), class: "btn btn-primary" %>
+<%= shared_component("post.html", action: stage_path(@conn, :update_stage), conn: @conn, stage: :confirmation_agreement, redirect_to: :get_them_ready) %>

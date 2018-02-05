@@ -1,0 +1,43 @@
+<h1>Getting them ready</h1>
+
+<%= if @current_user.stages["confirmation_agreement"] do %>
+  <%= shared_component("status.html", content: "Agreement", class: "bg-blue") %>
+<% else %>
+  <%= shared_component("status.html", content: "Agreement", class: "bg-red") %>
+<% end %>
+
+<%= if @current_user.stages["document_checklist"] do %>
+  <%= shared_component("status.html", content: "Document list", class: "bg-blue") %>
+<% else %>
+  <%= shared_component("status.html", content: "Document list", class: "bg-red") %>
+<% end %>
+
+<%= if @current_user.stages["preparation"] do %>
+  <%= shared_component("status.html", content: "Prep email", class: "bg-blue") %>
+<% else %>
+  <%= shared_component("status.html", content: "Prep email", class: "bg-red") %>
+<% end %>
+
+
+<br/>
+<br/>
+
+
+<%= link "Volunteer agreement template", to: confirmation_agreement_path(@conn, :confirmation_agreement_show), class: "btn btn-primary" %>
+
+<%= if @current_user.stages["document_checklist"] do %>
+  <%= link "Collect important documents", to: document_checklist_path(@conn, :document_checklist_show), class: "btn btn-primary" %>
+<% else %>
+  <%= link "Collect important documents", to: document_checklist_path(@conn, :document_checklist_new), class: "btn btn-primary" %>
+<% end %>
+
+<%= if @current_user.stages["preparation"] do %>
+  <%= link "Start date preparation email", to: preparation_path(@conn, :preparation_show), class: "btn btn-primary" %>
+<% else %>
+  <%= link "Start date preparation email", to: preparation_path(@conn, :preparation_new), class: "btn btn-primary" %>
+<% end %>
+
+<br/>
+<br/>
+
+<%= link "Home", to: page_path(@conn, :landing), class: "btn btn-primary" %>

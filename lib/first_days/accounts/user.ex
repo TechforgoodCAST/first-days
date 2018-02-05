@@ -46,6 +46,11 @@ defmodule FirstDays.Accounts.User do
     |> Ecto.Changeset.cast_embed(:preparation)
   end
 
+  def stage_changeset(%User{} = user, attrs) do
+    user
+    |> cast(attrs, [:stages])
+  end
+
   def email_changeset(%User{} = user, attrs \\ %{}) do
     user
     |> cast(attrs, [:email])

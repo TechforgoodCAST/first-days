@@ -79,6 +79,12 @@ defmodule FirstDays.Accounts do
     |> Repo.update()
   end
 
+  def update_user_stage(%User{} = user, attrs) do
+    user
+    |> User.stage_changeset(attrs)
+    |> Repo.update
+  end
+
 
   @doc """
   Deletes a User.
