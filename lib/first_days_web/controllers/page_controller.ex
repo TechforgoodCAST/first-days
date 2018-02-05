@@ -16,15 +16,7 @@ defmodule FirstDaysWeb.PageController do
     render conn, "landing.html"
   end
 
-  def finding_volunteer(conn, _params) do
-    render conn, "finding_volunteer.html"
-  end
-
   def get_them_ready(conn, _params) do
     render conn, "get_them_ready.html"
-  end
-
-  def feedback(conn, _params) do
-    render conn, "feedback.html"
   end
 end
