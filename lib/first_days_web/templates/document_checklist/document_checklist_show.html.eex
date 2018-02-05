@@ -25,4 +25,4 @@
 <p>Many thanks</p>
 
 <%= link "Edit", to: document_checklist_path(@conn, :document_checklist_edit), class: "btn btn-primary" %>
-<%= shared_component("post.html", action: stage_path(@conn, :update_stage), conn: @conn, field: :document_checklist, value: "true") %>
+<%= shared_component("post.html", action: stage_path(@conn, :update_stage), conn: @conn, stage: :document_checklist, redirect_to: :landing) %>

@@ -13,8 +13,9 @@ defmodule FirstDaysWeb.StageController do
 
     case Accounts.update_user_stage(user, %{stages: updated_stages}) do
       {:ok, _user} ->
+        redirect_to = String.to_atom(params["redirect_to"])
         conn
-        |> redirect(to: page_path(conn, :landing))
+        |> redirect(to: page_path(conn, redirect_to))
       {:error, _changeset} ->
         conn
         |> put_flash(:error, "Something went wrong, please try again")

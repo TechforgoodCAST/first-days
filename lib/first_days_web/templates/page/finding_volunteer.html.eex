@@ -1,3 +1,0 @@
-finding volunteer
-
-<%= shared_component("link.html", content: "Finding a volunteer", to: role_description_path(@conn, :role_description_new)) %>
