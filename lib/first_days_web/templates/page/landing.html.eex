@@ -14,7 +14,14 @@
 <% else %>
   <%= link "Getting your volunteer ready to start", to: document_checklist_path(@conn, :document_checklist_new), class: "btn btn-primary" %>
 <% end %>
+
+<!-- test components -->
 <%= shared_component("card.html", class: "w-50") %>
+<%= shared_component("button_main.html", content: "login", wrapper_class: "w-25 bg-blue", content_class: "white") %>
+<%= shared_component("button_main.html", content: "login", wrapper_class: "w-25 b--blue bw1 ba", content_class: "mv0 blue") %>
+<%= shared_component("button_square.html",icon: "", alt: "send") %>
+<%= shared_component("input_field.html", content: "Email", width: "w-30") %>
+<%= shared_component("text_area.html", content: "In a few sentences, what does your organisation do?", width: "w-60", content_help: "Helper text for a form control. Can use this text to ") %>
 
 
 <%= link "Collecting feedback", to: feedback_path(@conn, :feedback_show), class: "btn btn-primary" %>

@@ -89,7 +89,7 @@
   --box-shadow-4: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
   --box-shadow-5: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
 
-  --black: #000;
+  --black: #0B0C0C;
   --near-black: #111;
   --dark-gray: #333;
   --mid-gray: #555;
@@ -143,11 +143,11 @@
   --pink: #ff80cc;
   --light-pink: #ffa3d7;
   --dark-green: #137752;
-  --green: #19a974;
+  --green: #00836A;
   --light-green: #9eebcf;
   --navy: #001b44;
   --dark-blue: #00449e;
-  --blue: #357edd;
+  --blue: #4169E1;
   --light-blue: #96ccff;
   --lightest-blue: #cdecff;
   --washed-blue: #f6fffe;
