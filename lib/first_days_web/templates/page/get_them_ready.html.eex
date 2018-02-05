@@ -26,13 +26,18 @@
 <%= link "Volunteer agreement template", to: confirmation_agreement_path(@conn, :confirmation_agreement_show), class: "btn btn-primary" %>
 
 <%= if @current_user.stages["document_checklist"] do %>
-  <%= link "Getting your volunteer ready to start", to: document_checklist_path(@conn, :document_checklist_show), class: "btn btn-primary" %>
+  <%= link "Collect important documents", to: document_checklist_path(@conn, :document_checklist_show), class: "btn btn-primary" %>
 <% else %>
-  <%= link "Getting your volunteer ready to start", to: document_checklist_path(@conn, :document_checklist_new), class: "btn btn-primary" %>
+  <%= link "Collect important documents", to: document_checklist_path(@conn, :document_checklist_new), class: "btn btn-primary" %>
 <% end %>
 
 <%= if @current_user.stages["preparation"] do %>
-  <%= link "Start date preparation email", to: preparation_path(@conn, :prepartion_show), class: "btn btn-primary" %>
+  <%= link "Start date preparation email", to: preparation_path(@conn, :preparation_show), class: "btn btn-primary" %>
 <% else %>
   <%= link "Start date preparation email", to: preparation_path(@conn, :preparation_new), class: "btn btn-primary" %>
 <% end %>
+
+<br/>
+<br/>
+
+<%= link "Home", to: page_path(@conn, :landing), class: "btn btn-primary" %>
