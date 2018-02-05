@@ -1,0 +1,7 @@
+<p>Dear <%= @current_user.name %>,</p>
+
+<p>Congratulations, you have successfully registered for First Days. We will guide you through the process of recruiting your volunteers, from assessing your needs through to getting feedback from your volunteer once they have commenced volunteering.</p>
+<p>You will also be shown helpful tips and links to help you in your volunteer recruitment and management process.</p>
+
+<p>Kind Regards,</p>
+<p>First Days</p>
