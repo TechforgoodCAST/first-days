@@ -1,0 +1,3 @@
+<div class="<%= "bg-green #{assigns[:class]}" %>">
+  hello
+</div>
