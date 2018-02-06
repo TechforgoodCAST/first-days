@@ -3,5 +3,5 @@
     <img src="<%= @image %>">
   </div>
   <p class="<%= "#{sub_header} mb4" %>"><%= @sub_header_content %></p>
-  <%= shared_component("button_main.html", content: @button_content, wrapper_class: "bg-blue w-80-ns", content_class: "white") %>
+  <%= shared_component("button_main.html", content: @button_content, wrapper_class: "bg-blue w-80-ns", content_class: "white", link: @link) %>
 </div>

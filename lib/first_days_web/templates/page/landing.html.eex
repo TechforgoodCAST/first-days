@@ -20,32 +20,30 @@
   </div>
 </section>
 
+<%
+  role_description_link =
+    if @current_user.stages["role_description"] do
+     role_description_path(@conn, :role_description_show)
+    else
+      role_description_link = role_description_path(@conn, :role_description_new)
+    end
+
+  role_description_button_content =
+    if @current_user.stages["role_description"] do
+      "View template"
+    else
+      "Create a description"
+    end
+%>
+
 <section>
   <div class="flex flex-row">
     <div class="<%= "w-two-thirds-ns mr2 #{card} mv2 flex flex-row" %>">
-
-      <%= shared_component("stage_card.html", image: "/images/search_big.svg", sub_header_content: "Finding a volunteer", button_content: "Create description") %>
-      <%= shared_component("stage_card.html", image: "/images/prepare_big.svg", sub_header_content: "Getting your volunteer ready to start", button_content: "Get them ready") %>
-      <%= shared_component("stage_card.html", image: "/images/feedback_big.svg", sub_header_content: "Collecting feeback", button_content: "View feedback") %>
-
-
-
+      <%= shared_component("stage_card.html", image: "/images/search_big.svg", sub_header_content: "Finding a volunteer", button_content: role_description_button_content, link: role_description_link) %>
+      <%= shared_component("stage_card.html", image: "/images/prepare_big.svg", sub_header_content: "Getting your volunteer ready to start", button_content: "Get them ready", link: page_path(@conn, :get_them_ready)) %>
+      <%= shared_component("stage_card.html", image: "/images/feedback_big.svg", sub_header_content: "Collecting feeback", button_content: "View template", link: feedback_path(@conn, :feedback_show)) %>
     </div>
     <div class="<%= "w-third-ns ml2 #{card} mv2" %>">
     </div>
   </div>
 </section>
-
-<%= if @current_user.stages["role_description"] do %>
-  <%= link "Finding a volunteer", to: role_description_path(@conn, :role_description_show), class: "btn btn-primary" %>
-<% else %>
-  <%= link "Finding a volunteer", to: role_description_path(@conn, :role_description_new), class: "btn btn-primary" %>
-<% end %>
-
-<%= if @current_user.stages["document_checklist"] do %>
-  <%= link "Getting your volunteer ready to start", to: document_checklist_path(@conn, :document_checklist_show), class: "btn btn-primary" %>
-<% else %>
-  <%= link "Getting your volunteer ready to start", to: document_checklist_path(@conn, :document_checklist_new), class: "btn btn-primary" %>
-<% end %>
-
-<%= link "Collecting feedback", to: feedback_path(@conn, :feedback_show), class: "btn btn-primary" %>
