@@ -36,6 +36,8 @@
       <p class="ma0"><%= get_flash(@conn, :error) %></p>
 
       <main class="mw9-ns center">
+        <%= render @view_module, @view_template, assigns %>
+      </main>
       <!-- <%= if @current_user do %>
         <%= if @current_user.stages["role_description"] do %>
           <%= shared_component("status.html", content: "Find a volunteer", class: "bg-green") %>
@@ -57,12 +59,6 @@
 
       <% end %> -->
 
-
-      <main role="main">
-        <%= render @view_module, @view_template, assigns %>
-      </main>
-
-    </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
