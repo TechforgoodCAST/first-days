@@ -128,3 +128,9 @@ a {
   text-decoration: none;
   outline: 0;
 }
+
+a:hover,
+a:active,
+a:focus {
+  outline: 0;
+}

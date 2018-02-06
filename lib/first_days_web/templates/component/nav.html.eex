@@ -1,4 +1,0 @@
-<nav class="w-100 h3 bb b--blue flex justify-between items-center bg-white">
-  <a class="f4 lh-copy b blue link no-underline flex items-center pa2 dib ml4">First Days</a>
-  <%= shared_component("button_main.html", content: "Log out", wrapper_class: "w4 b--blue bw1 ba flex items-center h2 mr4", content_class: "mv0 blue") %>
-</nav>

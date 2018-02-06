@@ -14,7 +14,12 @@
 
   <body>
 
-  <%= shared_component("nav.html")%>
+  <%= if @current_user do %>
+    <%= shared_component("logged_in_nav.html", conn: @conn, current_user: @current_user)%>
+  <% else %>
+    <%= shared_component("logged_out_nav.html", conn: @conn)%>
+  <% end %>
+
 
     <!-- <div class="container">
       <header class="header">
