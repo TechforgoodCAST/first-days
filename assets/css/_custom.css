@@ -1,50 +1,13 @@
 * {
-  font-family: 'Cantarell', sans-serif;
+  font-family: "Cantarell", sans-serif;
 }
 
 body {
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
+  margin: 0;
 }
-
-body p {
-  font-size: 20px;
-}
-
-body label {
-  font-size: 18px;
-}
-
-body a {
-  font-size: 20px;
-}
-
-body li {
-  font-size: 20px;
-}
-
-body .btn {
-  font-size: 20px;
-}
-
-body .form-control {
-  font-size: 18px;
-  height: 40px;
-  margin: 10px 0;
-}
-
-body h3 {
-  font-size: 27px;
-}
-
-.my-date .form-control {
-  width: 150px;
-  display: inline-block;
-}
-
-
 
 .multiple-choice {
-
   display: block;
   float: none;
   clear: left;
@@ -67,8 +30,8 @@ body h3 {
     z-index: 1;
 
     /* // IE8 doesn’t support pseudoelements, so we don’t want to hide native elements there. */
-      margin: 0;
-      opacity: 0;
+    margin: 0;
+    opacity: 0;
   }
 
   label {
@@ -85,11 +48,11 @@ body h3 {
     } */
   }
 
-  [type=radio] + label::before {
+  [type="radio"] + label::before {
     content: "";
     border: 2px solid;
     background: transparent;
-    border-color: #4169E1;
+    border-color: #4169e1;
     width: 34px;
     height: 34px;
     position: absolute;
@@ -98,10 +61,10 @@ body h3 {
     border-radius: 50%;
   }
 
-  [type=radio] + label::after {
+  [type="radio"] + label::after {
     content: "";
     border: 10px solid;
-    border-color: #4169E1;
+    border-color: #4169e1;
     width: 0;
     height: 0;
     position: absolute;
@@ -111,7 +74,7 @@ body h3 {
     opacity: 0;
   }
 
-  [type=checkbox] + label::before {
+  [type="checkbox"] + label::before {
     content: "";
     border: 2px solid;
     background: transparent;
@@ -122,7 +85,7 @@ body h3 {
     left: 0;
   }
 
-  [type=checkbox] + label::after {
+  [type="checkbox"] + label::after {
     content: "";
     border: solid;
     border-width: 0 0 5px 5px;
@@ -142,11 +105,11 @@ body h3 {
     /* @include opacity(0); */
   }
 
-  [type=radio]:focus + label::before {
+  [type="radio"]:focus + label::before {
     /* @include box-shadow(0 0 0 4px $focus-colour); */
   }
 
-  [type=checkbox]:focus + label::before {
+  [type="checkbox"]:focus + label::before {
     /* @include box-shadow(0 0 0 3px $focus-colour); */
   }
 

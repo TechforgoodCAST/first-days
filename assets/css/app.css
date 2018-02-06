@@ -1,5 +1,7 @@
 /* This file is for your main application css. */
 
+@import "./_reset.css";
+
 /* import tachyons modules */
 
 @import "tachyons-custom/src/_box-sizing";

@@ -1,7 +1,55 @@
-<h1>First Days</h1>
+<section>
+  <div class="w-two-thirds-ns cf pt0">
+    <%= shared_component("tab.html", class: "fl pr2 w-third", content: "Tab") %>
+    <%= shared_component("tab.html", class: "fl pr2 w-third", content: "Tab") %>
+    <%= shared_component("tab.html", class: "fl pr2 w-third", content: "Tab") %>
+  </div>
+</section>
 
-<p>First Days helps you to support volunteers through the recruitment process, from assessing your needs, right through to getting feedback on the volunteers first day.</p>
+<section>
+  <div class="<%= "#{card} mt2 mb3" %>">
+    <div class="pv4 ph2">
+      <div>
+        <img src="" alt="">
+      </div>
+      <div>
+        <h1 class="<%= "#{headline}" %>">Welcome to First Days!</h1>
+        <h2 class="<%= "#{title_black}" %>">First Days helps you to support volunteers through the recruitment process, from assessing your needs, right through to getting feedback on the volunteers first day.</h2>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section>
+  <div class="flex flex-row">
+    <div class="<%= "w-two-thirds-ns mr2 #{card} mv2 flex flex-row" %>">
+      <div class="w-third-ns mh2">
+        <div class="">
+          <img src="" alt="">
+        </div>
+        <p>Finding a volunteer</p>
+        <%= shared_component("button_main.html", content: "Create a description", wrapper_class: "bg-blue", content_class: "white") %>
+      </div>
+      <div class="w-third-ns mh2">
+        <div class="">
+          <img src="" alt="">
+        </div>
+        <p>Finding a volunteer</p>
+        <%= shared_component("button_main.html", content: "Getting your volunteer ready to start", wrapper_class: "bg-blue", content_class: "white") %>
+      </div>
+      <div class="w-third-ns mh2">
+        <div class="">
+          <img src="" alt="">
+        </div>
+        <p>Finding a volunteer</p>
+        <%= shared_component("button_main.html", content: "Collecting feedback", wrapper_class: "bg-blue", content_class: "white") %>
+      </div>
+    </div>
+    <div class="<%= "w-third-ns ml2 #{card} mv2" %>">
+    <%= shared_component("tab.html", class: "fl pr2 w-third", content: "Tab") %>
+    </div>
+  </div>
+</section>
 
 <%= if @current_user.stages["role_description"] do %>
   <%= link "Finding a volunteer", to: role_description_path(@conn, :role_description_show), class: "btn btn-primary" %>
@@ -15,22 +63,4 @@
   <%= link "Getting your volunteer ready to start", to: document_checklist_path(@conn, :document_checklist_new), class: "btn btn-primary" %>
 <% end %>
 
-<!-- test components -->
-
-<%= shared_component("card.html", class: "shadow-1 db w-50") %>
-<%= shared_component("button_main.html", content: "login", wrapper_class: "w-25 bg-blue", content_class: "white") %>
-<%= shared_component("button_main.html", content: "login", wrapper_class: "w-25 b--blue bw1 ba", content_class: "mv0 blue") %>
-<%= shared_component("button_square.html",icon: "", alt: "send") %>
-<%= shared_component("input_field.html", content: "Email", width: "w-30") %>
-<%= shared_component("text_area.html", content: "In a few sentences, what does your organisation do?", width: "w-60", content_help: "Helper text for a form control. Can use this text to ") %>
-
-<%= shared_component("radio.html", content: "HR") %>
-<%= shared_component("radio.html", content: "IT") %>
-<%= shared_component("radio.html", content: "Finance") %>
-
-
-
-
-
-
-<!-- # <%= link "Collecting feedback", to: feedback_path(@conn, :feedback_show), class: "btn btn-primary" %> -->
+<%= link "Collecting feedback", to: feedback_path(@conn, :feedback_show), class: "btn btn-primary" %>

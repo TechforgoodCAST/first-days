@@ -9,11 +9,14 @@
 
     <title>Hello FirstDays!</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
-    <link href="https://fonts.googleapis.com/css?family=Cantarell" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cantarell:400,700" rel="stylesheet">
   </head>
 
   <body>
-    <div class="container">
+
+  <%= shared_component("nav.html")%>
+
+    <!-- <div class="container">
       <header class="header">
         <ol class="breadcrumb text-right">
           <%= if @current_user do %>
@@ -26,13 +29,13 @@
             <li><%= link "Log in", to: session_path(@conn, :new) %></li>
           <% end %>
         </ol>
-      </header>
+      </header> -->
 
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-success" role="alert"><%= get_flash(@conn, :success) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <p class="ma0"><%= get_flash(@conn, :info) %></p>
+      <p class="ma0"><%= get_flash(@conn, :success) %></p>
+      <p class="ma0"><%= get_flash(@conn, :error) %></p>
 
-      <main role="main">
+      <main class="mw9-ns center">
         <%= render @view_module, @view_template, assigns %>
       </main>
 

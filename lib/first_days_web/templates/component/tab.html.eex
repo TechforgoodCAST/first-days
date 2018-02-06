@@ -1,4 +1,5 @@
 <div class="<%= assigns[:class] %>">
-  <img src="<%= assigns[:icon] %>" alt="progress">
-  <%= assigns[:content] %>
+  <div class="bg-white pv3 tc">
+    <h1 class="f6 black ttu ma0"><%= @content %></h1>
+  </div>
 </div>

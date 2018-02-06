@@ -1,6 +1,0 @@
-
-<div class="<%= "bg-white pa4-ns pa3 mv3 br2 #{assigns[:class]}" %>">
-  <div class="tc">
-
-  </div>
-</div>

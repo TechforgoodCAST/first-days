@@ -27,4 +27,8 @@ defmodule FirstDaysWeb.PageController do
   def feedback(conn, _params) do
     render conn, "feedback.html"
   end
+
+  def test(conn, _params) do
+    render conn, "test.html"
+  end
 end

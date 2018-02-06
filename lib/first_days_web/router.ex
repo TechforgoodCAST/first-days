@@ -26,6 +26,7 @@ defmodule FirstDaysWeb.Router do
     get "/finding-volunteer", PageController, :finding_volunteer
     get "/preparation", PageController, :preparation
     get "/feedback", PageController, :feedback
+    get "/test", PageController, :test
 
     post "/update-stage", StageController, :update_stage
 
