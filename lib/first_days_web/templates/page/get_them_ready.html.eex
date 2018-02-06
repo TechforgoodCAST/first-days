@@ -1,4 +1,27 @@
-<h1>Getting them ready</h1>
+<!-- Tab -->
+<section>
+  <div class="w-two-thirds-ns cf pt0">
+    <%= shared_component("tab.html", class: "fl pr2 w-third", font: "white", tab_state: "bg-blue", content: "Getting them ready") %>
+  </div>
+</section>
+
+<section>
+  <div class="flex flex-row">
+    <!-- left card -->
+    <div class="<%= "w-two-thirds-ns mr2 #{card} mb2 flex flex-column" %>">
+        <%= shared_component("progress_bar.html", image: "/images/progress_bar1.svg") %>
+        <%= shared_component("divider.html") %>
+      <div class="flex flex-row mt4">
+        <%= shared_component("stage_card.html", image: "/images/agreement_big.svg", sub_header_content: "Volunteer agreement template", button_content: "View Template", link: confirmation_agreement_path(@conn, :confirmation_agreement_show)) %>
+        <%= shared_component("stage_card.html", image: "/images/checklist_big.svg", sub_header_content: "Collect important documents", button_content: "Create document list", link: document_checklist_path(@conn, :document_checklist_new)) %>
+        <%= shared_component("stage_card.html", image: "/images/prep_email_big.svg", sub_header_content: "Start date preparation email", button_content: "Create email", link: preparation_path(@conn, :preparation_new)) %>
+      </div>
+    </div>
+    <!-- right card -->
+    <div class="<%= "w-third-ns ml2 #{card}" %>">
+    </div>
+  </div>
+</section>
 
 <%= if @current_user.stages["confirmation_agreement"] do %>
   <%= shared_component("status.html", content: "Agreement", class: "bg-blue") %>

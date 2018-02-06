@@ -1,11 +1,12 @@
+<!-- tabs -->
 <section>
   <div class="w-two-thirds-ns cf pt0">
-    <%= shared_component("tab.html", class: "fl pr2 w-third", content: "Find a volunteer") %>
-    <%= shared_component("tab.html", class: "fl pr2 w-third", content: "Getting them ready") %>
-    <%= shared_component("tab.html", class: "fl pr2 w-third", content: "Collecting feedback") %>
+    <%= shared_component("tab.html", font: "black", class: "fl pr2 w-third", tab_state: "bg-white",content: "Find a volunteer") %>
+    <%= shared_component("tab.html", font: "black", class: "fl pr2 w-third", tab_state: "bg-white", content: "Getting them ready") %>
+    <%= shared_component("tab.html", font: "black", class: "fl pr2 w-third", tab_state: "bg-white", content: "Collecting feedback") %>
   </div>
 </section>
-
+<!-- header -->
 <section>
   <div class="<%= "#{card()} mt2 mb3" %>">
     <div class="flex flex-row items-center ma4">

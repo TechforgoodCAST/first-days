@@ -1,5 +1,5 @@
 <div class="<%= assigns[:class] %>">
-  <div class="bg-white pv3 tc">
-    <h1 class="f6 black ttu ma0"><%= @content %></h1>
+  <div class="<%= "pv3 tc #{assigns[:tab_state]}" %>">
+    <h1 class="<%= "f6 ttu ma0 #{assigns[:font]}" %>"><%= @content %></h1>
   </div>
 </div>
