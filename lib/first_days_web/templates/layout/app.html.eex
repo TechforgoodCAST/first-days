@@ -13,7 +13,6 @@
   </head>
 
   <body>
-
   <%= shared_component("nav.html")%>
 
     <!-- <div class="container">
@@ -56,13 +55,8 @@
         <% end %>
 
       <% end %> -->
-
-
-      <main role="main">
         <%= render @view_module, @view_template, assigns %>
       </main>
-
-    </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>

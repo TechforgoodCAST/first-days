@@ -1,11 +1,12 @@
+<!-- tabs -->
 <section>
   <div class="w-two-thirds-ns cf pt0">
-    <%= shared_component("tab.html", class: "fl pr2 w-third", content: "Find a volunteer") %>
-    <%= shared_component("tab.html", class: "fl pr2 w-third", content: "Getting them ready") %>
-    <%= shared_component("tab.html", class: "fl pr2 w-third", content: "Collecting feedback") %>
+    <%= shared_component("tab.html", font: "black", class: "fl pr2 w-third", tab_state: "bg-white",content: "Find a volunteer") %>
+    <%= shared_component("tab.html", font: "black", class: "fl pr2 w-third", tab_state: "bg-white", content: "Getting them ready") %>
+    <%= shared_component("tab.html", font: "black", class: "fl pr2 w-third", tab_state: "bg-white", content: "Collecting feedback") %>
   </div>
 </section>
-
+<!-- header -->
 <section>
   <div class="<%= "#{card} mt2 mb3" %>">
     <div class="flex flex-row items-center ma4">
@@ -19,18 +20,16 @@
     </div>
   </div>
 </section>
-
+<!-- left card -->
 <section>
   <div class="flex flex-row">
-    <div class="<%= "w-two-thirds-ns mr2 #{card} mv2 flex flex-row" %>">
-
+    <!-- left card -->
+    <div class="<%= "w-two-thirds-ns mr2 #{card} mb2 flex flex-row" %>">
       <%= shared_component("stage_card.html", image: "/images/search_big.svg", sub_header_content: "Finding a volunteer", button_content: "Create description") %>
       <%= shared_component("stage_card.html", image: "/images/prepare_big.svg", sub_header_content: "Getting your volunteer ready to start", button_content: "Get them ready") %>
       <%= shared_component("stage_card.html", image: "/images/feedback_big.svg", sub_header_content: "Collecting feeback", button_content: "View feedback") %>
-
-
-
     </div>
+    <!-- right card -->
     <div class="<%= "w-third-ns ml2 #{card} mv2" %>">
     </div>
   </div>
