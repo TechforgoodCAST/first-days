@@ -63,19 +63,19 @@ defmodule FirstDays.Accounts.User do
   end
 
   def new_password_changeset(%User{} = user, params \\ %{}) do
-    message = "Passwords do not match"
     user
     |> cast(params, [:password])
     |> validate_required([:password])
-    |> validate_confirmation(:password, required: true, message: message)
     |> validate_password()
     |> put_pass_hash()
   end
 
   defp validate_password(changeset) do
+    message = "Passwords do not match"
     changeset
     |> validate_required([:password])
     |> validate_length(:password, min: 6, max: 100)
+    |> validate_confirmation(:password, required: true, message: message)
   end
 
 
