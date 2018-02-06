@@ -36,6 +36,29 @@
       <p class="ma0"><%= get_flash(@conn, :error) %></p>
 
       <main class="mw9-ns center">
+      <!-- <%= if @current_user do %>
+        <%= if @current_user.stages["role_description"] do %>
+          <%= shared_component("status.html", content: "Find a volunteer", class: "bg-green") %>
+        <% else %>
+          <%= shared_component("status.html", content: "Find a volunteer", class: "bg-red") %>
+        <% end %>
+
+        <%= if @current_user.stages["confirmation_agreement"] && @current_user.stages["document_checklist"] && @current_user.stages["preparation"] do %>
+          <%= shared_component("status.html", content: "Getting them ready", class: "bg-green") %>
+        <% else %>
+          <%= shared_component("status.html", content: "Getting them ready", class: "bg-red") %>
+        <% end %>
+
+        <%= if @current_user.stages["feedback"] do %>
+          <%= shared_component("status.html", content: "Collecting feedback", class: "bg-green") %>
+        <% else %>
+          <%= shared_component("status.html", content: "Collecting feedback", class: "bg-red") %>
+        <% end %>
+
+      <% end %> -->
+
+
+      <main role="main">
         <%= render @view_module, @view_template, assigns %>
       </main>
 

@@ -31,4 +31,4 @@
 <p>It's important that we get better at the things we do not so well and keep doing the things that are working, so your feedback is really appreciated!</p>
 <p>Many thanks</p>
 
-<%= shared_component("post.html", action: stage_path(@conn, :update_stage), conn: @conn, field: :feedback, value: "true") %>
+<%= shared_component("post.html", action: stage_path(@conn, :update_stage), conn: @conn, stage: :feedback, redirect_to: :landing) %>
