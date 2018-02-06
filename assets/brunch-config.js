@@ -52,6 +52,7 @@ exports.config = {
       processors: [
         require("postcss-import")(),
         require("autoprefixer")(),
+        require("postcss-nested")(),
         require("postcss-custom-media")(),
         require("postcss-custom-properties")(),
         require("postcss-clean")
