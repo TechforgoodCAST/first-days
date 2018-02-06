@@ -1,0 +1,3 @@
+<div class="<%= "pointer br2 tc pv3 #{assigns[:wrapper_class]}" %>">
+  <a href="<%= assigns[:link] %>" class="<%="outline-0 f5 center link b lh-copy-ns pv3 #{assigns[:content_class]}" %>"><%= assigns[:content]%></a>
+</div>

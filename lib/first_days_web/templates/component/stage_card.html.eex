@@ -1,0 +1,7 @@
+<div class="w-third-ns mh2 tc flex flex-column items-center">
+  <div class="mb1">
+    <img src="<%= @image %>">
+  </div>
+  <p class="<%= "#{body_bold()} mb4" %>"><%= @sub_header_content %></p>
+  <%= shared_component("button_main.html", content: @button_content, wrapper_class: "bg-blue w-80-ns", content_class: "white", link: @link) %>
+</div>

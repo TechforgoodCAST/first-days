@@ -1,0 +1,5 @@
+<div class="mt3">
+  <label for="comment" class="db b f5 lh-copy black mb2"><%= assigns[:content]%></label>
+  <textarea id="comment" name="comment" class="<%= "pa2 input-reset ba b--blue br2 bg-white measure f5 outline-0 #{assigns[:width]}" %>" aria-describedby="comment-desc"></textarea>
+  <small id="comment-desc" class="db f6 black-60"><%= assigns[:content_help]%><a href="<%= assigns[:link] %>" class="link underline black-80 hover-blue f6">link to more info.</a></small>
+</div>

@@ -9,10 +9,19 @@
 
     <title>Hello FirstDays!</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link href="https://fonts.googleapis.com/css?family=Cantarell:400,700" rel="stylesheet">
   </head>
 
   <body>
-    <div class="container">
+
+  <%= if @current_user do %>
+    <%= shared_component("logged_in_nav.html", conn: @conn, current_user: @current_user)%>
+  <% else %>
+    <%= shared_component("logged_out_nav.html", conn: @conn)%>
+  <% end %>
+
+
+    <!-- <div class="container">
       <header class="header">
         <ol class="breadcrumb text-right">
           <%= if @current_user do %>
@@ -25,13 +34,20 @@
             <li><%= link "Log in", to: session_path(@conn, :new) %></li>
           <% end %>
         </ol>
-      </header>
+      </header> -->
 
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-success" role="alert"><%= get_flash(@conn, :success) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <p class="ma0"><%= get_flash(@conn, :info) %></p>
+      <p class="ma0"><%= get_flash(@conn, :success) %></p>
+      <p class="ma0"><%= get_flash(@conn, :error) %></p>
 
-      <%= if @current_user do %>
+      <main class="mw9-ns center">
+        <section class="ml3 mr3">
+          <%= render @view_module, @view_template, assigns %>
+        </section>
+      </main>
+
+
+      <!-- <%= if @current_user do %>
         <%= if @current_user.stages["role_description"] do %>
           <%= shared_component("status.html", content: "Find a volunteer", class: "bg-green") %>
         <% else %>
@@ -50,14 +66,7 @@
           <%= shared_component("status.html", content: "Collecting feedback", class: "bg-red") %>
         <% end %>
 
-      <% end %>
-
-
-      <main role="main">
-        <%= render @view_module, @view_template, assigns %>
-      </main>
-
-    </div> <!-- /container -->
+      <% end %> -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>

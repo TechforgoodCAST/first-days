@@ -8,6 +8,7 @@
   "dependencies": {
     "phoenix": "file:../deps/phoenix",
     "phoenix_html": "file:../deps/phoenix_html",
+    "postcss-nested": "^3.0.0",
     "tachyons-custom": "^4.9.4"
   },
   "devDependencies": {

@@ -1,0 +1,14 @@
+
+<form>
+  <div class="left-0 bottom-0 mb3">
+    <fieldset>
+      <legend>
+        <h1>question</h1>
+      </legend>
+      <%= shared_component("radio.html", content: "HR") %>
+      <%= shared_component("radio.html", content: "IT") %>
+      <%= shared_component("radio.html", content: "IT") %>
+      <%= shared_component("radio.html", content: "IT") %>
+    </fieldset>
+  </div>
+</form>

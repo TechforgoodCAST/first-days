@@ -1,0 +1,5 @@
+<div class="<%= "pointer #{assigns[:wrapper_class]}" %>">
+  <a href="<%= assigns[:link] %>" class="bg-green link db h4 w4 br2 pa4">
+    <img src="<%= assigns[:icon] %>" alt="<%= assigns[:alt] %>">
+  </a>
+</div>

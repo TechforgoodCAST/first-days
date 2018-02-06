@@ -9,9 +9,9 @@
 @custom-media --breakpoint-large screen and (min-width: 60em);
 
 :root {
-  --sans-serif: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
-    helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial,
-    sans-serif;
+  --sans-serif: "Cantarell", sans-serif, -apple-system, BlinkMacSystemFont,
+    "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto,
+    "segoe ui", arial, sans-serif;
   --serif: georgia, serif;
   --code: consolas, monaco, monospace;
 
@@ -66,7 +66,7 @@
   --max-width-6: 32rem;
   --max-width-7: 48rem;
   --max-width-8: 64rem;
-  --max-width-9: 96rem;
+  --max-width-9: 86rem;
 
   --border-radius-none: 0;
   --border-radius-1: 0.125rem;
@@ -83,13 +83,13 @@
   --border-width-4: 1rem;
   --border-width-5: 2rem;
 
-  --box-shadow-1: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
+  --box-shadow-1: 0px 0px 4px 2px rgba(12, 0, 51, 0.1);
   --box-shadow-2: 0px 0px 8px 2px rgba(0, 0, 0, 0.2);
   --box-shadow-3: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
   --box-shadow-4: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
   --box-shadow-5: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
 
-  --black: #000;
+  --black: #0b0c0c;
   --near-black: #111;
   --dark-gray: #333;
   --mid-gray: #555;
@@ -143,11 +143,11 @@
   --pink: #ff80cc;
   --light-pink: #ffa3d7;
   --dark-green: #137752;
-  --green: #19a974;
+  --green: #00836a;
   --light-green: #9eebcf;
   --navy: #001b44;
   --dark-blue: #00449e;
-  --blue: #357edd;
+  --blue: #4169e1;
   --light-blue: #96ccff;
   --lightest-blue: #cdecff;
   --washed-blue: #f6fffe;

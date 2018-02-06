@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>progress_1/3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="progress_circle_1/3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-5.000000, -3.000000)">
+        <g id="progress_1/3" transform="translate(6.000000, 4.000000)" stroke-width="2">
+            <circle id="Oval" stroke="#F18308" transform="translate(10.000000, 10.000000) rotate(-360.000000) translate(-10.000000, -10.000000) " cx="10" cy="10" r="10"></circle>
+            <path d="M10,0 C4.4771525,0 0,4.4771525 0,10 C0,15.5228475 4.4771525,20 10,20 C12.7689488,20 15.2750471,18.8746033 17.0858466,17.0562583" id="Oval" stroke="#FFFFFF" transform="translate(8.542923, 10.000000) rotate(-360.000000) translate(-8.542923, -10.000000) "></path>
+        </g>
+    </g>
+</svg>

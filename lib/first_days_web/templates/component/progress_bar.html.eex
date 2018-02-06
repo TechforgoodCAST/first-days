@@ -1,0 +1,5 @@
+<div class="w-100">
+  <div class="mb4">
+    <img src="<%= @image %>">
+  </div>
+</div>
