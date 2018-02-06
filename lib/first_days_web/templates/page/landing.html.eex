@@ -26,7 +26,7 @@
 
       <%= shared_component("stage_card.html", image: "/images/search_big.svg", sub_header_content: "Finding a volunteer", button_content: "Create description") %>
       <%= shared_component("stage_card.html", image: "/images/prepare_big.svg", sub_header_content: "Getting your volunteer ready to start", button_content: "Get them ready") %>
-      <%= shared_component("stage_card.html", image: "/images/feeback_big.svg", sub_header_content: "Collecting feeback", button_content: "View feedback") %>
+      <%= shared_component("stage_card.html", image: "/images/feedback_big.svg", sub_header_content: "Collecting feeback", button_content: "View feedback") %>
 
 
 
