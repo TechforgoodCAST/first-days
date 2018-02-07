@@ -1,3 +1,44 @@
-<h2>Role Description</h2>
+<%
+  role_description_progress_icon =
+    cond do
+      @current_user.stages["role_description"] == true ->
+        "/images/progress_done_white.svg"
+      true ->
+        "/images/progress_white.svg"
+    end
+%>
 
-<%= render "role_description_form.html", Map.merge(assigns, %{action: role_description_path(@conn, :role_description_create), method: :post}) %>
+<!-- Tab -->
+
+<section>
+  <div class="w-two-thirds-ns cf pt0">
+    <%= shared_component("tab.html", class: "fl pr2 w-third", font: "white", tab_state: "bg-blue", content: "Find a volunteer", icon: role_description_progress_icon) %>
+  </div>
+</section>
+
+<section>
+  <div class="flex flex-row">
+
+    <!-- left card -->
+
+    <div class="<%= "w-two-thirds-ns mr2 #{card_font()} mb2 flex flex-column" %>">
+      <div class="">
+        <%= render "role_description_form.html", Map.merge(assigns, %{action: role_description_path(@conn, :role_description_create), method: :post}) %>
+      </div>
+    </div>
+
+    <!-- right card -->
+
+    <div class="<%= "w-third-ns ml2 #{card_font()}" %>">
+      <div class="pa2">
+        <div class="flex flex-row items-center pb2">
+            <img class="" src="/images/search_small.svg" alt="Prepare">
+            <h1 class="<%= "#{headline_font()} ml2 f4" %>">Let's find a volunteer</h1>
+        </div>
+        <div class="<%= "#{body_font()}" %>">
+          <p>This form will help you understand what your organisation needs from a volunteer by guiding you through all the steps in creating a great volunteer role description.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
