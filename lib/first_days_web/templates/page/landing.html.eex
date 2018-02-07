@@ -34,7 +34,7 @@
 <!-- header -->
 
 <section>
-  <div class="<%= "#{card()} mt2 mb3" %>">
+  <div class="<%= "#{card_font()} mt2 mb3" %>">
     <div class="flex flex-row items-center ma4">
 
       <div class="w4 mr3">
@@ -42,8 +42,8 @@
       </div>
 
       <div>
-        <h1 class="<%= "#{headline()}" %>">Welcome to First Days!</h1>
-        <h2 class="<%= "#{title_black()}" %>">First Days helps you to support volunteers through the recruitment process, from assessing your needs, right through to getting feedback on the volunteers first day.</h2>
+        <h1 class="<%= "#{headline_font()}" %>">Welcome to First Days!</h1>
+        <h2 class="<%= "#{title_black_font()}" %>">First Days helps you to support volunteers through the recruitment process, from assessing your needs, right through to getting feedback on the volunteers first day.</h2>
       </div>
 
     </div>
@@ -69,7 +69,7 @@
 <section>
   <div class="flex flex-row">
 
-    <div class="<%= "w-two-thirds-ns mr2 #{card()} mv2 flex flex-row justify-center" %>">
+    <div class="<%= "w-two-thirds-ns mr2 #{card_font()} mv2 flex flex-row justify-center" %>">
       <div class="flex items-end">
         <%= shared_component("stage_card.html", class: "mr4", image: "/images/search_big.svg", sub_header_content: "Finding a volunteer", button_content: role_description_button_content, link: role_description_link) %>
         <%= shared_component("stage_card.html", class: "mr4", image: "/images/prepare_big.svg", sub_header_content: "Getting your volunteer ready to start", button_content: "Get them ready", link: page_path(@conn, :get_them_ready)) %>
@@ -77,15 +77,15 @@
       </div>
     </div>
 
-    <div class="<%= "w-third-ns ml2 #{card()} mv2" %>">
+    <div class="<%= "w-third-ns ml2 #{card_font()} mv2" %>">
 
       <div class="pa2">
         <div class="flex flex-row items-center pb2">
             <img src="/images/tips.svg" alt="Tips">
-          <h1 class="<%= "#{headline()} ml3 f4" %>">Tips</h1>
+          <h1 class="<%= "#{headline_font()} ml3 f4" %>">Tips</h1>
         </div>
 
-        <div class="<%= "#{body()}" %>">
+        <div class="<%= "#{body_font()}" %>">
           <p>Some tips about how to best use First Days, this could be any text that explains how to best go through the steps and what is required.</p>
         </div>
       </div>

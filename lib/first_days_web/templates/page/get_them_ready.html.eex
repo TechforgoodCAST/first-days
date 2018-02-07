@@ -53,7 +53,7 @@
 <section>
   <div class="flex flex-row">
     <!-- left card -->
-    <div class="<%= "w-two-thirds-ns mr2 #{card} mb2 flex flex-column" %>">
+    <div class="<%= "w-two-thirds-ns mr2 #{card_font()} mb2 flex flex-column" %>">
         <%= shared_component("progress_bar.html", image: "/images/progress_bar1.svg") %>
         <%= shared_component("divider.html") %>
       <div class="flex flex-row mb4 mt6">
@@ -63,13 +63,13 @@
       </div>
     </div>
     <!-- right card -->
-    <div class="<%= "w-third-ns ml2 #{card}" %>">
+    <div class="<%= "w-third-ns ml2 #{card_font()}" %>">
       <div class="pa2">
         <div class="flex flex-row items-center pb2">
             <img class="" src="/images/prepare_small.svg" alt="Prepare">
-            <h1 class="<%= "#{headline()} ml2 f4" %>">Getting ready for your volunteer to start</h1>
+            <h1 class="<%= "#{headline_font()} ml2 f4" %>">Getting ready for your volunteer to start</h1>
         </div>
-        <div class="<%= "#{body()}" %>">
+        <div class="<%= "#{body_font()}" %>">
           <p>Some organisations already have most of these things ready for their volunteers to start. However, if your organisation is relatively new to using volunteers then you may ﬁnd some things here useful.</p>
         </div>
       </div>

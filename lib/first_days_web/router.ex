@@ -14,9 +14,9 @@ defmodule FirstDaysWeb.Router do
     plug :accepts, ["json"]
   end
 
-  pipeline :layout do
-    plug :put_layout, {FirstDaysWeb.LayoutView, :alternate_layout}
-  end
+  # pipeline :layout do
+  #   plug :put_layout, {FirstDaysWeb.LayoutView, :alternate_layout}
+  # end
 
   scope "/", FirstDaysWeb do
     pipe_through :browser # Use the default browser stack
@@ -34,7 +34,7 @@ defmodule FirstDaysWeb.Router do
   end
 
   scope "/forms", FirstDaysWeb do
-    pipe_through [:browser, :authenticate_user, :layout]
+    pipe_through [:browser, :authenticate_user]
 
     get "/role-description-new", RoleDescriptionController, :role_description_new
     post "/role-description-create", RoleDescriptionController, :role_description_create

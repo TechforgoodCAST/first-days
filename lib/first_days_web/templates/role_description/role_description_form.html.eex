@@ -5,7 +5,7 @@
     </div>
   <% end %>
 
-  <h3>About the role</h3>
+  <h1 class="<%= headline_font() %>">About the role</h1>
 
   <div class="form-group">
     <%= label f, :role_title, "What is the role title?", class: "control-label" %>
