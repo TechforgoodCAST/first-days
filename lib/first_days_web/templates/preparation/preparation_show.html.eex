@@ -1,18 +1,68 @@
-<h2>Preparation</h2>
-<p>Hopefully your volunteer is due to start in the next 2 weeks or so. It’s helpful to send them a reminder email, together with useful information.</p>
-<p class="alert alert-info">Please copy the text below into a new document and edit it as you see fit before sending it to your volunteer.</p>
+<%
+  preparation_progress_icon =
+    cond do
+      @current_user.stages["preparation"] == true ->
+        "/images/progress_done_white.svg"
+      true ->
+        "/images/progress_white.svg"
+    end
+%>
 
-<h3>Preparation Email</h3>
-<p>Dear [NAME]</p>
-<p>We hope you're looking forward to your first day with us on  <%= "#{@answers.first_day_date.day}-#{@answers.first_day_date.month}-#{@answers.first_day_date.year}" %>.</p>
-<p>We wanted to offer some helpful information.</p>
+<!-- Tab -->
 
-<p>Dress code - <%= @answers.dress_code %></p>
-<p>What you'll be doing on your first day - <%= @answers.first_day_expectations %></p>
-<p>Other things helpful to know - <%= @answers.other_details %></p>
+<section>
+  <div class="w-two-thirds-ns cf pt0">
+    <%= shared_component("tab.html", class: "fl pr2 w-third", font: "white", tab_state: "bg-blue", content: "Getting them ready", icon: preparation_progress_icon) %>
+  </div>
+</section>
 
-<p>We look forward to seeing you then.</p>
-<p>Many thanks</p>
+<section>
+  <div class="flex flex-row">
 
-<%= link "Edit", to: preparation_path(@conn, :preparation_edit), class: "btn btn-primary" %>
-<%= shared_component("post.html", action: stage_path(@conn, :update_stage), conn: @conn, stage: :preparation, redirect_to: :get_them_ready) %>
+    <!-- left card -->
+
+    <div class="<%= "w-two-thirds-ns mr2 #{card_font()} mb2 flex flex-column" %>">
+      <div class="">
+        <h2>Preparation</h2>
+
+        <p>Hopefully your volunteer is due to start in the next 2 weeks or so. It’s helpful to send them a reminder email, together with useful information.</p>
+        <p class="alert alert-info">Please copy the text below into a new document and edit it as you see fit before sending it to your volunteer.</p>
+
+        <h3>Preparation Email</h3>
+        <p>Dear [NAME]</p>
+        <p>We hope you're looking forward to your first day with us on  <%= "#{@answers.first_day_date.day}-#{@answers.first_day_date.month}-#{@answers.first_day_date.year}" %>.</p>
+        <p>We wanted to offer some helpful information.</p>
+
+        <p>Dress code - <%= @answers.dress_code %></p>
+        <p>What you'll be doing on your first day - <%= @answers.first_day_expectations %></p>
+        <p>Other things helpful to know - <%= @answers.other_details %></p>
+
+        <p>We look forward to seeing you then.</p>
+        <p>Many thanks</p>
+
+        <%= link "Edit", to: preparation_path(@conn, :preparation_edit), class: "btn btn-primary" %>
+      </div>
+    </div>
+
+    <!-- right card -->
+
+    <div class="<%= "w-third-ns ml2 #{card_font()}" %>">
+      <div class="pa2">
+        <div class="flex flex-row items-center pb2">
+            <img class="" src="/images/prep_email_small.svg" alt="Prepare">
+            <h1 class="<%= "#{headline_font()} ml2 f4" %>">Start date preparation</h1>
+        </div>
+        <div class="<%= "#{body_font()}" %>">
+          <p>Thanks for answering the questions for the preparation email.</p>
+          <br>
+          <p>Your email text to send to the volunteer is here on the left. Please copy it into a new document so that you can edit it as you see fit. You can also email it to yourself.</p>
+          <br>
+          <p>Hopefully your volunteer is due to start in the next 2 weeks or so. It's helpful to send them a reminder email, together with useful information.</p>
+          <br>
+          <p>I have completed this step, I am happy to say that it is done.</p>
+          <%= shared_component("post.html", action: stage_path(@conn, :update_stage), conn: @conn, stage: :preparation, redirect_to: :get_them_ready) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,14 +1,15 @@
 <%= form_for @changeset, @action, [method: @method], fn f -> %>
+
+  <h1 class="<%= headline_font() %>">Preparing the volunteer for their first day</h1>
+  <p class="<%= body_font() %>">It's important your volunteer is prepared for their first day. It can be intimidating to start in a new organisation, so help them to prepare by filling out the details below.</p>
+
   <%= if @changeset.action do %>
     <div class="alert alert-danger">
       <p>Oops, something went wrong! Please check the errors below.</p>
     </div>
   <% end %>
 
-  <h3>Preparing volunteer for their first day</h3>
-  <p>It's important your volunteer is prepared for their first day. It can be intimidating to start in a new organisation, so help them to prepare by filling out the details below.</p>
-
-  <div class="form-group">
+  <div class="mt3">
     <%= label f, :first_day_date, "When is the volunteer's first day? (if you don't know, please provide us with your best guess)", class: "control-label" %>
     <div class="my-date">
       <%= my_datetime_select f, :first_day_date, default: {2018, 2, 13} %>
@@ -16,25 +17,23 @@
     <%= error_tag f, :first_day_date %>
   </div>
 
-  <div class="form-group">
+  <div class="mt3">
     <%= label f, :dress_code, "Are there any dress code requirements? (This could include dress code for the organisation, or health and safety requirements. For example footwear, wearing of jewellery, dressing for certain weather if they will be working outside)", class: "control-label" %>
     <%= text_input f, :dress_code, class: "form-control" %>
     <%= error_tag f, :dress_code %>
   </div>
 
-  <div class="form-group">
+  <div class="mt3">
     <%= label f, :first_day_expectations, "What should the volunteer expect on their first day? (For example, will they meet the team? Have a tour? What will they likely be working on?)", class: "control-label" %>
     <%= text_input f, :first_day_expectations, class: "form-control" %>
     <%= error_tag f, :first_day_expectations %>
   </div>
 
-  <div class="form-group">
+  <div class="mt3">
     <%= label f, :other_details, "Are there any other details you'd like them to know ahead of time?", class: "control-label" %>
     <%= text_input f, :other_details, class: "form-control" %>
     <%= error_tag f, :other_details %>
   </div>
 
   <%= submit "Submit", class: "btn btn-primary" %>
-  <span></span>
-  <%= link "Home", to: page_path(@conn, :landing), class: "btn btn-primary" %>
 <% end %>

@@ -1,5 +1,8 @@
-<div class="<%= assigns[:class] %>">
-  <div class="<%= "pv3 tc #{assigns[:tab_state]}" %>">
-    <h1 class="<%= "f6 ttu ma0 #{assigns[:font]}" %>"><%= @content %></h1>
+<div class="<%= @class %>">
+  <div class="<%= "pv3 tc flex flex-row items-center justify-center #{assigns[:tab_state]}" %>">
+    <div class="pr2">
+      <img src="<%= @icon %>" alt="progress-icon">
+    </div>
+    <h1 class="<%= "f6 ttu ma0 #{@font}" %>"><%= @content %></h1>
   </div>
 </div>

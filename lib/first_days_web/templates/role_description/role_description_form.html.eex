@@ -1,118 +1,115 @@
 <%= form_for @changeset, @action, [method: @method], fn f -> %>
+
+  <h1 class="<%= headline_font() %>">About the role</h1>
   <%= if @changeset.action do %>
-    <div class="alert alert-danger">
+    <div class="<%= check_form_errors_alert() %>">
       <p>Oops, something went wrong! Please check the errors below.</p>
     </div>
   <% end %>
 
-  <h3>About the role</h3>
-
-  <div class="form-group">
-    <%= label f, :role_title, "What is the role title?", class: "control-label" %>
-    <%= text_input f, :role_title, class: "form-control" %>
-    <%= error_tag f, :role_title %>
+  <div class="mt3">
+    <%= label f, :role_title, "What is the role title?", class: "#{input_label_class()}" %>
+    <%= text_input f, :role_title, class: "#{input_class()}" %>
+    <%= error_tag f, :role_title, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="form-group">
-    <%= label f, :description, "Please give a one sentence description of the role", class: "control-label" %>
-    <%= text_input f, :description, class: "form-control" %>
-    <%= error_tag f, :description %>
+  <div class="mt3">
+    <%= label f, :description, "Please give a one sentence description of the role", class: "#{input_label_class()}" %>
+    <%= textarea f, :description, class: "#{input_class()}" %>
+    <%= error_tag f, :description, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="form-group">
-    <%= label f, :area, "What area is the role in?", class: "control-label" %>
-    <%= select f, :area, ["Finance", "Legal", "HR", "IT"], class: "form-control", prompt: "" %>
-    <%= error_tag f, :area %>
+  <div class="mt3">
+    <%= label f, :area, "What area is the role in?", class: "#{input_label_class()}" %>
+    <%= select f, :area, ["Finance", "Legal", "HR", "IT"], class: "#{input_class()}", prompt: "" %>
+    <%= error_tag f, :area, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="form-group">
-    <%= label f, :finance_skills, "What are the specific finance skills you require?", class: "control-label" %>
-    <%= select f, :finance_skills, finance_skills(), class: "form-control", prompt: "" %>
-    <%= error_tag f, :finance_skills %>
+  <div class="mt3">
+    <%= label f, :finance_skills, "What are the specific finance skills you require?", class: "#{input_label_class()}" %>
+    <%= select f, :finance_skills, finance_skills(), class: "#{input_class()}", prompt: "" %>
+    <%= error_tag f, :finance_skills, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="form-group">
-    <%= label f, :additional_info, "Is there any other info you'd like to add?", class: "control-label" %>
-    <%= text_input f, :additional_info, class: "form-control" %>
-    <%= error_tag f, :additional_info %>
+  <div class="mt3">
+    <%= label f, :additional_info, "Is there any other info you'd like to add?", class: "#{input_label_class()}" %>
+    <%= text_input f, :additional_info, class: "#{input_class()}" %>
+    <%= error_tag f, :additional_info, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="form-group">
-    <%= label f, :work_frequency, "How frequently will the volunteer be needed to work? (for example, once a week, once a month, quarterly board meetings etc)", class: "control-label" %>
-    <%= text_input f, :work_frequency, class: "form-control" %>
-    <%= error_tag f, :work_frequency %>
+  <div class="mt3">
+    <%= label f, :work_frequency, "How frequently will the volunteer be needed to work? (for example, once a week, once a month, quarterly board meetings etc)", class: "#{input_label_class()}" %>
+    <%= text_input f, :work_frequency, class: "#{input_class()}" %>
+    <%= error_tag f, :work_frequency, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="form-group">
-    <%= label f, :work_length, "What is the total length fo the opportunity? (e.g. 1 month, 6 months, 1 year, ongoing)", class: "control-label" %>
-    <%= text_input f, :work_length, class: "form-control" %>
-    <%= error_tag f, :work_length %>
+  <div class="mt3">
+    <%= label f, :work_length, "What is the total length fo the opportunity? (e.g. 1 month, 6 months, 1 year, ongoing)", class: "#{input_label_class()}" %>
+    <%= text_input f, :work_length, class: "#{input_class()}" %>
+    <%= error_tag f, :work_length, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="form-group">
-    <%= label f, :location, "Where will the volunteer be based? (in a certain office location, working from home?)", class: "control-label" %>
-    <%= text_input f, :location, class: "form-control" %>
-    <%= error_tag f, :location %>
+  <div class="mt3">
+    <%= label f, :location, "Where will the volunteer be based? (in a certain office location, working from home?)", class: "#{input_label_class()}" %>
+    <%= text_input f, :location, class: "#{input_class()}" %>
+    <%= error_tag f, :location, class: "#{input_error_class()}" %>
   </div>
 
 
-  <div class="form-group">
-    <%= label f, :contact_details, "What are the contact details if a potential volunteer wants to speak further?", class: "control-label" %>
-    <%= text_input f, :contact_details, class: "form-control" %>
-    <%= error_tag f, :contact_details %>
+  <div class="mt3">
+    <%= label f, :contact_details, "What are the contact details if a potential volunteer wants to speak further?", class: "#{input_label_class()}" %>
+    <%= text_input f, :contact_details, class: "#{input_class()}" %>
+    <%= error_tag f, :contact_details, class: "#{input_error_class()}" %>
   </div>
 
   <h3>About the organisation</h3>
   <p>It's good for the potential volunteer to understand what your organisation does. Knowing this can really motivate volunteers to apply.</p>
 
-  <div class="form-group">
-    <%= label f, :organisation_name, "What is the name of your organisation?", class: "control-label" %>
-    <%= text_input f, :organisation_name, class: "form-control" %>
-    <%= error_tag f, :organisation_name %>
+  <div class="mt3">
+    <%= label f, :organisation_name, "What is the name of your organisation?", class: "#{input_label_class()}" %>
+    <%= text_input f, :organisation_name, class: "#{input_class()}" %>
+    <%= error_tag f, :organisation_name, class: "#{input_error_class()}" %>
   </div>
 
 
-  <div class="form-group">
-    <%= label f, :organisation_mission, "In a few sentences, what does your organisation do?", class: "control-label" %>
-    <%= text_input f, :organisation_mission, class: "form-control" %>
-    <%= error_tag f, :organisation_mission %>
+  <div class="mt3">
+    <%= label f, :organisation_mission, "In a few sentences, what does your organisation do?", class: "#{input_label_class()}" %>
+    <%= text_input f, :organisation_mission, class: "#{input_class()}" %>
+    <%= error_tag f, :organisation_mission, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="form-group">
-    <%= label f, :organisation_achievements, "What if any notable achievements has your organisation had? e.g. awards, membership of professional bodies (this can help attract volunteers to your organisation)", class: "control-label" %>
-    <%= text_input f, :organisation_achievements, class: "form-control" %>
-    <%= error_tag f, :organisation_achievements %>
+  <div class="mt3">
+    <%= label f, :organisation_achievements, "What if any notable achievements has your organisation had? e.g. awards, membership of professional bodies (this can help attract volunteers to your organisation)", class: "#{input_label_class()}" %>
+    <%= text_input f, :organisation_achievements, class: "#{input_class()}" %>
+    <%= error_tag f, :organisation_achievements, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="form-group">
-    <%= label f, :charity_number, "Please write your charity number", class: "control-label" %>
-    <%= text_input f, :charity_number, class: "form-control" %>
-    <%= error_tag f, :charity_number %>
+  <div class="mt3">
+    <%= label f, :charity_number, "Please write your charity number", class: "#{input_label_class()}" %>
+    <%= text_input f, :charity_number, class: "#{input_class()}" %>
+    <%= error_tag f, :charity_number, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="form-group">
-    <%= label f, :website_link, "and a link to your website (if you have one)", class: "control-label" %>
-    <%= text_input f, :website_link, class: "form-control" %>
-    <%= error_tag f, :website_link %>
+  <div class="mt3">
+    <%= label f, :website_link, "and a link to your website (if you have one)", class: "#{input_label_class()}" %>
+    <%= text_input f, :website_link, class: "#{input_class()}" %>
+    <%= error_tag f, :website_link, class: "#{input_error_class()}" %>
   </div>
 
   <h3>The benefits of the volunteering role</h3>
   <p>Volunteers are motivated not just by the help they can give, but also how volunteering can develop them professionally and personally.</p>
 
-  <div class="form-group">
-    <%= label f, :how_will_work_help, "How will this work help the organisation? (1 sentence, jargon free)", class: "control-label" %>
-    <%= text_input f, :how_will_work_help, class: "form-control" %>
-    <%= error_tag f, :how_will_work_help %>
+  <div class="mt3">
+    <%= label f, :how_will_work_help, "How will this work help the organisation? (1 sentence, jargon free)", class: "#{input_label_class()}" %>
+    <%= text_input f, :how_will_work_help, class: "#{input_class()}" %>
+    <%= error_tag f, :how_will_work_help, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="form-group">
-    <%= label f, :skills_to_be_gained, "What skills or experience will the volunteer gain from doing this role?", class: "control-label" %>
-    <%= text_input f, :skills_to_be_gained, class: "form-control" %>
-    <%= error_tag f, :skills_to_be_gained %>
+  <div class="mt3">
+    <%= label f, :skills_to_be_gained, "What skills or experience will the volunteer gain from doing this role?", class: "#{input_label_class()}" %>
+    <%= text_input f, :skills_to_be_gained, class: "#{input_class()}" %>
+    <%= error_tag f, :skills_to_be_gained, class: "#{input_error_class()}" %>
   </div>
-
 
   <%= submit "Submit", class: "btn btn-primary" %>
-  <span></span>
-  <%= link "Home", to: page_path(@conn, :landing), class: "btn btn-primary" %>
 <% end %>

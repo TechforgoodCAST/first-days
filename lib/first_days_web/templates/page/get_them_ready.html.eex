@@ -1,66 +1,78 @@
+<%
+  get_them_ready_progress_icon =
+    cond do
+      @current_user.stages["preparation"] == true ->
+        "/images/progress_3.svg"
+      @current_user.stages["document_checklist"] == true ->
+        "/images/progress_2.svg"
+      @current_user.stages["confirmation_agreement"] == true ->
+        "/images/progress_1.svg"
+      true ->
+        "/images/progress_white.svg"
+    end
+%>
+
 <!-- Tab -->
+
 <section>
   <div class="w-two-thirds-ns cf pt0">
-    <%= shared_component("tab.html", class: "fl pr2 w-third", font: "white", tab_state: "bg-blue", content: "Getting them ready") %>
+    <%= shared_component("tab.html", class: "fl pr2 w-third", font: "white", tab_state: "bg-blue", content: "Getting them ready", icon: get_them_ready_progress_icon) %>
   </div>
 </section>
+
+<%
+  document_checklist_link =
+    if @current_user.stages["document_checklist"] do
+     document_checklist_path(@conn, :document_checklist_show)
+    else
+      document_checklist_link = document_checklist_path(@conn, :document_checklist_new)
+    end
+
+  document_checklist_button_content =
+    if @current_user.stages["document_checklist"] do
+      "View document list"
+    else
+      "Create document list"
+    end
+
+  preparation_link =
+    if @current_user.stages["preparation"] do
+     preparation_path(@conn, :preparation_show)
+    else
+      preparation_link = preparation_path(@conn, :preparation_new)
+    end
+
+  preparation_button_content =
+    if @current_user.stages["preparation"] do
+      "View email"
+    else
+      "Create email"
+    end
+%>
 
 <section>
   <div class="flex flex-row">
     <!-- left card -->
-    <div class="<%= "w-two-thirds-ns mr2 #{card} mb2 flex flex-column" %>">
+    <div class="<%= "w-two-thirds-ns mr2 #{card_font()} mb2 flex flex-column" %>">
         <%= shared_component("progress_bar.html", image: "/images/progress_bar1.svg") %>
         <%= shared_component("divider.html") %>
-      <div class="flex flex-row mt4">
+      <div class="flex flex-row mb4 mt6">
         <%= shared_component("stage_card.html", image: "/images/agreement_big.svg", sub_header_content: "Volunteer agreement template", button_content: "View Template", link: confirmation_agreement_path(@conn, :confirmation_agreement_show)) %>
-        <%= shared_component("stage_card.html", image: "/images/checklist_big.svg", sub_header_content: "Collect important documents", button_content: "Create document list", link: document_checklist_path(@conn, :document_checklist_new)) %>
-        <%= shared_component("stage_card.html", image: "/images/prep_email_big.svg", sub_header_content: "Start date preparation email", button_content: "Create email", link: preparation_path(@conn, :preparation_new)) %>
+        <%= shared_component("stage_card.html", image: "/images/checklist_big.svg", sub_header_content: "Collect important documents", button_content: document_checklist_button_content, link: document_checklist_link) %>
+        <%= shared_component("stage_card.html", image: "/images/prep_email_big.svg", sub_header_content: "Start date preparation email", button_content: preparation_button_content, link: preparation_link) %>
       </div>
     </div>
     <!-- right card -->
-    <div class="<%= "w-third-ns ml2 #{card}" %>">
+    <div class="<%= "w-third-ns ml2 #{card_font()}" %>">
+      <div class="pa2">
+        <div class="flex flex-row items-center pb2">
+            <img class="" src="/images/prepare_small.svg" alt="Prepare">
+            <h1 class="<%= "#{headline_font()} ml2 f4" %>">Getting ready for your volunteer to start</h1>
+        </div>
+        <div class="<%= "#{body_font()}" %>">
+          <p>Some organisations already have most of these things ready for their volunteers to start. However, if your organisation is relatively new to using volunteers then you may ﬁnd some things here useful.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
-<%= if @current_user.stages["confirmation_agreement"] do %>
-  <%= shared_component("status.html", content: "Agreement", class: "bg-blue") %>
-<% else %>
-  <%= shared_component("status.html", content: "Agreement", class: "bg-red") %>
-<% end %>
-
-<%= if @current_user.stages["document_checklist"] do %>
-  <%= shared_component("status.html", content: "Document list", class: "bg-blue") %>
-<% else %>
-  <%= shared_component("status.html", content: "Document list", class: "bg-red") %>
-<% end %>
-
-<%= if @current_user.stages["preparation"] do %>
-  <%= shared_component("status.html", content: "Prep email", class: "bg-blue") %>
-<% else %>
-  <%= shared_component("status.html", content: "Prep email", class: "bg-red") %>
-<% end %>
-
-
-<br/>
-<br/>
-
-
-<%= link "Volunteer agreement template", to: confirmation_agreement_path(@conn, :confirmation_agreement_show), class: "btn btn-primary" %>
-
-<%= if @current_user.stages["document_checklist"] do %>
-  <%= link "Collect important documents", to: document_checklist_path(@conn, :document_checklist_show), class: "btn btn-primary" %>
-<% else %>
-  <%= link "Collect important documents", to: document_checklist_path(@conn, :document_checklist_new), class: "btn btn-primary" %>
-<% end %>
-
-<%= if @current_user.stages["preparation"] do %>
-  <%= link "Start date preparation email", to: preparation_path(@conn, :preparation_show), class: "btn btn-primary" %>
-<% else %>
-  <%= link "Start date preparation email", to: preparation_path(@conn, :preparation_new), class: "btn btn-primary" %>
-<% end %>
-
-<br/>
-<br/>
-
-<%= link "Home", to: page_path(@conn, :landing), class: "btn btn-primary" %>
