@@ -1,16 +1,20 @@
 
-<article class="w-100 dt tc w-100 vh-100 bg-login-gradient white cover" style="background:url(/images/login_flow_bg.png) no-repeat center;">
-<%= form_for @conn, session_path(@conn, :create), [as: :session], fn f -> %>
-  <div class="form-group">
-    <%= email_input f, :email, placeholder: "Email", class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= password_input f, :password, placeholder: "Password", class: "form-control" %>
-  </div>
-  <%= submit "Log in", class: "btn btn-primary" %>
-<% end %>
+<article class="dt tc w-100 vh-100 bg-login-gradient white cover ph7" style="background:url(/images/login_flow_bg.png) no-repeat center;">
+  <div class="<%= "v-mid tc ph3 pa4-ns pa3 br2 shadow-1 w-60 h7 center mt4 #{card_font()}" %>">
+    <div class="pa6">
+      <%= form_for @conn, session_path(@conn, :create), [as: :session], fn f -> %>
+        <div class="form-group">
+          <%= email_input f, :email, placeholder: "Email", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= password_input f, :password, placeholder: "Password", class: "form-control" %>
+        </div>
+        <%= submit "Log in", class: "btn btn-primary" %>
+      <% end %>
 
-<%= link "Forgot password?", to: password_path(@conn, :new) %>
+      <%= link "Forgot password?", to: password_path(@conn, :new) %>
+    </div>
+  </div>
 </article>
 
 
