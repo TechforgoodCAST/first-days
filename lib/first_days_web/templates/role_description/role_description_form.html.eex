@@ -1,11 +1,11 @@
 <%= form_for @changeset, @action, [method: @method], fn f -> %>
+
+  <h1 class="<%= headline_font() %>">About the role</h1>
   <%= if @changeset.action do %>
-    <div class="alert alert-danger">
+    <div class="red mv2">
       <p>Oops, something went wrong! Please check the errors below.</p>
     </div>
   <% end %>
-
-  <h1 class="<%= headline_font() %>">About the role</h1>
 
   <div class="mt3">
     <%= label f, :role_title, "What is the role title?", class: "#{input_label_class()}" %>
@@ -15,7 +15,7 @@
 
   <div class="mt3">
     <%= label f, :description, "Please give a one sentence description of the role", class: "#{input_label_class()}" %>
-    <%= text_input f, :description, class: "#{input_class()}" %>
+    <%= textarea f, :description, class: "#{input_class()}" %>
     <%= error_tag f, :description, class: "#{input_error_class()}" %>
   </div>
 
@@ -111,8 +111,5 @@
     <%= error_tag f, :skills_to_be_gained, class: "#{input_error_class()}" %>
   </div>
 
-
   <%= submit "Submit", class: "btn btn-primary" %>
-  <span></span>
-  <%= link "Home", to: page_path(@conn, :landing), class: "btn btn-primary" %>
 <% end %>
