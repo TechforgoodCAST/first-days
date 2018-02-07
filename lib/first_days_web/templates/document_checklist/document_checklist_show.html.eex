@@ -1,28 +1,72 @@
-<h2>Document Checklist</h2>
+<%
+  document_checklist_progress_icon =
+    cond do
+      @current_user.stages["document_checklist"] == true ->
+        "/images/progress_done_white.svg"
+      true ->
+        "/images/progress_white.svg"
+    end
+%>
 
-<p>Thanks for completing the preparation checklist. Your email text to send to the volunteer is below.</p>
-<p class="alert alert-info">Please copy the text below into a new document and edit it as you see fit before sending it to your volunteer.</p>
-<p>When you have completed the paperwork part of the process, please log back on and we'll help you prepare a personalised email to support the volunteer on their first day.</p>
+<!-- Tab -->
 
-<h3>Email template</h3>
-<p>Dear [NAME],</p>
-<p>Thanks very much for signing up to be a volunteer. As you may expect, there is some paperwork involved in starting the position.  We’ve listed what we need to receive from you below.</p>
-<p>It’s important that we get this process underway so we’d be grateful if you could send us the documents we need by the [DATE].</p>
+<section>
+  <div class="w-two-thirds-ns cf pt0">
+    <%= shared_component("tab.html", class: "fl pr2 w-third", font: "white", tab_state: "bg-blue", content: "Getting them ready", icon: document_checklist_progress_icon) %>
+  </div>
+</section>
 
-<p>Could you please send us:</p>
+<section>
+  <div class="flex flex-row">
 
-<ul>
-  <%= for document <- get_document_list(@answers) do %>
-    <li><%= document %></li>
-  <% end %>
-  <%= if @answers.other_document != nil do %>
-    <li><%= @answers.other_document %></li>
-  <% end %>
-</ul>
+    <!-- left card -->
 
-<p>Please also let us know when you are available to start.</p>
+    <div class="<%= "w-two-thirds-ns mr2 #{card_font()} mb2 flex flex-column" %>">
+      <div class="">
+        <h1>Document Checklist</h1>
+        <h3>Email template</h3>
+        <p>Dear [NAME],</p>
+        <p>Thanks very much for signing up to be a volunteer. As you may expect, there is some paperwork involved in starting the position.  We’ve listed what we need to receive from you below.</p>
+        <p>It’s important that we get this process underway so we’d be grateful if you could send us the documents we need by the [DATE].</p>
 
-<p>Many thanks</p>
+        <p>Could you please send us:</p>
 
-<%= link "Edit", to: document_checklist_path(@conn, :document_checklist_edit), class: "btn btn-primary" %>
-<%= shared_component("post.html", action: stage_path(@conn, :update_stage), conn: @conn, stage: :document_checklist, redirect_to: :get_them_ready) %>
+        <ul>
+        <%= for document <- get_document_list(@answers) do %>
+        <li><%= document %></li>
+        <% end %>
+        <%= if @answers.other_document != nil do %>
+        <li><%= @answers.other_document %></li>
+        <% end %>
+        </ul>
+
+        <p>Please also let us know when you are available to start.</p>
+
+        <p>Many thanks</p>
+
+        <%= link "Edit", to: document_checklist_path(@conn, :document_checklist_edit), class: "btn btn-primary" %>
+      </div>
+    </div>
+
+    <!-- right card -->
+
+    <div class="<%= "w-third-ns ml2 #{card_font()}" %>">
+      <div class="pa2">
+        <div class="flex flex-row items-center pb2">
+            <img class="" src="/images/checklist_small.svg" alt="Prepare">
+            <h1 class="<%= "#{headline_font()} ml2 f4" %>">Collect important documents</h1>
+        </div>
+        <div class="<%= "#{body_font()}" %>">
+          <p>Thanks for completing the preparation checklist.</p>
+          <br>
+          <p>Your email text to send to the volunteer is here on the left. Please copy it into a new document so that you can edit it as you see fit, then share it with your network. You can also email it to yourself.</p>
+          <br>
+          <p>When you have completed the paperwork part of the process, please log back on and we'll help you prepare a personalised email to support the volunteer on their first day.</p>
+          <br>
+          <p>I have completed this step, I am happy to say that it is done.</p>
+          <%= shared_component("post.html", action: stage_path(@conn, :update_stage), conn: @conn, stage: :document_checklist, redirect_to: :get_them_ready) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
