@@ -9,7 +9,8 @@ defmodule FirstDaysWeb.PageController do
   end
 
   def index(conn, _params) do
-    render conn, "index.html"
+    conn
+    |> redirect(to: session_path(conn, :new))
   end
 
   def landing(conn, _params) do
