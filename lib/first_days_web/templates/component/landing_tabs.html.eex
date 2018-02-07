@@ -1,5 +1,0 @@
-<div class="<%= assigns[:class] %>">
-  <%= shared_component("tab.html", content: "Find a volunteer", icon: "", class: "") %>
-  <%= shared_component("tab.html", content: "Getting them ready", icon: "", class: "") %>
-  <%= shared_component("tab.html", content: "Collecting feedback", icon: "", class: "") %>
-</div>

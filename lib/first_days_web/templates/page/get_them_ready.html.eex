@@ -1,7 +1,7 @@
 <!-- Tab -->
 <section>
   <div class="w-two-thirds-ns cf pt0">
-    <%= shared_component("tab.html", class: "fl pr2 w-third", font: "white", tab_state: "bg-blue", content: "Getting them ready") %>
+    <%= shared_component("tab.html", class: "fl pr2 w-third", font: "white", tab_state: "bg-blue", content: "Getting them ready", icon: "") %>
   </div>
 </section>
 

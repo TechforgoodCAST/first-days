@@ -1,12 +1,38 @@
 <!-- tabs -->
+
+<%
+  find_volunteer_tab_icon =
+    if @current_user.stages["role_description"] do
+      "/images/progress_done_green.svg"
+    else
+      "/images/progress_disable.svg"
+    end
+
+  get_them_ready_tab_icon =
+    if @current_user.stages["confirmation_agreement"] && @current_user.stages["document_checklist"] && @current_user.stages["preparation"] do
+      "/images/progress_done_green.svg"
+    else
+      "/images/progress_disable.svg"
+    end
+
+  feedback_tab_icon =
+    if @current_user.stages["feedback"] do
+      "/images/progress_done_green.svg"
+    else
+      "/images/progress_disable.svg"
+    end
+%>
+
 <section>
-  <div class="w-two-thirds-ns cf pt0">
-    <%= shared_component("tab.html", font: "black", class: "fl pr2 w-third", tab_state: "bg-white",content: "Find a volunteer") %>
-    <%= shared_component("tab.html", font: "black", class: "fl pr2 w-third", tab_state: "bg-white", content: "Getting them ready") %>
-    <%= shared_component("tab.html", font: "black", class: "fl pr2 w-third", tab_state: "bg-white", content: "Collecting feedback") %>
+  <div class="w-two-thirds-ns cf pt0 flex flex-row">
+    <%= shared_component("tab.html", font: "black", class: "pr2 w-third", tab_state: "bg-white",content: "Find a volunteer", icon: find_volunteer_tab_icon) %>
+    <%= shared_component("tab.html", font: "black", class: "pr2 w-third", tab_state: "bg-white", content: "Getting them ready", icon: get_them_ready_tab_icon) %>
+    <%= shared_component("tab.html", font: "black", class: "pr2 w-third", tab_state: "bg-white", content: "Collecting feedback", icon: feedback_tab_icon)%>
   </div>
 </section>
+
 <!-- header -->
+
 <section>
   <div class="<%= "#{card()} mt2 mb3" %>">
     <div class="flex flex-row items-center ma4">
