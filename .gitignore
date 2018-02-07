@@ -27,5 +27,3 @@ npm-debug.log
 /config/*.secret.exs
 
 .env
-assets/static/.DS_Store
-.DS_Store
