@@ -1,5 +1,5 @@
-<h1>Login</h1>
 
+<article class="vh-100 dt w-100 vh-100 bg-login-gradient">
 <%= form_for @conn, session_path(@conn, :create), [as: :session], fn f -> %>
   <div class="form-group">
     <%= email_input f, :email, placeholder: "Email", class: "form-control" %>
@@ -11,3 +11,10 @@
 <% end %>
 
 <%= link "Forgot password?", to: password_path(@conn, :new) %>
+</article>
+
+
+
+  <!-- <div class="dtc v-mid tc white ph3 ph4-l">
+    <h1 class="f6 f2-m f-subheadline-l fw6 tc">Vertically centering things in css is easy!</h1>
+  </div> -->

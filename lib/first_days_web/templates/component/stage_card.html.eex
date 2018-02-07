@@ -1,4 +1,4 @@
-<div class="w-third-ns mh2 tc flex flex-column items-center">
+<div class="<%= "w-third-ns tc flex flex-column items-center #{assigns[:class]}" %>">
   <div class="mb1">
     <img src="<%= @image %>">
   </div>

@@ -142,3 +142,7 @@ body {
     margin-right: $gutter;
   } */
 }
+
+.bg-login-gradient {
+  	background: linear-gradient(180deg, #FFFFFF 0%, #F1F1F1 100%);
+}
