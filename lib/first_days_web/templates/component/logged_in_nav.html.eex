@@ -1,5 +1,5 @@
 <nav class="w-100 h3 bb b--blue flex justify-between items-center bg-white">
-  <a class="f4 lh-copy b blue link no-underline flex items-center pa2 dib ml4">First Days</a>
+  <%= link("First Days", to: page_path(@conn, :index), class: "f4 lh-copy b blue link no-underline flex items-center pa2 dib ml4") %>
   <div class="pointer br2 tc pv3 w4 b--blue bw1 ba flex items-center h2 mr4">
     <%= link "Log out", to: session_path(@conn, :delete, @current_user), method: "delete", class: "mv0 blue f5 center link b lh-copy-ns pv3 outline-0" %>
   </div>

@@ -28,3 +28,4 @@ npm-debug.log
 
 .env
 assets/static/.DS_Store
+.DS_Store
