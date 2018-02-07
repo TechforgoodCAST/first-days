@@ -21,6 +21,7 @@ defmodule FirstDaysWeb.ComponentHelpers do
   def card_font, do: "bg-white pa4-ns pa3 _fontbr2 shadow-1"
 
   # form classes + widths
+  def check_form_errors_alert, do: "red mv2"
   def input_class_100, do: "w-100 pa2 input-reset ba b--blue br2 bg-white measure f5 outline-0 w5"
   def input_class_60, do: "w-50 pa2 input-reset ba b--blue br2 bg-white measure f5 outline-0 w5"
   def input_class_50, do: "w-30 pa2 input-reset ba b--blue br2 bg-white measure f5 outline-0 w5"

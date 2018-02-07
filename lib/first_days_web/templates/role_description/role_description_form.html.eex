@@ -2,7 +2,7 @@
 
   <h1 class="<%= headline_font() %>">About the role</h1>
   <%= if @changeset.action do %>
-    <div class="red mv2">
+    <div class="<%= check_form_errors_alert() %>">
       <p>Oops, something went wrong! Please check the errors below.</p>
     </div>
   <% end %>
