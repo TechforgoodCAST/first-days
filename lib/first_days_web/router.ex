@@ -44,20 +44,24 @@ defmodule FirstDaysWeb.Router do
     get "/role-description-email", RoleDescriptionController, :role_description_email
 
     get "/confirmation-agreement-show", ConfirmationAgreementController, :confirmation_agreement_show
+    get "/confirmation-agreement-email", ConfirmationAgreementController, :confirmation_agreement_email
 
     get "/document-checklist-new", DocumentChecklistController, :document_checklist_new
     post "/document-checklist-create", DocumentChecklistController, :document_checklist_create
     get "/document-checklist-show", DocumentChecklistController, :document_checklist_show
     get "/document-checklist-edit", DocumentChecklistController, :document_checklist_edit
     put "/document-checklist-update", DocumentChecklistController, :document_checklist_update
+    get "/document_checklist-email", DocumentChecklistController, :document_checklist_email
 
     get "/preparation-new", PreparationController, :preparation_new
     post "/preparation-create", PreparationController, :preparation_create
     get "/preparation-show", PreparationController, :preparation_show
     get "/preparation-edit", PreparationController, :preparation_edit
     put "/preparation-update", PreparationController, :preparation_update
+    get "/preparation-email", PreparationController, :preparation_email
 
     get "/feedback-show", FeedbackController, :feedback_show
+    get "/feedback-email", FeedbackController, :feedback_email
   end
 
   # Other scopes may use custom stacks.
