@@ -20,7 +20,7 @@ defmodule FirstDaysWeb.UserController do
         Email.welcome_email(%{current_user: user}) |> Mailer.deliver_later
         conn
         |> FirstDaysWeb.Auth.login(user)
-        |> put_flash(:success, "Thank you for signing up!")
+        |> put_flash(:success, "Thanks for signing up!")
         |> redirect(to: page_path(conn, :landing))
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "new.html", changeset: changeset)

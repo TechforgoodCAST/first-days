@@ -27,7 +27,7 @@ defmodule FirstDaysWeb.SessionController do
   def delete(conn, _) do
     conn
     |> FirstDaysWeb.Auth.logout()
-    |> put_flash(:info, "You have logged out")
+    |> put_flash(:info, "You've logged out")
     |> redirect(to: page_path(conn, :index))
   end
 end

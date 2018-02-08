@@ -85,7 +85,7 @@
           </div>
         </div>
       </div>
-      <%= shared_component("button_main.html", content: "Back to home", wrapper_class: "bg-blue w-100-ns mt4", link: page_path(@conn, :landing), content_class: "white") %>
+      <%= shared_component("button_main.html", content: "Back to Home", wrapper_class: "bg-blue w-100-ns mt4", link: page_path(@conn, :landing), content_class: "white") %>
     </div>
   </div>
 </section>
