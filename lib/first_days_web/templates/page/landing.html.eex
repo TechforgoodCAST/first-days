@@ -34,7 +34,7 @@
 <!-- header -->
 
 <section>
-  <div class="<%= "#{card_class()} mt2 mb3" %>">
+  <div class="<%= "#{card_class()} mt2 mb2" %>">
     <div class="flex flex-row items-center ma4">
 
       <div class="w4 mr3">
