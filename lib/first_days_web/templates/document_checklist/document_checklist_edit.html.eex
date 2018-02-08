@@ -6,43 +6,15 @@
       true ->
         "/images/progress_white.svg"
     end
+
+  tab_content = "Getting them ready"
+  form_template_content = render "document_checklist_form.html", Map.merge(assigns, %{action: document_checklist_path(@conn, :document_checklist_update), method: :put})
+  tips_content = render("document_checklist_form_tips.html", assigns)
 %>
 
-<!-- Tab -->
-
-<section>
-  <div class="w-two-thirds-ns cf pt0">
-    <%= shared_component("tab.html", class: "fl pr2 w-third", font: "white", tab_state: "bg-blue", content: "Getting them ready", icon: document_checklist_progress_icon) %>
-  </div>
-</section>
-
-<section>
-  <div class="flex flex-row">
-
-    <!-- left card -->
-
-    <div class="<%= "w-two-thirds-ns mr2 #{card_font()} mb2 flex flex-column" %>">
-      <div class="">
-        <%= render "document_checklist_form.html", Map.merge(assigns, %{action: document_checklist_path(@conn, :document_checklist_update), method: :put}) %>
-      </div>
-    </div>
-
-    <!-- right card -->
-
-    <div class="<%= "w-third-ns ml2 #{card_font()}" %>">
-      <div class="pa2">
-        <div class="flex flex-row items-center pb2">
-            <img class="" src="/images/checklist_small.svg" alt="Prepare">
-            <h1 class="<%= "#{headline_font()} ml2 f4" %>">Collect important documents</h1>
-        </div>
-        <div class="<%= "#{body_font()}" %>">
-          <p>Now that your volunteer has agreed to take up the role you can begin the preparations.</p>
-          <br>
-          <p>Before your volunteer can start, you'll likely need them to provide certatin paperwork. What is needed varies for different organisations and different roles. Completing this process ahead of time is really important as it can often slow down the volunteering process and create frustrations on both sides.</p>
-          <br>
-          <p>It's important your volunteer is prepared for their first day and has completed or sent through any paperwork they need to fill out for the role.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<%=
+  new_assigns = %{progress_icon: document_checklist_progress_icon, tab_content: tab_content, form_template_content: form_template_content, tips_content: tips_content}
+  render FirstDaysWeb.ComponentView,
+  "form_template_layout.html",
+  Map.merge(assigns, new_assigns)
+%>
