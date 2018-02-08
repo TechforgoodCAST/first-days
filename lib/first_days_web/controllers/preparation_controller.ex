@@ -60,9 +60,18 @@ defmodule FirstDaysWeb.PreparationController do
     Email.preparation_email(%{current_user: user, answers: user.preparation})
     |> Mailer.deliver_later
 
-    conn
-    |> put_flash(:modal, :preparation)
-    |> redirect(to: page_path(conn, :get_them_ready))
-  end
+    updated_stage = %{"preparation" => true}
+    updated_stages = Map.merge(user.stages, updated_stage)
 
+    case Accounts.update_user_stage(user, %{stages: updated_stages}) do
+      {:ok, _user} ->
+        conn
+        |> put_flash(:modal, :preparation)
+        |> redirect(to: page_path(conn, :get_them_ready))
+      {:error, _changeset} ->
+        conn
+        |> put_flash(:error, "Something went wrong, please try again")
+        |> redirect(to: page_path(conn, :get_them_ready))
+    end
+  end
 end

@@ -55,13 +55,23 @@ defmodule FirstDaysWeb.DocumentChecklistController do
         render(conn, "document_checklist_edit.html", changeset: document_checklist_changeset)
     end
   end
-
+    
   def document_checklist_email(%{assigns: %{current_user: user}} = conn, _params) do
     Email.document_checklist_email(%{current_user: user, answers: user.document_checklist})
     |> Mailer.deliver_later
 
-    conn
-    |> put_flash(:modal, :document_checklist)
-    |> redirect(to: page_path(conn, :get_them_ready))
+    updated_stage = %{"document_checklist" => true}
+    updated_stages = Map.merge(user.stages, updated_stage)
+
+    case Accounts.update_user_stage(user, %{stages: updated_stages}) do
+      {:ok, _user} ->
+        conn
+        |> put_flash(:modal, :document_checklist)
+        |> redirect(to: page_path(conn, :get_them_ready))
+      {:error, _changeset} ->
+        conn
+        |> put_flash(:error, "Something went wrong, please try again")
+        |> redirect(to: page_path(conn, :get_them_ready))
+    end
   end
 end

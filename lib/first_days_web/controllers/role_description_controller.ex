@@ -75,5 +75,4 @@ defmodule FirstDaysWeb.RoleDescriptionController do
         |> redirect(to: page_path(conn, :landing))
     end
   end
-
 end
