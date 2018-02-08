@@ -41,6 +41,7 @@ defmodule FirstDaysWeb.Router do
     get "/role-description-show", RoleDescriptionController, :role_description_show
     get "/role-description-edit", RoleDescriptionController, :role_description_edit
     put "/role-description-update", RoleDescriptionController, :role_description_update
+    get "/role-description-email", RoleDescriptionController, :role_description_email
 
     get "/confirmation-agreement-show", ConfirmationAgreementController, :confirmation_agreement_show
 

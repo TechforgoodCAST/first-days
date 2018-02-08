@@ -13,8 +13,18 @@ defmodule FirstDays.Email do
   def reset_password_email(to_email, token) do
     new_email()
     |> to(to_email)
-    |> from("ivan@wearecast.org.uk")
+    |> from("hello@firstdayswales.co.uk")
     |> subject("Reset passwords instructions")
     |> text_body("Please visit http://localhost:4000/forgot-password/#{token}/edit to reset your password")
+  end
+
+  def role_description_email(%{current_user: current_user, answers: answers}) do
+    new_email()
+    |> to(current_user.email)
+    |> from("hello@firstdayswales.co.uk")
+    |> subject("First Days - Role description")
+    |> assign(:current_user, current_user)
+    |> assign(:answers, answers)
+    |> render(:role_description_email)
   end
 end

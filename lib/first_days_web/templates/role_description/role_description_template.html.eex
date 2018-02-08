@@ -36,4 +36,5 @@
 
 
 
+<%= link "Send", to: role_description_path(@conn, :role_description_email), class: "btn btn-primary" %>
 <%= link "Edit", to: role_description_path(@conn, :role_description_edit), class: "btn btn-primary" %>
