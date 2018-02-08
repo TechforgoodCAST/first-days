@@ -1,37 +1,39 @@
-<h2>Role Description Template</h2>
+<h2 class="<%= "#{headline_font()} tc mv4" %>">Role Description Template</h2>
 
-<p>Thanks very much for telling us about the role.</p>
-<p class="alert alert-info">The text for your role description is below. Please copy it into a new document so that you can edit it as you see fit, then share it with your network. Good luck finding the right candidate!</p>
-<p>When you’ve selected the appropriate person, simply sign back on and we'll take you through the remaining steps of the process.</p>
+<section class="ma4">
+  <h3 class="<%= "#{headline_font()}" %>">Role Description (please edit as you see fit)</h3>
+  <div class="mv2">
+    <p class="<%= "#{title_bold_font()} dib" %>">Role</p><p class="<%= "#{title_black_font} dib" %>">: <%= @answers.area %></p>
+  </div>
+  <p class="<%= "#{body_font} mb2" %>">A(n) <%= @answers.role_title %> volunteer is needed for <%= @answers.organisation_name %> to help us with <%= @answers.description %>.</p>
+  <p class="<%= "#{body_font}" %>">We are looking for an individual with skills in <%= @answers.finance_skills %>. As well as these aspects of the role, the volunteer will be able to learn about the charity’s work (and) <%= @answers.additional_info %>.</p>
+  <div class="mv2">
+    <p class="<%= "#{title_bold_font()}" %>">What we do</p>
+  </div>
+  <p class="<%= "#{body_font}" %>"><%= @answers.organisation_mission %>. <%= @answers.organisation_achievements %></p>
+  <div class="mv2">
+    <p class="<%= "#{title_bold_font()}" %>">Details of the role</p>
+  </div>
+  <p class="<%= "#{body_font} mb2" %>">The role is needed for <%= @answers.work_length %> and will involve working <%= @answers.work_frequency %>. Travel expenses will be paid.</p>
+  <p class="<%= "#{body_font}" %>">It will be based in <%= @answers.location %>.</p>
+  <div class="mv2">
+    <p class="<%= "#{title_bold_font()}" %>">What you'll gain</p>
+  </div>
+  <p class="<%= "#{body_font}" %>">Doing this you could gain <%= @answers.skills_to_be_gained %>.</p>
+  <div class="mv2">
+    <p class="<%= "#{title_bold_font()}" %>">The impact for us</p>
+  </div>
+  <p class="<%= "#{body_font}" %>"><%= @answers.how_will_work_help %></p>
 
-<h3>Role Description (please edit as you see fit)</h3>
-<br/>
-
-<p><b>Role</b>: <%= @answers.area %></p>
-
-<p>A(n) <%= @answers.role_title %> volunteer is needed for <%= @answers.organisation_name %> to help us with <%= @answers.description %>.</p>
-<p>We are looking for an individual with skills in <%= @answers.finance_skills %>. As well as these aspects of the role, the volunteer will be able to learn about the charity’s work (and) <%= @answers.additional_info %>.</p>
-
-<p><b>What we do</b></p>
-
-<p><%= @answers.organisation_mission %>. <%= @answers.organisation_achievements %></p>
-
-<p><b>Details of the role</b></p>
-
-<p>The role is needed for <%= @answers.work_length %> and will involve working <%= @answers.work_frequency %>. Travel expenses will be paid.</p>
-
-<p>It will be based in <%= @answers.location %>.</p>
-
-<p><b>What you'll gain</b></p>
-
-<p>Doing this you could gain <%= @answers.skills_to_be_gained %>.</p>
-
-<p><b>The impact for us</b></p>
-<p><%= @answers.how_will_work_help %></p>
+  <p class="<%= "#{body_font} mt3 mb2 dib" %>">Want to speak further? Contact</p><p class= "<%= "#{body_bold_font()} dib pl1" %>"><%= @answers.contact_details %>.</p>
+  <div class="">
+    <p class="<%= "#{body_font} mv2 dib" %>">Charity number: </p><p class= "<%= "#{body_bold_font()} dib pl1" %>"><%= @answers.charity_number %></p>
+  </div>
+  <div class="">
+    <p class="<%= "#{body_font} mv2 dib" %>">Website: </p><p class= "<%= "#{body_bold_font()} dib pl1" %>"><%= @answers.website_link %></p>
+  </div>
+</section>
 
 
-<p>Want to speak further? Contact <%= @answers.contact_details %>.</p>
-<p>Charity number: <%= @answers.charity_number %></p>
-<p>Website: <%= @answers.website_link %></p>
 
 <%= link "Edit", to: role_description_path(@conn, :role_description_edit), class: "btn btn-primary" %>
