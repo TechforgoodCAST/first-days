@@ -11,7 +11,7 @@
 
     <!-- left card -->
 
-    <div class="<%= "w-two-thirds-ns mr2 #{card_font()} mb2 flex flex-column" %>">
+    <div class="<%= "w-two-thirds-ns mr2 #{card_class()} mb2 flex flex-column" %>">
       <div class="">
         <%= @form_template_content %>
       </div>
@@ -19,7 +19,7 @@
 
     <!-- right card -->
 
-    <div class="<%= "w-third-ns ml2 #{card_font()}" %>">
+    <div class="<%= "w-third-ns ml2 #{card_class()}" %>">
       <%= @tips_content %>
     </div>
   </div>

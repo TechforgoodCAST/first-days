@@ -18,7 +18,7 @@ defmodule FirstDaysWeb.ComponentHelpers do
   def tab_white_font_font, do: "f6 white ttu"
   def tab_black_font_font, do: "f6 black ttu"
 
-  def card_font, do: "bg-white pa4-ns pa3 _fontbr2 shadow-1"
+  def card_class, do: "bg-white pa4-ns pa3 _fontbr2 shadow-1"
 
   # form classes + widths
   def check_form_errors_alert, do: "red mv2"
