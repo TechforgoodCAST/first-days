@@ -1,5 +1,4 @@
 <h2 class="<%= "#{headline_font()} tc mv4" %>">Role Description Template</h2>
-
 <section class="ma4">
   <h3 class="<%= "#{headline_font()}" %>">Role Description (please edit as you see fit)</h3>
   <div class="mv2">
@@ -35,6 +34,10 @@
 </section>
 
 
-
-<%= link "Send", to: role_description_path(@conn, :role_description_email), class: "btn btn-primary" %>
-<%= link "Edit", to: role_description_path(@conn, :role_description_edit), class: "btn btn-primary" %>
+<div class="flex items-center justify-between w-100">
+  <%= shared_component("button_square.html", wrapper_class: "mt2", class: "transparent dib", icon: "/images/edit.svg" , alt: "edit" , link: role_description_path(@conn, :role_description_edit)) %>
+  <div class="flex flex-row items-center">
+    <p class="<%= "#{title_blue_font} mr3" %>">Send to myself</p>
+    <%= shared_component("button_square.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/send.svg" , alt: "send to myself", link: role_description_path(@conn, :role_description_email)) %>
+  </div>
+</div>
