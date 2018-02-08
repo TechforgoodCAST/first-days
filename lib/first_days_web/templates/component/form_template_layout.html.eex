@@ -1,0 +1,26 @@
+<!-- Tab -->
+
+<section>
+  <div class="w-two-thirds-ns cf pt0">
+    <%= shared_component("tab.html", class: "fl pr2 w-third", font: "white", tab_state: "bg-blue", content: @tab_content, icon: @progress_icon) %>
+  </div>
+</section>
+
+<section>
+  <div class="flex flex-row">
+
+    <!-- left card -->
+
+    <div class="<%= "w-two-thirds-ns mr2 #{card_font()} mb2 flex flex-column" %>">
+      <div class="">
+        <%= @form_template_content %>
+      </div>
+    </div>
+
+    <!-- right card -->
+
+    <div class="<%= "w-third-ns ml2 #{card_font()}" %>">
+      <%= @tips_content %>
+    </div>
+  </div>
+</section>

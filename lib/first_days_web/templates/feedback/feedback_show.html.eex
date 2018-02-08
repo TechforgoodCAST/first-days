@@ -6,84 +6,15 @@
       true ->
         "/images/progress_white.svg"
     end
+
+  tab_content = "Collecting Feedback"
+  form_template_content = render("feedback_template.html", assigns)
+  tips_content = render("feedback_tips.html", assigns)
 %>
 
-<!-- Tab -->
-
-<section>
-  <div class="w-two-thirds-ns cf pt0">
-    <%= shared_component("tab.html", class: "fl pr2 w-third", font: "white", tab_state: "bg-blue", content: "Collecting Feedback", icon: feedback_progress_icon) %>
-  </div>
-</section>
-
-<section>
-  <div class="flex flex-row">
-
-    <!-- left card -->
-
-    <div class="<%= "w-two-thirds-ns mr2 #{card_font()} mb2 flex flex-column" %>">
-      <div class="">
-        <h2>Volunteer feedback</h2>
-
-
-
-        <p>Thanks for using First Days to help with your successful volunteer recruitment.</p>
-        <p>It’s important to get feedback from volunteers after their first day. Not only does it help you understand their experience, but also it helps identify ways you can improve your induction processes. We’ve prepared this email that you can send out to the volunteer, which contains a link to the questions we’ll ask them.</p>
-
-        <h3>What you need to do</h3>
-
-        <p>Write an email to your volunteer asking for their feedback - we’ve put some example questions in the sample email below to help you. Or you might like to use a free survey tool for this, like <a href="https://www.google.co.uk/forms/about/" target="_blank">Google Forms</a>, <a href="https://www.surveymonkey.com/" target="_blank">Survey Monkey</a> or <a href="https://www.typeform.com/" target="_blank">Typeform</a>. This can make volunteers give more honest answers, as they won’t need to send it directly back to you.</p>
-
-        <p>Thanks again, and congratulations on getting the volunteer in post!</p>
-
-        <h3>Sample email with example questions</h3>
-
-        <p>Dear [NAME]</p>
-
-        <p>Congratulations on completing your first day volunteering with us!</p>
-        <p>We're grateful to you for joining the team and we hope you found your first day an enjoyable experience.</p>
-        <p>It's helpful to get feedback from you on your first day. So we'd be grateful if you could take 5 minutes to tell us your thoughts on these questions:</p>
-
-        <p>1) Did you enjoy your first day?</p>
-        <p>2) Did you get introduced to colleagues?</p>
-        <p>3) How welcome did you feel, on a scale of 1-10 (1 being not welcome, 10 being like family)?</p>
-        <p>4) What would have helped to make you feel more welcome?</p>
-        <p>5) How well do you feel you understand what the organisation does and who it works with?</p>
-        <p>6) What else would be useful to know?</p>
-        <p>7) How clear do you feel about your role?</p>
-        <p>8) What would help to make you more clear about your role?</p>
-        <p>9) Do you have everything you need to do your role? e.g. information, equipment or resources</p>
-        <p>10) Would you like to volunteer with us again?</p>
-
-        <p>It's important that we get better at the things we do not so well and keep doing the things that are working, so your feedback is really appreciated!</p>
-        <p>Many thanks</p>
-      </div>
-    </div>
-
-    <!-- right card -->
-
-    <div class="<%= "w-third-ns ml2 #{card_font()}" %>">
-      <div class="pa2">
-        <div class="flex flex-row items-center pb2">
-            <img class="" src="/images/feedback_small.svg" alt="Prepare">
-            <h1 class="<%= "#{headline_font()} ml2 f4" %>">Collecting feedback</h1>
-        </div>
-        <div class="<%= "#{body_font()}" %>">
-          <p>Thanks for using First Days to help with your succesful volunteer recruitment.</p>
-          <br>
-          <p>It's important to get feedback from volunteers after their first day. Not only does it help you understand their experience, but also helps identify ways you can improve your induction processes. We've prepared this email that you can send out to the volunteer, which contains a link to the questions we'll ask them.</p>
-          <br>
-          <p>What you need to do</p>
-          <br>
-          <p>Write an email to your volunteer asking for their feedback - we've put some example questions in the sample email here on the left to help you. Or you might like to use a free survey tool for this, like Google Forms, Survey Monkey or TypeForm. This can make volunteers give more honest answers, as they wont' need to send it directly back to you.</p>
-          <br>
-          <p>Thanks again, and congratulations on getting the volunteer for the post!</p>
-          <br>
-          <br>
-          <p>I have completed this step, I am happy to say that it is done.</p>
-          <%= shared_component("post.html", action: stage_path(@conn, :update_stage), conn: @conn, stage: :feedback, redirect_to: :landing) %>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<%=
+  new_assigns = %{progress_icon: feedback_progress_icon, tab_content: tab_content, form_template_content: form_template_content, tips_content: tips_content}
+  render FirstDaysWeb.ComponentView,
+  "form_template_layout.html",
+  Map.merge(assigns, new_assigns)
+%>

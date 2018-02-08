@@ -1,0 +1,21 @@
+<div class="pa2">
+  <div class="flex flex-row items-center pb2">
+      <img class="" src="/images/feedback_small.svg" alt="Prepare">
+      <h1 class="<%= "#{headline_font()} ml2 f4" %>">Collecting feedback</h1>
+  </div>
+  <div class="<%= "#{body_font()}" %>">
+    <p>Thanks for using First Days to help with your succesful volunteer recruitment.</p>
+    <br>
+    <p>It's important to get feedback from volunteers after their first day. Not only does it help you understand their experience, but also helps identify ways you can improve your induction processes. We've prepared this email that you can send out to the volunteer, which contains a link to the questions we'll ask them.</p>
+    <br>
+    <p>What you need to do</p>
+    <br>
+    <p>Write an email to your volunteer asking for their feedback - we've put some example questions in the sample email here on the left to help you. Or you might like to use a free survey tool for this, like Google Forms, Survey Monkey or TypeForm. This can make volunteers give more honest answers, as they wont' need to send it directly back to you.</p>
+    <br>
+    <p>Thanks again, and congratulations on getting the volunteer for the post!</p>
+    <br>
+    <br>
+    <p>I have completed this step, I am happy to say that it is done.</p>
+    <%= shared_component("post.html", action: stage_path(@conn, :update_stage), conn: @conn, stage: :feedback, redirect_to: :landing) %>
+  </div>
+</div>
