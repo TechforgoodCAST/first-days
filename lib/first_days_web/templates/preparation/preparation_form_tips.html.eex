@@ -1,0 +1,11 @@
+<div class="pa2">
+  <div class="flex flex-row items-center pb2">
+      <img class="" src="/images/prep_email_small.svg" alt="Prepare">
+      <h1 class="<%= "#{headline_font()} ml2 f4" %>">Collect important documents</h1>
+  </div>
+  <div class="<%= "#{body_font()}" %>">
+    <p>Before your volunteer starts you'll probably want to send them information so that they can settle in quickly.</p>
+    <br>
+    <p>It's important that your volunteer is prepared for their first day and has completed or sent through any paperwork they need to fill out for the role.</p>
+  </div>
+</div>

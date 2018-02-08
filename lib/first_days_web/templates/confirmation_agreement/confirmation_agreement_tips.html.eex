@@ -1,0 +1,22 @@
+<div class="pa2">
+  <div class="flex flex-row items-center pb2">
+      <img class="" src="/images/search_small.svg" alt="Prepare">
+      <h1 class="<%= "#{headline_font()} ml2 f4" %>">Confirmation & Agreement</h1>
+  </div>
+  <div class="<%= "#{body_font()}" %>">
+    <p>Congratulations on recruiting your volunteer!</p>
+    <br>
+    <p>The volunteer agreement template is here on the left. Please copy it into a new document so that you can edit it as you see fit, then share it with your network. You can also email it to yourself.</p>
+    <br>
+    <p>Why should I do this?</p>
+    <br>
+    <p>An important part of building your volunteer relationship is ensuring that there's a clear understanding of what is expected from each party. This is particularly important when a private sector individual is working in the third sector for the first time. It's quite common for there to be differences in working cultures that may surprise the volunteers.</p>
+    <br>
+    <p>It's good to get a signed agreement up front to help with this process.</p>
+    <br>
+    <p>We'd recommend you personalise and send the agreement below to the volunteer as part of the confirmation process. We've also included some links that you might want to send through to them as they may help you prepare.</p>
+    <br>
+    <p>I have completed this step, I am happy to say that it is done.</p>
+    <%= shared_component("post.html", action: stage_path(@conn, :update_stage), conn: @conn, stage: :confirmation_agreement, redirect_to: :get_them_ready) %>
+  </div>
+</div>

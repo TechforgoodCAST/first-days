@@ -3,8 +3,8 @@ defmodule FirstDays.Email do
 
   def welcome_email(%{current_user: current_user}) do
     new_email()
-    |> to("ivan@wearecast.org.uk")
-    |> from("ivan@wearecast.org.uk")
+    |> to(current_user.email)
+    |> from("hello@firstdayswales.co.uk")
     |> subject("Welcome to the First Days!")
     |> assign(:current_user, current_user)
     |> render(:welcome_email)

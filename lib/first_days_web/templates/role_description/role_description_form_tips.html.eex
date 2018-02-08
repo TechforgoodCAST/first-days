@@ -1,0 +1,9 @@
+<div class="pa2">
+  <div class="flex flex-row items-center pb2">
+      <img class="" src="/images/search_small.svg" alt="Prepare">
+      <h1 class="<%= "#{headline_font()} ml2 f4" %>">Let's find a volunteer</h1>
+  </div>
+  <div class="<%= "#{body_font()}" %>">
+    <p>This form will help you understand what your organisation needs from a volunteer by guiding you through all the steps in creating a great volunteer role description.</p>
+  </div>
+</div>

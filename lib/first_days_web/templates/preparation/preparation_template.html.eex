@@ -1,0 +1,18 @@
+<h2>Preparation</h2>
+
+<p>Hopefully your volunteer is due to start in the next 2 weeks or so. It’s helpful to send them a reminder email, together with useful information.</p>
+<p class="alert alert-info">Please copy the text below into a new document and edit it as you see fit before sending it to your volunteer.</p>
+
+<h3>Preparation Email</h3>
+<p>Dear [NAME]</p>
+<p>We hope you're looking forward to your first day with us on  <%= "#{@answers.first_day_date.day}-#{@answers.first_day_date.month}-#{@answers.first_day_date.year}" %>.</p>
+<p>We wanted to offer some helpful information.</p>
+
+<p>Dress code - <%= @answers.dress_code %></p>
+<p>What you'll be doing on your first day - <%= @answers.first_day_expectations %></p>
+<p>Other things helpful to know - <%= @answers.other_details %></p>
+
+<p>We look forward to seeing you then.</p>
+<p>Many thanks</p>
+
+<%= link "Edit", to: preparation_path(@conn, :preparation_edit), class: "btn btn-primary" %>

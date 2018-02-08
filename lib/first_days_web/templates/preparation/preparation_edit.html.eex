@@ -6,41 +6,15 @@
       true ->
         "/images/progress_white.svg"
     end
+
+  tab_content = "Getting them ready"
+  form_template_content = render "preparation_form.html", Map.merge(assigns, %{action: preparation_path(@conn, :preparation_update), method: :put})
+  tips_content = render("preparation_form_tips.html", assigns)
 %>
 
-<!-- Tab -->
-
-<section>
-  <div class="w-two-thirds-ns cf pt0">
-    <%= shared_component("tab.html", class: "fl pr2 w-third", font: "white", tab_state: "bg-blue", content: "Getting them ready", icon: preparation_progress_icon) %>
-  </div>
-</section>
-
-<section>
-  <div class="flex flex-row">
-
-    <!-- left card -->
-
-    <div class="<%= "w-two-thirds-ns mr2 #{card_font()} mb2 flex flex-column" %>">
-      <div class="">
-        <%= render "preparation_form.html", Map.merge(assigns, %{action: preparation_path(@conn, :preparation_update), method: :put}) %>
-      </div>
-    </div>
-
-    <!-- right card -->
-
-    <div class="<%= "w-third-ns ml2 #{card_font()}" %>">
-      <div class="pa2">
-        <div class="flex flex-row items-center pb2">
-            <img class="" src="/images/prep_email_small.svg" alt="Prepare">
-            <h1 class="<%= "#{headline_font()} ml2 f4" %>">Collect important documents</h1>
-        </div>
-        <div class="<%= "#{body_font()}" %>">
-          <p>Before your volunteer starts you'll probably want to send them information so that they can settle in quickly.</p>
-          <br>
-          <p>It's important that your volunteer is prepared for their first day and has completed or sent through any paperwork they need to fill out for the role.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<%=
+  new_assigns = %{progress_icon: preparation_progress_icon, tab_content: tab_content, form_template_content: form_template_content, tips_content: tips_content}
+  render FirstDaysWeb.ComponentView,
+  "form_template_layout.html",
+  Map.merge(assigns, new_assigns)
+%>

@@ -1,0 +1,22 @@
+<h1>Document Checklist</h1>
+<h3>Email template</h3>
+<p>Dear [NAME],</p>
+<p>Thanks very much for signing up to be a volunteer. As you may expect, there is some paperwork involved in starting the position.  We’ve listed what we need to receive from you below.</p>
+<p>It’s important that we get this process underway so we’d be grateful if you could send us the documents we need by the [DATE].</p>
+
+<p>Could you please send us:</p>
+
+<ul>
+<%= for document <- get_document_list(@answers) do %>
+<li><%= document %></li>
+<% end %>
+<%= if @answers.other_document != nil do %>
+<li><%= @answers.other_document %></li>
+<% end %>
+</ul>
+
+<p>Please also let us know when you are available to start.</p>
+
+<p>Many thanks</p>
+
+<%= link "Edit", to: document_checklist_path(@conn, :document_checklist_edit), class: "btn btn-primary" %>

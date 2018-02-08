@@ -1,0 +1,16 @@
+<div class="pa2">
+  <div class="flex flex-row items-center pb2">
+      <img class="" src="/images/checklist_small.svg" alt="Prepare">
+      <h1 class="<%= "#{headline_font()} ml2 f4" %>">Collect important documents</h1>
+  </div>
+  <div class="<%= "#{body_font()}" %>">
+    <p>Thanks for completing the preparation checklist.</p>
+    <br>
+    <p>Your email text to send to the volunteer is here on the left. Please copy it into a new document so that you can edit it as you see fit, then share it with your network. You can also email it to yourself.</p>
+    <br>
+    <p>When you have completed the paperwork part of the process, please log back on and we'll help you prepare a personalised email to support the volunteer on their first day.</p>
+    <br>
+    <p>I have completed this step, I am happy to say that it is done.</p>
+    <%= shared_component("post.html", action: stage_path(@conn, :update_stage), conn: @conn, stage: :document_checklist, redirect_to: :get_them_ready) %>
+  </div>
+</div>
