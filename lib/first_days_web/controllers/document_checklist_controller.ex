@@ -1,7 +1,6 @@
 defmodule FirstDaysWeb.DocumentChecklistController do
   use FirstDaysWeb, :controller
-  alias FirstDays.{DocumentChecklist, Accounts}
-
+  alias FirstDays.{DocumentChecklist, Accounts, Email, Mailer}
 
   def document_checklist_new(conn, _params) do
     changeset = DocumentChecklist.changeset(%DocumentChecklist{}, %{})
