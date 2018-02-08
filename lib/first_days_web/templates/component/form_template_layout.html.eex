@@ -7,7 +7,7 @@
 </section>
 
 <section>
-  <div class="flex flex-row">
+  <div class="inline-flex flex-row">
 
     <!-- left card -->
 
@@ -19,7 +19,7 @@
 
     <!-- right card -->
 
-    <div class="<%= "w-third-ns ml2 #{card_class()}" %>">
+    <div class="<%= "w-third-ns ml2 dit #{card_class()}" %>">
       <%= @tips_content %>
     </div>
   </div>
