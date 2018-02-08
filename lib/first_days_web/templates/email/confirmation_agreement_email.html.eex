@@ -12,37 +12,45 @@
 
 <p>Kind Regards,</p>
 <p>First Days</p>
+<br>
 
-<section>
-  <h3>Role Description (please edit as you see fit)</h3>
-  <div>
-    <p><b>Role</b>: <%= @answers.area %></p>
-  </div>
-  <p>A(n) <%= @answers.role_title %> volunteer is needed for <%= @answers.organisation_name %> to help us with <%= @answers.description %>.</p>
-  <p>We are looking for an individual with skills in <%= @answers.finance_skills %>. As well as these aspects of the role, the volunteer will be able to learn about the charity’s work (and) <%= @answers.additional_info %>.</p>
-  <div>
-    <p><b>What we do</b></p>
-  </div>
-  <p><%= @answers.organisation_mission %>. <%= @answers.organisation_achievements %></p>
-  <div>
-    <p><b>Details of the role</b></p>
-  </div>
-  <p>The role is needed for <%= @answers.work_length %> and will involve working <%= @answers.work_frequency %>. Travel expenses will be paid.</p>
-  <p>It will be based in <%= @answers.location %>.</p>
-  <div>
-    <p><b>What you'll gain</b></p>
-  </div>
-  <p>Doing this you could gain <%= @answers.skills_to_be_gained %>.</p>
-  <div>
-    <p><b>The impact for us</b></p>
-  </div>
-  <p><%= @answers.how_will_work_help %></p>
+<h2 class="<%= "#{headline_font()} tc mv4" %>"><b>Confirmation & Agreement</b></h2>
+<section class="ma4">
+<h3 class="<%= "#{title_bold_font()}" %>">Confirmation & Agreement (to edit and send to the volunteer)</h3>
+<p class="<%= "#{body_font} mb2 mt2" %>">Dear [NAME],</p>
+<p class="<%= "#{body_font} mb2" %>">We're delighted that you've agreed to volunteer with us.</p>
+<div class="<%= "#{body_font} mb2" %>">
+<p>As part of the process we find it’s useful to set up a agreement between you and the organisation so that it’s clear what you can expect from us, and us from you.  We’ve created an non-legal honour bound agreement below. Please read this, and if you’re happy, sign it and send it back to us by [DATE]</p>
+</div>
+<div class="<%= "#{body_font} mb2" %>">
+<p>Linked to this, if you’ve not volunteered in third sector before, you might find some differences in working culture to other sectors.  To help you prepare for this, we’ve given you a few links that it may be useful for you to look at.</p>
+</div>
+<p class="<%= "#{body_font} mb2" %>">[LINKS]</p>
 
-  <p>Want to speak further? Contact <b><%= @answers.contact_details %></b></p>
-  <div>
-    <p>Charity number: <b><%= @answers.charity_number %></b></p>
-  </div>
-  <div>
-    <p>Website: <b><%= @answers.website_link %></b></p>
-  </div>
+<p class="<%= "#{body_font} mb2" %>">We look forward to working with you.</p>
+<p class="<%= "#{body_font} mb4" %>">Many Thanks</p>
+
+<%= shared_component("divider.html") %>
+
+<h3 class="<%= "#{title_bold_font()} mt4 mb2" %>">Confirmation & Agreement</h3>
+<p class="<%= "#{body_font} mb2 mt2" %>">Volunteers are an important and valued part of [name of organisation]. We hope that you enjoy volunteering with us and feel a full part of our team.</p>
+<p class="<%= "#{body_font} mb2 mt2" %>">This agreement tells you what you can expect from us, and what we hope from you. We aim to be flexible, so please let us know if you would like to make any changes and we will do our best.</p>
+<p class="<%= "#{body_font} mb2 mt2" %>">We, [name of organisation], will do our best to introduce you to how the organisation works and your role in it and to provide any training you need. The initial training agreed is:</p>
+
+<ol class="<%= "#{body_font} ml3 mb4 mt2" %>">
+  <li>1. to provide regular meetings with your manager so that you can tell us if you are happy with how your work is organised and get feedback from us. Your manager’s name is [name of manager]</li>
+  <li>2. to respect your skills, dignity and individual wishes and to do our best to meet them.</li>
+  <li>3. to reimburse your travel and meal costs up to our current maximum.</li>
+  <li>4. to consult with you and keep you informed of possible changes.</li>
+  <li>5. to insure you against injury you suffer or cause due to negligence.</li>
+  <li>6. to provide a safe environment.</li>
+  <li>7. to apply our equal opportunities policy</li>
+  <li>8. to apply our complaints procedure if there is any problem</li>
+</ol>
+
+<h3 class="<%= "#{title_bold_font()} mt4 mb2" %>">For the volunteer</h3>
+<p class="<%= "#{body_font} mb2 mt2" %>">I [name of volunteer], agree to do my best, to work reliably to the best of my ability, and to give as much warning as possible whenever I cannot volunteer as expected to follow [name of organisation]’s rules and procedures, including health and safety, equal opportunities and confidentially.</p>
+<p class="<%= "#{body_font} mb2 mt2" %>">Note: this agreement is in honour only and is not itended to be a legally binding contract of employment</p>
+<p class="<%= "#{body_font} mb2 mt2" %>">Signed:</p>
+<p class="<%= "#{body_font} mb2 mt2" %>">Date:</p>
 </section>
