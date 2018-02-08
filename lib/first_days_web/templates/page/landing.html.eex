@@ -34,7 +34,7 @@
 <!-- header -->
 
 <section>
-  <div class="<%= "#{card_font()} mt2 mb3" %>">
+  <div class="<%= "#{card_class()} mt2 mb3" %>">
     <div class="flex flex-row items-center ma4">
 
       <div class="w4 mr3">
@@ -69,7 +69,7 @@
 <section>
   <div class="flex flex-row">
 
-    <div class="<%= "w-two-thirds-ns mr2 #{card_font()} mv2 flex flex-row justify-center" %>">
+    <div class="<%= "w-two-thirds-ns mr2 #{card_class()} mv2 flex flex-row justify-center" %>">
       <div class="flex items-end">
         <%= shared_component("stage_card.html", class: "mr4", image: "/images/search_big.svg", sub_header_content: "Finding a volunteer", button_content: role_description_button_content, link: role_description_link) %>
         <%= shared_component("stage_card.html", class: "mr4", image: "/images/prepare_big.svg", sub_header_content: "Getting your volunteer ready to start", button_content: "Get them ready", link: page_path(@conn, :get_them_ready)) %>
@@ -77,7 +77,7 @@
       </div>
     </div>
 
-    <div class="<%= "w-third-ns ml2 #{card_font()} mv2" %>">
+    <div class="<%= "w-third-ns ml2 #{card_class()} mv2" %>">
 
       <div class="pa2">
         <div class="flex flex-row items-center pb2">

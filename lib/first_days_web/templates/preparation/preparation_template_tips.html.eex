@@ -4,7 +4,7 @@
       <h1 class="<%= "#{headline_font()} ml2 f4" %>">Start date preparation</h1>
   </div>
   <div class="<%= "#{body_font()}" %>">
-    <p>Thanks for answering the questions for the preparation email.</p>
+    <p class="<%= "#{body_bold_font} mt4" %>">Thanks for answering the questions for the preparation email.</p>
     <br>
     <p>Your email text to send to the volunteer is here on the left. Please copy it into a new document so that you can edit it as you see fit. You can also email it to yourself.</p>
     <br>

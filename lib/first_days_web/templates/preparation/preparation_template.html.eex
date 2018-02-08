@@ -1,18 +1,24 @@
-<h2>Preparation</h2>
+<h2 class="<%= "#{headline_font()} tc mv4" %>">Preparation Email</h2>
+<section class="ma4">
+  <p class="<%= "#{body_font()} mb2" %>">Dear [NAME]</p>
+  <p class="<%= "#{body_font()} mb2 dib" %>">We hope you're looking forward to your first day with us on </p><p class= "<%= "#{body_bold_font()} ml1 dib" %>"><%= "#{@answers.first_day_date.day}-#{@answers.first_day_date.month}-#{@answers.first_day_date.year}" %>.</p>
+  <p class="<%= "#{body_font()} mb2" %>">We wanted to offer some helpful information.</p>
+  <p class="<%= "#{body_bold_font} mb2 mt3" %>">Dress code</p><p class= "<%= "#{body_font()}" %>"><%= @answers.dress_code %></p>
+  <p class="<%= "#{body_bold_font} mb2 mt3" %>">What you'll be doing on your first day</p><p class= "<%= "#{body_font()}" %>"><%= @answers.first_day_expectations %></p>
+  <p class="<%= "#{body_bold_font} mb2 mt3" %>">Other things helpful to know</p><p class= "<%= "#{body_font()}" %>"><%= @answers.other_details %></p>
 
-<p>Hopefully your volunteer is due to start in the next 2 weeks or so. It’s helpful to send them a reminder email, together with useful information.</p>
-<p class="alert alert-info">Please copy the text below into a new document and edit it as you see fit before sending it to your volunteer.</p>
+  <p class="<%= "#{body_font()} mb2 mt4" %>">We look forward to seeing you then.</p>
+  <p class="<%= "#{body_font()} mb2" %>">Many thanks</p>
+</section>
 
-<h3>Preparation Email</h3>
-<p>Dear [NAME]</p>
-<p>We hope you're looking forward to your first day with us on  <%= "#{@answers.first_day_date.day}-#{@answers.first_day_date.month}-#{@answers.first_day_date.year}" %>.</p>
-<p>We wanted to offer some helpful information.</p>
-
-<p>Dress code - <%= @answers.dress_code %></p>
-<p>What you'll be doing on your first day - <%= @answers.first_day_expectations %></p>
-<p>Other things helpful to know - <%= @answers.other_details %></p>
-
-<p>We look forward to seeing you then.</p>
-<p>Many thanks</p>
-
-<%= link "Edit", to: preparation_path(@conn, :preparation_edit), class: "btn btn-primary" %>
+<!-- template_buttons -->
+<div class="flex items-center justify-between w-100">
+  <div class="flex flex-row items-center">
+    <%= shared_component("button_square.html", wrapper_class: "mt2", class: "ml1 transparent dib", icon: "/images/edit.svg" , alt: "edit" , link: preparation_path(@conn, :preparation_edit)) %>
+    <p class="<%= "#{title_blue_font}" %>">Edit Template</p>
+  </div>
+    <div class="flex flex-row items-center">
+    <p class="<%= "#{title_blue_font} mr3" %>">Send to myself</p>
+    <%= shared_component("button_square.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/send.svg" , alt: "send to myself", link: preparation_path(@conn, :preparation_email)) %>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 <%= form_for @changeset, @action, [method: @method], fn f -> %>
-
-  <h1 class="<%= headline_font() %>">Document Checklist</h1>
+<section class="ma4">
+    <h1 class="<%= headline_font() %>">Document Checklist</h1>
   <p class="<%= body_font() %>">What documents or paperwork do you need from the volunteer to be able to start the role? (Please tick all that apply)</p>
 
   <%= if @changeset.action do %>
@@ -10,67 +10,76 @@
   <% end %>
 
 
-  <div class="mt3">
+  <div class="<%= "#{input_wrapper_class()}" %>">
     <%= checkbox f, :photo_id %>
     <%= label f, :photo_id, "Photo Id" %>
-    <%= error_tag f, :photo_id %>
+    <%= error_tag f, :photo_id, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="mt3">
+  <div class="<%= "#{input_wrapper_class()}" %>">
     <%= checkbox f, :proof_of_identity %>
     <%= label f, :proof_of_identity, "Proof of identity" %>
-    <%= error_tag f, :proof_of_identity %>
+    <%= error_tag f, :proof_of_identity, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="mt3">
+  <div class="<%= "#{input_wrapper_class()}" %>">
     <%= checkbox f, :proof_of_address %>
     <%= label f, :proof_of_address, "Proof of address" %>
-    <%= error_tag f, :proof_of_address %>
+    <%= error_tag f, :proof_of_address, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="mt3">
+  <div class="<%= "#{input_wrapper_class()}" %>">
     <%= checkbox f, :volunteer_requirements %>
     <%= label f, :volunteer_requirements, "Volunteer requirements e.g. dietary, medical or religious needs" %>
-    <%= error_tag f, :volunteer_requirements %>
+    <%= error_tag f, :volunteer_requirements, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="mt3">
+  <div class="<%= "#{input_wrapper_class()}" %>">
     <%= checkbox f, :emergency_contact_details %>
     <%= label f, :emergency_contact_details, "Emergency contact details" %>
-    <%= error_tag f, :emergency_contact_details %>
+    <%= error_tag f, :emergency_contact_details, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="mt3">
+  <div class="<%= "#{input_wrapper_class()}" %>">
     <%= checkbox f, :dbs_check %>
     <%= label f, :dbs_check, "DBS (Disclosure and Barring Service) check" %>
-    <%= error_tag f, :dbs_check %>
+    <%= error_tag f, :dbs_check, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="mt3">
+  <div class="<%= "#{input_wrapper_class()}" %>">
     <%= checkbox f, :proof_of_residency %>
     <%= label f, :proof_of_residency, "Proof of residency" %>
-    <%= error_tag f, :proof_of_residency %>
+    <%= error_tag f, :proof_of_residency, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="mt3">
+  <div class="<%= "#{input_wrapper_class()}" %>">
     <%= checkbox f, :bank_details %>
     <%= label f, :bank_details, "Bank/Building Society details (for paying expenses)" %>
-    <%= error_tag f, :bank_details %>
+    <%= error_tag f, :bank_details, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="mt3">
+  <div class="<%= "#{input_wrapper_class()}" %>">
     <%= checkbox f, :proof_of_qualifications %>
     <%= label f, :proof_of_qualifications, "Proof of qualifications" %>
-    <%= error_tag f, :proof_of_qualifications %>
+    <%= error_tag f, :proof_of_qualifications, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="mt3">
+  <div class="<%= "#{input_wrapper_class()}" %>">
     <%= label f, :other_document, "Other" %>
-    <%= text_input f, :other_document, class: "form-control" %>
-    <%= error_tag f, :other_document %>
+    <%= text_input f, :other_document, class: "#{input_class()}" %>
+    <%= error_tag f, :other_document, class: "#{input_error_class()}" %>
   </div>
+</section>
 
-
-  <%= link("Back", to: page_path(@conn, :get_them_ready)) %>
-  <%= submit "Submit", class: "btn btn-primary" %>
+  <!-- form_buttons -->
+  <div class="flex items-center justify-between w-100">
+    <div class="flex flex-row items-center">
+      <%= shared_component("button_square.html", wrapper_class: "mt2", class: "ml1 transparent dib", icon: "/images/previous.svg" , alt: "back" , link: page_path(@conn, :get_them_ready)) %>
+      <!-- <p class="<%= "#{title_blue_font}" %>">Go Back</p> -->
+    </div>
+    <div class="flex flex-row items-center">
+      <p class="<%= "#{title_blue_font} mr3" %>">View Document Checklist</p>
+      <%= shared_component("button_square_checkmark.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/checkmark.svg" , alt: "send to myself", link: document_checklist_path(@conn, :document_checklist_show)) %>
+    </div>
+  </div>
 <% end %>

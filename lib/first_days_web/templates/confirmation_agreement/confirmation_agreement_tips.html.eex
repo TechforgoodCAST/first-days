@@ -1,6 +1,6 @@
 <div class="pa2">
   <div class="flex flex-row items-center pb2">
-      <img class="" src="/images/search_small.svg" alt="Prepare">
+      <img class="" src="/images/agreement_small.svg" alt="Prepare">
       <h1 class="<%= "#{headline_font()} ml2 f4" %>">Confirmation & Agreement</h1>
   </div>
   <div class="<%= "#{body_font()}" %>">

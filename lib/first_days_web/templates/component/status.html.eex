@@ -1,3 +1,0 @@
-<div class="<%= assigns[:class] %>">
-  <%= assigns[:content] %>
-</div>
