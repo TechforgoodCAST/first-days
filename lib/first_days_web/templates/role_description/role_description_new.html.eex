@@ -6,39 +6,15 @@
       true ->
         "/images/progress_white.svg"
     end
+
+  tab_content = "Find a volunteer"
+  form_template_content = render "role_description_form.html", Map.merge(assigns, %{action: role_description_path(@conn, :role_description_create), method: :post})
+  tips_content = render("role_description_form_tips.html", assigns)
 %>
 
-<!-- Tab -->
-
-<section>
-  <div class="w-two-thirds-ns cf pt0">
-    <%= shared_component("tab.html", class: "fl pr2 w-third", font: "white", tab_state: "bg-blue", content: "Find a volunteer", icon: role_description_progress_icon) %>
-  </div>
-</section>
-
-<section>
-  <div class="flex flex-row">
-
-    <!-- left card -->
-
-    <div class="<%= "w-two-thirds-ns mr2 #{card_font()} mb2 flex flex-column" %>">
-      <div class="">
-        <%= render "role_description_form.html", Map.merge(assigns, %{action: role_description_path(@conn, :role_description_create), method: :post}) %>
-      </div>
-    </div>
-
-    <!-- right card -->
-
-    <div class="<%= "w-third-ns ml2 #{card_font()}" %>">
-      <div class="pa2">
-        <div class="flex flex-row items-center pb2">
-            <img class="" src="/images/search_small.svg" alt="Prepare">
-            <h1 class="<%= "#{headline_font()} ml2 f4" %>">Let's find a volunteer</h1>
-        </div>
-        <div class="<%= "#{body_font()}" %>">
-          <p>This form will help you understand what your organisation needs from a volunteer by guiding you through all the steps in creating a great volunteer role description.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<%=
+  new_assigns = %{progress_icon: role_description_progress_icon, tab_content: tab_content, form_template_content: form_template_content, tips_content: tips_content}
+  render FirstDaysWeb.ComponentView,
+  "form_template_layout.html",
+  Map.merge(assigns, new_assigns)
+%>

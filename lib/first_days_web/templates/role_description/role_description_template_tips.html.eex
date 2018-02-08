@@ -1,0 +1,16 @@
+<div class="pa2">
+  <div class="flex flex-row items-center pb2">
+      <img class="" src="/images/search_small.svg" alt="Prepare">
+      <h1 class="<%= "#{headline_font()} ml2 f4" %>">Let's find a volunteer</h1>
+  </div>
+  <div class="<%= "#{body_font()}" %>">
+    <p>Thanks very much for telling us about the role.</p>
+    <br>
+    <p>The text for your role description is here on the left. Please copy it into a new document so that you can edit it as you see fit, then share it with your network. You can also email it to yourself.</p>
+    <br>
+    <p>When you've selected the appropriate person, simply sign back on and we'll take you through the remaining steps of the process!</p>
+    <br>
+    <p>I have completed this step, I am happy to say that it is done.</p>
+    <%= shared_component("post.html", action: stage_path(@conn, :update_stage), conn: @conn, stage: :role_description, redirect_to: :landing) %>
+  </div>
+</div>
