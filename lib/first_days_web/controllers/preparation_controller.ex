@@ -1,6 +1,6 @@
 defmodule FirstDaysWeb.PreparationController do
   use FirstDaysWeb, :controller
-  alias FirstDays.{Preparation, Accounts}
+  alias FirstDays.{Preparation, Accounts, Email, Mailer}
 
   def preparation_new(conn, _params) do
     changeset = Preparation.changeset(%Preparation{}, %{})
