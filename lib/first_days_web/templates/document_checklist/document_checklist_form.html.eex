@@ -1,6 +1,6 @@
 <%= form_for @changeset, @action, [method: @method], fn f -> %>
-
-  <h1 class="<%= headline_font() %>">Document Checklist</h1>
+<section class="ma4">
+    <h1 class="<%= headline_font() %>">Document Checklist</h1>
   <p class="<%= body_font() %>">What documents or paperwork do you need from the volunteer to be able to start the role? (Please tick all that apply)</p>
 
   <%= if @changeset.action do %>
@@ -69,8 +69,17 @@
     <%= text_input f, :other_document, class: "#{input_class()}" %>
     <%= error_tag f, :other_document, class: "#{input_error_class()}" %>
   </div>
+</section>
 
-
-  <%= link("Back", to: page_path(@conn, :get_them_ready)) %>
-  <%= submit "Submit", class: "btn btn-primary" %>
+  <!-- form_buttons -->
+  <div class="flex items-center justify-between w-100">
+    <div class="flex flex-row items-center">
+      <%= shared_component("button_square.html", wrapper_class: "mt2", class: "ml1 transparent dib", icon: "/images/previous.svg" , alt: "back" , link: page_path(@conn, :get_them_ready)) %>
+      <!-- <p class="<%= "#{title_blue_font}" %>">Go Back</p> -->
+    </div>
+    <div class="flex flex-row items-center">
+      <p class="<%= "#{title_blue_font} mr3" %>">View Document Checklist</p>
+      <%= shared_component("button_square_checkmark.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/checkmark.svg" , alt: "send to myself", link: document_checklist_path(@conn, :document_checklist_show)) %>
+    </div>
+  </div>
 <% end %>

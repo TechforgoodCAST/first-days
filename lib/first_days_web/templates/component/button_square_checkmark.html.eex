@@ -1,0 +1,5 @@
+<div class="<%= "pointer #{assigns[:wrapper_class]}" %>">
+  <button type="submit" class="<%= " link db h4 w4 br2 pa4 #{assigns[:class]}" %>">
+    <img src="<%= assigns[:icon] %>" alt="<%= assigns[:alt] %>">
+  </button>
+</div>
