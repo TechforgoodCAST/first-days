@@ -73,16 +73,19 @@
       </div>
     </div>
     <!-- right card -->
-    <div class="<%= "w-third-ns ml2 #{card_class()}" %>">
-      <div class="pa2">
-        <div class="flex flex-row items-center pb2">
-            <img class="" src="/images/prepare_small.svg" alt="Prepare">
-            <h1 class="<%= "#{headline_font()} ml2 f4" %>">Getting ready for your volunteer to start</h1>
-        </div>
-        <div class="<%= "#{body_font()}" %>">
-          <p>Some organisations already have most of these things ready for their volunteers to start. However, if your organisation is relatively new to using volunteers then you may ﬁnd some things here useful.</p>
+    <div class="w-third-ns ml2 ">
+      <div class="<%= "#{card_class()}" %>">
+        <div class="pa2">
+          <div class="flex flex-row items-center pb2">
+              <img class="" src="/images/prepare_small.svg" alt="Prepare">
+              <h1 class="<%= "#{headline_font()} ml2 f4" %>">Getting ready for your volunteer to start</h1>
+          </div>
+          <div class="<%= "#{body_font()}" %>">
+            <p>Some organisations already have most of these things ready for their volunteers to start. However, if your organisation is relatively new to using volunteers then you may ﬁnd some things here useful.</p>
+          </div>
         </div>
       </div>
+      <%= shared_component("button_main.html", content: "Back to home", wrapper_class: "bg-blue w-100-ns mt4", link: page_path(@conn, :landing), content_class: "white") %>
     </div>
   </div>
 </section>
