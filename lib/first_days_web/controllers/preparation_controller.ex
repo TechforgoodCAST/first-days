@@ -55,4 +55,13 @@ defmodule FirstDaysWeb.PreparationController do
         render(conn, "preparation_edit.html", changeset: preparation_changeset)
     end
   end
+
+  def preparation_email(%{assigns: %{current_user: user}} = conn, _params) do
+    Email.preparation_email(%{current_user: user, answers: user.preparation})
+    |> Mailer.deliver_later
+
+    conn
+    |> redirect(to: page_path(conn, :get_them_ready))
+  end
+
 end

@@ -1,0 +1,42 @@
+<p>Hello <%= @current_user.name %>,</p>
+
+<p>Here is the template of the volunteer first day preparation e-mail.</p>
+<p>Before your volunteer starts you’ll want to send them information so that they know what to expect and can settle in quickly. It is important that your volunteer is prepared for their first day and has completed any necessary paperwork. Volunteers will feel more supported and valued if they are communicated with fully in the time between them expressing an interest in your organisation and actually commencing volunteering with you.</p>
+<p>Once you have edited this template as required, please send to the volunteer. You can then sign back into First days, and we will take you through the final step of the process!</p>
+
+<p>Kind Regards,</p>
+<p>First Days</p>
+
+<section>
+  <h3>Role Description (please edit as you see fit)</h3>
+  <div>
+    <p><b>Role</b>: <%= @answers.area %></p>
+  </div>
+  <p>A(n) <%= @answers.role_title %> volunteer is needed for <%= @answers.organisation_name %> to help us with <%= @answers.description %>.</p>
+  <p>We are looking for an individual with skills in <%= @answers.finance_skills %>. As well as these aspects of the role, the volunteer will be able to learn about the charity’s work (and) <%= @answers.additional_info %>.</p>
+  <div>
+    <p><b>What we do</b></p>
+  </div>
+  <p><%= @answers.organisation_mission %>. <%= @answers.organisation_achievements %></p>
+  <div>
+    <p><b>Details of the role</b></p>
+  </div>
+  <p>The role is needed for <%= @answers.work_length %> and will involve working <%= @answers.work_frequency %>. Travel expenses will be paid.</p>
+  <p>It will be based in <%= @answers.location %>.</p>
+  <div>
+    <p><b>What you'll gain</b></p>
+  </div>
+  <p>Doing this you could gain <%= @answers.skills_to_be_gained %>.</p>
+  <div>
+    <p><b>The impact for us</b></p>
+  </div>
+  <p><%= @answers.how_will_work_help %></p>
+
+  <p>Want to speak further? Contact <b><%= @answers.contact_details %></b></p>
+  <div>
+    <p>Charity number: <b><%= @answers.charity_number %></b></p>
+  </div>
+  <div>
+    <p>Website: <b><%= @answers.website_link %></b></p>
+  </div>
+</section>

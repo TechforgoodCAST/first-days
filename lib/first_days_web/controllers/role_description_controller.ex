@@ -1,6 +1,6 @@
 defmodule FirstDaysWeb.RoleDescriptionController do
   use FirstDaysWeb, :controller
-  alias FirstDays.{RoleDescription, Accounts}
+  alias FirstDays.{RoleDescription, Accounts, Email, Mailer}
 
 
   def role_description_new(conn, _params) do
@@ -56,4 +56,13 @@ defmodule FirstDaysWeb.RoleDescriptionController do
         render(conn, "role_description_edit.html", changeset: role_description_changeset)
     end
   end
+
+  def role_description_email(%{assigns: %{current_user: user}} = conn, _params) do
+    Email.role_description_email(%{current_user: user, answers: user.role_description})
+    |> Mailer.deliver_later
+
+    conn
+    |> redirect(to: page_path(conn, :landing))
+  end
+
 end

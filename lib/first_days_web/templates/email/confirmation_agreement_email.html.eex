@@ -1,0 +1,48 @@
+<p>Hello <%= @current_user.name %>,</p>
+
+<p>Here is a confirmation agreement template that you can use to ensure that there is a clear understanding of what is expected from the volunteer and also from you as the host organisation. An important part of this understanding and communication can be putting in a place a volunteering agreement. This is particularly important when a private sector individual is engaging with the voluntary sector for the first time. It’s quite common for there to be differences in working culture that may surprise the volunteer.</p>
+<p>A volunteer agreement helps both the organisation and its volunteers by making expectations clear. They also address the unlikely possibility of volunteers being considered employees in the eyes of the law.</p>
+<p>The agreement template can be personalised and sent to the potential volunteer as part of the induction process. Please also see the following links that may be helpful to you and also your potential volunteer.</p>
+
+<a href="https://www.wcva.org.uk/volunteering/working-with-volunteers/resources">https://www.wcva.org.uk/volunteering/working-with-volunteers/resources</a>
+<br>
+<a href="https://www.ncvo.org.uk/practical-support/information/volunteer-management">https://www.ncvo.org.uk/practical-support/information/volunteer-management</a>
+<br>
+<a href="https://www.wcva.org.uk/members-partners/third-sector-support-wales">https://www.wcva.org.uk/members-partners/third-sector-support-wales</a>
+
+<p>Kind Regards,</p>
+<p>First Days</p>
+
+<section>
+  <h3>Role Description (please edit as you see fit)</h3>
+  <div>
+    <p><b>Role</b>: <%= @answers.area %></p>
+  </div>
+  <p>A(n) <%= @answers.role_title %> volunteer is needed for <%= @answers.organisation_name %> to help us with <%= @answers.description %>.</p>
+  <p>We are looking for an individual with skills in <%= @answers.finance_skills %>. As well as these aspects of the role, the volunteer will be able to learn about the charity’s work (and) <%= @answers.additional_info %>.</p>
+  <div>
+    <p><b>What we do</b></p>
+  </div>
+  <p><%= @answers.organisation_mission %>. <%= @answers.organisation_achievements %></p>
+  <div>
+    <p><b>Details of the role</b></p>
+  </div>
+  <p>The role is needed for <%= @answers.work_length %> and will involve working <%= @answers.work_frequency %>. Travel expenses will be paid.</p>
+  <p>It will be based in <%= @answers.location %>.</p>
+  <div>
+    <p><b>What you'll gain</b></p>
+  </div>
+  <p>Doing this you could gain <%= @answers.skills_to_be_gained %>.</p>
+  <div>
+    <p><b>The impact for us</b></p>
+  </div>
+  <p><%= @answers.how_will_work_help %></p>
+
+  <p>Want to speak further? Contact <b><%= @answers.contact_details %></b></p>
+  <div>
+    <p>Charity number: <b><%= @answers.charity_number %></b></p>
+  </div>
+  <div>
+    <p>Website: <b><%= @answers.website_link %></b></p>
+  </div>
+</section>

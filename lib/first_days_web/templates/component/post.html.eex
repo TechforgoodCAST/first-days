@@ -1,5 +1,5 @@
 <%= form_for @conn, @action, [], fn f -> %>
     <%= hidden_input f, @stage, value: "true" %>
     <%= hidden_input f, :redirect_to, value: @redirect_to %>
-  <%= submit "Done", class: "blue b--blue ba" %>
+  <%= submit "Done", class: "mt4 br2 w-100 white b--blue ba bg-blue pv3 ttu" %>
 <% end %>
