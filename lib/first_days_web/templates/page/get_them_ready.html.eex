@@ -10,6 +10,46 @@
       true ->
         "/images/progress_white.svg"
     end
+
+  progress_bar_image =
+    cond do
+      @current_user.stages["preparation"] == true ->
+        "/images/progress_bar4.svg"
+      @current_user.stages["document_checklist"] == true ->
+        "/images/progress_bar3.svg"
+      @current_user.stages["confirmation_agreement"] == true ->
+        "/images/progress_bar2.svg"
+      true ->
+        "/images/progress_bar1.svg"
+    end
+
+    document_checklist_link =
+      if @current_user.stages["document_checklist"] do
+       document_checklist_path(@conn, :document_checklist_show)
+      else
+        document_checklist_link = document_checklist_path(@conn, :document_checklist_new)
+      end
+
+    document_checklist_button_content =
+      if @current_user.stages["document_checklist"] do
+        "View document list"
+      else
+        "Create document list"
+      end
+
+    preparation_link =
+      if @current_user.stages["preparation"] do
+       preparation_path(@conn, :preparation_show)
+      else
+        preparation_link = preparation_path(@conn, :preparation_new)
+      end
+
+    preparation_button_content =
+      if @current_user.stages["preparation"] do
+        "View email"
+      else
+        "Create email"
+      end
 %>
 
 <!-- Tab -->
@@ -20,41 +60,11 @@
   </div>
 </section>
 
-<%
-  document_checklist_link =
-    if @current_user.stages["document_checklist"] do
-     document_checklist_path(@conn, :document_checklist_show)
-    else
-      document_checklist_link = document_checklist_path(@conn, :document_checklist_new)
-    end
-
-  document_checklist_button_content =
-    if @current_user.stages["document_checklist"] do
-      "View document list"
-    else
-      "Create document list"
-    end
-
-  preparation_link =
-    if @current_user.stages["preparation"] do
-     preparation_path(@conn, :preparation_show)
-    else
-      preparation_link = preparation_path(@conn, :preparation_new)
-    end
-
-  preparation_button_content =
-    if @current_user.stages["preparation"] do
-      "View email"
-    else
-      "Create email"
-    end
-%>
-
 <section>
   <div class="flex flex-row">
     <!-- left card -->
-    <div class="<%= "w-two-thirds-ns mr2 #{card_font()} mb2 flex flex-column" %>">
-        <%= shared_component("progress_bar.html", image: "/images/progress_bar1.svg") %>
+    <div class="<%= "w-two-thirds-ns mr2 #{card_class()} mb2 flex flex-column" %>">
+        <%= shared_component("progress_bar.html", image: progress_bar_image) %>
         <%= shared_component("divider.html") %>
       <div class="flex flex-row mb4 mt6">
         <%= shared_component("stage_card.html", image: "/images/agreement_big.svg", sub_header_content: "Volunteer agreement template", button_content: "View Template", link: confirmation_agreement_path(@conn, :confirmation_agreement_show)) %>
@@ -63,7 +73,7 @@
       </div>
     </div>
     <!-- right card -->
-    <div class="<%= "w-third-ns ml2 #{card_font()}" %>">
+    <div class="<%= "w-third-ns ml2 #{card_class()}" %>">
       <div class="pa2">
         <div class="flex flex-row items-center pb2">
             <img class="" src="/images/prepare_small.svg" alt="Prepare">
