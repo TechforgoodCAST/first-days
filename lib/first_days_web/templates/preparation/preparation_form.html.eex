@@ -1,5 +1,5 @@
 <%= form_for @changeset, @action, [method: @method], fn f -> %>
-
+  <section class="ma4">
   <h1 class="<%= headline_font() %>">Preparing the volunteer for their first day</h1>
   <p class="<%= body_font() %>">It's important your volunteer is prepared for their first day. It can be intimidating to start in a new organisation, so help them to prepare by filling out the details below.</p>
 
@@ -17,23 +17,29 @@
     <%= error_tag f, :first_day_date, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="<%= "#{input_wrapper_class()}" %>">
+  <div class="<%= "#{input_wrapper_class()} mt4" %>">
     <%= label f, :dress_code, "Are there any dress code requirements? (This could include dress code for the organisation, or health and safety requirements. For example footwear, wearing of jewellery, dressing for certain weather if they will be working outside)", class: "#{input_label_class()}" %>
-    <%= text_input f, :dress_code, class: "#{input_class()}" %>
+    <%= textarea f, :dress_code, class: "#{input_class_60()}", rows: "4" %>
     <%= error_tag f, :dress_code, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="<%= "#{input_wrapper_class()}" %>">
+  <div class="<%= "#{input_wrapper_class()} mt4" %>">
     <%= label f, :first_day_expectations, "What should the volunteer expect on their first day? (For example, will they meet the team? Have a tour? What will they likely be working on?)", class: "#{input_label_class()}" %>
-    <%= text_input f, :first_day_expectations, class: "#{input_class()}" %>
+    <%= textarea f, :first_day_expectations, class: "#{input_class_60()}", rows: "4" %>
     <%= error_tag f, :first_day_expectations, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="<%= "#{input_wrapper_class()}" %>">
+  <div class="<%= "#{input_wrapper_class()} mt4" %>">
     <%= label f, :other_details, "Are there any other details you'd like them to know ahead of time?", class: "#{input_label_class()}" %>
-    <%= text_input f, :other_details, class: "#{input_class()}" %>
+    <%= textarea f, :other_details, class: "#{input_class_60()}", rows: "4" %>
     <%= error_tag f, :other_details, class: "#{input_error_class()}" %>
   </div>
-
-  <%= submit "Submit", class: "btn btn-primary" %>
+</section>
+<!-- form_buttons -->
+<div class="flex items-center justify-end w-100">
+  <div class="flex flex-row items-center">
+    <p class="<%= "#{title_blue_font} mr3" %>">View Email Template</p>
+    <%= shared_component("button_square_checkmark.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/checkmark.svg" , alt: "done", link: preparation_path(@conn, :preparation_show)) %>
+  </div>
+</div>
 <% end %>
