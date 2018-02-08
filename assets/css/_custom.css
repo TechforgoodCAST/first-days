@@ -78,6 +78,7 @@ body {
     content: "";
     border: 2px solid;
     background: transparent;
+    border-color: #4169e1;
     width: 34px;
     height: 34px;
     position: absolute;
@@ -87,22 +88,14 @@ body {
 
   [type="checkbox"] + label::after {
     content: "";
-    border: solid;
-    border-width: 0 0 5px 5px;
-    background: transparent;
-    border-top-color: transparent;
-    width: 17px;
-    height: 7px;
+    border: 10px solid;
+    border-color: #4169e1;
+    width: 0;
+    height: 0;
     position: absolute;
-    top: 10px;
-    left: 8px;
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    top: 9px;
+    left: 9px;
     opacity: 0;
-    /* @include opacity(0); */
   }
 
   [type="radio"]:focus + label::before {
