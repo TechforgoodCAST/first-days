@@ -1,12 +1,14 @@
 <p>Hello <%= @current_user.name %>,</p>
 
-<p>Here is the role description template that has been created based on the answers that you have provided. The specific answers that you have given helps you to really understand what your organisation needs from a volunteer by guiding you through all the steps in creating a great volunteer role description.</p>
-<p>A really focused and engaging role description is key to attracting the right volunteer to take your organisation to the next level, so it is important that you make a clear ask of what skills and experiences you require, and also show what is really great about your organisations and what the volunteer would gain from volunteering with you.</p>
-<p>Please study the role description and edit to ensure it captures exactly the information you want to give to a potential volunteer.</p>
-<p>Once you have selected an appropriate person, you can sign back into First Days, and we will take you through the remaining steps of the process!</p>
-<p>There are many sources of support to ensure that your volunteering opportunity is the best it can be. The following link would be good place to start:</p>
-<a href="https://www.volunteering-wales.net/organisations/">https://www.volunteering-wales.net/organisations/</a>
-<p>Good luck finding the right candidate.</p>
+<p>Here is a confirmation agreement template that you can use to ensure that there is a clear understanding of what is expected from the volunteer and also from you as the host organisation. An important part of this understanding and communication can be putting in a place a volunteering agreement. This is particularly important when a private sector individual is engaging with the voluntary sector for the first time. It’s quite common for there to be differences in working culture that may surprise the volunteer.</p>
+<p>A volunteer agreement helps both the organisation and its volunteers by making expectations clear. They also address the unlikely possibility of volunteers being considered employees in the eyes of the law.</p>
+<p>The agreement template can be personalised and sent to the potential volunteer as part of the induction process. Please also see the following links that may be helpful to you and also your potential volunteer.</p>
+
+<a href="https://www.wcva.org.uk/volunteering/working-with-volunteers/resources">https://www.wcva.org.uk/volunteering/working-with-volunteers/resources</a>
+<br>
+<a href="https://www.ncvo.org.uk/practical-support/information/volunteer-management">https://www.ncvo.org.uk/practical-support/information/volunteer-management</a>
+<br>
+<a href="https://www.wcva.org.uk/members-partners/third-sector-support-wales">https://www.wcva.org.uk/members-partners/third-sector-support-wales</a>
 
 <p>Kind Regards,</p>
 <p>First Days</p>

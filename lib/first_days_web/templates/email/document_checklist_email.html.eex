@@ -1,12 +1,8 @@
 <p>Hello <%= @current_user.name %>,</p>
 
-<p>Here is the role description template that has been created based on the answers that you have provided. The specific answers that you have given helps you to really understand what your organisation needs from a volunteer by guiding you through all the steps in creating a great volunteer role description.</p>
-<p>A really focused and engaging role description is key to attracting the right volunteer to take your organisation to the next level, so it is important that you make a clear ask of what skills and experiences you require, and also show what is really great about your organisations and what the volunteer would gain from volunteering with you.</p>
-<p>Please study the role description and edit to ensure it captures exactly the information you want to give to a potential volunteer.</p>
-<p>Once you have selected an appropriate person, you can sign back into First Days, and we will take you through the remaining steps of the process!</p>
-<p>There are many sources of support to ensure that your volunteering opportunity is the best it can be. The following link would be good place to start:</p>
-<a href="https://www.volunteering-wales.net/organisations/">https://www.volunteering-wales.net/organisations/</a>
-<p>Good luck finding the right candidate.</p>
+<p>Before your volunteer can start, it is likely that they will need to provide certain paperwork. Here is a template of the documents that you have indicated that your organisation will require. It is important that both the volunteer and the host organisation are clear in understanding these requirements and that everyone is clear about the requirements in respect of paperwork needed before they commence the role. Good communication between the volunteer and host organisation is key to establishing a positive and professional relationship between all parties.</p>
+
+<p>Once you have edited this template as required, please send to the volunteer. You can then sign back into first Days, and we will take you through the remaining steps of the process!</p>
 
 <p>Kind Regards,</p>
 <p>First Days</p>

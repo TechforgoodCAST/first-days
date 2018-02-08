@@ -1,12 +1,24 @@
 <p>Hello <%= @current_user.name %>,</p>
 
-<p>Here is the role description template that has been created based on the answers that you have provided. The specific answers that you have given helps you to really understand what your organisation needs from a volunteer by guiding you through all the steps in creating a great volunteer role description.</p>
-<p>A really focused and engaging role description is key to attracting the right volunteer to take your organisation to the next level, so it is important that you make a clear ask of what skills and experiences you require, and also show what is really great about your organisations and what the volunteer would gain from volunteering with you.</p>
-<p>Please study the role description and edit to ensure it captures exactly the information you want to give to a potential volunteer.</p>
-<p>Once you have selected an appropriate person, you can sign back into First Days, and we will take you through the remaining steps of the process!</p>
-<p>There are many sources of support to ensure that your volunteering opportunity is the best it can be. The following link would be good place to start:</p>
-<a href="https://www.volunteering-wales.net/organisations/">https://www.volunteering-wales.net/organisations/</a>
-<p>Good luck finding the right candidate.</p>
+<p>Here is the template of an e-mail that can be sent to your volunteers to get feedback from them about their volunteer experience with your organisation. It is important to get feedback from volunteers after their first day. Not only does it help you understand their experience, but also it helps identify ways you can improve your volunteer recruitment, retention and induction processes.</p>
+<p>You have now completed the First Days process, and we would hope that you have found it helpful, and will use it in future as part of your volunteer recruitment, induction and management process. If you found the tool helpful, please make your networks and colleagues in the sector aware of it.</p>
+<p>First Days has been created through funding provided by Big Lottery Fund Wales. The project is a partnership between Wales Co-operative Centre, Business in the Community Cymru, CAST and WCVA. Further information about the work of these organisations can be found here:</p>
+
+<a href="https://www.bitc.org.uk/wales">https://www.bitc.org.uk/wales</a>
+<br>
+<a href="https://www.bitc.org.uk/wales">https://www.bitc.org.uk/wales</a>
+<br>
+<a href="https://wales.coop/">https://wales.coop/</a>
+<br>
+<a href="https://www.wcva.org.uk/">https://www.wcva.org.uk/</a>
+<br>
+<a href="https://www.wearecast.org.uk/">https://www.wearecast.org.uk/</a>
+<br>
+
+<p>Remember that support is always available from local and national support organisations. The following link would be a good place to start in identifying local support and resources.</p>
+
+<a href="https://www.wcva.org.uk/members-partners/third-sector-support-wales">https://www.wcva.org.uk/members-partners/third-sector-support-wales</a>
+<br>
 
 <p>Kind Regards,</p>
 <p>First Days</p>

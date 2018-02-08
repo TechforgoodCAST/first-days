@@ -1,12 +1,8 @@
 <p>Hello <%= @current_user.name %>,</p>
 
-<p>Here is the role description template that has been created based on the answers that you have provided. The specific answers that you have given helps you to really understand what your organisation needs from a volunteer by guiding you through all the steps in creating a great volunteer role description.</p>
-<p>A really focused and engaging role description is key to attracting the right volunteer to take your organisation to the next level, so it is important that you make a clear ask of what skills and experiences you require, and also show what is really great about your organisations and what the volunteer would gain from volunteering with you.</p>
-<p>Please study the role description and edit to ensure it captures exactly the information you want to give to a potential volunteer.</p>
-<p>Once you have selected an appropriate person, you can sign back into First Days, and we will take you through the remaining steps of the process!</p>
-<p>There are many sources of support to ensure that your volunteering opportunity is the best it can be. The following link would be good place to start:</p>
-<a href="https://www.volunteering-wales.net/organisations/">https://www.volunteering-wales.net/organisations/</a>
-<p>Good luck finding the right candidate.</p>
+<p>Here is the template of the volunteer first day preparation e-mail.</p>
+<p>Before your volunteer starts you’ll want to send them information so that they know what to expect and can settle in quickly. It is important that your volunteer is prepared for their first day and has completed any necessary paperwork. Volunteers will feel more supported and valued if they are communicated with fully in the time between them expressing an interest in your organisation and actually commencing volunteering with you.</p>
+<p>Once you have edited this template as required, please send to the volunteer. You can then sign back into First days, and we will take you through the final step of the process!</p>
 
 <p>Kind Regards,</p>
 <p>First Days</p>
