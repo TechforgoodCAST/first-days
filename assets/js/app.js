@@ -11,7 +11,14 @@
 //
 // If you no longer want to use a dependency, remember
 // to also remove its path from "config.paths.watched".
-import "phoenix_html"
+import "phoenix_html";
+
+var exitButton = document.getElementById("exit-modal-button");
+var modal = document.getElementById("modal");
+
+exitButton.addEventListener("click", function(e) {
+  modal.className = "dn";
+});
 
 // Import local files
 //

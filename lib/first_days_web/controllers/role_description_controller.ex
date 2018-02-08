@@ -62,6 +62,7 @@ defmodule FirstDaysWeb.RoleDescriptionController do
     |> Mailer.deliver_later
 
     conn
+    |> put_flash(:modal, :role_description)
     |> redirect(to: page_path(conn, :landing))
   end
 

@@ -36,9 +36,14 @@
         </ol>
       </header> -->
 
-      <p class="ma0"><%= get_flash(@conn, :info) %></p>
+
+      <!-- <p class="ma0"><%= get_flash(@conn, :info) %></p>
       <p class="ma0"><%= get_flash(@conn, :success) %></p>
-      <p class="ma0"><%= get_flash(@conn, :error) %></p>
+    <p class="ma0"><%= get_flash(@conn, :error) %></p> -->
+
+      <%= if get_flash(@conn, :modal) do
+        shared_component("email_sent_modal.html", assigns)
+      end %>
 
       <main class="mw9-ns center">
         <section class="ml3 mr3">

@@ -61,6 +61,7 @@ defmodule FirstDaysWeb.DocumentChecklistController do
     |> Mailer.deliver_later
 
     conn
+    |> put_flash(:modal, :document_checklist)
     |> redirect(to: page_path(conn, :get_them_ready))
   end
 end

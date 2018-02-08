@@ -61,6 +61,7 @@ defmodule FirstDaysWeb.PreparationController do
     |> Mailer.deliver_later
 
     conn
+    |> put_flash(:modal, :preparation)
     |> redirect(to: page_path(conn, :get_them_ready))
   end
 

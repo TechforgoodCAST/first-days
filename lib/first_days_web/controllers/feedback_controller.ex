@@ -11,6 +11,7 @@ defmodule FirstDaysWeb.FeedbackController do
     |> Mailer.deliver_later
 
     conn
+    |> put_flash(:modal, :feedback)
     |> redirect(to: page_path(conn, :landing))
   end
 end

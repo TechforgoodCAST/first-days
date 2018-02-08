@@ -11,6 +11,7 @@ defmodule FirstDaysWeb.ConfirmationAgreementController do
     |> Mailer.deliver_later
 
     conn
-    |> redirect(to: page_path(conn, :landing))
+    |> put_flash(:modal, :confirmation_agreeement)
+    |> redirect(to: page_path(conn, :get_them_ready))
   end
 end
