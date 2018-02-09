@@ -47,6 +47,10 @@
         shared_component("email_sent_modal.html", assigns)
       end %>
 
+      <%= if get_flash(@conn, :modal_success) do
+        shared_component("success_modal.html", assigns)
+      end %>
+
       <%= if get_flash(@conn, :info) do %>
       <div class="w-100 bg-light-blue ph2 h2 flex items-center justify-center">
         <p class="<%= "#{body_bold_font()} white" %>"><%= get_flash(@conn, :info) %></p>

@@ -6,7 +6,7 @@
     <div id="exit-modal-button" class="absolute right-0 top-0 pa3 pointer">
       <img src="/images/close.svg" alt="close modal">
     </div>
-    <h1 class="<%= "#{headline_font()} pb4" %>">WELLDONE!<br>You have now completed<br> all the First Days steps!</h1>
+    <h1 class="<%= "#{headline_font()} pb4" %>">WELL DONE!<br>You have now completed<br> all the First Days steps!</h1>
     <img src="/images/modal_hurray.svg" alt="email sent">
     <p class="<%= "#{body_font()} pv3" %>">We hope that your volunteer had a great start.<br>
       You can always come back to First Days if you want to<br>
