@@ -9,62 +9,66 @@
     </div>
   <% end %>
 
+  <!-- <div class="multiple-choice mv3">
+    <input class="" id="radio-1" type="radio"  name="radio-group" >
+    <label class="" for="radio-1"><%= assigns[:content]%></label>
+  </div> -->
 
-  <div class="<%= "#{input_wrapper_class()}" %>">
+  <div class="<%= "#{input_wrapper_class()} multiple-choice mt4" %>">
     <%= checkbox f, :photo_id %>
-    <%= label f, :photo_id, "Photo Id" %>
+    <%= label f, :photo_id, "Photo Id", class: "ml2 pv2" %>
     <%= error_tag f, :photo_id, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="<%= "#{input_wrapper_class()}" %>">
+  <div class="<%= "#{input_wrapper_class()} multiple-choice mt2" %>">
     <%= checkbox f, :proof_of_identity %>
-    <%= label f, :proof_of_identity, "Proof of identity" %>
+    <%= label f, :proof_of_identity, "Proof of identity", class: "ml2 pv2 pv2" %>
     <%= error_tag f, :proof_of_identity, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="<%= "#{input_wrapper_class()}" %>">
+  <div class="<%= "#{input_wrapper_class()} multiple-choice mt2" %>">
     <%= checkbox f, :proof_of_address %>
-    <%= label f, :proof_of_address, "Proof of address" %>
+    <%= label f, :proof_of_address, "Proof of address", class: "ml2 pv2" %>
     <%= error_tag f, :proof_of_address, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="<%= "#{input_wrapper_class()}" %>">
+  <div class="<%= "#{input_wrapper_class()} multiple-choice mt2" %>">
     <%= checkbox f, :volunteer_requirements %>
-    <%= label f, :volunteer_requirements, "Volunteer requirements e.g. dietary, medical or religious needs" %>
+    <%= label f, :volunteer_requirements, "Volunteer requirements e.g. dietary, medical or religious needs", class: "ml2 pv2" %>
     <%= error_tag f, :volunteer_requirements, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="<%= "#{input_wrapper_class()}" %>">
+  <div class="<%= "#{input_wrapper_class()} multiple-choice mt2" %>">
     <%= checkbox f, :emergency_contact_details %>
-    <%= label f, :emergency_contact_details, "Emergency contact details" %>
+    <%= label f, :emergency_contact_details, "Emergency contact details", class: "ml2 pv2" %>
     <%= error_tag f, :emergency_contact_details, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="<%= "#{input_wrapper_class()}" %>">
+  <div class="<%= "#{input_wrapper_class()} multiple-choice mt2" %>">
     <%= checkbox f, :dbs_check %>
-    <%= label f, :dbs_check, "DBS (Disclosure and Barring Service) check" %>
+    <%= label f, :dbs_check, "DBS (Disclosure and Barring Service) check", class: "ml2 pv2" %>
     <%= error_tag f, :dbs_check, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="<%= "#{input_wrapper_class()}" %>">
+  <div class="<%= "#{input_wrapper_class()} multiple-choice mt2" %>">
     <%= checkbox f, :proof_of_residency %>
-    <%= label f, :proof_of_residency, "Proof of residency" %>
+    <%= label f, :proof_of_residency, "Proof of residency", class: "ml2 pv2" %>
     <%= error_tag f, :proof_of_residency, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="<%= "#{input_wrapper_class()}" %>">
+  <div class="<%= "#{input_wrapper_class()} multiple-choice mt2" %>">
     <%= checkbox f, :bank_details %>
-    <%= label f, :bank_details, "Bank/Building Society details (for paying expenses)" %>
+    <%= label f, :bank_details, "Bank/Building Society details (for paying expenses)", class: "ml2 pv2" %>
     <%= error_tag f, :bank_details, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="<%= "#{input_wrapper_class()}" %>">
+  <div class="<%= "#{input_wrapper_class()} multiple-choice mt2" %>">
     <%= checkbox f, :proof_of_qualifications %>
-    <%= label f, :proof_of_qualifications, "Proof of qualifications" %>
+    <%= label f, :proof_of_qualifications, "Proof of qualifications", class: "ml2 pv2" %>
     <%= error_tag f, :proof_of_qualifications, class: "#{input_error_class()}" %>
   </div>
 
-  <div class="<%= "#{input_wrapper_class()}" %>">
+  <div class="<%= "#{input_wrapper_class()} mt4" %>">
     <%= label f, :other_document, "Other" %>
     <%= text_input f, :other_document, class: "#{input_class()}" %>
     <%= error_tag f, :other_document, class: "#{input_error_class()}" %>

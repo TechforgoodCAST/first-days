@@ -1,5 +1,4 @@
-<h2>New User</h2>
-
+<article class="dt tc w-100 vh-100 bg-login-gradient white cover ph7" style="background:url(/images/login_flow_bg.png) no-repeat center;">
 <%= render "form.html", Map.put(assigns, :action, user_path(@conn, :create)) %>
 
-<span><%= link "Back", to: user_path(@conn, :index) %></span>
+</article>
