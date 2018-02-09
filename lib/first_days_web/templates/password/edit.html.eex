@@ -1,21 +1,27 @@
-<div>
-  <h2>Password reset</h2>
-  <p>Please enter a new password for your account.</p>
-  <%= form_for @changeset, password_path(@conn, :update, @token), [method: "put"], fn f -> %>
-    <div>
-      <%= label f, :password, "New password" %>
-      <%= password_input f, :password %>
-      ><%= error_tag f, :password %>
-    </div>
+<article class="dt tc w-100 vh-100 bg-login-gradient white cover ph7" style="background:url(/images/login_flow_bg.png) no-repeat center;">
+  <div class="center">
+    <h1 class="blue f2 b mt4">First Days</h1>
+    <p class="<%= "#{title_black_font} mv2" %>">Please enter a new password for your account.</p>
+  </div>
+  <div class="<%= "v-mid tc ph3 pa4-ns pa3 br2 shadow-1 w-60 h7 center mt3 #{card_class()}" %>">
+    <div class="tl">
+    <%= form_for @changeset, password_path(@conn, :update, @token), [method: "put"], fn f -> %>
+      <div>
+        <%= label f, :password, "New password", class: "#{input_label_class()}" %>
+        <%= password_input f, :password, class: "#{input_class_100()}" %>
+        ><%= error_tag f, :password, class: "#{input_error_class()}" %>
+      </div>
 
-    <div>
-      <%= label f, :password_confirmation, "Confirm new password" %>
-      <%= password_input f, :password_confirmation %>
-      ><%= error_tag f, :password_confirmation %>
-    </div>
+      <div>
+        <%= label f, :password_confirmation, "Confirm new password", class: "#{input_label_class()}" %>
+        <%= password_input f, :password_confirmation, class: "#{input_class_100()}" %>
+        ><%= error_tag f, :password_confirmation, class: "#{input_error_class()}" %>
+      </div>
 
-    <div>
-      <%= submit "Reset password" %>
-    </div>
-  <% end %>
+      <div>
+        <input class="mt4" type="submit" name="" value="Reset password" id="submit">
+      </div>
+    <% end %>
+  </div>
 </div>
+</article>

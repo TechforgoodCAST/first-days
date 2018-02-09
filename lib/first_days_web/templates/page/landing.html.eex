@@ -34,7 +34,7 @@
 <!-- header -->
 
 <section>
-  <div class="<%= "#{card_class()} mt2 mb3" %>">
+  <div class="<%= "#{card_class()} mt2 mb2" %>">
     <div class="flex flex-row items-center ma4">
 
       <div class="w4 mr3">
@@ -71,9 +71,9 @@
 
     <div class="<%= "w-two-thirds-ns mr2 #{card_class()} mv2 flex flex-row justify-center" %>">
       <div class="flex items-end">
-        <%= shared_component("stage_card.html", class: "mr4", image: "/images/search_big.svg", sub_header_content: "Finding a volunteer", button_content: role_description_button_content, link: role_description_link) %>
+        <%= shared_component("stage_card.html", class: "mr4", image: "/images/search_big.svg", sub_header_content: "Let's start by finding a volunteer", button_content: role_description_button_content, link: role_description_link) %>
         <%= shared_component("stage_card.html", class: "mr4", image: "/images/prepare_big.svg", sub_header_content: "Getting your volunteer ready to start", button_content: "Get them ready", link: page_path(@conn, :get_them_ready)) %>
-        <%= shared_component("stage_card.html", image: "/images/feedback_big.svg", sub_header_content: "Collecting feeback", button_content: "View template", link: feedback_path(@conn, :feedback_show)) %>
+        <%= shared_component("stage_card.html", image: "/images/feedback_big.svg", sub_header_content: "Collect feeback from your volunteer", button_content: "View template", link: feedback_path(@conn, :feedback_show)) %>
       </div>
     </div>
 
@@ -86,7 +86,11 @@
         </div>
 
         <div class="<%= "#{body_font()}" %>">
-          <p>Some tips about how to best use First Days, this could be any text that explains how to best go through the steps and what is required.</p>
+          <p>First Days is made up of three easy to use sections. At the end of each section a template of your
+responses will be sent to your e-mail with the completed information, links and resources to assist
+you. You can then edit this template until it is exactly as you want.
+Once you have completed a section and you are ready to move onto the next section you can login
+again at any time.</p>
         </div>
       </div>
 

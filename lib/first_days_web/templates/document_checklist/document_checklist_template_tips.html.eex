@@ -10,7 +10,7 @@
     <br>
     <p>When you have completed the paperwork part of the process, please log back on and we'll help you prepare a personalised email to support the volunteer on their first day.</p>
     <br>
-    <p>I have completed this step, I am happy to say that it is done.</p>
+    <p class="<%= "#{body_bold_font()}" %>">I have completed this step, I am happy to say that it is done.</p>
     <%= shared_component("post.html", action: stage_path(@conn, :update_stage), conn: @conn, stage: :document_checklist, redirect_to: :get_them_ready) %>
   </div>
 </div>

@@ -1,5 +1,5 @@
 * {
-  font-family: "Cantarell", sans-serif;
+  font-family: "Cantarell", sans-serif !important;
 }
 
 body {
@@ -78,6 +78,7 @@ body {
     content: "";
     border: 2px solid;
     background: transparent;
+    border-color: #4169e1;
     width: 34px;
     height: 34px;
     position: absolute;
@@ -87,22 +88,14 @@ body {
 
   [type="checkbox"] + label::after {
     content: "";
-    border: solid;
-    border-width: 0 0 5px 5px;
-    background: transparent;
-    border-top-color: transparent;
-    width: 17px;
-    height: 7px;
+    border: 10px solid;
+    border-color: #4169e1;
+    width: 0;
+    height: 0;
     position: absolute;
-    top: 10px;
-    left: 8px;
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    top: 9px;
+    left: 9px;
     opacity: 0;
-    /* @include opacity(0); */
   }
 
   [type="radio"]:focus + label::before {
@@ -134,21 +127,23 @@ body {
   }
 }
 
-button, input[type="submit"], input[type="reset"] {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 #submit {
   opacity: 1;
   width: 100%;
   background-color: #4169e1;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   font-weight: bold;
   color: white;
   padding-top: 1rem;
@@ -165,5 +160,9 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 .bg-login-gradient {
-  	background: linear-gradient(180deg, #FFFFFF 0%, #F1F1F1 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f1f1f1 100%);
+}
+
+.modal-gray {
+  background-color: rgba(112, 112, 112, 0.7);
 }

@@ -15,6 +15,7 @@ defmodule FirstDaysWeb.SessionController do
     case FirstDaysWeb.Auth.login_by_email_and_pass(conn, email, pass, repo: Repo) do
       {:ok, conn} ->
         conn
+        |> put_flash(:info, "Welcome back!")
         |> redirect(to: page_path(conn, :landing))
       {:error, _reason, conn} ->
         conn
@@ -26,7 +27,7 @@ defmodule FirstDaysWeb.SessionController do
   def delete(conn, _) do
     conn
     |> FirstDaysWeb.Auth.logout()
-    |> put_flash(:info, "You have logged out")
+    |> put_flash(:info, "You've logged out")
     |> redirect(to: page_path(conn, :index))
   end
 end

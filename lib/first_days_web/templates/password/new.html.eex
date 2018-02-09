@@ -1,14 +1,22 @@
-<div>
-  <h2>Password reset</h2>
+<article class="dt tc w-100 vh-100 bg-login-gradient white cover ph7" style="background:url(/images/login_flow_bg.png) no-repeat center;">
+  <div class="center">
+    <h1 class="blue f2 b mt5">First Days</h1>
+    <p class="<%= "#{title_black_font} mv2" %>">Forgot your password?</p>
+  </div>
+
+  <div class="<%= "v-mid tc ph3 pa4-ns pa3 br2 shadow-1 w-60 h7 center mt3 #{card_class()}" %>">
+    <div class="tl">
     <%= form_for @changeset, @action, fn f -> %>
     <div>
-      <%= label f, :email %>
-      <%= text_input f, :email %>
-      <%= error_tag f, :email %>
+      <%= label f, :email, class: "#{input_label_class()}"%>
+      <%= text_input f, :email, class: "#{input_class_100()}"  %>
+      <%= error_tag f, :email, class: "#{input_error_class()}" %>
     </div>
 
     <div>
-      <%= submit "Send reset link" %>
+      <input class="mt4" type="submit" name="" value="Send reset link" id="submit">
     </div>
   <% end %>
 </div>
+</div>
+</article>

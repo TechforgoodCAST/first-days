@@ -61,8 +61,18 @@ defmodule FirstDaysWeb.RoleDescriptionController do
     Email.role_description_email(%{current_user: user, answers: user.role_description})
     |> Mailer.deliver_later
 
-    conn
-    |> redirect(to: page_path(conn, :landing))
-  end
+    updated_stage = %{"role_description" => true}
+    updated_stages = Map.merge(user.stages, updated_stage)
 
+    case Accounts.update_user_stage(user, %{stages: updated_stages}) do
+      {:ok, _user} ->
+        conn
+        |> put_flash(:modal, :role_description)
+        |> redirect(to: page_path(conn, :landing))
+      {:error, _changeset} ->
+        conn
+        |> put_flash(:error, "Something went wrong, please try again")
+        |> redirect(to: page_path(conn, :landing))
+    end
+  end
 end
