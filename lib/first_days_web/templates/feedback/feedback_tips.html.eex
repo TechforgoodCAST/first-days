@@ -15,7 +15,7 @@
     <p>Thanks again, and congratulations on getting the volunteer for the post!</p>
     <br>
     <br>
-    <p>I have completed this step, I am happy to say that it is done.</p>
+    <p class="<%= "#{body_bold_font()}" %>">I have completed this step, I am happy to say that it is done.</p>
     <%= shared_component("post.html", action: stage_path(@conn, :update_stage), conn: @conn, stage: :feedback, redirect_to: :landing) %>
   </div>
 </div>
