@@ -11,10 +11,18 @@ defmodule FirstDaysWeb.StageController do
 
     updated_stages = Map.merge(user.stages, update_stages)
 
+    show_success_modal =
+      if params["feedback"] do
+        :modal_success
+      else
+        :no_modal
+      end
+
     case Accounts.update_user_stage(user, %{stages: updated_stages}) do
       {:ok, _user} ->
         redirect_to = String.to_atom(params["redirect_to"])
         conn
+        |> put_flash(show_success_modal, :feedback)
         |> redirect(to: page_path(conn, redirect_to))
       {:error, _changeset} ->
         conn
