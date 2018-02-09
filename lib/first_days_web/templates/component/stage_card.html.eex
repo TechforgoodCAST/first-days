@@ -2,6 +2,8 @@
   <div class="mb1">
     <img src="<%= @image %>">
   </div>
-  <p class="<%= "#{body_bold_font()} mb4" %>"><%= @sub_header_content %></p>
+  <div class="h3-ns">
+    <p class="<%= "#{body_bold_font()} mb4" %>"><%= @sub_header_content %></p>
+  </div>
   <%= shared_component("button_main.html", content: @button_content, wrapper_class: "bg-blue w-80-ns", content_class: "white", link: @link) %>
 </div>

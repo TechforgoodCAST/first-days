@@ -14,11 +14,13 @@
 
   <body>
 
-  <%= if @current_user do %>
-    <%= shared_component("logged_in_nav.html", conn: @conn, current_user: @current_user)%>
-  <% else %>
-    <%= shared_component("logged_out_nav.html", conn: @conn)%>
-  <% end %>
+  <div class="w-100 bg-white bb b--blue">
+    <%= if @current_user do %>
+      <%= shared_component("logged_in_nav.html", conn: @conn, current_user: @current_user)%>
+    <% else %>
+      <%= shared_component("logged_out_nav.html", conn: @conn)%>
+    <% end %>
+  </div>
 
 
     <!-- <div class="container">
@@ -45,6 +47,10 @@
         shared_component("email_sent_modal.html", assigns)
       end %>
 
+      <%= if get_flash(@conn, :modal_success) do
+        shared_component("success_modal.html", assigns)
+      end %>
+
       <%= if get_flash(@conn, :info) do %>
       <div class="w-100 bg-light-blue ph2 h2 flex items-center justify-center">
         <p class="<%= "#{body_bold_font()} white" %>"><%= get_flash(@conn, :info) %></p>
@@ -64,7 +70,7 @@
       <% end %>
 
       <main class="mw9-ns center">
-        <section class="ml3 mr3">
+        <section class="mh3">
           <%= render @view_module, @view_template, assigns %>
         </section>
       </main>

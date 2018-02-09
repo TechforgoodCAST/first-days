@@ -21,13 +21,27 @@
     else
       "/images/progress_disable.svg"
     end
+
+  role_description_link =
+    if @current_user.stages["role_description"] do
+     role_description_path(@conn, :role_description_show)
+    else
+      role_description_link = role_description_path(@conn, :role_description_new)
+    end
+
+  role_description_button_content =
+    if @current_user.stages["role_description"] do
+      "View template"
+    else
+      "Create description"
+    end
 %>
 
 <section>
   <div class="w-two-thirds-ns cf pt0 flex flex-row">
-    <%= shared_component("tab.html", font: "black", class: "pr2 w-third", tab_state: "bg-white",content: "Find a volunteer", icon: find_volunteer_tab_icon) %>
-    <%= shared_component("tab.html", font: "black", class: "pr2 w-third", tab_state: "bg-white", content: "Getting them ready", icon: get_them_ready_tab_icon) %>
-    <%= shared_component("tab.html", font: "black", class: "pr2 w-third", tab_state: "bg-white", content: "Collecting feedback", icon: feedback_tab_icon)%>
+    <%= shared_component("tab_landing.html", font: "black", class: "pr2 w-third", tab_state: "bg-white",content: "Find a volunteer", icon: find_volunteer_tab_icon, link: role_description_link) %>
+    <%= shared_component("tab_landing.html", font: "black", class: "pr2 w-third", tab_state: "bg-white", content: "Getting them ready", icon: get_them_ready_tab_icon, link: page_path(@conn, :get_them_ready)) %>
+    <%= shared_component("tab_landing.html", font: "black", class: "pr2 w-third", tab_state: "bg-white", content: "Collecting feedback", icon: feedback_tab_icon, link: feedback_path(@conn, :feedback_show))%>
   </div>
 </section>
 
@@ -50,30 +64,14 @@
   </div>
 </section>
 
-<%
-  role_description_link =
-    if @current_user.stages["role_description"] do
-     role_description_path(@conn, :role_description_show)
-    else
-      role_description_link = role_description_path(@conn, :role_description_new)
-    end
-
-  role_description_button_content =
-    if @current_user.stages["role_description"] do
-      "View template"
-    else
-      "Create description"
-    end
-%>
-
 <section>
   <div class="flex flex-row">
 
     <div class="<%= "w-two-thirds-ns mr2 #{card_class()} mv2 flex flex-row justify-center" %>">
       <div class="flex items-end">
-        <%= shared_component("stage_card.html", class: "mr4", image: "/images/search_big.svg", sub_header_content: "Let's start by finding a volunteer", button_content: role_description_button_content, link: role_description_link) %>
+        <%= shared_component("stage_card.html", class: "mr4", image: "/images/search_big.svg", sub_header_content: "Finding a volunteer", button_content: role_description_button_content, link: role_description_link) %>
         <%= shared_component("stage_card.html", class: "mr4", image: "/images/prepare_big.svg", sub_header_content: "Getting your volunteer ready to start", button_content: "Get them ready", link: page_path(@conn, :get_them_ready)) %>
-        <%= shared_component("stage_card.html", image: "/images/feedback_big.svg", sub_header_content: "Collect feeback from your volunteer", button_content: "View template", link: feedback_path(@conn, :feedback_show)) %>
+        <%= shared_component("stage_card.html", image: "/images/feedback_big.svg", sub_header_content: "Collecting feedback", button_content: "View template", link: feedback_path(@conn, :feedback_show)) %>
       </div>
     </div>
 

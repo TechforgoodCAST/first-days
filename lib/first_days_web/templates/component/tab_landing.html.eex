@@ -1,0 +1,11 @@
+
+<div class="<%= @class %>">
+  <a href="<%= @link %>" class="pointer">
+    <div class="<%= "pv3 tc flex flex-row items-center justify-center #{assigns[:tab_state]}" %>">
+    <div class="pr2">
+      <img src="<%= @icon %>" alt="progress-icon">
+    </div>
+    <h1 class="<%= "f6 ttu ma0 #{@font}" %>"><%= @content %></h1>
+  </div>
+  </a>
+</div>

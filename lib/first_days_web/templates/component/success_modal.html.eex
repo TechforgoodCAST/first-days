@@ -1,0 +1,16 @@
+<div id="modal" class="w-100 h-100 fixed left-0 top-0 flex items-center justify-center modal-gray">s
+  <div class="bg-white tc ph6 pv4 relative flex items-center flex-column br2">
+    <div class="modal-icon flex items-center">
+      <img src="/images/modal_welldone.svg" alt="success">
+    </div>
+    <div id="exit-modal-button" class="absolute right-0 top-0 pa3 pointer">
+      <img src="/images/close.svg" alt="close modal">
+    </div>
+    <h1 class="<%= "#{headline_font()} pb4" %>">WELL DONE!<br>You have now completed<br> all the First Days steps!</h1>
+    <img src="/images/modal_hurray.svg" alt="email sent">
+    <p class="<%= "#{body_font()} pv3" %>">We hope that your volunteer had a great start.<br>
+      You can always come back to First Days if you want to<br>
+      revisit the proccess, making it the best it can be.</p>
+    <%= shared_component("button_main.html", content: "Back to home", wrapper_class: "bg-blue w-60-ns", link: page_path(@conn, :landing), content_class: "white") %>
+  </div>
+</div>
