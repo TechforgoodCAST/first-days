@@ -1,5 +1,8 @@
 <div id="modal" class="w-100 h-100 fixed left-0 top-0 flex items-center justify-center modal-gray">
   <div class="bg-white tc ph6 pv4 relative flex items-center flex-column br2">
+    <div class="modal-icon flex items-center">
+      <img src="/images/modal_send.svg" alt="email sent">
+    </div>
     <div id="exit-modal-button" class="absolute right-0 top-0 pa3 pointer">
       <img src="/images/close.svg" alt="close modal">
     </div>

@@ -166,3 +166,8 @@ input[type="reset"] {
 .modal-gray {
   background-color: rgba(112, 112, 112, 0.7);
 }
+
+.modal-icon {
+  display: inline-block;
+  margin: -80px 0 10px 0;
+}
