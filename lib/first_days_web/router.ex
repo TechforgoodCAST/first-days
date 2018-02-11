@@ -60,8 +60,8 @@ defmodule FirstDaysWeb.Router do
     put "/preparation-update", PreparationController, :update
     get "/preparation-email", PreparationController, :email
 
-    get "/feedback-show", FeedbackController, :feedback_show
-    get "/feedback-email", FeedbackController, :feedback_email
+    get "/feedback-show", FeedbackController, :show
+    get "/feedback-email", FeedbackController, :email
   end
 
   # Other scopes may use custom stacks.

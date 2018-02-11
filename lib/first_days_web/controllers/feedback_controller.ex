@@ -2,11 +2,11 @@ defmodule FirstDaysWeb.FeedbackController do
   use FirstDaysWeb, :controller
   alias FirstDays.{Email, Mailer, Accounts}
 
-  def feedback_show(conn, _params) do
-    render conn, "feedback_show.html"
+  def show(conn, _params) do
+    render conn, "show.html"
   end
 
-  def feedback_email(%{assigns: %{current_user: user}} = conn, _params) do
+  def email(%{assigns: %{current_user: user}} = conn, _params) do
     Email.feedback_email(%{current_user: user})
     |> Mailer.deliver_later
 
