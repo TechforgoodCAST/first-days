@@ -8,8 +8,8 @@
     end
 
   tab_content = "Getting them ready"
-  form_template_content = render "document_checklist_form.html", Map.merge(assigns, %{action: document_checklist_path(@conn, :update), method: :put})
-  tips_content = render("document_checklist_form_tips.html", assigns)
+  form_template_content = render "form.html", Map.merge(assigns, %{action: document_checklist_path(@conn, :create), method: :post})
+  tips_content = render("form_tips.html", assigns)
 %>
 
 <%=

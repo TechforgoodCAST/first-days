@@ -8,8 +8,8 @@
     end
 
   tab_content = "Getting them ready"
-  form_template_content = render("document_checklist_template.html", assigns)
-  tips_content = render("document_checklist_template_tips.html", assigns)
+  form_template_content = render("template.html", assigns)
+  tips_content = render("template_tips.html", assigns)
 %>
 
 <%=
