@@ -10,7 +10,7 @@
     <img src="/images/modal_hurray.svg" alt="email sent">
     <p class="<%= "#{body_font()} pv3" %>">We hope that your volunteer had a great start.<br>
       You can always come back to First Days if you want to<br>
-      revisit the proccess, making it the best it can be.</p>
+      revisit the process, making it the best it can be.</p>
     <%= shared_component("button_main.html", content: "Back to home", wrapper_class: "bg-blue w-60-ns", link: page_path(@conn, :landing), content_class: "white") %>
   </div>
 </div>

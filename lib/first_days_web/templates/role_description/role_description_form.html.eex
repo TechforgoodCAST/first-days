@@ -20,7 +20,7 @@
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :area, "What area is the role in?", class: "#{input_label_class()}" %>
+    <%= label f, :area, "What skill area is the volunteer role in?", class: "#{input_label_class()}" %>
     <%= select f, :area, ["Finance", "Legal", "HR", "IT"], class: "#{input_class()}", prompt: "" %>
     <%= error_tag f, :area, class: "#{input_error_class()}" %>
   </div>
@@ -81,13 +81,13 @@
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :organisation_achievements, "What if any notable achievements has your organisation had? e.g. awards, membership of professional bodies (this can help attract volunteers to your organisation)", class: "#{input_label_class()}" %>
+    <%= label f, :organisation_achievements, "What notable achievements has your organisation had? e.g. awards, membership of professional bodies (this can help attract volunteers to your organisation)", class: "#{input_label_class()}" %>
     <%= textarea f, :organisation_achievements, class: "#{input_class_60()}", rows: "4" %>
     <%= error_tag f, :organisation_achievements, class: "#{input_error_class()}" %>
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :charity_number, "Please write your charity number", class: "#{input_label_class()}" %>
+    <%= label f, :charity_number, "Please confirm your charity number/company number (if applicable)", class: "#{input_label_class()}" %>
     <%= text_input f, :charity_number, class: "#{input_class_30()}" %>
     <%= error_tag f, :charity_number, class: "#{input_error_class()}" %>
   </div>

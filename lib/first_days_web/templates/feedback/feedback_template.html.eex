@@ -18,6 +18,8 @@
   <p class="<%= "#{body_font} mb2" %>">8) What would help to make you more clear about your role?</p>
   <p class="<%= "#{body_font} mb2" %>">9) Do you have everything you need to do your role? e.g. information, equipment or resources</p>
   <p class="<%= "#{body_font} mb2" %>">10) Would you like to volunteer with us again?</p>
+  <p class="<%= "#{body_font} mb2" %>">11) Would you recommend our organisation to your friends and family?</p>
+
 
   <p class="<%= "#{body_font} mb2 mt4" %>">It's important that we get better at the things we do not so well and keep doing the things that are working, so your feedback is really appreciated!</p>
   <p class="<%= "#{body_font} mb2" %>">Many thanks</p>
