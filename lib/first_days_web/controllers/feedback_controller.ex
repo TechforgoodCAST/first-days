@@ -16,7 +16,7 @@ defmodule FirstDaysWeb.FeedbackController do
     case Accounts.update_user_stage(user, %{stages: updated_stages}) do
       {:ok, _user} ->
         conn
-        |> put_flash(:modal_success, :feedback)
+        |> put_flash(:success_modal, :feedback)
         |> redirect(to: page_path(conn, :landing))
       {:error, _changeset} ->
         conn

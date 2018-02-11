@@ -26,11 +26,11 @@
 
     <!-- modals -->
 
-    <%= if get_flash(@conn, :modal) do
+    <%= if get_flash(@conn, :email_modal) do
       shared_component("email_sent_modal.html", assigns)
     end %>
 
-    <%= if get_flash(@conn, :modal_success) do
+    <%= if get_flash(@conn, :success_modal) do
       shared_component("success_modal.html", assigns)
     end %>
 

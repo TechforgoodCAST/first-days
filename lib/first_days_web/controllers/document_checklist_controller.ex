@@ -66,7 +66,7 @@ defmodule FirstDaysWeb.DocumentChecklistController do
     case Accounts.update_user_stage(user, %{stages: updated_stages}) do
       {:ok, _user} ->
         conn
-        |> put_flash(:modal, :document_checklist)
+        |> put_flash(:email_modal, :document_checklist)
         |> redirect(to: page_path(conn, :get_them_ready))
       {:error, _changeset} ->
         conn

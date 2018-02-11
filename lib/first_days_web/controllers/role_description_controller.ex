@@ -67,7 +67,7 @@ defmodule FirstDaysWeb.RoleDescriptionController do
     case Accounts.update_user_stage(user, %{stages: updated_stages}) do
       {:ok, _user} ->
         conn
-        |> put_flash(:modal, :role_description)
+        |> put_flash(:email_modal, :role_description)
         |> redirect(to: page_path(conn, :landing))
       {:error, _changeset} ->
         conn

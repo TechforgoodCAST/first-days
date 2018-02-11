@@ -14,7 +14,7 @@ defmodule FirstDaysWeb.StageController do
 
     show_success_modal =
       if params["feedback"] do
-        :modal_success
+        :success_modal
       else
         :no_modal
       end

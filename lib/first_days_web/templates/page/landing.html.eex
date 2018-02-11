@@ -84,11 +84,13 @@
         </div>
 
         <div class="<%= "#{body_font()}" %>">
-          <p>First Days is made up of three easy to use sections. At the end of each section a template of your
-responses will be sent to your e-mail with the completed information, links and resources to assist
-you. You can then edit this template until it is exactly as you want.
-Once you have completed a section and you are ready to move onto the next section you can login
-again at any time.</p>
+          <p>
+          First Days is made up of three easy to use sections. At the end of each section a template of your
+          responses will be sent to your e-mail with the completed information, links and resources to assist
+          you. You can then edit this template until it is exactly as you want.
+          Once you have completed a section and you are ready to move onto the next section you can log in
+          again at any time.
+          </p>
         </div>
       </div>
 

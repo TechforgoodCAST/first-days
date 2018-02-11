@@ -66,7 +66,7 @@ defmodule FirstDaysWeb.PreparationController do
     case Accounts.update_user_stage(user, %{stages: updated_stages}) do
       {:ok, _user} ->
         conn
-        |> put_flash(:modal, :preparation)
+        |> put_flash(:email_modal, :preparation)
         |> redirect(to: page_path(conn, :get_them_ready))
       {:error, _changeset} ->
         conn

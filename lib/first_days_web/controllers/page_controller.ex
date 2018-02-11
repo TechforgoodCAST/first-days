@@ -21,7 +21,7 @@ defmodule FirstDaysWeb.PageController do
     render conn, "get_them_ready.html"
   end
 
-  def test(conn, _params) do
-    render conn, "test.html"
+  def about(conn, _params) do
+    render conn, "about.html"
   end
 end
