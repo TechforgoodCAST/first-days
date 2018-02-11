@@ -24,7 +24,7 @@
   </div>
 
   <div class="<%= "#{input_wrapper_class()} mt4" %>">
-    <%= label f, :first_day_expectations, "What should the volunteer expect on their first day? (For example, will they meet the team? Have a tour? What will they likely be working on?)", class: "#{input_label_class()}" %>
+    <%= label f, :first_day_expectations, "what will be the nature of the work that they will be undertaking? (For example, will they meet the team? Have a tour? What will they likely be working on?)", class: "#{input_label_class()}" %>
     <%= textarea f, :first_day_expectations, class: "#{input_class_60()}", rows: "4" %>
     <%= error_tag f, :first_day_expectations, class: "#{input_error_class()}" %>
   </div>
