@@ -57,7 +57,7 @@
 
       <div>
         <h1 class="<%= "#{headline_font()}" %>">Welcome to First Days!</h1>
-        <h2 class="<%= "#{title_black_font()}" %>">First Days helps you to support volunteers through the recruitment process, from assessing your needs, right through to getting feedback on the volunteers first day.</h2>
+        <h2 class="<%= "#{title_black_font()}" %>">First Days helps you to support volunteers through the recruitment process, from assessing your needs, right through to getting feedback on the volunteer's first day.</h2>
       </div>
 
     </div>
