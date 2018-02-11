@@ -46,12 +46,12 @@ defmodule FirstDaysWeb.Router do
     get "/confirmation-agreement-show", ConfirmationAgreementController, :show
     get "/confirmation-agreement-email", ConfirmationAgreementController, :email
 
-    get "/document-checklist-new", DocumentChecklistController, :document_checklist_new
-    post "/document-checklist-create", DocumentChecklistController, :document_checklist_create
-    get "/document-checklist-show", DocumentChecklistController, :document_checklist_show
-    get "/document-checklist-edit", DocumentChecklistController, :document_checklist_edit
-    put "/document-checklist-update", DocumentChecklistController, :document_checklist_update
-    get "/document_checklist-email", DocumentChecklistController, :document_checklist_email
+    get "/document-checklist-new", DocumentChecklistController, :new
+    post "/document-checklist-create", DocumentChecklistController, :create
+    get "/document-checklist-show", DocumentChecklistController, :show
+    get "/document-checklist-edit", DocumentChecklistController, :edit
+    put "/document-checklist-update", DocumentChecklistController, :update
+    get "/document-checklist-email", DocumentChecklistController, :email
 
     get "/preparation-new", PreparationController, :preparation_new
     post "/preparation-create", PreparationController, :preparation_create
