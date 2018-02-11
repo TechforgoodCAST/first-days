@@ -8,7 +8,7 @@ defmodule FirstDaysWeb.Auth do
   def init(opts) do
     Keyword.fetch!(opts, :repo)
   end
-  
+
   def call(conn, repo) do
     user_id = get_session(conn, :user_id)
     user = user_id && repo.get(User, user_id)
@@ -50,5 +50,14 @@ defmodule FirstDaysWeb.Auth do
       |> redirect(to: Helpers.page_path(conn, :index))
       |> halt()
     end
+  end
+
+  def already_signed_in(%{assigns: %{current_user: %User{}}} = conn, _opts) do
+    conn
+    |> redirect(to: Helpers.page_path(conn, :index))
+  end
+
+  def already_signed_in(conn, _opts) do
+    conn
   end
 end
