@@ -14,9 +14,9 @@ defmodule FirstDaysWeb.Router do
     plug :accepts, ["json"]
   end
 
-  # pipeline :layout do
-  #   plug :put_layout, {FirstDaysWeb.LayoutView, :alternate_layout}
-  # end
+  pipeline :signed_out_layout do
+    plug :put_layout, {FirstDaysWeb.LayoutView, :signed_out_layout}
+  end
 
   scope "/", FirstDaysWeb do
     pipe_through :browser # Use the default browser stack

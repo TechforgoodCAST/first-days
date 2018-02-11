@@ -1,6 +1,7 @@
 defmodule FirstDaysWeb.SessionController do
   use FirstDaysWeb, :controller
   alias FirstDays.Repo
+  plug :put_layout, {FirstDaysWeb.LayoutView, :signed_out_layout}
 
   def new(conn, _) do
     if conn.assigns.current_user do

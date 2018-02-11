@@ -1,6 +1,7 @@
 defmodule FirstDaysWeb.PasswordController do
   use FirstDaysWeb, :controller
   alias FirstDays.{Accounts.User, Repo, Accounts}
+  plug :put_layout, {FirstDaysWeb.LayoutView, :signed_out_layout}
 
   use Timex
 

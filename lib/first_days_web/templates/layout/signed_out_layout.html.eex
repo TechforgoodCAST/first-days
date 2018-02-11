@@ -54,10 +54,8 @@
 
     <!-- main app -->
 
-    <main class="mw9-ns center">
-      <section class="mh3">
-        <%= render @view_module, @view_template, assigns %>
-      </section>
+    <main class="center">
+      <%= render @view_module, @view_template, assigns %>
     </main>
 
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
