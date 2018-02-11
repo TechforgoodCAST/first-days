@@ -10,7 +10,6 @@
 <h2 class="<%= "#{headline_font()} tc mv4" %>">Document Checklist</h2>
 <section class="ma4">
   <h3 class="<%= "#{title_bold_font()}" %>">Email template</h3>
-
   <p class="<%= "#{body_font} mb2 mt2" %>">Dear [NAME],</p>
   <p class="<%= "#{body_font} mb2 mt2" %>">Thanks very much for signing up to be a volunteer. As you may expect, there is some paperwork involved in starting the position.  We’ve listed what we need to receive from you below.</p>
   <p class="<%= "#{body_font} mb2 mt2" %>">It’s important that we get this process underway so we’d be grateful if you could send us the documents we need by the [DATE].</p>
