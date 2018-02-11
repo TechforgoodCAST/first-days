@@ -1,6 +1,6 @@
 defmodule FirstDaysWeb.PageController do
   use FirstDaysWeb, :controller
-  plug :authenticate_user when action in [:landing]
+  plug :authenticate_user when action in [:landing, :get_them_ready]
   alias FirstDays.Accounts.User
 
   def index(%{assigns: %{current_user: %User{}}} = conn, _params) do

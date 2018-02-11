@@ -1,6 +1,7 @@
 defmodule FirstDaysWeb.StageController do
   use FirstDaysWeb, :controller
   alias FirstDays.Accounts
+  plug :authenticate_user 
 
   def update_stage(%{assigns: %{current_user: user}} = conn, params) do
     update_stages =
