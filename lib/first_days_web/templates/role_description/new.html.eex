@@ -8,8 +8,8 @@
     end
 
   tab_content = "Find a volunteer"
-  form_template_content = render("role_description_template.html", assigns)
-  tips_content = render("role_description_template_tips.html", assigns)
+  form_template_content = render "form.html", Map.merge(assigns, %{action: role_description_path(@conn, :create), method: :post})
+  tips_content = render("form_tips.html", assigns)
 %>
 
 <%=
