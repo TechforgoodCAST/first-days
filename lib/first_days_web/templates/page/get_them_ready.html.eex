@@ -67,7 +67,7 @@
         <%= shared_component("progress_bar.html", image: progress_bar_image) %>
         <%= shared_component("divider.html") %>
       <div class="flex flex-row mb4 mt6">
-        <%= shared_component("stage_card.html", image: "/images/agreement_big.svg", sub_header_content: "Volunteer agreement template", button_content: "View Template", link: confirmation_agreement_path(@conn, :confirmation_agreement_show)) %>
+        <%= shared_component("stage_card.html", image: "/images/agreement_big.svg", sub_header_content: "Volunteer agreement template", button_content: "View Template", link: confirmation_agreement_path(@conn, :show)) %>
         <%= shared_component("stage_card.html", image: "/images/checklist_big.svg", sub_header_content: "Collect important documents", button_content: document_checklist_button_content, link: document_checklist_link) %>
         <%= shared_component("stage_card.html", image: "/images/prep_email_big.svg", sub_header_content: "Start date preparation email", button_content: preparation_button_content, link: preparation_link) %>
       </div>

@@ -24,9 +24,9 @@
 
   role_description_link =
     if @current_user.stages["role_description"] do
-     role_description_path(@conn, :role_description_show)
+     role_description_path(@conn, :show)
     else
-      role_description_link = role_description_path(@conn, :role_description_new)
+      role_description_link = role_description_path(@conn, :new)
     end
 
   role_description_button_content =

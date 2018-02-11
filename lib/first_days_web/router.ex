@@ -36,15 +36,15 @@ defmodule FirstDaysWeb.Router do
   scope "/forms", FirstDaysWeb do
     pipe_through [:browser, :authenticate_user]
 
-    get "/role-description-new", RoleDescriptionController, :role_description_new
-    post "/role-description-create", RoleDescriptionController, :role_description_create
-    get "/role-description-show", RoleDescriptionController, :role_description_show
-    get "/role-description-edit", RoleDescriptionController, :role_description_edit
-    put "/role-description-update", RoleDescriptionController, :role_description_update
-    get "/role-description-email", RoleDescriptionController, :role_description_email
+    get "/role-description-new", RoleDescriptionController, :new
+    post "/role-description-create", RoleDescriptionController, :create
+    get "/role-description-show", RoleDescriptionController, :show
+    get "/role-description-edit", RoleDescriptionController, :edit
+    put "/role-description-update", RoleDescriptionController, :update
+    get "/role-description-email", RoleDescriptionController, :email
 
-    get "/confirmation-agreement-show", ConfirmationAgreementController, :confirmation_agreement_show
-    get "/confirmation-agreement-email", ConfirmationAgreementController, :confirmation_agreement_email
+    get "/confirmation-agreement-show", ConfirmationAgreementController, :show
+    get "/confirmation-agreement-email", ConfirmationAgreementController, :email
 
     get "/document-checklist-new", DocumentChecklistController, :document_checklist_new
     post "/document-checklist-create", DocumentChecklistController, :document_checklist_create
