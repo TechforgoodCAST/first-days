@@ -9,7 +9,7 @@ defmodule FirstDays.RoleDescription do
     field :charity_number, :string
     field :contact_details, :string
     field :description, :string
-    field :finance_skills, :string
+    field :specific_skills, :string
     field :how_will_work_help, :string
     field :location, :string
     field :organisation_achievements, :string
@@ -26,7 +26,7 @@ defmodule FirstDays.RoleDescription do
           :role_title,
           :description,
           :area,
-          :finance_skills,
+          :specific_skills,
           :additional_info,
           :work_frequency,
           :work_length,

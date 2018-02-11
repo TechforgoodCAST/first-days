@@ -9,13 +9,13 @@
 
   <div class="<%= "#{input_wrapper_class()}" %>">
     <%= label f, :role_title, "What is the role title?", class: "#{input_label_class()}" %>
-    <%= text_input f, :role_title, class: "#{input_class_50}" %>
+    <%= text_input f, :role_title, class: "#{input_class_50()}" %>
     <%= error_tag f, :role_title, class: "#{input_error_class()}" %>
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
     <%= label f, :description, "Please give a one sentence description of the role", class: "#{input_label_class()}" %>
-    <%= textarea f, :description, class: "#{input_class_60}", rows: "2" %>
+    <%= textarea f, :description, class: "#{input_class_60()}", rows: "2" %>
     <%= error_tag f, :description, class: "#{input_error_class()}" %>
   </div>
 
@@ -26,9 +26,9 @@
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :finance_skills, "What are the specific finance skills you require?", class: "#{input_label_class()}" %>
-    <%= select f, :finance_skills, finance_skills(), class: "#{input_class()}", prompt: "" %>
-    <%= error_tag f, :finance_skills, class: "#{input_error_class()}" %>
+    <%= label f, :specific_skills, "What are the specific skills you require?", class: "#{input_label_class()}" %>
+    <%= textarea f, :specific_skills, class: "#{input_class_60()}", rows: "3" %>
+    <%= error_tag f, :specific_skills, class: "#{input_error_class()}" %>
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">

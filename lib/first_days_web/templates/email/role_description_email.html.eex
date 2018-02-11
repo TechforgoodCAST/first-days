@@ -17,7 +17,7 @@
     <p><b>Role</b>: <%= @answers.area %></p>
   </div>
   <p>A(n) <%= @answers.role_title %> volunteer is needed for <%= @answers.organisation_name %> to help us with <%= @answers.description %>.</p>
-  <p>We are looking for an individual with skills in <%= @answers.finance_skills %>. As well as these aspects of the role, the volunteer will be able to learn about the charity’s work (and) <%= @answers.additional_info %>.</p>
+  <p>We are looking for an individual with skills in <%= @answers.specific_skills %>. As well as these aspects of the role, the volunteer will be able to learn about the charity’s work (and) <%= @answers.additional_info %>.</p>
   <div>
     <p><b>What we do</b></p>
   </div>

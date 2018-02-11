@@ -5,7 +5,7 @@
     <p class="<%= "#{title_bold_font()} dib" %>">Role</p><p class="<%= "#{title_black_font} dib" %>">: <%= @answers.area %></p>
   </div>
   <p class="<%= "#{body_font} mb2" %>">A(n) <%= @answers.role_title %> volunteer is needed for <%= @answers.organisation_name %> to help us with <%= @answers.description %>.</p>
-  <p class="<%= "#{body_font}" %>">We are looking for an individual with skills in <%= @answers.finance_skills %>. As well as these aspects of the role, the volunteer will be able to learn about the charity’s work (and) <%= @answers.additional_info %>.</p>
+  <p class="<%= "#{body_font}" %>">We are looking for an individual with skills in <%= @answers.specific_skills %>. As well as these aspects of the role, the volunteer will be able to learn about the charity’s work (and) <%= @answers.additional_info %>.</p>
   <div class="mv2">
     <p class="<%= "#{title_bold_font()}" %>">What we do</p>
   </div>
