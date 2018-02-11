@@ -65,7 +65,7 @@
 
 
 <h3 class="<%= "#{title_bold_font()} mt5" %>">About the organisation</h3>
-  <p class="<%= "#{body_font} mv2" %>">It's good for the potential volunteer to understand what your organisation does. Knowing this can really motivate volunteers to apply.</p>
+  <p class="<%= "#{body_font()} mv2" %>">It's good for the potential volunteer to understand what your organisation does. Knowing this can really motivate volunteers to apply.</p>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
     <%= label f, :organisation_name, "What is the name of your organisation?", class: "#{input_label_class()}" %>
@@ -100,7 +100,7 @@
   <%= shared_component("divider.html") %>
 
 <h3 class="<%= "#{title_bold_font()} mt5" %>">The benefits of the volunteering role</h3>
-  <p class="<%= "#{body_font} mv2" %>">Volunteers are motivated not just by the help they can give, but also how volunteering can develop them professionally and personally.</p>
+  <p class="<%= "#{body_font()} mv2" %>">Volunteers are motivated not just by the help they can give, but also how volunteering can develop them professionally and personally.</p>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
     <%= label f, :how_will_work_help, "How will this work help the organisation? (1 sentence, jargon free)", class: "#{input_label_class()}" %>
@@ -118,7 +118,7 @@
   <!-- form_buttons -->
   <div class="flex items-center justify-end w-100">
     <div class="flex flex-row items-center">
-      <p class="<%= "#{title_blue_font} mr3" %>">View Role Description Template</p>
+      <p class="<%= "#{title_blue_font()} mr3" %>">View Role Description Template</p>
       <%= shared_component("button_square_checkmark.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/checkmark.svg" , alt: "done", link: role_description_path(@conn, :role_description_show)) %>
     </div>
   </div>

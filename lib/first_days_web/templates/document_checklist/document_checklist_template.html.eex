@@ -2,14 +2,14 @@
 <section class="ma4">
   <h3 class="<%= "#{title_bold_font()}" %>">Email template</h3>
 
-  <p class="<%= "#{body_font} mb2 mt2" %>">Dear [NAME],</p>
-  <p class="<%= "#{body_font} mb2 mt2" %>">Thanks very much for signing up to be a volunteer. As you may expect, there is some paperwork involved in starting the position.  We’ve listed what we need to receive from you below.</p>
-  <p class="<%= "#{body_font} mb2 mt2" %>">It’s important that we get this process underway so we’d be grateful if you could send us the documents we need by the [DATE].</p>
+  <p class="<%= "#{body_font()} mb2 mt2" %>">Dear [NAME],</p>
+  <p class="<%= "#{body_font()} mb2 mt2" %>">Thanks very much for signing up to be a volunteer. As you may expect, there is some paperwork involved in starting the position.  We’ve listed what we need to receive from you below.</p>
+  <p class="<%= "#{body_font()} mb2 mt2" %>">It’s important that we get this process underway so we’d be grateful if you could send us the documents we need by the [DATE].</p>
 
-  <p class="<%= "#{body_font} mb2 mt2" %>">Could you please send us:</p>
+  <p class="<%= "#{body_font()} mb2 mt2" %>">Could you please send us:</p>
 
   <article class="pa2 pa4-ns">
-  <ul class="<%= "#{body_font} mb2 mt2 list pl0 ml0 mw6 ba b--light-silver br2" %>">
+  <ul class="<%= "#{body_font()} mb2 mt2 list pl0 ml0 mw6 ba b--light-silver br2" %>">
   <%= for document <- get_document_list(@answers) do %>
   <li class="ph3 pv3 bb b--light-silver"><%= document %></li>
   <% end %>
@@ -18,9 +18,9 @@
   <% end %>
   </ul>
   </article>
-  <p class="<%= "#{body_font} mb2 mt2" %>">Please also let us know when you are available to start.</p>
+  <p class="<%= "#{body_font()} mb2 mt2" %>">Please also let us know when you are available to start.</p>
 
-  <p class="<%= "#{body_font} mb2 mt2" %>">Many thanks</p>
+  <p class="<%= "#{body_font()} mb2 mt2" %>">Many thanks</p>
 </section>
 
 
@@ -28,10 +28,10 @@
 <div class="flex items-center justify-between w-100">
   <div class="flex flex-row items-center">
     <%= shared_component("button_square.html", wrapper_class: "mt2", class: "ml1 transparent dib", icon: "/images/edit.svg" , alt: "edit" , link: document_checklist_path(@conn, :document_checklist_edit)) %>
-    <p class="<%= "#{title_blue_font}" %>">Edit Template</p>
+    <p class="<%= "#{title_blue_font()}" %>">Edit Template</p>
   </div>
   <div class="flex flex-row items-center">
-    <p class="<%= "#{title_blue_font} mr3" %>">Send to myself</p>
+    <p class="<%= "#{title_blue_font()} mr3" %>">Send to myself</p>
     <%= shared_component("button_square.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/send.svg" , alt: "send to myself", link: document_checklist_path(@conn, :document_checklist_email)) %>
   </div>
 </div>

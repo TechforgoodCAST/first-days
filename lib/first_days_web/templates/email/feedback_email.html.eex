@@ -26,27 +26,27 @@
 
 <h2 class="<%= "#{headline_font()} tc mv4" %>">Volunteer Feedback Template</h2>
 <section class="ma4">
-  <h3 class="<%= "#{title_bold_font}" %>">Sample email with example questions</h3>
-  <p class="<%= "#{body_font} mv2" %>">Dear [NAME]</p>
-  <div class="<%= "#{body_font} mb2" %>">
+  <h3 class="<%= "#{title_bold_font()}" %>">Sample email with example questions</h3>
+  <p class="<%= "#{body_font()} mv2" %>">Dear [NAME]</p>
+  <div class="<%= "#{body_font()} mb2" %>">
     <p>Congratulations on completing your first day volunteering with us!</p>
     <p>We're grateful to you for joining the team and we hope you found your first day an enjoyable experience.</p>
     <p>It's helpful to get feedback from you on your first day. So we'd be grateful if you could take 5 minutes to tell us your thoughts on these questions:</p>
   </div>
 
-  <p class="<%= "#{body_font} mb2" %>">1) Did you enjoy your first day?</p>
-  <p class="<%= "#{body_font} mb2" %>">2) Did you get introduced to colleagues?</p>
-  <p class="<%= "#{body_font} mb2" %>">3) How welcome did you feel, on a scale of 1-10 (1 being not welcome, 10 being like family)?</p>
-  <p class="<%= "#{body_font} mb2" %>">4) What would have helped to make you feel more welcome?</p>
-  <p class="<%= "#{body_font} mb2" %>">5) How well do you feel you understand what the organisation does and who it works with?</p>
-  <p class="<%= "#{body_font} mb2" %>">6) What else would be useful to know?</p>
-  <p class="<%= "#{body_font} mb2" %>">7) How clear do you feel about your role?</p>
-  <p class="<%= "#{body_font} mb2" %>">8) What would help to make you more clear about your role?</p>
-  <p class="<%= "#{body_font} mb2" %>">9) Do you have everything you need to do your role? e.g. information, equipment or resources</p>
-  <p class="<%= "#{body_font} mb2" %>">10) Would you like to volunteer with us again?</p>
-  <p class="<%= "#{body_font} mb2" %>">11) Would you recommend our organisation to your friends and family?</p>
+  <p class="<%= "#{body_font()} mb2" %>">1) Did you enjoy your first day?</p>
+  <p class="<%= "#{body_font()} mb2" %>">2) Did you get introduced to colleagues?</p>
+  <p class="<%= "#{body_font()} mb2" %>">3) How welcome did you feel, on a scale of 1-10 (1 being not welcome, 10 being like family)?</p>
+  <p class="<%= "#{body_font()} mb2" %>">4) What would have helped to make you feel more welcome?</p>
+  <p class="<%= "#{body_font()} mb2" %>">5) How well do you feel you understand what the organisation does and who it works with?</p>
+  <p class="<%= "#{body_font()} mb2" %>">6) What else would be useful to know?</p>
+  <p class="<%= "#{body_font()} mb2" %>">7) How clear do you feel about your role?</p>
+  <p class="<%= "#{body_font()} mb2" %>">8) What would help to make you more clear about your role?</p>
+  <p class="<%= "#{body_font()} mb2" %>">9) Do you have everything you need to do your role? e.g. information, equipment or resources</p>
+  <p class="<%= "#{body_font()} mb2" %>">10) Would you like to volunteer with us again?</p>
+  <p class="<%= "#{body_font()} mb2" %>">11) Would you recommend our organisation to your friends and family?</p>
 
 
-  <p class="<%= "#{body_font} mb2 mt4" %>">It's important that we get better at the things we do not so well and keep doing the things that are working, so your feedback is really appreciated!</p>
-  <p class="<%= "#{body_font} mb2" %>">Many thanks</p>
+  <p class="<%= "#{body_font()} mb2 mt4" %>">It's important that we get better at the things we do not so well and keep doing the things that are working, so your feedback is really appreciated!</p>
+  <p class="<%= "#{body_font()} mb2" %>">Many thanks</p>
 </section>

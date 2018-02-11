@@ -38,7 +38,7 @@
 <!-- form_buttons -->
 <div class="flex items-center justify-end w-100">
   <div class="flex flex-row items-center">
-    <p class="<%= "#{title_blue_font} mr3" %>">View Email Template</p>
+    <p class="<%= "#{title_blue_font()} mr3" %>">View Email Template</p>
     <%= shared_component("button_square_checkmark.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/checkmark.svg" , alt: "done", link: preparation_path(@conn, :preparation_show)) %>
   </div>
 </div>

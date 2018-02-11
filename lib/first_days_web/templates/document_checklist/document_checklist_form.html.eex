@@ -79,10 +79,10 @@
   <div class="flex items-center justify-between w-100">
     <div class="flex flex-row items-center">
       <%= shared_component("button_square.html", wrapper_class: "mt2", class: "ml1 transparent dib", icon: "/images/previous.svg" , alt: "back" , link: page_path(@conn, :get_them_ready)) %>
-      <!-- <p class="<%= "#{title_blue_font}" %>">Go Back</p> -->
+      <!-- <p class="<%= "#{title_blue_font()}" %>">Go Back</p> -->
     </div>
     <div class="flex flex-row items-center">
-      <p class="<%= "#{title_blue_font} mr3" %>">View Document Checklist</p>
+      <p class="<%= "#{title_blue_font()} mr3" %>">View Document Checklist</p>
       <%= shared_component("button_square_checkmark.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/checkmark.svg" , alt: "send to myself", link: document_checklist_path(@conn, :document_checklist_show)) %>
     </div>
   </div>
