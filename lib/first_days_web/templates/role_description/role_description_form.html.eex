@@ -44,7 +44,7 @@
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :work_length, "What is the total length fo the opportunity? (e.g. 1 month, 6 months, 1 year, ongoing)", class: "#{input_label_class()}" %>
+    <%= label f, :work_length, "What is the total length of the opportunity? (e.g. 1 month, 6 months, 1 year, ongoing)", class: "#{input_label_class()}" %>
     <%= text_input f, :work_length, class: "#{input_class()}" %>
     <%= error_tag f, :work_length, class: "#{input_error_class()}" %>
   </div>

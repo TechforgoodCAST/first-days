@@ -1,6 +1,6 @@
 <section>
   <div class="<%= "#{card_class()} mt2 mb2 mt4 pa4" %>">
-  <h2 class="<%= "#{headline_font()} tc mv4" %>">Welcome to first Days.</h2>
+  <h2 class="<%= "#{headline_font()} tc mv4" %>">Welcome to First Days</h2>
   <div class="<%= "#{title_black_font()} ph5" %>">
     <p>
       First days helps you to engage with volunteers from the beginning of the recruitment process right
@@ -20,7 +20,7 @@
     <p>
       First Days has been made possible with funding from The Big Lottery Fund, and is a partnership
       between the Wales Co-operative Centre, Wales Council for Voluntary Action (WCVA), Business in
-      The Community (BITC) Cymru and CAST
+      The Community (BITC) Cymru and CAST.
     </p>
     <div class="mv4">
       <%= shared_component("divider.html") %>
