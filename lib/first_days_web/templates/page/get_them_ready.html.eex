@@ -39,9 +39,9 @@
 
     preparation_link =
       if @current_user.stages["preparation"] do
-       preparation_path(@conn, :preparation_show)
+       preparation_path(@conn, :show)
       else
-        preparation_link = preparation_path(@conn, :preparation_new)
+        preparation_link = preparation_path(@conn, :new)
       end
 
     preparation_button_content =

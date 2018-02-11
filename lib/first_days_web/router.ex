@@ -53,12 +53,12 @@ defmodule FirstDaysWeb.Router do
     put "/document-checklist-update", DocumentChecklistController, :update
     get "/document-checklist-email", DocumentChecklistController, :email
 
-    get "/preparation-new", PreparationController, :preparation_new
-    post "/preparation-create", PreparationController, :preparation_create
-    get "/preparation-show", PreparationController, :preparation_show
-    get "/preparation-edit", PreparationController, :preparation_edit
-    put "/preparation-update", PreparationController, :preparation_update
-    get "/preparation-email", PreparationController, :preparation_email
+    get "/preparation-new", PreparationController, :new
+    post "/preparation-create", PreparationController, :create
+    get "/preparation-show", PreparationController, :show
+    get "/preparation-edit", PreparationController, :edit
+    put "/preparation-update", PreparationController, :update
+    get "/preparation-email", PreparationController, :email
 
     get "/feedback-show", FeedbackController, :feedback_show
     get "/feedback-email", FeedbackController, :feedback_email

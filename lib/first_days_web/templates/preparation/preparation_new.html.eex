@@ -8,7 +8,7 @@
     end
 
   tab_content = "Getting them ready"
-  form_template_content = render "preparation_form.html", Map.merge(assigns, %{action: preparation_path(@conn, :preparation_create), method: :post})
+  form_template_content = render "preparation_form.html", Map.merge(assigns, %{action: preparation_path(@conn, :create), method: :post})
   tips_content = render("preparation_form_tips.html", assigns)
 %>
 
