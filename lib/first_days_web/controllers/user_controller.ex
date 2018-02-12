@@ -1,6 +1,8 @@
 defmodule FirstDaysWeb.UserController do
   use FirstDaysWeb, :controller
   plug :authenticate_user when action in [:index, :show]
+  plug :already_signed_in
+  plug :put_layout, {FirstDaysWeb.LayoutView, :signed_out_layout}
 
   alias FirstDays.{Accounts, Accounts.User, Email, Mailer}
 

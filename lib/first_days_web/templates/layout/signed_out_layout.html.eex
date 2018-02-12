@@ -27,13 +27,7 @@
     <!-- modals -->
 
     <%= if get_flash(@conn, :email_modal) do
-      redirect_to =
-        if get_flash(@conn, :email_modal) == :role_description do
-          page_path(@conn, :landing)
-        else
-          page_path(@conn, :get_them_ready)
-        end
-      shared_component("email_sent_modal.html", Map.put(assigns, :redirect_to, redirect_to))
+      shared_component("email_sent_modal.html", assigns)
     end %>
 
     <%= if get_flash(@conn, :success_modal) do
@@ -60,10 +54,8 @@
 
     <!-- main app -->
 
-    <main class="mw9-ns center">
-      <section class="mh3">
-        <%= render @view_module, @view_template, assigns %>
-      </section>
+    <main class="center">
+      <%= render @view_module, @view_template, assigns %>
     </main>
 
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>

@@ -1,6 +1,7 @@
 defmodule FirstDaysWeb.SessionController do
   use FirstDaysWeb, :controller
   alias FirstDays.Repo
+  plug :put_layout, {FirstDaysWeb.LayoutView, :signed_out_layout}
 
   def new(conn, _) do
     if conn.assigns.current_user do
@@ -15,7 +16,6 @@ defmodule FirstDaysWeb.SessionController do
     case FirstDaysWeb.Auth.login_by_email_and_pass(conn, email, pass, repo: Repo) do
       {:ok, conn} ->
         conn
-        |> put_flash(:info, "Welcome back!")
         |> redirect(to: page_path(conn, :landing))
       {:error, _reason, conn} ->
         conn

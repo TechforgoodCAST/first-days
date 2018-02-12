@@ -1,29 +1,3 @@
-<p>Hello <%= @current_user.name %>,</p>
-
-<p>Here is the template of an e-mail that can be sent to your volunteers to get feedback from them about their volunteer experience with your organisation. It is important to get feedback from volunteers after their first day. Not only does it help you understand their experience, but also it helps identify ways you can improve your volunteer recruitment, retention and induction processes.</p>
-<p>You have now completed the First Days process, and we would hope that you have found it helpful, and will use it in future as part of your volunteer recruitment, induction and management process. If you found the tool helpful, please make your networks and colleagues in the sector aware of it.</p>
-<p>First Days has been created through funding provided by Big Lottery Fund Wales. The project is a partnership between Wales Co-operative Centre, Business in the Community Cymru, CAST and WCVA. Further information about the work of these organisations can be found here:</p>
-
-<a href="https://www.bitc.org.uk/wales">https://www.bitc.org.uk/wales</a>
-<br>
-<a href="https://www.bitc.org.uk/wales">https://www.bitc.org.uk/wales</a>
-<br>
-<a href="https://wales.coop/">https://wales.coop/</a>
-<br>
-<a href="https://www.wcva.org.uk/">https://www.wcva.org.uk/</a>
-<br>
-<a href="https://www.wearecast.org.uk/">https://www.wearecast.org.uk/</a>
-<br>
-
-<p>Remember that support is always available from local and national support organisations. The following link would be a good place to start in identifying local support and resources.</p>
-
-<a href="https://www.wcva.org.uk/members-partners/third-sector-support-wales">https://www.wcva.org.uk/members-partners/third-sector-support-wales</a>
-<br>
-
-<p>Kind Regards,</p>
-<p>First Days</p>
-<br>
-
 <h2 class="<%= "#{headline_font()} tc mv4" %>">Volunteer Feedback Template</h2>
 <section class="ma4">
   <h3 class="<%= "#{title_bold_font()}" %>">Sample email with example questions</h3>
@@ -50,3 +24,12 @@
   <p class="<%= "#{body_font()} mb2 mt4" %>">It's important that we get better at the things we do not so well and keep doing the things that are working, so your feedback is really appreciated!</p>
   <p class="<%= "#{body_font()} mb2" %>">Many thanks</p>
 </section>
+
+
+<!-- template_buttons -->
+<div class="flex items-center justify-end w-100">
+    <div class="flex flex-row items-center">
+    <p class="<%= "#{title_blue_font()} mr3" %>">Send to myself</p>
+    <%= shared_component("button_square.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/send.svg" , alt: "send to myself", link: feedback_path(@conn, :email)) %>
+  </div>
+</div>

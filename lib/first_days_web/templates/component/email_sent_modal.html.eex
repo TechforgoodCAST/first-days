@@ -9,6 +9,6 @@
     <h1 class="<%= "#{headline_font()} pb4" %>">This template<br>has been sent to your email.</h1>
     <img src="/images/modal_checkmark.svg" alt="email sent">
     <p class="<%= "#{body_font()} pv3" %>">You can always come back and edit this template.</p>
-    <%= shared_component("button_main.html", content: "Back to home", wrapper_class: "bg-blue w-60-ns", link: page_path(@conn, :landing), content_class: "white") %>
+    <%= shared_component("button_main.html", content: "Back", wrapper_class: "bg-blue w-60-ns", link: @redirect_to, content_class: "white") %>
   </div>
 </div>

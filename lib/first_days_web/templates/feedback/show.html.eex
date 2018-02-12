@@ -8,8 +8,8 @@
     end
 
   tab_content = "Collecting Feedback"
-  form_template_content = render("feedback_template.html", assigns)
-  tips_content = render("feedback_tips.html", assigns)
+  form_template_content = render("template.html", assigns)
+  tips_content = render("tips.html", assigns)
 %>
 
 <%=

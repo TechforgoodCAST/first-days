@@ -9,26 +9,26 @@
 
   <div class="<%= "#{input_wrapper_class()}" %>">
     <%= label f, :role_title, "What is the role title?", class: "#{input_label_class()}" %>
-    <%= text_input f, :role_title, class: "#{input_class_50}" %>
+    <%= text_input f, :role_title, class: "#{input_class_50()}" %>
     <%= error_tag f, :role_title, class: "#{input_error_class()}" %>
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
     <%= label f, :description, "Please give a one sentence description of the role", class: "#{input_label_class()}" %>
-    <%= textarea f, :description, class: "#{input_class_60}", rows: "2" %>
+    <%= textarea f, :description, class: "#{input_class_60()}", rows: "2" %>
     <%= error_tag f, :description, class: "#{input_error_class()}" %>
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :area, "What area is the role in?", class: "#{input_label_class()}" %>
+    <%= label f, :area, "What skill area is the volunteer role in?", class: "#{input_label_class()}" %>
     <%= select f, :area, ["Finance", "Legal", "HR", "IT"], class: "#{input_class()}", prompt: "" %>
     <%= error_tag f, :area, class: "#{input_error_class()}" %>
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :finance_skills, "What are the specific finance skills you require?", class: "#{input_label_class()}" %>
-    <%= select f, :finance_skills, finance_skills(), class: "#{input_class()}", prompt: "" %>
-    <%= error_tag f, :finance_skills, class: "#{input_error_class()}" %>
+    <%= label f, :specific_skills, "What are the specific skills you require?", class: "#{input_label_class()}" %>
+    <%= textarea f, :specific_skills, class: "#{input_class_60()}", rows: "3" %>
+    <%= error_tag f, :specific_skills, class: "#{input_error_class()}" %>
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
@@ -44,7 +44,7 @@
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :work_length, "What is the total length fo the opportunity? (e.g. 1 month, 6 months, 1 year, ongoing)", class: "#{input_label_class()}" %>
+    <%= label f, :work_length, "What is the total length of the opportunity? (e.g. 1 month, 6 months, 1 year, ongoing)", class: "#{input_label_class()}" %>
     <%= text_input f, :work_length, class: "#{input_class()}" %>
     <%= error_tag f, :work_length, class: "#{input_error_class()}" %>
   </div>
@@ -65,7 +65,7 @@
 
 
 <h3 class="<%= "#{title_bold_font()} mt5" %>">About the organisation</h3>
-  <p class="<%= "#{body_font} mv2" %>">It's good for the potential volunteer to understand what your organisation does. Knowing this can really motivate volunteers to apply.</p>
+  <p class="<%= "#{body_font()} mv2" %>">It's good for the potential volunteer to understand what your organisation does. Knowing this can really motivate volunteers to apply.</p>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
     <%= label f, :organisation_name, "What is the name of your organisation?", class: "#{input_label_class()}" %>
@@ -81,13 +81,13 @@
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :organisation_achievements, "What if any notable achievements has your organisation had? e.g. awards, membership of professional bodies (this can help attract volunteers to your organisation)", class: "#{input_label_class()}" %>
+    <%= label f, :organisation_achievements, "What notable achievements has your organisation had? e.g. awards, membership of professional bodies (this can help attract volunteers to your organisation)", class: "#{input_label_class()}" %>
     <%= textarea f, :organisation_achievements, class: "#{input_class_60()}", rows: "4" %>
     <%= error_tag f, :organisation_achievements, class: "#{input_error_class()}" %>
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :charity_number, "Please write your charity number", class: "#{input_label_class()}" %>
+    <%= label f, :charity_number, "Please confirm your charity number/company number (if applicable)", class: "#{input_label_class()}" %>
     <%= text_input f, :charity_number, class: "#{input_class_30()}" %>
     <%= error_tag f, :charity_number, class: "#{input_error_class()}" %>
   </div>
@@ -100,7 +100,7 @@
   <%= shared_component("divider.html") %>
 
 <h3 class="<%= "#{title_bold_font()} mt5" %>">The benefits of the volunteering role</h3>
-  <p class="<%= "#{body_font} mv2" %>">Volunteers are motivated not just by the help they can give, but also how volunteering can develop them professionally and personally.</p>
+  <p class="<%= "#{body_font()} mv2" %>">Volunteers are motivated not just by the help they can give, but also how volunteering can develop them professionally and personally.</p>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
     <%= label f, :how_will_work_help, "How will this work help the organisation? (1 sentence, jargon free)", class: "#{input_label_class()}" %>
@@ -118,8 +118,8 @@
   <!-- form_buttons -->
   <div class="flex items-center justify-end w-100">
     <div class="flex flex-row items-center">
-      <p class="<%= "#{title_blue_font} mr3" %>">View Role Description Template</p>
-      <%= shared_component("button_square_checkmark.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/checkmark.svg" , alt: "done", link: role_description_path(@conn, :role_description_show)) %>
+      <p class="<%= "#{title_blue_font()} mr3" %>">View Role Description Template</p>
+      <%= shared_component("button_square_checkmark.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/checkmark.svg" , alt: "done", link: role_description_path(@conn, :show)) %>
     </div>
   </div>
 <% end %>

@@ -1,20 +1,4 @@
-<p>Hello <%= @current_user.name %>,</p>
-
-<p>Here is a confirmation agreement template that you can use to ensure that there is a clear understanding of what is expected from the volunteer and also from you as the host organisation. An important part of this understanding and communication can be putting in a place a volunteering agreement. This is particularly important when a private sector individual is engaging with the voluntary sector for the first time. It’s quite common for there to be differences in working culture that may surprise the volunteer.</p>
-<p>A volunteer agreement helps both the organisation and its volunteers by making expectations clear. They also address the unlikely possibility of volunteers being considered employees in the eyes of the law.</p>
-<p>The agreement template can be personalised and sent to the potential volunteer as part of the induction process. Please also see the following links that may be helpful to you and also your potential volunteer.</p>
-
-<a href="https://www.wcva.org.uk/volunteering/working-with-volunteers/resources">https://www.wcva.org.uk/volunteering/working-with-volunteers/resources</a>
-<br>
-<a href="https://www.ncvo.org.uk/practical-support/information/volunteer-management">https://www.ncvo.org.uk/practical-support/information/volunteer-management</a>
-<br>
-<a href="https://www.wcva.org.uk/members-partners/third-sector-support-wales">https://www.wcva.org.uk/members-partners/third-sector-support-wales</a>
-
-<p>Kind Regards,</p>
-<p>First Days</p>
-<br>
-
-<h2 class="<%= "#{headline_font()} tc mv4" %>"><b>Confirmation & Agreement</b></h2>
+<h2 class="<%= "#{headline_font()} tc mv4" %>">Confirmation & Agreement</h2>
 <section class="ma4">
 <h3 class="<%= "#{title_bold_font()}" %>">Confirmation & Agreement (to edit and send to the volunteer)</h3>
 <p class="<%= "#{body_font()} mb2 mt2" %>">Dear [NAME],</p>
@@ -48,9 +32,19 @@
   <li>8. to apply our complaints procedure if there is any problem</li>
 </ol>
 
+<%= shared_component("divider.html") %>
+
 <h3 class="<%= "#{title_bold_font()} mt4 mb2" %>">For the volunteer</h3>
 <p class="<%= "#{body_font()} mb2 mt2" %>">I [name of volunteer], agree to do my best, to work reliably to the best of my ability, and to give as much warning as possible whenever I cannot volunteer as expected to follow [name of organisation]’s rules and procedures, including health and safety, equal opportunities and confidentially.</p>
 <p class="<%= "#{body_font()} mb2 mt2" %>">Note: this agreement is in honour only and is not itended to be a legally binding contract of employment</p>
 <p class="<%= "#{body_font()} mb2 mt2" %>">Signed:</p>
 <p class="<%= "#{body_font()} mb2 mt2" %>">Date:</p>
 </section>
+
+<!-- template_buttons -->
+<div class="flex items-center justify-end w-100">
+  <div class="flex flex-row items-center">
+    <p class="<%= "#{title_blue_font()} mr3" %>">Send to myself</p>
+    <%= shared_component("button_square.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/send.svg" , alt: "send to myself", link: confirmation_agreement_path(@conn, :email)) %>
+  </div>
+</div>

@@ -1,15 +1,7 @@
-<p>Hello <%= @current_user.name %>,</p>
-
-<p>Before your volunteer can start, it is likely that they will need to provide certain paperwork. Here is a template of the documents that you have indicated that your organisation will require. It is important that both the volunteer and the host organisation are clear in understanding these requirements and that everyone is clear about the requirements in respect of paperwork needed before they commence the role. Good communication between the volunteer and host organisation is key to establishing a positive and professional relationship between all parties.</p>
-
-<p>Once you have edited this template as required, please send to the volunteer. You can then sign back into first Days, and we will take you through the remaining steps of the process!</p>
-
-<p>Kind Regards,</p>
-<p>First Days</p>
-<br>
 <h2 class="<%= "#{headline_font()} tc mv4" %>">Document Checklist</h2>
 <section class="ma4">
   <h3 class="<%= "#{title_bold_font()}" %>">Email template</h3>
+
   <p class="<%= "#{body_font()} mb2 mt2" %>">Dear [NAME],</p>
   <p class="<%= "#{body_font()} mb2 mt2" %>">Thanks very much for signing up to be a volunteer. As you may expect, there is some paperwork involved in starting the position.  We’ve listed what we need to receive from you below.</p>
   <p class="<%= "#{body_font()} mb2 mt2" %>">It’s important that we get this process underway so we’d be grateful if you could send us the documents we need by the [DATE].</p>
@@ -30,3 +22,16 @@
 
   <p class="<%= "#{body_font()} mb2 mt2" %>">Many thanks</p>
 </section>
+
+
+<!-- template_buttons -->
+<div class="flex items-center justify-between w-100">
+  <div class="flex flex-row items-center">
+    <%= shared_component("button_square.html", wrapper_class: "mt2", class: "ml1 transparent dib", icon: "/images/edit.svg" , alt: "edit" , link: document_checklist_path(@conn, :edit)) %>
+    <p class="<%= "#{title_blue_font()}" %>">Edit Template</p>
+  </div>
+  <div class="flex flex-row items-center">
+    <p class="<%= "#{title_blue_font()} mr3" %>">Send to myself</p>
+    <%= shared_component("button_square.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/send.svg" , alt: "send to myself", link: document_checklist_path(@conn, :email)) %>
+  </div>
+</div>
