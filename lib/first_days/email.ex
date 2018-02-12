@@ -15,7 +15,7 @@ defmodule FirstDays.Email do
     |> to(to_email)
     |> from("hello@firstdayswales.co.uk")
     |> subject("Reset passwords instructions")
-    |> text_body("Please visit https://first-days.herokuapp.com/#{token}/edit to reset your password")
+    |> text_body("Please visit https://first-days.herokuapp.com/forgot-password/#{token}/edit to reset your password")
   end
 
   def role_description_email(%{current_user: current_user, answers: answers}) do

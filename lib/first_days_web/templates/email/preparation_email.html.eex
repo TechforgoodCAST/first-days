@@ -10,7 +10,7 @@
 <h2 class="<%= "#{headline_font()} tc mv4" %>">Preparation Email</h2>
 <section class="ma4">
   <p class="<%= "#{body_font()} mb2" %>">Dear [NAME]</p>
-  <p class="<%= "#{body_font()} mb2 dib" %>">We hope you're looking forward to your first day with us on the </p><p><b><%= "#{@answers.first_day_date.day} #{digitsToMonth(@answers.first_day_date.month)} #{@answers.first_day_date.year}" %>.</b></p>
+  <p class="<%= "#{body_font()} mb2 dib" %>">We hope you're looking forward to your first day with us on the <b><%= "#{@answers.first_day_date.day} #{digitsToMonth(@answers.first_day_date.month)} #{@answers.first_day_date.year}" %>.</b></p>
   <p class="<%= "#{body_font()} mb2" %>">We wanted to offer some helpful information.</p>
   <p><b>Dress code</b></p><p class= "<%= "#{body_font()}" %>"><%= @answers.dress_code %></p>
   <p><b>What you'll be doing on your first day</b></p><p class= "<%= "#{body_font()}" %>"><%= @answers.first_day_expectations %></p>
