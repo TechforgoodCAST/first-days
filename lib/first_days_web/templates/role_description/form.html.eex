@@ -119,7 +119,7 @@
   <div class="flex items-center justify-end w-100">
     <div class="flex flex-row items-center">
       <p class="<%= "#{title_blue_font()} mr3" %>">View Role Description Template</p>
-      <%= shared_component("button_square_checkmark.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/checkmark.svg" , alt: "done", link: role_description_path(@conn, :role_description_show)) %>
+      <%= shared_component("button_square_checkmark.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/checkmark.svg" , alt: "done", link: role_description_path(@conn, :show)) %>
     </div>
   </div>
 <% end %>

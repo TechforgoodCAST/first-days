@@ -9,8 +9,8 @@
 
   tab_content = "Getting them ready"
 
-  form_template_content = render("confirmation_agreement_template.html", assigns)
-  tips_content = render("confirmation_agreement_tips.html", assigns)
+  form_template_content = render("template.html", assigns)
+  tips_content = render("tips.html", assigns)
 %>
 
 <%=

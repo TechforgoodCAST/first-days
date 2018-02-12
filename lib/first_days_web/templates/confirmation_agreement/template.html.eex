@@ -45,6 +45,6 @@
 <div class="flex items-center justify-end w-100">
   <div class="flex flex-row items-center">
     <p class="<%= "#{title_blue_font()} mr3" %>">Send to myself</p>
-    <%= shared_component("button_square.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/send.svg" , alt: "send to myself", link: confirmation_agreement_path(@conn, :confirmation_agreement_email)) %>
+    <%= shared_component("button_square.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/send.svg" , alt: "send to myself", link: confirmation_agreement_path(@conn, :email)) %>
   </div>
 </div>
