@@ -4,7 +4,7 @@
     <p class="<%= "#{title_black_font()} mv2" %>">Enter your Email and Password below</p>
   </div>
 
-  <div class="<%= "v-mid tc ph3 pa4-ns pa3 br2 shadow-1 w-60 h7 center mt3 #{card_class()}" %>">
+  <div class="<%= "v-mid tc ph3 pa4-ns pa3 br2 shadow-1 w-60 mw6 h7 center mt3 #{card_class()}" %>">
     <div class="tl">
       <%= form_for @conn, session_path(@conn, :create), [as: :session], fn f -> %>
         <div class="form-group">
