@@ -2,15 +2,15 @@ defmodule FirstDaysWeb.DocumentChecklistView do
   use FirstDaysWeb, :view
 
   @humanised_documents %{
-    photo_id: "Photo id",
-    proof_of_identity: "Proof of identity",
-    proof_of_address: "Proof of address",
-    volunteer_requirements: "Volunteer requirements e.g. dietary, medical or religious needs",
-    emergency_contact_details: "Emergency contact details",
-    dbs_check: "DBS (Disclosure and Barring Service) check",
-    proof_of_residency: "Proof of residency",
-    bank_details: "Bank/Building Society details (for paying expenses)",
-    proof_of_qualifications: "Proof of qualifications"
+    photo_id: gettext("Photo id"),
+    proof_of_identity: gettext("Proof of identity"),
+    proof_of_address: gettext("Proof of address"),
+    volunteer_requirements: gettext("Volunteer requirements e.g. dietary, medical or religious needs"),
+    emergency_contact_details: gettext("Emergency contact details"),
+    dbs_check: gettext("DBS (Disclosure and Barring Service) check"),
+    proof_of_residency: gettext("Proof of residency"),
+    bank_details: gettext("Bank/Building Society details (for paying expenses)"),
+    proof_of_qualifications: gettext("Proof of qualifications")
   }
 
   def get_document_list(documents) do
