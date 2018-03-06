@@ -1,4 +1,0 @@
-<div class="mt3">
-  <label class="db b f5 lh-copy black mb2"><%= assigns[:content]%></label>
-  <input class="<%= "pa2 input-reset ba b--blue br2 bg-white measure f5 outline-0 #{assigns[:width]}" %>" type="email" name="email-address" id="email-address">
-</div>
