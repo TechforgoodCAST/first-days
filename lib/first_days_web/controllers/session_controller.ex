@@ -13,7 +13,7 @@ defmodule FirstDaysWeb.SessionController do
   end
 
   def create(conn, %{"session" => %{"email" => email, "password" => pass}}) do
-    case FirstDaysWeb.Auth.login_by_email_and_pass(conn, email, pass, repo: Repo) do
+    case FirstDaysWeb.Plugs.Auth.login_by_email_and_pass(conn, email, pass, repo: Repo) do
       {:ok, conn} ->
         conn
         |> redirect(to: page_path(conn, :landing))
@@ -26,7 +26,7 @@ defmodule FirstDaysWeb.SessionController do
 
   def delete(conn, _) do
     conn
-    |> FirstDaysWeb.Auth.logout()
+    |> FirstDaysWeb.Plugs.Auth.logout()
     |> put_flash(:info, "You've logged out")
     |> redirect(to: page_path(conn, :index))
   end

@@ -7,7 +7,8 @@ defmodule FirstDaysWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
-    plug FirstDaysWeb.Auth, repo: FirstDays.Repo
+    plug FirstDaysWeb.Plugs.Auth, repo: FirstDays.Repo
+    plug FirstDaysWeb.Plugs.Locale
   end
 
   pipeline :api do

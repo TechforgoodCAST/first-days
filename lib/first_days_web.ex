@@ -23,7 +23,7 @@ defmodule FirstDaysWeb do
       import Plug.Conn
       import FirstDaysWeb.Router.Helpers
       import FirstDaysWeb.Gettext
-      import FirstDaysWeb.Auth, only: [authenticate_user: 2, already_signed_in: 2] # New import
+      import FirstDaysWeb.Plugs.Auth, only: [authenticate_user: 2, already_signed_in: 2] # New import
     end
   end
 
@@ -50,7 +50,7 @@ defmodule FirstDaysWeb do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
-      import FirstDaysWeb.Auth, only: [authenticate_user: 2] # New import
+      import FirstDaysWeb.Plugs.Auth, only: [authenticate_user: 2] # New import
     end
   end
 
