@@ -22,7 +22,7 @@ defmodule FirstDaysWeb.Router do
   scope "/", FirstDaysWeb do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", SessionController, :new
     get "/landing", PageController, :landing
     get "/get-them-ready", PageController, :get_them_ready
     get "/about", PageController, :about

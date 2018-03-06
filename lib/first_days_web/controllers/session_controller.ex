@@ -28,6 +28,6 @@ defmodule FirstDaysWeb.SessionController do
     conn
     |> FirstDaysWeb.Plugs.Auth.logout()
     |> put_flash(:info, "You've logged out")
-    |> redirect(to: page_path(conn, :index))
+    |> redirect(to: session_path(conn, :new))
   end
 end

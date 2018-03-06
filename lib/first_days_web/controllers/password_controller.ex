@@ -34,7 +34,7 @@ defmodule FirstDaysWeb.PasswordController do
 
         conn
         |> put_flash(:info, "We've sent you an email with instructions on how to reset your password")
-        |> redirect(to: page_path(conn, :index))
+        |> redirect(to: session_path(conn, :new))
     end
   end
 
@@ -93,7 +93,7 @@ defmodule FirstDaysWeb.PasswordController do
 
               conn
               |> put_flash(:info, "Password reset successfully!")
-              |> redirect(to: page_path(conn, :index))
+              |> redirect(to: session_path(conn, :new))
             {:error, changeset} ->
               conn
               |> render("edit.html", changeset: changeset, token: token)
