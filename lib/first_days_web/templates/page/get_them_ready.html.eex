@@ -32,9 +32,9 @@
 
     document_checklist_button_content =
       if @current_user.stages["document_checklist"] do
-        "View document list"
+        gettext("View document list")
       else
-        "Create document list"
+        gettext("Create document list")
       end
 
     preparation_link =
@@ -46,9 +46,9 @@
 
     preparation_button_content =
       if @current_user.stages["preparation"] do
-        "View email"
+        gettext("View email")
       else
-        "Create email"
+        gettext("Create email")
       end
 %>
 
@@ -56,7 +56,7 @@
 
 <section>
   <div class="w-two-thirds-ns cf pt0">
-    <%= shared_component("tab.html", class: "fl pr2 w-third", font: "white", tab_state: "bg-blue", content: "Getting them ready", icon: get_them_ready_progress_icon) %>
+    <%= shared_component("tab.html", class: "fl pr2 w-third", font: "white", tab_state: "bg-blue", content: gettext("Getting them ready"), icon: get_them_ready_progress_icon) %>
   </div>
 </section>
 
@@ -67,9 +67,9 @@
         <%= shared_component("progress_bar.html", image: progress_bar_image) %>
         <%= shared_component("divider.html") %>
       <div class="flex flex-row mb4 mt6">
-        <%= shared_component("stage_card.html", image: "/images/agreement_big.svg", sub_header_content: "Volunteer agreement template", button_content: "View Template", link: confirmation_agreement_path(@conn, :show)) %>
-        <%= shared_component("stage_card.html", image: "/images/checklist_big.svg", sub_header_content: "Collect important documents", button_content: document_checklist_button_content, link: document_checklist_link) %>
-        <%= shared_component("stage_card.html", image: "/images/prep_email_big.svg", sub_header_content: "Start date preparation email", button_content: preparation_button_content, link: preparation_link) %>
+        <%= shared_component("stage_card.html", image: "/images/agreement_big.svg", sub_header_content: gettext("Volunteer agreement template"), button_content: gettext("View Template"), link: confirmation_agreement_path(@conn, :show)) %>
+        <%= shared_component("stage_card.html", image: "/images/checklist_big.svg", sub_header_content: gettext("Collect important documents"), button_content: document_checklist_button_content, link: document_checklist_link) %>
+        <%= shared_component("stage_card.html", image: "/images/prep_email_big.svg", sub_header_content: gettext("Start date preparation email"), button_content: preparation_button_content, link: preparation_link) %>
       </div>
     </div>
     <!-- right card -->
@@ -77,13 +77,13 @@
       <div class="pa2">
         <div class="flex flex-row items-center pb2">
             <img class="" src="/images/prepare_small.svg" alt="Prepare">
-            <h1 class="<%= "#{headline_font()} ml2 f4" %>">Getting ready for your volunteer to start</h1>
+            <h1 class="<%= "#{headline_font()} ml2 f4" %>"><%= gettext("Getting ready for your volunteer to start") %></h1>
         </div>
         <div class="<%= "#{body_font()}" %>">
-          <p>Some organisations already have most of these things ready for their volunteers to start. However, if your organisation is relatively new to using volunteers then you may ﬁnd some things here useful.</p>
+          <p><%= gettext("Some organisations already have most of these things ready for their volunteers to start. However, if your organisation is relatively new to using volunteers then you may ﬁnd some things here useful.") %></p>
         </div>
       </div>
-      <%= shared_component("button_main.html", content: "Back to Home", wrapper_class: "bg-blue w-100-ns mt4", link: page_path(@conn, :landing), content_class: "white") %>
+      <%= shared_component("button_main.html", content: gettext("Back to Home"), wrapper_class: "bg-blue w-100-ns mt4", link: page_path(@conn, :landing), content_class: "white") %>
     </div>
   </div>
 </section>
