@@ -11,6 +11,6 @@
     <p class="<%= "#{body_font()} pv3" %>"><%= gettext("We hope that your volunteer had a great start.") %><br>
       <%= gettext("You can always come back to First Days if you want to") %><br>
       <%= gettext("revisit the process, making it the best it can be.") %></p>
-    <%= shared_component("button_main.html", content: "Back", wrapper_class: "bg-blue w-60-ns", link: page_path(@conn, :landing), content_class: "white") %>
+    <%= shared_component("button_main.html", content: gettext("Back"), wrapper_class: "bg-blue w-60-ns", link: page_path(@conn, :landing), content_class: "white") %>
   </div>
 </div>
