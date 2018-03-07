@@ -33,7 +33,7 @@
 
   <div class="<%= "#{input_wrapper_class()}" %>">
     <%= label f, :additional_info, "Is there any other info you'd like to add?", class: "#{input_label_class()}" %>
-    <%= textarea f, :additional_info, class: "#{input_class_60}", rows: "4" %>
+    <%= textarea f, :additional_info, class: "#{input_class_60()}", rows: "4" %>
     <%= error_tag f, :additional_info, class: "#{input_error_class()}" %>
   </div>
 

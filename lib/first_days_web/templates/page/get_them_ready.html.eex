@@ -25,9 +25,9 @@
 
     document_checklist_link =
       if @current_user.stages["document_checklist"] do
-       document_checklist_path(@conn, :show)
+        document_checklist_path(@conn, :show)
       else
-        document_checklist_link = document_checklist_path(@conn, :new)
+        document_checklist_path(@conn, :new)
       end
 
     document_checklist_button_content =
@@ -39,9 +39,9 @@
 
     preparation_link =
       if @current_user.stages["preparation"] do
-       preparation_path(@conn, :show)
+        preparation_path(@conn, :show)
       else
-        preparation_link = preparation_path(@conn, :new)
+        preparation_path(@conn, :new)
       end
 
     preparation_button_content =
