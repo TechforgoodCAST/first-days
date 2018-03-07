@@ -1,64 +1,64 @@
 <%= form_for @changeset, @action, [method: @method], fn f -> %>
 
-  <h1 class="<%= headline_font() %>">About the role</h1>
+  <h1 class="<%= headline_font() %>"><%= gettext("About the role") %></h1>
   <%= if @changeset.action do %>
     <div class="<%= check_form_errors_alert() %>">
-      <p>Oops, something went wrong! Please check the errors below.</p>
+      <p><%= gettext("Oops, something went wrong! Please check the errors below.") %></p>
     </div>
   <% end %>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :role_title, "What is the role title?", class: "#{input_label_class()}" %>
+    <%= label f, :role_title, gettext("What is the role title?"), class: "#{input_label_class()}" %>
     <%= text_input f, :role_title, class: "#{input_class_50()}" %>
     <%= error_tag f, :role_title, class: "#{input_error_class()}" %>
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :description, "Please give a one sentence description of the role", class: "#{input_label_class()}" %>
+    <%= label f, :description, gettext("Please give a one sentence description of the role"), class: "#{input_label_class()}" %>
     <%= textarea f, :description, class: "#{input_class_60()}", rows: "2" %>
     <%= error_tag f, :description, class: "#{input_error_class()}" %>
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :area, "What skill area is the volunteer role in?", class: "#{input_label_class()}" %>
-    <%= select f, :area, ["Finance", "Legal", "HR", "IT"], class: "#{input_class()}", prompt: "" %>
+    <%= label f, :area, gettext("What skill area is the volunteer role in?"), class: "#{input_label_class()}" %>
+    <%= select f, :area, [gettext("Finance"), gettext("Legal"), gettext("HR"), gettext("IT")], class: "#{input_class()}", prompt: "" %>
     <%= error_tag f, :area, class: "#{input_error_class()}" %>
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :specific_skills, "What are the specific skills you require?", class: "#{input_label_class()}" %>
+    <%= label f, :specific_skills, gettext("What are the specific skills you require?"), class: "#{input_label_class()}" %>
     <%= textarea f, :specific_skills, class: "#{input_class_60()}", rows: "3" %>
     <%= error_tag f, :specific_skills, class: "#{input_error_class()}" %>
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :additional_info, "Is there any other info you'd like to add?", class: "#{input_label_class()}" %>
+    <%= label f, :additional_info, gettext("Is there any other info you'd like to add?"), class: "#{input_label_class()}" %>
     <%= textarea f, :additional_info, class: "#{input_class_60()}", rows: "4" %>
     <%= error_tag f, :additional_info, class: "#{input_error_class()}" %>
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :work_frequency, "How frequently will the volunteer be needed to work? (for example, once a week, once a month, quarterly board meetings etc)", class: "#{input_label_class()}" %>
+    <%= label f, :work_frequency, gettext("How frequently will the volunteer be needed to work? (for example, once a week, once a month, quarterly board meetings etc)"), class: "#{input_label_class()}" %>
     <%= text_input f, :work_frequency, class: "#{input_class()}" %>
     <%= error_tag f, :work_frequency, class: "#{input_error_class()}" %>
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :work_length, "What is the total length of the opportunity? (e.g. 1 month, 6 months, 1 year, ongoing)", class: "#{input_label_class()}" %>
+    <%= label f, :work_length, gettext("What is the total length of the opportunity? (e.g. 1 month, 6 months, 1 year, ongoing)"), class: "#{input_label_class()}" %>
     <%= text_input f, :work_length, class: "#{input_class()}" %>
     <%= error_tag f, :work_length, class: "#{input_error_class()}" %>
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :location, "Where will the volunteer be based? (in a certain office location, working from home?)", class: "#{input_label_class()}" %>
+    <%= label f, :location, gettext("Where will the volunteer be based? (in a certain office location, working from home?)"), class: "#{input_label_class()}" %>
     <%= text_input f, :location, class: "#{input_class_60()}" %>
     <%= error_tag f, :location, class: "#{input_error_class()}" %>
   </div>
 
 
   <div class="<%= "#{input_wrapper_class()} mb5" %>">
-    <%= label f, :contact_details, "What are the contact details if a potential volunteer wants to speak further?", class: "#{input_label_class()}" %>
-    <%= text_input f, :contact_details, class: "#{input_class()}", placeholder: "Email" %>
+    <%= label f, :contact_details, gettext("What are the contact details if a potential volunteer wants to speak further?"), class: "#{input_label_class()}" %>
+    <%= text_input f, :contact_details, class: "#{input_class()}", placeholder: gettext("Email") %>
     <%= error_tag f, :contact_details, class: "#{input_error_class()}" %>
   </div>
   <%= shared_component("divider.html") %>
@@ -68,32 +68,32 @@
   <p class="<%= "#{body_font()} mv2" %>">It's good for the potential volunteer to understand what your organisation does. Knowing this can really motivate volunteers to apply.</p>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :organisation_name, "What is the name of your organisation?", class: "#{input_label_class()}" %>
+    <%= label f, :organisation_name, gettext("What is the name of your organisation?"), class: "#{input_label_class()}" %>
     <%= text_input f, :organisation_name, class: "#{input_class_50()}" %>
     <%= error_tag f, :organisation_name, class: "#{input_error_class()}" %>
   </div>
 
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :organisation_mission, "In a few sentences, what does your organisation do?", class: "#{input_label_class()}" %>
+    <%= label f, :organisation_mission, gettext("In a few sentences, what does your organisation do?"), class: "#{input_label_class()}" %>
     <%= textarea f, :organisation_mission, class: "#{input_class_60()}", rows: "4" %>
     <%= error_tag f, :organisation_mission, class: "#{input_error_class()}" %>
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :organisation_achievements, "What notable achievements has your organisation had? e.g. awards, membership of professional bodies (this can help attract volunteers to your organisation)", class: "#{input_label_class()}" %>
+    <%= label f, :organisation_achievements, gettext("What notable achievements has your organisation had? e.g. awards, membership of professional bodies (this can help attract volunteers to your organisation)"), class: "#{input_label_class()}" %>
     <%= textarea f, :organisation_achievements, class: "#{input_class_60()}", rows: "4" %>
     <%= error_tag f, :organisation_achievements, class: "#{input_error_class()}" %>
   </div>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :charity_number, "Please confirm your charity number/company number (if applicable)", class: "#{input_label_class()}" %>
+    <%= label f, :charity_number, gettext("Please confirm your charity number/company number (if applicable)"), class: "#{input_label_class()}" %>
     <%= text_input f, :charity_number, class: "#{input_class_30()}" %>
     <%= error_tag f, :charity_number, class: "#{input_error_class()}" %>
   </div>
 
   <div class="<%= "#{input_wrapper_class()} mb5" %>">
-    <%= label f, :website_link, "and a link to your website (if you have one)", class: "#{input_label_class()}" %>
+    <%= label f, :website_link, gettext("and a link to your website (if you have one)"), class: "#{input_label_class()}" %>
     <%= text_input f, :website_link, class: "#{input_class_60()}" %>
     <%= error_tag f, :website_link, class: "#{input_error_class()}" %>
   </div>
@@ -103,13 +103,13 @@
   <p class="<%= "#{body_font()} mv2" %>">Volunteers are motivated not just by the help they can give, but also how volunteering can develop them professionally and personally.</p>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
-    <%= label f, :how_will_work_help, "How will this work help the organisation? (1 sentence, jargon free)", class: "#{input_label_class()}" %>
+    <%= label f, :how_will_work_help, gettext("How will this work help the organisation? (1 sentence, jargon free)"), class: "#{input_label_class()}" %>
     <%= textarea f, :how_will_work_help, class: "#{input_class_60()}" %>
     <%= error_tag f, :how_will_work_help, class: "#{input_error_class()}" %>
   </div>
 
   <div class="<%= "#{input_wrapper_class()} mb5" %>">
-    <%= label f, :skills_to_be_gained, "What skills or experience will the volunteer gain from doing this role?", class: "#{input_label_class()}" %>
+    <%= label f, :skills_to_be_gained, gettext("What skills or experience will the volunteer gain from doing this role?"), class: "#{input_label_class()}" %>
     <%= textarea f, :skills_to_be_gained, class: "#{input_class_60()}", rows: "4" %>
     <%= error_tag f, :skills_to_be_gained, class: "#{input_error_class()}" %>
   </div>
@@ -118,7 +118,7 @@
   <!-- form_buttons -->
   <div class="flex items-center justify-end w-100">
     <div class="flex flex-row items-center">
-      <p class="<%= "#{title_blue_font()} mr3" %>">View Role Description Template</p>
+      <p class="<%= "#{title_blue_font()} mr3" %>"><%= gettext("View Role Description Template") %></p>
       <%= shared_component("button_square_checkmark.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/checkmark.svg" , alt: "done", link: role_description_path(@conn, :show)) %>
     </div>
   </div>

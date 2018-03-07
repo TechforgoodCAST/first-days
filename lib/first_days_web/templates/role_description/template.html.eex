@@ -1,35 +1,35 @@
-<h2 class="<%= "#{headline_font()} tc mv4" %>">Role Description Template</h2>
+<h2 class="<%= "#{headline_font()} tc mv4" %>">"<%= gettext("Role Description Template(") %>")</h2>
 <section class="ma4">
-  <h3 class="<%= "#{title_bold_font()}" %>">Role Description (please edit as you see fit)</h3>
+  <h3 class="<%= "#{title_bold_font()}" %>">"<%= gettext("Role Description (please edit as you see fit)(") %>")</h3>
   <div class="mv2">
-    <p class="<%= "#{title_bold_font()} dib" %>">Role</p><p class="<%= "#{title_black_font()} dib" %>">: <%= @answers.area %></p>
+    <p class="<%= "#{title_bold_font()} dib" %>"><%= gettext("Role") %></p><p class="<%= "#{title_black_font()} dib" %>">: <%= @answers.area %></p>
   </div>
-  <p class="<%= "#{body_font()} mb2" %>">A(n) <%= @answers.role_title %> volunteer is needed for <%= @answers.organisation_name %> to help us with <%= @answers.description %>.</p>
-  <p class="<%= "#{body_font()}" %>">We are looking for an individual with skills in <%= @answers.specific_skills %>. As well as these aspects of the role, the volunteer will be able to learn about the charity’s work (and) <%= @answers.additional_info %>.</p>
+  <p class="<%= "#{body_font()} mb2" %>"><%= gettext("A(n) ") %><span><%= @answers.role_title %></span><%= gettext(" volunteer is needed for ") %><span><%= @answers.organisation_name %></span><%= gettext(" to help us with ") %><span><%= @answers.description %></span>.</p>
+  <p class="<%= "#{body_font()}" %>"><%= gettext("We are looking for an individual with skills in ") %><span><%= @answers.specific_skills %></span><%= gettext(". As well as these aspects of the role, the volunteer will be able to learn about the charity’s work (and) ") %><span><%= @answers.additional_info %></span>.</p>
   <div class="mv2">
-    <p class="<%= "#{title_bold_font()}" %>">What we do</p>
+    <p class="<%= "#{title_bold_font()}" %>"><%= gettext("What we do") %></p>
   </div>
   <p class="<%= "#{body_font()}" %>"><%= @answers.organisation_mission %>. <%= @answers.organisation_achievements %></p>
   <div class="mv2">
-    <p class="<%= "#{title_bold_font()}" %>">Details of the role</p>
+    <p class="<%= "#{title_bold_font()}" %>"><%= gettext("Details of the role") %></p>
   </div>
-  <p class="<%= "#{body_font()} mb2" %>">The role is needed for <%= @answers.work_length %> and will involve working <%= @answers.work_frequency %>. Travel expenses will be paid.</p>
-  <p class="<%= "#{body_font()}" %>">It will be based in <%= @answers.location %>.</p>
+  <p class="<%= "#{body_font()} mb2" %>"><%= gettext("The role is needed for ") %><span><%= @answers.work_length %></span><%= gettext(" and will involve working ") %><span><%= @answers.work_frequency %></span><%= gettext(". Travel expenses will be paid.") %></p>
+  <p class="<%= "#{body_font()}" %>"><%= gettext("It will be based in ") %><span><%= @answers.location %></span>.</p>
   <div class="mv2">
-    <p class="<%= "#{title_bold_font()}" %>">What you'll gain</p>
+    <p class="<%= "#{title_bold_font()}" %>"><%= gettext("What you'll gain") %></p>
   </div>
-  <p class="<%= "#{body_font()}" %>">Doing this you could gain <%= @answers.skills_to_be_gained %>.</p>
+  <p class="<%= "#{body_font()}" %>"><%= gettext("Doing this you could gain ") %><span><%= @answers.skills_to_be_gained %></span>.</p>
   <div class="mv2">
-    <p class="<%= "#{title_bold_font()}" %>">The impact for us</p>
+    <p class="<%= "#{title_bold_font()}" %>"><%= gettext("The impact for us") %></p>
   </div>
   <p class="<%= "#{body_font()}" %>"><%= @answers.how_will_work_help %></p>
 
-  <p class="<%= "#{body_font()} mt3 mb2 dib" %>">Want to speak further? Contact</p><p class= "<%= "#{body_bold_font()} dib pl1" %>"><%= @answers.contact_details %>.</p>
+  <p class="<%= "#{body_font()} mt3 mb2 dib" %>"><%= gettext("Want to speak further? Contact") %></p><p class= "<%= "#{body_bold_font()} dib pl1" %>"><%= @answers.contact_details %>.</p>
   <div class="">
-    <p class="<%= "#{body_font()} mv2 dib" %>">Charity number: </p><p class= "<%= "#{body_bold_font()} dib pl1" %>"><%= @answers.charity_number %></p>
+    <p class="<%= "#{body_font()} mv2 dib" %>"><%= gettext("Charity number: ") %></p><p class= "<%= "#{body_bold_font()} dib pl1" %>"><%= @answers.charity_number %></p>
   </div>
   <div class="">
-    <p class="<%= "#{body_font()} mv2 dib" %>">Website: </p><p class= "<%= "#{body_bold_font()} dib pl1" %>"><%= @answers.website_link %></p>
+    <p class="<%= "#{body_font()} mv2 dib" %>"><%= gettext("Website: ") %></p><p class= "<%= "#{body_bold_font()} dib pl1" %>"><%= @answers.website_link %></p>
   </div>
 </section>
 
@@ -37,10 +37,10 @@
 <div class="flex items-center justify-between w-100">
   <div class="flex flex-row items-center">
     <%= shared_component("button_square.html", wrapper_class: "mt2", class: "ml1 transparent dib", icon: "/images/edit.svg" , alt: "edit" , link: role_description_path(@conn, :edit)) %>
-    <p class="<%= "#{title_blue_font()}" %>">Edit Template</p>
+    <p class="<%= "#{title_blue_font()}" %>"><%= gettext("Edit Template") %></p>
   </div>
     <div class="flex flex-row items-center">
-    <p class="<%= "#{title_blue_font()} mr3" %>">Send to myself</p>
+    <p class="<%= "#{title_blue_font()} mr3" %>"><%= gettext("Send to myself") %></p>
     <%= shared_component("button_square.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/send.svg" , alt: "send to myself", link: role_description_path(@conn, :email)) %>
   </div>
 </div>
