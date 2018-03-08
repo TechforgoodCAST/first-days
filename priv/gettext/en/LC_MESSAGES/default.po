@@ -1,0 +1,1250 @@
+## `msgid`s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove `msgid`s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use `mix gettext.extract --merge` or `mix gettext.merge`
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: en\n"
+
+#: lib/first_days_web/templates/password/new.html.eex:11
+#: lib/first_days_web/templates/role_description/form.html.eex:61
+#: lib/first_days_web/templates/session/new.html.eex:2
+#: lib/first_days_web/templates/user/form.html.eex:22
+msgid "Email"
+msgstr ""
+
+#: lib/first_days_web/templates/session/new.html.eex:5
+msgid "Forgot password?"
+msgstr ""
+
+#: lib/first_days_web/templates/component/logged_out_nav.html.eex:8
+#: lib/first_days_web/templates/session/new.html.eex:4
+msgid "Log in"
+msgstr ""
+
+#: lib/first_days_web/templates/session/new.html.eex:3
+#: lib/first_days_web/templates/user/form.html.eex:28
+msgid "Password"
+msgstr ""
+
+#: lib/first_days_web/templates/component/success_modal.html.eex:9
+msgid " all the First Days steps!"
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:25
+msgid "1. to provide regular meetings with your manager so that you can tell us if you are happy with how your work is organised and get feedback from us. Your manager’s name is [name of manager]"
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:26
+msgid "2. to respect your skills, dignity and individual wishes and to do our best to meet them."
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:27
+msgid "3. to reimburse your travel and meal costs up to our current maximum."
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:28
+msgid "4. to consult with you and keep you informed of possible changes."
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:29
+msgid "5. to insure you against injury you suffer or cause due to negligence."
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:30
+msgid "6. to provide a safe environment."
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:31
+msgid "7. to apply our equal opportunities policy"
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:32
+msgid "8. to apply our complaints procedure if there is any problem"
+msgstr ""
+
+#: lib/first_days_web/templates/component/logged_in_nav.html.eex:6
+#: lib/first_days_web/templates/component/logged_out_nav.html.eex:6
+msgid "About"
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/tips.html.eex:13
+msgid "An important part of building your volunteer relationship is in ensuring that there is a clear understanding of what is expected from each party. This is particularly important when a private sector individual is working in the third sector for the first time. It's quite common for there to be differences in working cultures that may surprise the volunteers."
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:7
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:23
+msgid "As part of the process we find it’s useful to set up a agreement between you and the organisation so that it’s clear what you can expect from us, and us from you.  We’ve created an non-legal honour bound agreement below. Please read this, and if you’re happy, sign it and send it back to us by [DATE]"
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:1
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:19
+#: lib/first_days_web/templates/confirmation_agreement/tips.html.eex:4
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:17
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:35
+msgid "Confirmation & Agreement"
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:3
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:19
+msgid "Confirmation & Agreement (to edit and send to the volunteer)"
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/tips.html.eex:7
+msgid "Congratulations on recruiting your volunteer!"
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:41
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:55
+msgid "Date:"
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:4
+#: lib/first_days_web/templates/document_checklist/template.html.eex:5
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:20
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:13
+msgid "Dear [NAME],"
+msgstr ""
+
+#: lib/first_days_web/templates/component/logged_in_nav.html.eex:3
+#: lib/first_days_web/templates/component/logged_out_nav.html.eex:3
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:14
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:8
+#: lib/first_days_web/templates/email/feedback_email.html.eex:24
+#: lib/first_days_web/templates/email/preparation_email.html.eex:8
+#: lib/first_days_web/templates/email/role_description_email.html.eex:12
+#: lib/first_days_web/templates/email/welcome_email.html.eex:8
+#: lib/first_days_web/templates/layout/app.html.eex:10
+#: lib/first_days_web/templates/layout/signed_out_layout.html.eex:10
+#: lib/first_days_web/templates/password/edit.html.eex:3
+#: lib/first_days_web/templates/password/new.html.eex:3
+#: lib/first_days_web/templates/session/new.html.eex:10
+msgid "First Days"
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:37
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:51
+msgid "For the volunteer"
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/show.html.eex:10
+#: lib/first_days_web/templates/document_checklist/edit.html.eex:10
+#: lib/first_days_web/templates/document_checklist/new.html.eex:10
+#: lib/first_days_web/templates/document_checklist/show.html.eex:10
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:59
+#: lib/first_days_web/templates/page/landing.html.eex:43
+#: lib/first_days_web/templates/preparation/edit.html.eex:10
+#: lib/first_days_web/templates/preparation/new.html.eex:10
+#: lib/first_days_web/templates/preparation/show.html.eex:10
+msgid "Getting them ready"
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:38
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:52
+msgid "I [name of volunteer], agree to do my best, to work reliably to the best of my ability, and to give as much warning as possible whenever I cannot volunteer as expected to follow [name of organisation]’s rules and procedures, including health and safety, equal opportunities and confidentially."
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/tips.html.eex:19
+#: lib/first_days_web/templates/document_checklist/template_tips.html.eex:13
+#: lib/first_days_web/templates/feedback/tips.html.eex:18
+#: lib/first_days_web/templates/preparation/template_tips.html.eex:13
+#: lib/first_days_web/templates/role_description/template_tips.html.eex:13
+msgid "I have completed this step, I am happy to say that it is done."
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/tips.html.eex:15
+msgid "It's good to get a signed agreement up front to help with this process."
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:10
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:26
+msgid "Linked to this, if you’ve not volunteered in third sector before, you might find some differences in working culture to other sectors.  To help you prepare for this, we’ve given you a few links that it may be useful for you to look at."
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:15
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:31
+msgid "Many Thanks"
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:39
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:53
+msgid "Note: this agreement is in honour only and is not itended to be a legally binding contract of employment"
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:47
+#: lib/first_days_web/templates/document_checklist/template.html.eex:35
+#: lib/first_days_web/templates/feedback/template.html.eex:32
+#: lib/first_days_web/templates/preparation/template.html.eex:21
+#: lib/first_days_web/templates/role_description/template.html.eex:43
+msgid "Send to myself"
+msgstr ""
+
+#: lib/first_days_web/templates/component/logged_out_nav.html.eex:9
+#: lib/first_days_web/templates/user/form.html.eex:40
+msgid "Sign up"
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:40
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:54
+msgid "Signed:"
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/tips.html.eex:9
+msgid "The volunteer agreement template is here on the left. Please copy it into a new document so that you can edit it as you see fit, then share it with your network. You can also email it to yourself."
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:21
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:37
+msgid "This agreement tells you what you can expect from us, and what we hope from you. We aim to be flexible, so please let us know if you would like to make any changes and we will do our best."
+msgstr ""
+
+#: lib/first_days_web/templates/component/email_sent_modal.html.eex:9
+msgid "This template"
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:20
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:36
+msgid "Volunteers are an important and valued part of [name of organisation]. We hope that you enjoy volunteering with us and feel a full part of our team."
+msgstr ""
+
+#: lib/first_days_web/templates/component/success_modal.html.eex:9
+msgid "WELL DONE!"
+msgstr ""
+
+#: lib/first_days_web/templates/component/success_modal.html.eex:11
+msgid "We hope that your volunteer had a great start."
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:14
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:30
+msgid "We look forward to working with you."
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/tips.html.eex:17
+msgid "We'd recommend you personalise and send the agreement below to the volunteer as part of the confirmation process. We've also included some links that you might want to send through to them as they may help you prepare."
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:5
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:21
+msgid "We're delighted that you've agreed to volunteer with us."
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:22
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:38
+msgid "We, [name of organisation], will do our best to introduce you to how the organisation works and your role in it and to provide any training you need. The initial training agreed is:"
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/tips.html.eex:11
+msgid "Why should I do this?"
+msgstr ""
+
+#: lib/first_days_web/templates/component/email_sent_modal.html.eex:11
+msgid "You can always come back and edit this template."
+msgstr ""
+
+#: lib/first_days_web/templates/component/success_modal.html.eex:12
+msgid "You can always come back to First Days if you want to"
+msgstr ""
+
+#: lib/first_days_web/templates/component/success_modal.html.eex:9
+msgid "You have now completed"
+msgstr ""
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:12
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:28
+msgid "[LINKS]"
+msgstr ""
+
+#: lib/first_days_web/templates/component/email_sent_modal.html.eex:9
+msgid "has been sent to your email."
+msgstr ""
+
+#: lib/first_days_web/templates/component/success_modal.html.eex:13
+msgid "revisit the process, making it the best it can be."
+msgstr ""
+
+#: lib/first_days_web/templates/feedback/template.html.eex:11
+msgid "1) Did you enjoy your first day?"
+msgstr ""
+
+#: lib/first_days_web/templates/feedback/template.html.eex:20
+msgid "10) Would you like to volunteer with us again?"
+msgstr ""
+
+#: lib/first_days_web/templates/feedback/template.html.eex:21
+msgid "11) Would you recommend our organisation to your friends and family?"
+msgstr ""
+
+#: lib/first_days_web/templates/feedback/template.html.eex:12
+msgid "2) Did you get introduced to colleagues?"
+msgstr ""
+
+#: lib/first_days_web/templates/feedback/template.html.eex:13
+msgid "3) How welcome did you feel, on a scale of 1-10 (1 being not welcome, 10 being like family)?"
+msgstr ""
+
+#: lib/first_days_web/templates/feedback/template.html.eex:14
+msgid "4) What would have helped to make you feel more welcome?"
+msgstr ""
+
+#: lib/first_days_web/templates/feedback/template.html.eex:15
+msgid "5) How well do you feel you understand what the organisation does and who it works with?"
+msgstr ""
+
+#: lib/first_days_web/templates/feedback/template.html.eex:16
+msgid "6) What else would be useful to know?"
+msgstr ""
+
+#: lib/first_days_web/templates/feedback/template.html.eex:17
+msgid "7) How clear do you feel about your role?"
+msgstr ""
+
+#: lib/first_days_web/templates/feedback/template.html.eex:18
+msgid "8) What would help to make you more clear about your role?"
+msgstr ""
+
+#: lib/first_days_web/templates/feedback/template.html.eex:19
+msgid "9) Do you have everything you need to do your role? e.g. information, equipment or resources"
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:56
+#: lib/first_days_web/views/document_checklist_view.ex:12
+msgid "Bank/Building Society details (for paying expenses)"
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/form_tips.html.eex:9
+msgid "Before your volunteer can start, you'll likely need them to provide certatin paperwork. What is needed varies for different organisations and different roles. Completing this process ahead of time is really important as it can often slow down the volunteering process and create frustrations on both sides."
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/template_tips.html.eex:4
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:71
+msgid "Collect important documents"
+msgstr ""
+
+#: lib/first_days_web/templates/feedback/show.html.eex:10
+msgid "Collecting Feedback"
+msgstr ""
+
+#: lib/first_days_web/templates/feedback/tips.html.eex:4
+#: lib/first_days_web/templates/page/landing.html.eex:44
+#: lib/first_days_web/templates/page/landing.html.eex:74
+msgid "Collecting feedback"
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:32
+#: lib/first_days_web/templates/feedback/template.html.eex:6
+msgid "Congratulations on completing your first day volunteering with us!"
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/template.html.eex:9
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:17
+msgid "Could you please send us:"
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:44
+#: lib/first_days_web/views/document_checklist_view.ex:10
+msgid "DBS (Disclosure and Barring Service) check"
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:30
+#: lib/first_days_web/templates/email/preparation_email.html.eex:12
+#: lib/first_days_web/templates/feedback/template.html.eex:4
+#: lib/first_days_web/templates/preparation/template.html.eex:3
+msgid "Dear [NAME]"
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:3
+#: lib/first_days_web/templates/document_checklist/template.html.eex:1
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:10
+msgid "Document Checklist"
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/template.html.eex:32
+#: lib/first_days_web/templates/preparation/template.html.eex:18
+#: lib/first_days_web/templates/role_description/template.html.eex:40
+msgid "Edit Template"
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/template.html.eex:3
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:12
+msgid "Email template"
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:38
+#: lib/first_days_web/views/document_checklist_view.ex:9
+msgid "Emergency contact details"
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:34
+#: lib/first_days_web/templates/feedback/template.html.eex:8
+msgid "It's helpful to get feedback from you on your first day. So we'd be grateful if you could take 5 minutes to tell us your thoughts on these questions:"
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:51
+#: lib/first_days_web/templates/feedback/template.html.eex:24
+msgid "It's important that we get better at the things we do not so well and keep doing the things that are working, so your feedback is really appreciated!"
+msgstr ""
+
+#: lib/first_days_web/templates/feedback/tips.html.eex:9
+msgid "It's important to get feedback from volunteers after their first day. Not only does it help you understand their experience, but also helps identify ways you can improve your induction processes. We've prepared this email that you can send out to the volunteer, which contains a link to the questions we'll ask them."
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/form_tips.html.eex:11
+msgid "It's important your volunteer is prepared for their first day and has completed or sent through any paperwork they need to fill out for the role."
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/template.html.eex:7
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:15
+msgid "It’s important that we get this process underway so we’d be grateful if you could send us the documents we need by the [DATE]."
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/template.html.eex:24
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:31
+#: lib/first_days_web/templates/email/feedback_email.html.eex:52
+#: lib/first_days_web/templates/email/preparation_email.html.eex:23
+#: lib/first_days_web/templates/feedback/template.html.eex:25
+#: lib/first_days_web/templates/preparation/template.html.eex:11
+msgid "Many thanks"
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/form_tips.html.eex:7
+msgid "Now that your volunteer has agreed to take up the role you can begin the preparations."
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:8
+#: lib/first_days_web/templates/preparation/form.html.eex:8
+#: lib/first_days_web/templates/role_description/form.html.eex:6
+#: lib/first_days_web/templates/user/form.html.eex:11
+msgid "Oops, something went wrong! Please check the errors below."
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:67
+msgid "Other"
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:14
+msgid "Photo Id"
+msgstr ""
+
+#: lib/first_days_web/views/document_checklist_view.ex:5
+msgid "Photo id"
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/template.html.eex:22
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:30
+msgid "Please also let us know when you are available to start."
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:26
+#: lib/first_days_web/views/document_checklist_view.ex:7
+msgid "Proof of address"
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:20
+#: lib/first_days_web/views/document_checklist_view.ex:6
+msgid "Proof of identity"
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:62
+#: lib/first_days_web/views/document_checklist_view.ex:13
+msgid "Proof of qualifications"
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:50
+#: lib/first_days_web/views/document_checklist_view.ex:11
+msgid "Proof of residency"
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:29
+#: lib/first_days_web/templates/feedback/template.html.eex:3
+msgid "Sample email with example questions"
+msgstr ""
+
+#: lib/first_days_web/templates/feedback/tips.html.eex:15
+msgid "Thanks again, and congratulations on getting the volunteer for the post!"
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/template_tips.html.eex:7
+msgid "Thanks for completing the preparation checklist."
+msgstr ""
+
+#: lib/first_days_web/templates/feedback/tips.html.eex:7
+msgid "Thanks for using First Days to help with your succesful volunteer recruitment."
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/template.html.eex:6
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:14
+msgid "Thanks very much for signing up to be a volunteer. As you may expect, there is some paperwork involved in starting the position.  We’ve listed what we need to receive from you below."
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:79
+msgid "View Document Checklist"
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:27
+#: lib/first_days_web/templates/feedback/template.html.eex:1
+msgid "Volunteer Feedback Template"
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:32
+#: lib/first_days_web/views/document_checklist_view.ex:8
+msgid "Volunteer requirements e.g. dietary, medical or religious needs"
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:33
+#: lib/first_days_web/templates/feedback/template.html.eex:7
+msgid "We're grateful to you for joining the team and we hope you found your first day an enjoyable experience."
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:4
+msgid "What documents or paperwork do you need from the volunteer to be able to start the role? (Please tick all that apply)"
+msgstr ""
+
+#: lib/first_days_web/templates/feedback/tips.html.eex:11
+msgid "What you need to do"
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/template_tips.html.eex:11
+msgid "When you have completed the paperwork part of the process, please log back on and we'll help you prepare a personalised email to support the volunteer on their first day."
+msgstr ""
+
+#: lib/first_days_web/templates/feedback/tips.html.eex:13
+msgid "Write an email to your volunteer asking for their feedback - we've put some example questions in the sample email here on the left to help you. Or you might like to use a free survey tool for this, like Google Forms, Survey Monkey or TypeForm. This can make volunteers give more honest answers, as they wont' need to send it directly back to you."
+msgstr ""
+
+#: lib/first_days_web/templates/document_checklist/template_tips.html.eex:9
+msgid "Your email text to send to the volunteer is here on the left. Please copy it into a new document so that you can edit it as you see fit, then share it with your network. You can also email it to yourself."
+msgstr ""
+
+#: lib/first_days_web/templates/page/about.html.eex:25
+msgid "  First Days has been made possible with funding from The Big Lottery Fund, and is a partnership\n  between the Wales Co-operative Centre, Wales Council for Voluntary Action (WCVA), Business in\n  The Community (BITC) Cymru and CAST.\n"
+msgstr ""
+
+#: lib/first_days_web/templates/page/landing.html.eex:88
+msgid "  First Days is made up of three easy to use sections. At the end of each section a template of your\n  responses will be sent to your e-mail with the completed information, links and resources to assist\n  you. You can then edit this template until it is exactly as you want.\n  Once you have completed a section and you are ready to move onto the next section you can log in\n  again at any time.\n"
+msgstr ""
+
+#: lib/first_days_web/templates/page/about.html.eex:6
+msgid "  First days helps you to engage with volunteers from the beginning of the recruitment process right\n  through to getting feedback on the volunteer's first day. It will help you to assess the specific\n  volunteer needs that your organisation has and will enable you to create really focused volunteer\n  role descriptions that will attract the necessary skills and experience to support and develop your\n  organisation. First Days also provides you with the necessary information to keep in touch with your\n  potential volunteers, and gives you access to a wealth of tips, resources and support.\n"
+msgstr ""
+
+#: lib/first_days_web/templates/page/about.html.eex:17
+msgid "  We hope that you find using First Days a simple and helpful experience and that you recommend it\n  to your colleagues and networks in the third sector. If you have any queries please contact\n  Geoff.jones@wales.coop. We would love to hear your feedback.\n"
+msgstr ""
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:86
+msgid "Back to Home"
+msgstr ""
+
+#: lib/first_days_web/templates/page/landing.html.eex:36
+msgid "Create description"
+msgstr ""
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:37
+msgid "Create document list"
+msgstr ""
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:51
+msgid "Create email"
+msgstr ""
+
+#: lib/first_days_web/templates/page/landing.html.eex:42
+#: lib/first_days_web/templates/role_description/edit.html.eex:10
+#: lib/first_days_web/templates/role_description/new.html.eex:10
+#: lib/first_days_web/templates/role_description/show.html.eex:10
+msgid "Find a volunteer"
+msgstr ""
+
+#: lib/first_days_web/templates/page/landing.html.eex:72
+msgid "Finding a volunteer"
+msgstr ""
+
+#: lib/first_days_web/templates/page/landing.html.eex:73
+msgid "Get them ready"
+msgstr ""
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:80
+msgid "Getting ready for your volunteer to start"
+msgstr ""
+
+#: lib/first_days_web/templates/page/landing.html.eex:73
+msgid "Getting your volunteer ready to start"
+msgstr ""
+
+#: lib/first_days_web/templates/component/logged_in_nav.html.eex:9
+msgid "Log out"
+msgstr ""
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:83
+msgid "Some organisations already have most of these things ready for their volunteers to start. However, if your organisation is relatively new to using volunteers then you may ﬁnd some things here useful."
+msgstr ""
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:72
+#: lib/first_days_web/templates/preparation/form_tips.html.eex:4
+msgid "Start date preparation email"
+msgstr ""
+
+#: lib/first_days_web/templates/page/landing.html.eex:83
+msgid "Tips"
+msgstr ""
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:70
+msgid "View Template"
+msgstr ""
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:35
+msgid "View document list"
+msgstr ""
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:49
+msgid "View email"
+msgstr ""
+
+#: lib/first_days_web/templates/page/landing.html.eex:34
+#: lib/first_days_web/templates/page/landing.html.eex:74
+msgid "View template"
+msgstr ""
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:70
+msgid "Volunteer agreement template"
+msgstr ""
+
+#: lib/first_days_web/templates/page/about.html.eex:36
+msgid "With the kind support of:"
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:43
+#: lib/first_days_web/templates/role_description/template.html.eex:16
+msgid " and will involve working "
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:24
+#: lib/first_days_web/templates/role_description/template.html.eex:7
+msgid " to help us with "
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:22
+#: lib/first_days_web/templates/role_description/template.html.eex:7
+msgid " volunteer is needed for "
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:30
+#: lib/first_days_web/templates/role_description/template.html.eex:8
+msgid ". As well as these aspects of the role, the volunteer will be able to learn about the charity’s work (and) "
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:45
+#: lib/first_days_web/templates/role_description/template.html.eex:16
+msgid ". Travel expenses will be paid."
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:20
+#: lib/first_days_web/templates/role_description/template.html.eex:7
+msgid "A(n) "
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:3
+msgid "About the role"
+msgstr ""
+
+#: lib/first_days_web/views/preparation_view.ex:17
+msgid "April"
+msgstr ""
+
+#: lib/first_days_web/templates/preparation/form.html.eex:21
+msgid "Are there any dress code requirements? (This could include dress code for the organisation, or health and safety requirements. For example footwear, wearing of jewellery, dressing for certain weather if they will be working outside)"
+msgstr ""
+
+#: lib/first_days_web/templates/preparation/form.html.eex:33
+msgid "Are there any other details you'd like them to know ahead of time?"
+msgstr ""
+
+#: lib/first_days_web/views/preparation_view.ex:21
+msgid "August"
+msgstr ""
+
+#: lib/first_days_web/templates/preparation/form_tips.html.eex:7
+msgid "Before your volunteer starts you'll probably want to send them information so that they can settle in quickly."
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:59
+#: lib/first_days_web/templates/role_description/template.html.eex:29
+msgid "Charity number: "
+msgstr ""
+
+#: lib/first_days_web/templates/password/edit.html.eex:16
+msgid "Confirm new password"
+msgstr ""
+
+#: lib/first_days_web/views/preparation_view.ex:25
+msgid "December"
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:38
+#: lib/first_days_web/templates/role_description/template.html.eex:14
+msgid "Details of the role"
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:51
+#: lib/first_days_web/templates/role_description/template.html.eex:21
+msgid "Doing this you could gain "
+msgstr ""
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:15
+#: lib/first_days_web/templates/preparation/template.html.eex:6
+msgid "Dress code"
+msgstr ""
+
+#: lib/first_days_web/views/preparation_view.ex:15
+msgid "February"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:24
+msgid "Finance"
+msgstr ""
+
+#: lib/first_days_web/templates/password/new.html.eex:4
+msgid "Forgot your password?"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:24
+msgid "HR"
+msgstr ""
+
+#: lib/first_days_web/templates/preparation/template_tips.html.eex:11
+msgid "Hopefully your volunteer is due to start in the next 2 weeks or so. It's helpful to send them a reminder email, together with useful information."
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:41
+msgid "How frequently will the volunteer be needed to work? (for example, once a week, once a month, quarterly board meetings etc)"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:106
+msgid "How will this work help the organisation? (1 sentence, jargon free)"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:24
+msgid "IT"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:78
+msgid "In a few sentences, what does your organisation do?"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:35
+msgid "Is there any other info you'd like to add?"
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:47
+#: lib/first_days_web/templates/role_description/template.html.eex:17
+msgid "It will be based in "
+msgstr ""
+
+#: lib/first_days_web/templates/preparation/form_tips.html.eex:9
+msgid "It's important that your volunteer is prepared for their first day and has completed or sent through any paperwork they need to fill out for the role."
+msgstr ""
+
+#: lib/first_days_web/templates/preparation/form.html.eex:4
+msgid "It's important your volunteer is prepared for their first day. It can be intimidating to start in a new organisation, so help them to prepare by filling out the details below."
+msgstr ""
+
+#: lib/first_days_web/views/preparation_view.ex:14
+msgid "January"
+msgstr ""
+
+#: lib/first_days_web/views/preparation_view.ex:20
+msgid "July"
+msgstr ""
+
+#: lib/first_days_web/views/preparation_view.ex:19
+msgid "June"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:24
+msgid "Legal"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form_tips.html.eex:4
+#: lib/first_days_web/templates/role_description/template_tips.html.eex:4
+msgid "Let's find a volunteer"
+msgstr ""
+
+#: lib/first_days_web/views/preparation_view.ex:16
+msgid "March"
+msgstr ""
+
+#: lib/first_days_web/views/preparation_view.ex:18
+msgid "May"
+msgstr ""
+
+#: lib/first_days_web/templates/password/edit.html.eex:10
+msgid "New password"
+msgstr ""
+
+#: lib/first_days_web/views/preparation_view.ex:24
+msgid "November"
+msgstr ""
+
+#: lib/first_days_web/views/preparation_view.ex:23
+msgid "October"
+msgstr ""
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:19
+#: lib/first_days_web/templates/preparation/template.html.eex:8
+msgid "Other things helpful to know"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:90
+msgid "Please confirm your charity number/company number (if applicable)"
+msgstr ""
+
+#: lib/first_days_web/templates/password/edit.html.eex:4
+msgid "Please enter a new password for your account."
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:17
+msgid "Please give a one sentence description of the role"
+msgstr ""
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:10
+#: lib/first_days_web/templates/preparation/template.html.eex:1
+msgid "Preparation Email"
+msgstr ""
+
+#: lib/first_days_web/templates/preparation/form.html.eex:3
+msgid "Preparing the volunteer for their first day"
+msgstr ""
+
+#: lib/first_days_web/templates/password/edit.html.eex:22
+msgid "Reset password"
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:17
+#: lib/first_days_web/templates/role_description/template.html.eex:5
+msgid "Role"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/template.html.eex:3
+msgid "Role Description (please edit as you see fit)("
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/template.html.eex:1
+msgid "Role Description Template("
+msgstr ""
+
+#: lib/first_days_web/templates/password/new.html.eex:17
+msgid "Send reset link"
+msgstr ""
+
+#: lib/first_days_web/views/preparation_view.ex:22
+msgid "September"
+msgstr ""
+
+#: lib/first_days_web/templates/preparation/template_tips.html.eex:4
+msgid "Start date preparation"
+msgstr ""
+
+#: lib/first_days_web/templates/preparation/template_tips.html.eex:7
+msgid "Thanks for answering the questions for the preparation email."
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/template_tips.html.eex:7
+msgid "Thanks very much for telling us about the role."
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:53
+#: lib/first_days_web/templates/role_description/template.html.eex:23
+msgid "The impact for us"
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:41
+#: lib/first_days_web/templates/role_description/template.html.eex:16
+msgid "The role is needed for "
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/template_tips.html.eex:9
+msgid "The text for your role description is here on the left. Please copy it into a new document so that you can edit it as you see fit, then share it with your network. You can also email it to yourself."
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form_tips.html.eex:7
+msgid "This form will help you understand what your organisation needs from a volunteer by guiding you through all the steps in creating a great volunteer role description."
+msgstr ""
+
+#: lib/first_days_web/templates/preparation/form.html.eex:42
+msgid "View Email Template"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:121
+msgid "View Role Description Template"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/template.html.eex:27
+msgid "Want to speak further? Contact"
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:28
+#: lib/first_days_web/templates/role_description/template.html.eex:8
+msgid "We are looking for an individual with skills in "
+msgstr ""
+
+#: lib/first_days_web/templates/preparation/template.html.eex:4
+msgid "We hope you're looking forward to your first day with us on the"
+msgstr ""
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:22
+#: lib/first_days_web/templates/preparation/template.html.eex:10
+msgid "We look forward to seeing you then,"
+msgstr ""
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:14
+#: lib/first_days_web/templates/preparation/template.html.eex:5
+msgid "We wanted to offer some helpful information."
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:62
+#: lib/first_days_web/templates/role_description/template.html.eex:32
+msgid "Website: "
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:60
+msgid "What are the contact details if a potential volunteer wants to speak further?"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:29
+msgid "What are the specific skills you require?"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:71
+msgid "What is the name of your organisation?"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:11
+msgid "What is the role title?"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:47
+msgid "What is the total length of the opportunity? (e.g. 1 month, 6 months, 1 year, ongoing)"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:84
+msgid "What notable achievements has your organisation had? e.g. awards, membership of professional bodies (this can help attract volunteers to your organisation)"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:23
+msgid "What skill area is the volunteer role in?"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:112
+msgid "What skills or experience will the volunteer gain from doing this role?"
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:34
+#: lib/first_days_web/templates/role_description/template.html.eex:10
+msgid "What we do"
+msgstr ""
+
+#: lib/first_days_web/templates/preparation/form.html.eex:27
+msgid "What will be the nature of the work that they will be undertaking? (For example, will they meet the team? Have a tour? What will they likely be working on?)"
+msgstr ""
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:17
+#: lib/first_days_web/templates/preparation/template.html.eex:7
+msgid "What you'll be doing on your first day"
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:49
+#: lib/first_days_web/templates/role_description/template.html.eex:19
+msgid "What you'll gain"
+msgstr ""
+
+#: lib/first_days_web/templates/preparation/form.html.eex:13
+msgid "When is the volunteer's first day? (if you don't know, please provide us with your best guess)"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/template_tips.html.eex:11
+msgid "When you've selected the appropriate person, simply sign back on and we'll take you through the remaining steps of the process!"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:53
+msgid "Where will the volunteer be based? (in a certain office location, working from home?)"
+msgstr ""
+
+#: lib/first_days_web/templates/preparation/template_tips.html.eex:9
+msgid "Your email text to send to the volunteer is here on the left. Please copy it into a new document so that you can edit it as you see fit. You can also email it to yourself."
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:96
+msgid "and a link to your website (if you have one)"
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:4
+msgid "A really focused and engaging role description is key to attracting the right volunteer to take your organisation to the next level, so it is important that you make a clear ask of what skills and experiences you require, and also show what is really great about your organisations and what the volunteer would gain from volunteering with you."
+msgstr ""
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:4
+msgid "A volunteer agreement helps both the organisation and its volunteers by making expectations clear. They also address the unlikely possibility of volunteers being considered employees in the eyes of the law."
+msgstr ""
+
+#: lib/first_days_web/templates/component/email_sent_modal.html.eex:12
+#: lib/first_days_web/templates/component/success_modal.html.eex:14
+msgid "Back"
+msgstr ""
+
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:3
+msgid "Before your volunteer can start, it is likely that they will need to provide certain paperwork. Here is a template of the documents that you have indicated that your organisation will require. It is important that both the volunteer and the host organisation are clear in understanding these requirements and that everyone is clear about the requirements in respect of paperwork needed before they commence the role. Good communication between the volunteer and host organisation is key to establishing a positive and professional relationship between all parties."
+msgstr ""
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:4
+msgid "Before your volunteer starts you’ll want to send them information so that they know what to expect and can settle in quickly. It is important that your volunteer is prepared for their first day and has completed any necessary paperwork. Volunteers will feel more supported and valued if they are communicated with fully in the time between them expressing an interest in your organisation and actually commencing volunteering with you."
+msgstr ""
+
+#: lib/first_days_web/templates/email/welcome_email.html.eex:3
+msgid "Congratulations, you have successfully registered for First Days. We will guide you through the process of recruiting your volunteers, from assessing your needs through to getting feedback from your volunteer once they have commenced volunteering."
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:38
+msgid "Did you enjoy your first day?"
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:39
+msgid "Did you get introduced to colleagues?"
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:46
+msgid "Do you have everything you need to do your role? e.g. information, equipment or resources"
+msgstr ""
+
+#: lib/first_days_web/templates/session/new.html.eex:11
+msgid "Enter your Email and Password below"
+msgstr ""
+
+#: lib/first_days_web/templates/user/form.html.eex:3
+msgid "Enter your details below to sign up"
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:5
+msgid "First Days has been created through funding provided by Big Lottery Fund Wales. The project is a partnership between Wales Co-operative Centre, Business in the Community Cymru, CAST and WCVA. Further information about the work of these organisations can be found here:"
+msgstr ""
+
+#: lib/first_days_web/templates/email/welcome_email.html.eex:5
+msgid "First Days has been made possible by funding received from the Big Lottery Fund. It is a partnership between Wales Co-operative Centre, Business in the Community, Wales Council for Voluntary Action and CAST."
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:9
+msgid "Good luck finding the right candidate."
+msgstr ""
+
+#: lib/first_days_web/controllers/user_controller.ex:25
+msgid "Great! You are now signed up to First Days"
+msgstr ""
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:1
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:1
+#: lib/first_days_web/templates/email/feedback_email.html.eex:1
+#: lib/first_days_web/templates/email/preparation_email.html.eex:1
+#: lib/first_days_web/templates/email/role_description_email.html.eex:1
+#: lib/first_days_web/templates/email/welcome_email.html.eex:1
+msgid "Hello "
+msgstr ""
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:3
+msgid "Here is a confirmation agreement template that you can use to ensure that there is a clear understanding of what is expected from the volunteer and also from you as the host organisation. An important part of this understanding and communication can be putting in a place a volunteering agreement. This is particularly important when a private sector individual is engaging with the voluntary sector for the first time. It’s quite common for there to be differences in working culture that may surprise the volunteer."
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:3
+msgid "Here is the role description template that has been created based on the answers that you have provided. The specific answers that you have given helps you to really understand what your organisation needs from a volunteer by guiding you through all the steps in creating a great volunteer role description."
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:3
+msgid "Here is the template of an e-mail that can be sent to your volunteers to get feedback from them about their volunteer experience with your organisation. It is important to get feedback from volunteers after their first day. Not only does it help you understand their experience, but also it helps identify ways you can improve your volunteer recruitment, retention and induction processes."
+msgstr ""
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:3
+msgid "Here is the template of the volunteer first day preparation e-mail."
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:44
+msgid "How clear do you feel about your role?"
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:40
+msgid "How welcome did you feel, on a scale of 1-10 (1 being not welcome, 10 being like family)?"
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:42
+msgid "How well do you feel you understand what the organisation does and who it works with?"
+msgstr ""
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:13
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:7
+#: lib/first_days_web/templates/email/feedback_email.html.eex:23
+#: lib/first_days_web/templates/email/preparation_email.html.eex:7
+#: lib/first_days_web/templates/email/role_description_email.html.eex:11
+#: lib/first_days_web/templates/email/welcome_email.html.eex:7
+msgid "Kind Regards,"
+msgstr ""
+
+#: lib/first_days_web/templates/user/form.html.eex:16
+msgid "Name"
+msgstr ""
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:5
+msgid "Once you have edited this template as required, please send to the volunteer. You can then sign back into First days, and we will take you through the final step of the process!"
+msgstr ""
+
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:5
+msgid "Once you have edited this template as required, please send to the volunteer. You can then sign back into first Days, and we will take you through the remaining steps of the process!"
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:6
+msgid "Once you have selected an appropriate person, you can sign back into First Days, and we will take you through the remaining steps of the process!"
+msgstr ""
+
+#: lib/first_days_web/templates/user/form.html.eex:34
+msgid "Password confirmation"
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:5
+msgid "Please study the role description and edit to ensure it captures exactly the information you want to give to a potential volunteer."
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:18
+msgid "Remember that support is always available from local and national support organisations. The following link would be a good place to start in identifying local support and resources."
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:14
+msgid "Role Description (please edit as you see fit)"
+msgstr ""
+
+#: lib/first_days_web/templates/user/form.html.eex:2
+msgid "Sign up to First Days"
+msgstr ""
+
+#: lib/first_days_web/controllers/confirmation_agreement_controller.ex:23
+#: lib/first_days_web/controllers/document_checklist_controller.ex:20
+#: lib/first_days_web/controllers/document_checklist_controller.ex:51
+#: lib/first_days_web/controllers/document_checklist_controller.ex:73
+#: lib/first_days_web/controllers/feedback_controller.ex:23
+#: lib/first_days_web/controllers/preparation_controller.ex:20
+#: lib/first_days_web/controllers/preparation_controller.ex:51
+#: lib/first_days_web/controllers/preparation_controller.ex:73
+#: lib/first_days_web/controllers/role_description_controller.ex:21
+#: lib/first_days_web/controllers/role_description_controller.ex:52
+#: lib/first_days_web/controllers/role_description_controller.ex:74
+#: lib/first_days_web/controllers/stage_controller.ex:30
+msgid "Something went wrong, please try again"
+msgstr ""
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:5
+msgid "The agreement template can be personalised and sent to the potential volunteer as part of the induction process. Please also see the following links that may be helpful to you and also your potential volunteer."
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:7
+msgid "There are many sources of support to ensure that your volunteering opportunity is the best it can be. The following link would be good place to start:"
+msgstr ""
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:57
+msgid "Want to speak further? Contact "
+msgstr ""
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:13
+msgid "We hope you're looking forward to your first day with us on the "
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:43
+msgid "What else would be useful to know?"
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:41
+msgid "What would have helped to make you feel more welcome?"
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:45
+msgid "What would help to make you more clear about your role?"
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:47
+msgid "Would you like to volunteer with us again?"
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:48
+msgid "Would you recommend our organisation to your friends and family?"
+msgstr ""
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:4
+msgid "You have now completed the First Days process, and we would hope that you have found it helpful, and will use it in future as part of your volunteer recruitment, induction and management process. If you found the tool helpful, please make your networks and colleagues in the sector aware of it."
+msgstr ""
+
+#: lib/first_days_web/templates/email/welcome_email.html.eex:4
+msgid "You will also be shown helpful tips and links to help you in your volunteer recruitment and management process."
+msgstr ""
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:48
+msgid "to apply our complaints procedure if there is any problem"
+msgstr ""
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:47
+msgid "to apply our equal opportunities policy"
+msgstr ""
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:44
+msgid "to consult with you and keep you informed of possible changes."
+msgstr ""
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:45
+msgid "to insure you against injury you suffer or cause due to negligence."
+msgstr ""
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:46
+msgid "to provide a safe environment."
+msgstr ""
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:41
+msgid "to provide regular meetings with your manager so that you can tell us if you are happy with how your work is organised and get feedback from us. Your manager’s name is [name of manager]"
+msgstr ""
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:43
+msgid "to reimburse your travel and meal costs up to our current maximum."
+msgstr ""
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:42
+msgid "to respect your skills, dignity and individual wishes and to do our best to meet them."
+msgstr ""
+
+#: lib/first_days_web/controllers/session_controller.ex:22
+msgid "Invalid email/password combination"
+msgstr ""
+
+#: lib/first_days_web/controllers/password_controller.ex:46
+#: lib/first_days_web/controllers/password_controller.ex:71
+msgid "Invalid reset token"
+msgstr ""
+
+#: lib/first_days_web/controllers/password_controller.ex:95
+msgid "Password reset successfully!"
+msgstr ""
+
+#: lib/first_days_web/controllers/password_controller.ex:56
+#: lib/first_days_web/controllers/password_controller.ex:82
+msgid "Password reset token expired"
+msgstr ""
+
+#: lib/first_days_web/controllers/password_controller.ex:27
+msgid "We don't recognise that email, try again?"
+msgstr ""
+
+#: lib/first_days_web/controllers/password_controller.ex:36
+msgid "We've sent you an email with instructions on how to reset your password"
+msgstr ""
+
+#: lib/first_days_web/controllers/plugs/auth.ex:50
+msgid "You must be logged in to access that page"
+msgstr ""
+
+#: lib/first_days_web/controllers/session_controller.ex:30
+msgid "You've logged out"
+msgstr ""

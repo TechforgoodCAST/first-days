@@ -4,6 +4,7 @@ defmodule FirstDaysWeb.Plugs.Auth do
   import Phoenix.Controller
   alias FirstDaysWeb.Router.Helpers
   alias FirstDays.Accounts.User
+  import FirstDaysWeb.Gettext
 
   def init(opts) do
     Keyword.fetch!(opts, :repo)
