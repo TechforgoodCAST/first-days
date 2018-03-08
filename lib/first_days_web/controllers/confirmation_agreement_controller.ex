@@ -20,7 +20,7 @@ defmodule FirstDaysWeb.ConfirmationAgreementController do
         |> redirect(to: page_path(conn, :get_them_ready))
       {:error, _changeset} ->
         conn
-        |> put_flash(:error, "Something went wrong, please try again")
+        |> put_flash(:error, gettext("Something went wrong, please try again"))
         |> redirect(to: page_path(conn, :get_them_ready))
     end
   end

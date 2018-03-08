@@ -18,7 +18,7 @@ defmodule FirstDaysWeb.RoleDescriptionController do
             |> redirect(to: role_description_path(conn, :show))
           {:error, _changeset} ->
             conn
-            |> put_flash(:error, "Something went wrong, please try again")
+            |> put_flash(:error, gettext("Something went wrong, please try again"))
             |> render("new.html", changeset: role_description_changeset)
         end
       {:error, role_description_changeset} ->
@@ -49,7 +49,7 @@ defmodule FirstDaysWeb.RoleDescriptionController do
             |> redirect(to: role_description_path(conn, :show))
           {:error, _changeset} ->
             conn
-            |> put_flash(:error, "Something went wrong, please try again")
+            |> put_flash(:error, gettext("Something went wrong, please try again"))
             |> render("edit.html", changeset: role_description_changeset)
         end
       {:error, role_description_changeset} ->
@@ -71,7 +71,7 @@ defmodule FirstDaysWeb.RoleDescriptionController do
         |> redirect(to: page_path(conn, :landing))
       {:error, _changeset} ->
         conn
-        |> put_flash(:error, "Something went wrong, please try again")
+        |> put_flash(:error, gettext("Something went wrong, please try again"))
         |> redirect(to: page_path(conn, :landing))
     end
   end

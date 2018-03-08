@@ -19,7 +19,7 @@ defmodule FirstDaysWeb.SessionController do
         |> redirect(to: page_path(conn, :landing))
       {:error, _reason, conn} ->
         conn
-        |> put_flash(:error, "Invalid email/password combination")
+        |> put_flash(:error, gettext("Invalid email/password combination"))
         |> render("new.html")
     end
   end
@@ -27,7 +27,7 @@ defmodule FirstDaysWeb.SessionController do
   def delete(conn, _) do
     conn
     |> FirstDaysWeb.Plugs.Auth.logout()
-    |> put_flash(:info, "You've logged out")
+    |> put_flash(:info, gettext("You've logged out"))
     |> redirect(to: session_path(conn, :new))
   end
 end
