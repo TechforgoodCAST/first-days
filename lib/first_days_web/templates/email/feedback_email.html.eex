@@ -1,8 +1,8 @@
-<p>Hello <%= @current_user.name %>,</p>
+<p><%= gettext("Hello ") %><span><%= @current_user.name %></span>,</p>
 
-<p>Here is the template of an e-mail that can be sent to your volunteers to get feedback from them about their volunteer experience with your organisation. It is important to get feedback from volunteers after their first day. Not only does it help you understand their experience, but also it helps identify ways you can improve your volunteer recruitment, retention and induction processes.</p>
-<p>You have now completed the First Days process, and we would hope that you have found it helpful, and will use it in future as part of your volunteer recruitment, induction and management process. If you found the tool helpful, please make your networks and colleagues in the sector aware of it.</p>
-<p>First Days has been created through funding provided by Big Lottery Fund Wales. The project is a partnership between Wales Co-operative Centre, Business in the Community Cymru, CAST and WCVA. Further information about the work of these organisations can be found here:</p>
+<p><%= gettext("Here is the template of an e-mail that can be sent to your volunteers to get feedback from them about their volunteer experience with your organisation. It is important to get feedback from volunteers after their first day. Not only does it help you understand their experience, but also it helps identify ways you can improve your volunteer recruitment, retention and induction processes.") %></p>
+<p><%= gettext("You have now completed the First Days process, and we would hope that you have found it helpful, and will use it in future as part of your volunteer recruitment, induction and management process. If you found the tool helpful, please make your networks and colleagues in the sector aware of it.") %></p>
+<p><%= gettext("First Days has been created through funding provided by Big Lottery Fund Wales. The project is a partnership between Wales Co-operative Centre, Business in the Community Cymru, CAST and WCVA. Further information about the work of these organisations can be found here:") %></p>
 
 <a href="https://www.bitc.org.uk/wales">https://www.bitc.org.uk/wales</a>
 <br>
@@ -15,38 +15,39 @@
 <a href="https://www.wearecast.org.uk/">https://www.wearecast.org.uk/</a>
 <br>
 
-<p>Remember that support is always available from local and national support organisations. The following link would be a good place to start in identifying local support and resources.</p>
+<p><%= gettext("Remember that support is always available from local and national support organisations. The following link would be a good place to start in identifying local support and resources.") %></p>
 
 <a href="https://www.wcva.org.uk/members-partners/third-sector-support-wales">https://www.wcva.org.uk/members-partners/third-sector-support-wales</a>
 <br>
 
-<p>Kind Regards,</p>
-<p>First Days</p>
+<p><%= gettext("Kind Regards,") %></p>
+<p><%= gettext("First Days") %></p>
 <br>
 
-<h2 class="<%= "#{headline_font()} tc mv4" %>">Volunteer Feedback Template</h2>
-<section class="ma4">
-  <h3 class="<%= "#{title_bold_font()}" %>">Sample email with example questions</h3>
-  <p class="<%= "#{body_font()} mv2" %>">Dear [NAME]</p>
-  <div class="<%= "#{body_font()} mb2" %>">
-    <p>Congratulations on completing your first day volunteering with us!</p>
-    <p>We're grateful to you for joining the team and we hope you found your first day an enjoyable experience.</p>
-    <p>It's helpful to get feedback from you on your first day. So we'd be grateful if you could take 5 minutes to tell us your thoughts on these questions:</p>
+<h2><%= gettext("Volunteer Feedback Template") %></h2>
+<section>
+  <h3><%= gettext("Sample email with example questions") %></h3>
+  <p><%= gettext("Dear [NAME]") %></p>
+  <div>
+    <p><%= gettext("Congratulations on completing your first day volunteering with us!") %></p>
+    <p><%= gettext("We're grateful to you for joining the team and we hope you found your first day an enjoyable experience.") %></p>
+    <p><%= gettext("It's helpful to get feedback from you on your first day. So we'd be grateful if you could take 5 minutes to tell us your thoughts on these questions:") %></p>
   </div>
 
-  <p class="<%= "#{body_font()} mb2" %>">1) Did you enjoy your first day?</p>
-  <p class="<%= "#{body_font()} mb2" %>">2) Did you get introduced to colleagues?</p>
-  <p class="<%= "#{body_font()} mb2" %>">3) How welcome did you feel, on a scale of 1-10 (1 being not welcome, 10 being like family)?</p>
-  <p class="<%= "#{body_font()} mb2" %>">4) What would have helped to make you feel more welcome?</p>
-  <p class="<%= "#{body_font()} mb2" %>">5) How well do you feel you understand what the organisation does and who it works with?</p>
-  <p class="<%= "#{body_font()} mb2" %>">6) What else would be useful to know?</p>
-  <p class="<%= "#{body_font()} mb2" %>">7) How clear do you feel about your role?</p>
-  <p class="<%= "#{body_font()} mb2" %>">8) What would help to make you more clear about your role?</p>
-  <p class="<%= "#{body_font()} mb2" %>">9) Do you have everything you need to do your role? e.g. information, equipment or resources</p>
-  <p class="<%= "#{body_font()} mb2" %>">10) Would you like to volunteer with us again?</p>
-  <p class="<%= "#{body_font()} mb2" %>">11) Would you recommend our organisation to your friends and family?</p>
+  <ol>
+    <li><%= gettext("Did you enjoy your first day?") %></li>
+    <li><%= gettext("Did you get introduced to colleagues?") %></li>
+    <li><%= gettext("How welcome did you feel, on a scale of 1-10 (1 being not welcome, 10 being like family)?") %></li>
+    <li><%= gettext("What would have helped to make you feel more welcome?") %></li>
+    <li><%= gettext("How well do you feel you understand what the organisation does and who it works with?") %></li>
+    <li><%= gettext("What else would be useful to know?") %></li>
+    <li><%= gettext("How clear do you feel about your role?") %></li>
+    <li><%= gettext("What would help to make you more clear about your role?") %></li>
+    <li><%= gettext("Do you have everything you need to do your role? e.g. information, equipment or resources") %></li>
+    <li><%= gettext("Would you like to volunteer with us again?") %></li>
+    <li><%= gettext("Would you recommend our organisation to your friends and family?") %></li>
+  </ol>
 
-
-  <p class="<%= "#{body_font()} mb2 mt4" %>">It's important that we get better at the things we do not so well and keep doing the things that are working, so your feedback is really appreciated!</p>
-  <p class="<%= "#{body_font()} mb2" %>">Many thanks</p>
+  <p><%= gettext("It's important that we get better at the things we do not so well and keep doing the things that are working, so your feedback is really appreciated!") %></p>
+  <p><%= gettext("Many thanks") %></p>
 </section>

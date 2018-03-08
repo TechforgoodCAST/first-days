@@ -1,8 +1,8 @@
-<p>Hello <%= @current_user.name %>,</p>
+<p><%= gettext("Hello ") %><span><%= @current_user.name %></span>,</p>
 
-<p>Here is a confirmation agreement template that you can use to ensure that there is a clear understanding of what is expected from the volunteer and also from you as the host organisation. An important part of this understanding and communication can be putting in a place a volunteering agreement. This is particularly important when a private sector individual is engaging with the voluntary sector for the first time. It’s quite common for there to be differences in working culture that may surprise the volunteer.</p>
-<p>A volunteer agreement helps both the organisation and its volunteers by making expectations clear. They also address the unlikely possibility of volunteers being considered employees in the eyes of the law.</p>
-<p>The agreement template can be personalised and sent to the potential volunteer as part of the induction process. Please also see the following links that may be helpful to you and also your potential volunteer.</p>
+<p><%= gettext("Here is a confirmation agreement template that you can use to ensure that there is a clear understanding of what is expected from the volunteer and also from you as the host organisation. An important part of this understanding and communication can be putting in a place a volunteering agreement. This is particularly important when a private sector individual is engaging with the voluntary sector for the first time. It’s quite common for there to be differences in working culture that may surprise the volunteer.") %></p>
+<p><%= gettext("A volunteer agreement helps both the organisation and its volunteers by making expectations clear. They also address the unlikely possibility of volunteers being considered employees in the eyes of the law.") %></p>
+<p><%= gettext("The agreement template can be personalised and sent to the potential volunteer as part of the induction process. Please also see the following links that may be helpful to you and also your potential volunteer.") %></p>
 
 <a href="https://www.wcva.org.uk/volunteering/working-with-volunteers/resources">https://www.wcva.org.uk/volunteering/working-with-volunteers/resources</a>
 <br>
@@ -10,47 +10,47 @@
 <br>
 <a href="https://www.wcva.org.uk/members-partners/third-sector-support-wales">https://www.wcva.org.uk/members-partners/third-sector-support-wales</a>
 
-<p>Kind Regards,</p>
-<p>First Days</p>
+<p><%= gettext("Kind Regards,") %></p>
+<p><%= gettext("First Days") %></p>
 <br>
 
-<h2 class="<%= "#{headline_font()} tc mv4" %>"><b>Confirmation & Agreement</b></h2>
-<section class="ma4">
-<h3 class="<%= "#{title_bold_font()}" %>">Confirmation & Agreement (to edit and send to the volunteer)</h3>
-<p class="<%= "#{body_font()} mb2 mt2" %>">Dear [NAME],</p>
-<p class="<%= "#{body_font()} mb2" %>">We're delighted that you've agreed to volunteer with us.</p>
-<div class="<%= "#{body_font()} mb2" %>">
-<p>As part of the process we find it’s useful to set up a agreement between you and the organisation so that it’s clear what you can expect from us, and us from you.  We’ve created an non-legal honour bound agreement below. Please read this, and if you’re happy, sign it and send it back to us by [DATE]</p>
-</div>
-<div class="<%= "#{body_font()} mb2" %>">
-<p>Linked to this, if you’ve not volunteered in third sector before, you might find some differences in working culture to other sectors.  To help you prepare for this, we’ve given you a few links that it may be useful for you to look at.</p>
-</div>
-<p class="<%= "#{body_font()} mb2" %>">[LINKS]</p>
+<h2><b><%= gettext("Confirmation & Agreement") %></b></h2>
+<section>
+  <h3><%= gettext("Confirmation & Agreement (to edit and send to the volunteer)") %></h3>
+  <p><%= gettext("Dear [NAME],") %></p>
+  <p><%= gettext("We're delighted that you've agreed to volunteer with us.") %></p>
+  <div>
+  <p><%= gettext("As part of the process we find it’s useful to set up a agreement between you and the organisation so that it’s clear what you can expect from us, and us from you.  We’ve created an non-legal honour bound agreement below. Please read this, and if you’re happy, sign it and send it back to us by [DATE]") %></p>
+  </div>
+  <div>
+  <p><%= gettext("Linked to this, if you’ve not volunteered in third sector before, you might find some differences in working culture to other sectors.  To help you prepare for this, we’ve given you a few links that it may be useful for you to look at.") %></p>
+  </div>
+  <p><%= gettext("[LINKS]") %></p>
 
-<p class="<%= "#{body_font()} mb2" %>">We look forward to working with you.</p>
-<p class="<%= "#{body_font()} mb4" %>">Many Thanks</p>
+  <p><%= gettext("We look forward to working with you.") %></p>
+  <p><%= gettext("Many Thanks") %></p>
 
-<%= shared_component("divider.html") %>
+  <%= shared_component("divider.html") %>
 
-<h3 class="<%= "#{title_bold_font()} mt4 mb2" %>">Confirmation & Agreement</h3>
-<p class="<%= "#{body_font()} mb2 mt2" %>">Volunteers are an important and valued part of [name of organisation]. We hope that you enjoy volunteering with us and feel a full part of our team.</p>
-<p class="<%= "#{body_font()} mb2 mt2" %>">This agreement tells you what you can expect from us, and what we hope from you. We aim to be flexible, so please let us know if you would like to make any changes and we will do our best.</p>
-<p class="<%= "#{body_font()} mb2 mt2" %>">We, [name of organisation], will do our best to introduce you to how the organisation works and your role in it and to provide any training you need. The initial training agreed is:</p>
+  <h3><%= gettext("Confirmation & Agreement") %></h3>
+  <p><%= gettext("Volunteers are an important and valued part of [name of organisation]. We hope that you enjoy volunteering with us and feel a full part of our team.") %></p>
+  <p><%= gettext("This agreement tells you what you can expect from us, and what we hope from you. We aim to be flexible, so please let us know if you would like to make any changes and we will do our best.") %></p>
+  <p><%= gettext("We, [name of organisation], will do our best to introduce you to how the organisation works and your role in it and to provide any training you need. The initial training agreed is:") %></p>
 
-<ol class="<%= "#{body_font()} ml3 mb4 mt2" %>">
-  <li>1. to provide regular meetings with your manager so that you can tell us if you are happy with how your work is organised and get feedback from us. Your manager’s name is [name of manager]</li>
-  <li>2. to respect your skills, dignity and individual wishes and to do our best to meet them.</li>
-  <li>3. to reimburse your travel and meal costs up to our current maximum.</li>
-  <li>4. to consult with you and keep you informed of possible changes.</li>
-  <li>5. to insure you against injury you suffer or cause due to negligence.</li>
-  <li>6. to provide a safe environment.</li>
-  <li>7. to apply our equal opportunities policy</li>
-  <li>8. to apply our complaints procedure if there is any problem</li>
-</ol>
+  <ol>
+    <li><%= gettext("to provide regular meetings with your manager so that you can tell us if you are happy with how your work is organised and get feedback from us. Your manager’s name is [name of manager]") %></li>
+    <li><%= gettext("to respect your skills, dignity and individual wishes and to do our best to meet them.") %></li>
+    <li><%= gettext("to reimburse your travel and meal costs up to our current maximum.") %></li>
+    <li><%= gettext("to consult with you and keep you informed of possible changes.") %></li>
+    <li><%= gettext("to insure you against injury you suffer or cause due to negligence.") %></li>
+    <li><%= gettext("to provide a safe environment.") %></li>
+    <li><%= gettext("to apply our equal opportunities policy") %></li>
+    <li><%= gettext("to apply our complaints procedure if there is any problem") %></li>
+  </ol>
 
-<h3 class="<%= "#{title_bold_font()} mt4 mb2" %>">For the volunteer</h3>
-<p class="<%= "#{body_font()} mb2 mt2" %>">I [name of volunteer], agree to do my best, to work reliably to the best of my ability, and to give as much warning as possible whenever I cannot volunteer as expected to follow [name of organisation]’s rules and procedures, including health and safety, equal opportunities and confidentially.</p>
-<p class="<%= "#{body_font()} mb2 mt2" %>">Note: this agreement is in honour only and is not itended to be a legally binding contract of employment</p>
-<p class="<%= "#{body_font()} mb2 mt2" %>">Signed:</p>
-<p class="<%= "#{body_font()} mb2 mt2" %>">Date:</p>
+  <h3><%= gettext("For the volunteer") %></h3>
+  <p><%= gettext("I [name of volunteer], agree to do my best, to work reliably to the best of my ability, and to give as much warning as possible whenever I cannot volunteer as expected to follow [name of organisation]’s rules and procedures, including health and safety, equal opportunities and confidentially.") %></p>
+  <p><%= gettext("Note: this agreement is in honour only and is not itended to be a legally binding contract of employment") %></p>
+  <p><%= gettext("Signed:") %></p>
+  <p><%= gettext("Date:") %></p>
 </section>

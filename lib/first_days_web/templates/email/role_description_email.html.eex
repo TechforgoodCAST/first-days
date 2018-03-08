@@ -1,46 +1,64 @@
-<p>Hello <%= @current_user.name %>,</p>
+<p><%= gettext("Hello ") %><span><%= @current_user.name %></span>,</p>
 
-<p>Here is the role description template that has been created based on the answers that you have provided. The specific answers that you have given helps you to really understand what your organisation needs from a volunteer by guiding you through all the steps in creating a great volunteer role description.</p>
-<p>A really focused and engaging role description is key to attracting the right volunteer to take your organisation to the next level, so it is important that you make a clear ask of what skills and experiences you require, and also show what is really great about your organisations and what the volunteer would gain from volunteering with you.</p>
-<p>Please study the role description and edit to ensure it captures exactly the information you want to give to a potential volunteer.</p>
-<p>Once you have selected an appropriate person, you can sign back into First Days, and we will take you through the remaining steps of the process!</p>
-<p>There are many sources of support to ensure that your volunteering opportunity is the best it can be. The following link would be good place to start:</p>
+<p><%= gettext("Here is the role description template that has been created based on the answers that you have provided. The specific answers that you have given helps you to really understand what your organisation needs from a volunteer by guiding you through all the steps in creating a great volunteer role description.") %></p>
+<p><%= gettext("A really focused and engaging role description is key to attracting the right volunteer to take your organisation to the next level, so it is important that you make a clear ask of what skills and experiences you require, and also show what is really great about your organisations and what the volunteer would gain from volunteering with you.") %></p>
+<p><%= gettext("Please study the role description and edit to ensure it captures exactly the information you want to give to a potential volunteer.") %></p>
+<p><%= gettext("Once you have selected an appropriate person, you can sign back into First Days, and we will take you through the remaining steps of the process!") %></p>
+<p><%= gettext("There are many sources of support to ensure that your volunteering opportunity is the best it can be. The following link would be good place to start:") %></p>
 <a href="https://www.volunteering-wales.net/organisations/">https://www.volunteering-wales.net/organisations/</a>
-<p>Good luck finding the right candidate.</p>
+<p><%= gettext("Good luck finding the right candidate.") %></p>
 
-<p>Kind Regards,</p>
-<p>First Days</p>
+<p><%= gettext("Kind Regards,") %></p>
+<p><%= gettext("First Days") %></p>
 <br>
-<h2 class="<%= "#{headline_font()} tc mv4" %>">Role Description (please edit as you see fit)</h2>
+<h2><%= gettext("Role Description (please edit as you see fit)") %></h2>
 <section>
   <div>
-    <p><b>Role</b>: <%= @answers.area %></p>
+    <p><b><%= gettext("Role") %></b>: <%= @answers.area %></p>
   </div>
-  <p>A(n) <%= @answers.role_title %> volunteer is needed for <%= @answers.organisation_name %> to help us with <%= @answers.description %>.</p>
-  <p>We are looking for an individual with skills in <%= @answers.specific_skills %>. As well as these aspects of the role, the volunteer will be able to learn about the charity’s work (and) <%= @answers.additional_info %>.</p>
+  <p>
+    <%= gettext("A(n) ") %>
+    <span><%= @answers.role_title %></span>
+    <%= gettext(" volunteer is needed for ") %>
+    <span><%= @answers.organisation_name %></span>
+    <%= gettext(" to help us with ") %>
+    <span><%= @answers.description %></span>.
+  </p>
+  <p>
+    <%= gettext("We are looking for an individual with skills in ") %>
+    <span><%= @answers.specific_skills %></span>
+    <%= gettext(". As well as these aspects of the role, the volunteer will be able to learn about the charity’s work (and) ") %>
+    <span><%= @answers.additional_info %></span>.
+  </p>
   <div>
-    <p><b>What we do</b></p>
+    <p><b><%= gettext("What we do") %></b></p>
   </div>
   <p><%= @answers.organisation_mission %>. <%= @answers.organisation_achievements %></p>
   <div>
-    <p><b>Details of the role</b></p>
+    <p><b><%= gettext("Details of the role") %></b></p>
   </div>
-  <p>The role is needed for <%= @answers.work_length %> and will involve working <%= @answers.work_frequency %>. Travel expenses will be paid.</p>
-  <p>It will be based in <%= @answers.location %>.</p>
+  <p>
+    <%= gettext("The role is needed for ") %>
+    <span> <%= @answers.work_length %> </span>
+    <%= gettext(" and will involve working ") %>
+    <span> <%= @answers.work_frequency %> </span>
+    <%= gettext(". Travel expenses will be paid.") %>
+  </p>
+  <p><%= gettext("It will be based in ") %><span><%= @answers.location %></span>.</p>
   <div>
-    <p><b>What you'll gain</b></p>
+    <p><b><%= gettext("What you'll gain") %></b></p>
   </div>
-  <p>Doing this you could gain <%= @answers.skills_to_be_gained %>.</p>
+  <p><%= gettext("Doing this you could gain ") %><span><%= @answers.skills_to_be_gained %></span>.</p>
   <div>
-    <p><b>The impact for us</b></p>
+    <p><b><%= gettext("The impact for us") %></b></p>
   </div>
   <p><%= @answers.how_will_work_help %></p>
 
-  <p>Want to speak further? Contact <b><%= @answers.contact_details %></b></p>
+  <p><%= gettext("Want to speak further? Contact ") %><b><%= @answers.contact_details %></b></p>
   <div>
-    <p>Charity number: <b><%= @answers.charity_number %></b></p>
+    <p><%= gettext("Charity number: ") %><b><%= @answers.charity_number %></b></p>
   </div>
   <div>
-    <p>Website: <b><%= @answers.website_link %></b></p>
+    <p><%= gettext("Website: ") %><b><%= @answers.website_link %></b></p>
   </div>
 </section>
