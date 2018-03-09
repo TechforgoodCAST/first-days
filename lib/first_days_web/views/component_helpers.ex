@@ -1,5 +1,6 @@
 defmodule FirstDaysWeb.ComponentHelpers do
   alias FirstDaysWeb.ComponentView
+  alias Elixir.Phoenix.HTML.Link
 
   def shared_component(template, assigns \\ []) do
     ComponentView.render(template, assigns)
@@ -31,4 +32,10 @@ defmodule FirstDaysWeb.ComponentHelpers do
   def input_error_class, do: "db f6 red mt1"
   def input_wrapper_class, do: "mt3"
 
+  # switch language
+  def switch_locale_path(conn, locale, language) do
+    Link.link language, to: "#{conn.request_path}?locale=#{locale}", class: "#{language_toggle_colour(locale)} link"
+  end
+
+  def language_toggle_colour(locale), do: if Gettext.get_locale(FirstDaysWeb.Gettext) == locale, do: "blue", else: "gray"
 end

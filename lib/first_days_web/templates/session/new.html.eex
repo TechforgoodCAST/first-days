@@ -26,8 +26,11 @@ forgot_password = gettext("Forgot password?")
         </div>
         <input class="mt4" type="submit" name="" value="<%= log_in %>" id="submit">
       <% end %>
-      <div class="tc mt3">
+      <div class="tc mt3 flex flex-column items-center">
         <%= link forgot_password, to: password_path(@conn, :new) %>
+        <div class="<%= "f5 lh-copy flex flex-row mt2" %>">
+          <p class="black"><%= switch_locale_path(@conn, "en", "eng") %> / <%= switch_locale_path(@conn, "cy", "cym") %></p>
+        </div>
       </div>
     </div>
   </div>

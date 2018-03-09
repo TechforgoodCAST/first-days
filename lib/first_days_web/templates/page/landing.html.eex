@@ -37,11 +37,14 @@
     end
 %>
 
-<section>
+<section class="flex items-center justify-between">
   <div class="w-two-thirds-ns cf pt0 flex flex-row">
     <%= shared_component("tab_landing.html", font: "black", class: "pr2 w-third", tab_state: "bg-white",content: gettext("Find a volunteer"), icon: find_volunteer_tab_icon, link: role_description_link) %>
     <%= shared_component("tab_landing.html", font: "black", class: "pr2 w-third", tab_state: "bg-white", content: gettext("Getting them ready"), icon: get_them_ready_tab_icon, link: page_path(@conn, :get_them_ready)) %>
     <%= shared_component("tab_landing.html", font: "black", class: "pr2 w-third", tab_state: "bg-white", content: gettext("Collecting feedback"), icon: feedback_tab_icon, link: feedback_path(@conn, :show))%>
+  </div>
+  <div class="<%= "f5 lh-copy flex flex-row" %>">
+    <p><%= switch_locale_path(@conn, "en", "eng") %> / <%= switch_locale_path(@conn, "cy", "cym") %></p>
   </div>
 </section>
 

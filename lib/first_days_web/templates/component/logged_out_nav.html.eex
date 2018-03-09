@@ -7,8 +7,6 @@
       </div>
       <%= shared_component("button_main.html", content: gettext("Log in"), wrapper_class: "w4 b--blue bw1 ba flex items-center h2 mr1", content_class: "mv0 blue", link: session_path(@conn, :new)) %>
       <%= shared_component("button_main.html", content: gettext("Sign up"), wrapper_class: "w4 b--blue bw1 ba flex items-center h2", content_class: "mv0 blue", link: user_path(@conn, :new)) %>
-      <%= switch_locale_path(@conn, :cy, "Welsh") %>
-      <%= switch_locale_path(@conn, :en, "English") %>
     </div>
   </div>
 </nav>
