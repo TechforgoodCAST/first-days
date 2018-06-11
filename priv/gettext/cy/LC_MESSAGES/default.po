@@ -1040,7 +1040,7 @@ msgstr ""
 
 #: lib/first_days_web/controllers/user_controller.ex:25
 msgid "Great! You are now signed up to First Days"
-msgstr "Gwych! Rydych 'nawr wedi cofrestru ar gyfer First Days"
+msgstr "Gwych! Rydych 'nawr wedi cofrestru ar gyfer Diwrnodau Cyntaf"
 
 #: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:1
 #: lib/first_days_web/templates/email/document_checklist_email.html.eex:1
@@ -1049,7 +1049,7 @@ msgstr "Gwych! Rydych 'nawr wedi cofrestru ar gyfer First Days"
 #: lib/first_days_web/templates/email/role_description_email.html.eex:1
 #: lib/first_days_web/templates/email/welcome_email.html.eex:1
 msgid "Hello "
-msgstr "Annwyl "
+msgstr "Helo "
 
 #: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:3
 msgid "Here is a confirmation agreement template that you can use to ensure that there is a clear understanding of what is expected from the volunteer and also from you as the host organisation. An important part of this understanding and communication can be putting in a place a volunteering agreement. This is particularly important when a private sector individual is engaging with the voluntary sector for the first time. It’s quite common for there to be differences in working culture that may surprise the volunteer."
@@ -1137,7 +1137,7 @@ msgstr ""
 #: lib/first_days_web/controllers/role_description_controller.ex:74
 #: lib/first_days_web/controllers/stage_controller.ex:30
 msgid "Something went wrong, please try again"
-msgstr ""
+msgstr "Aeth rhywbeth o'i le, felly rhowch gynnig arall arni."
 
 #: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:5
 msgid "The agreement template can be personalised and sent to the potential volunteer as part of the induction process. Please also see the following links that may be helpful to you and also your potential volunteer."
@@ -1217,37 +1217,37 @@ msgstr "parchu eich sgiliau, eich urddas a'ch dymuniadau unigol, gan wneud ein g
 
 #: lib/first_days_web/controllers/session_controller.ex:22
 msgid "Invalid email/password combination"
-msgstr ""
+msgstr "Cyfuniad annilys o gyfeiriad e-bost/cyfrinair"
 
 #: lib/first_days_web/controllers/password_controller.ex:46
 #: lib/first_days_web/controllers/password_controller.ex:71
 msgid "Invalid reset token"
-msgstr ""
+msgstr "Tocyn annilys ar gyfer ailosod cyfrinair"
 
 #: lib/first_days_web/controllers/password_controller.ex:95
 msgid "Password reset successfully!"
-msgstr ""
+msgstr "Y cyfrinair wedi ei ailosod yn llwyddiannus!"
 
 #: lib/first_days_web/controllers/password_controller.ex:56
 #: lib/first_days_web/controllers/password_controller.ex:82
 msgid "Password reset token expired"
-msgstr ""
+msgstr "Tocyn ailosod cyfrinair wedi dod i ben"
 
 #: lib/first_days_web/controllers/password_controller.ex:27
 msgid "We don't recognise that email, try again?"
-msgstr ""
+msgstr "Nid ydym yn adnabod y cyfeiriad e-bost hwnnw. Rhowch gynnig arall arni."
 
 #: lib/first_days_web/controllers/password_controller.ex:36
 msgid "We've sent you an email with instructions on how to reset your password"
-msgstr ""
+msgstr "Rydym wedi anfon neges e-bost atoch yn cynnwys cyfarwyddiadau ar sut i ailosod eich cyfrinair"
 
 #: lib/first_days_web/controllers/plugs/auth.ex:50
 msgid "You must be logged in to access that page"
-msgstr ""
+msgstr "Rhaid i chi fewngofnodi er mwyn cael mynediad i'r dudalen honno"
 
 #: lib/first_days_web/controllers/session_controller.ex:30
 msgid "You've logged out"
-msgstr ""
+msgstr "Rydych wedi allgofnodi"
 
 #: lib/first_days_web/templates/feedback/tips.html.eex:7
 msgid "Thanks for using First Days to help with your successful volunteer recruitment."
