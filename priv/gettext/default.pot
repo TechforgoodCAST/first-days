@@ -1248,3 +1248,11 @@ msgstr ""
 #: lib/first_days_web/controllers/session_controller.ex:30
 msgid "You've logged out"
 msgstr ""
+
+#: lib/first_days_web/templates/feedback/tips.html.eex:7
+msgid "Thanks for using First Days to help with your successful volunteer recruitment."
+msgstr ""
+
+#: lib/first_days_web/templates/component/post.html.eex:4
+msgid "Done"
+msgstr ""

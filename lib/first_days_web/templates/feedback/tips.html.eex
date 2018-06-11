@@ -4,7 +4,7 @@
       <h1 class="<%= "#{headline_font()} ml2 f4" %>"><%= gettext("Collecting feedback") %></h1>
   </div>
   <div class="<%= "#{body_font()}" %>">
-    <p><%= gettext("Thanks for using First Days to help with your succesful volunteer recruitment.") %></p>
+    <p><%= gettext("Thanks for using First Days to help with your successful volunteer recruitment.") %></p>
     <br>
     <p><%= gettext("It's important to get feedback from volunteers after their first day. Not only does it help you understand their experience, but also helps identify ways you can improve your induction processes. We've prepared this email that you can send out to the volunteer, which contains a link to the questions we'll ask them.") %></p>
     <br>

@@ -19,17 +19,17 @@ msgstr "E-bost"
 
 #: lib/first_days_web/templates/session/new.html.eex:5
 msgid "Forgot password?"
-msgstr ""
+msgstr "Anghofio cyfrinair?"
 
 #: lib/first_days_web/templates/component/logged_out_nav.html.eex:8
 #: lib/first_days_web/templates/session/new.html.eex:4
 msgid "Log in"
-msgstr ""
+msgstr "Mewngofnodi"
 
 #: lib/first_days_web/templates/session/new.html.eex:3
 #: lib/first_days_web/templates/user/form.html.eex:28
 msgid "Password"
-msgstr ""
+msgstr "Cyfrinair"
 
 #: lib/first_days_web/templates/component/success_modal.html.eex:9
 msgid " all the First Days steps!"
@@ -186,7 +186,7 @@ msgstr "Anfon ataf fy hun"
 #: lib/first_days_web/templates/component/logged_out_nav.html.eex:9
 #: lib/first_days_web/templates/user/form.html.eex:40
 msgid "Sign up"
-msgstr ""
+msgstr "Cofrestrwch"
 
 #: lib/first_days_web/templates/confirmation_agreement/template.html.eex:40
 #: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:54
@@ -326,13 +326,13 @@ msgid "Collect important documents"
 msgstr "Casglu dogfennau pwysig"
 
 #: lib/first_days_web/templates/feedback/show.html.eex:10
-msgid "Collecting feedback"
+msgid "Collecting Feedback"
 msgstr "Casglu adborth"
 
 #: lib/first_days_web/templates/feedback/tips.html.eex:4
 #: lib/first_days_web/templates/page/landing.html.eex:44
 #: lib/first_days_web/templates/page/landing.html.eex:77
-msgid "collecting feedback"
+msgid "Collecting feedback"
 msgstr "Casglu adborth"
 
 #: lib/first_days_web/templates/email/feedback_email.html.eex:32
@@ -427,11 +427,11 @@ msgid "Other"
 msgstr "Arall"
 
 #: lib/first_days_web/templates/document_checklist/form.html.eex:14
-msgid "Photo ID"
+msgid "Photo Id"
 msgstr "Llun Adnabod"
 
 #: lib/first_days_web/views/document_checklist_view.ex:5
-msgid "photo ID"
+msgid "Photo id"
 msgstr "Llun Adnabod"
 
 #: lib/first_days_web/templates/document_checklist/template.html.eex:22
@@ -474,7 +474,7 @@ msgstr ""
 
 #: lib/first_days_web/templates/feedback/tips.html.eex:7
 msgid "Thanks for using First Days to help with your succesful volunteer recruitment."
-msgstr ""
+msgstr "Diolch am ddefnyddio Diwrnodau Cyntaf i helpu gyda'ch gwaith o recriwtio gwirfoddolwr yn llwyddiannus."
 
 #: lib/first_days_web/templates/document_checklist/template.html.eex:6
 #: lib/first_days_web/templates/email/document_checklist_email.html.eex:14
@@ -1049,7 +1049,7 @@ msgstr "Gwych! Rydych 'nawr wedi cofrestru ar gyfer First Days"
 #: lib/first_days_web/templates/email/role_description_email.html.eex:1
 #: lib/first_days_web/templates/email/welcome_email.html.eex:1
 msgid "Hello "
-msgstr ""
+msgstr "Annwyl "
 
 #: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:3
 msgid "Here is a confirmation agreement template that you can use to ensure that there is a clear understanding of what is expected from the volunteer and also from you as the host organisation. An important part of this understanding and communication can be putting in a place a volunteering agreement. This is particularly important when a private sector individual is engaging with the voluntary sector for the first time. It’s quite common for there to be differences in working culture that may surprise the volunteer."
@@ -1157,23 +1157,23 @@ msgstr ""
 
 #: lib/first_days_web/templates/email/feedback_email.html.eex:43
 msgid "What else would be useful to know?"
-msgstr ""
+msgstr "Beth arall a fyddai'n ddefnyddiol i'w wybod?"
 
 #: lib/first_days_web/templates/email/feedback_email.html.eex:41
 msgid "What would have helped to make you feel more welcome?"
-msgstr ""
+msgstr "Beth allai fod wedi helpu i wneud i chi deimlo'n fwy cartrefol?"
 
 #: lib/first_days_web/templates/email/feedback_email.html.eex:45
 msgid "What would help to make you more clear about your role?"
-msgstr ""
+msgstr "Beth a allai helpu i'ch gwneud yn fwy eglur ynghylch eich rôl?"
 
 #: lib/first_days_web/templates/email/feedback_email.html.eex:47
 msgid "Would you like to volunteer with us again?"
-msgstr ""
+msgstr "A hoffech wirfoddoli gyda ni eto?"
 
 #: lib/first_days_web/templates/email/feedback_email.html.eex:48
 msgid "Would you recommend our organisation to your friends and family?"
-msgstr ""
+msgstr "A fyddech yn argymell ein sefydliad i'ch ffrindiau a'ch teulu?"
 
 #: lib/first_days_web/templates/email/feedback_email.html.eex:4
 msgid "You have now completed the First Days process, and we would hope that you have found it helpful, and will use it in future as part of your volunteer recruitment, induction and management process. If you found the tool helpful, please make your networks and colleagues in the sector aware of it."
@@ -1184,11 +1184,11 @@ msgid "You will also be shown helpful tips and links to help you in your volunte
 msgstr ""
 
 #: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:48
-msgid "to apply our complaints procedure if there is any problem."
+msgid "to apply our complaints procedure if there is any problem"
 msgstr "rhoi ein gweithdrefn gŵynion ar waith, os bydd unrhyw broblem."
 
 #: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:47
-msgid "to apply our equal opportunities policy."
+msgid "to apply our equal opportunities policy"
 msgstr "rhoi ein polisi cyfle cyfartal ar waith."
 
 #: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:44
@@ -1204,7 +1204,7 @@ msgid "to provide a safe environment."
 msgstr "darparu amgylchedd diogel."
 
 #: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:41
-msgid "to provide regular meetings with your manager so that you can tell us if you are happy with how your work is organised and get feedback from us. Your manager’s name is [name of manager]."
+msgid "to provide regular meetings with your manager so that you can tell us if you are happy with how your work is organised and get feedback from us. Your manager’s name is [name of manager]"
 msgstr "darparu cyfarfodydd rheolaidd â'ch rheolwr, fel y gallwch ddweud wrthym a ydych yn fodlon ar y modd y mae eich gwaith yn cael ei drefnu, ac er mwyn i chi gael adborth gennym ni. Enw eich rheolwr yw [enw'r rheolwr]."
 
 #: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:43
@@ -1248,3 +1248,11 @@ msgstr ""
 #: lib/first_days_web/controllers/session_controller.ex:30
 msgid "You've logged out"
 msgstr ""
+
+#: lib/first_days_web/templates/feedback/tips.html.eex:7
+msgid "Thanks for using First Days to help with your successful volunteer recruitment."
+msgstr "Diolch am ddefnyddio Diwrnodau Cyntaf i helpu gyda'ch gwaith o recriwtio gwirfoddolwr yn llwyddiannus."
+
+#: lib/first_days_web/templates/component/post.html.eex:4
+msgid "Done"
+msgstr "Wedi gorffen"
