@@ -557,7 +557,7 @@ msgstr "Llunio'r neges e-bost"
 #: lib/first_days_web/templates/role_description/new.html.eex:10
 #: lib/first_days_web/templates/role_description/show.html.eex:10
 msgid "Find a volunteer"
-msgstr ""
+msgstr "Dod o hyd i wirfoddolwr"
 
 #: lib/first_days_web/templates/page/landing.html.eex:75
 msgid "Finding a volunteer"
@@ -653,7 +653,7 @@ msgstr "Gwybodaeth am y rôl"
 
 #: lib/first_days_web/views/preparation_view.ex:17
 msgid "April"
-msgstr ""
+msgstr "Ebrill"
 
 #: lib/first_days_web/templates/preparation/form.html.eex:21
 msgid "Are there any dress code requirements? (This could include dress code for the organisation, or health and safety requirements. For example footwear, wearing of jewellery, dressing for certain weather if they will be working outside)"
@@ -665,7 +665,7 @@ msgstr ""
 
 #: lib/first_days_web/views/preparation_view.ex:21
 msgid "August"
-msgstr ""
+msgstr "Awst"
 
 #: lib/first_days_web/templates/preparation/form_tips.html.eex:7
 msgid "Before your volunteer starts you'll probably want to send them information so that they can settle in quickly."
@@ -682,7 +682,7 @@ msgstr ""
 
 #: lib/first_days_web/views/preparation_view.ex:25
 msgid "December"
-msgstr ""
+msgstr "Rhagfyr"
 
 #: lib/first_days_web/templates/email/role_description_email.html.eex:38
 #: lib/first_days_web/templates/role_description/template.html.eex:14
@@ -1117,6 +1117,7 @@ msgid "Remember that support is always available from local and national support
 msgstr ""
 
 #: lib/first_days_web/templates/email/role_description_email.html.eex:14
+#: lib/first_days_web/templates/role_description/template.html.eex:3
 msgid "Role Description (please edit as you see fit)"
 msgstr ""
 
@@ -1256,3 +1257,43 @@ msgstr "Diolch am ddefnyddio Diwrnodau Cyntaf i helpu gyda'ch gwaith o recriwtio
 #: lib/first_days_web/templates/component/post.html.eex:4
 msgid "Done"
 msgstr "Wedi gorffen"
+
+#: lib/first_days_web/templates/role_description/template.html.eex:1
+msgid "Role Description Template"
+msgstr ""
+
+#: lib/first_days/email.ex:9
+msgid "Welcome to First Days!"
+msgstr ""
+
+#: lib/first_days/email.ex:36
+msgid "First Days - Document list"
+msgstr ""
+
+#: lib/first_days/email.ex:65
+msgid "First Days - Feedback"
+msgstr ""
+
+#: lib/first_days/email.ex:46
+msgid "First Days - First day preparation"
+msgstr ""
+
+#: lib/first_days/email.ex:26
+msgid "First Days - Role description"
+msgstr ""
+
+#: lib/first_days/email.ex:56
+msgid "First Days - Volunteer agreement"
+msgstr ""
+
+#: lib/first_days/email.ex:18
+msgid "Reset passwords instructions"
+msgstr ""
+
+#: lib/first_days/email.ex:19
+msgid "Please visit"
+msgstr ""
+
+#: lib/first_days/email.ex:19
+msgid "to reset your password"
+msgstr ""

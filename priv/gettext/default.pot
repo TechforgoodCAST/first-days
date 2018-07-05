@@ -317,7 +317,7 @@ msgid "Bank/Building Society details (for paying expenses)"
 msgstr ""
 
 #: lib/first_days_web/templates/document_checklist/form_tips.html.eex:9
-msgid "Before your volunteer can start, you'll likely need them to provide certatin paperwork. What is needed varies for different organisations and different roles. Completing this process ahead of time is really important as it can often slow down the volunteering process and create frustrations on both sides."
+msgid "Before your volunteer can start, you'll likely need them to provide certain paperwork. What is needed varies for different organisations and different roles. Completing this process ahead of time is really important as it can often slow down the volunteering process and create frustrations on both sides."
 msgstr ""
 
 #: lib/first_days_web/templates/document_checklist/template_tips.html.eex:4
@@ -1117,6 +1117,7 @@ msgid "Remember that support is always available from local and national support
 msgstr ""
 
 #: lib/first_days_web/templates/email/role_description_email.html.eex:14
+#: lib/first_days_web/templates/role_description/template.html.eex:3
 msgid "Role Description (please edit as you see fit)"
 msgstr ""
 
@@ -1255,4 +1256,44 @@ msgstr ""
 
 #: lib/first_days_web/templates/component/post.html.eex:4
 msgid "Done"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/template.html.eex:1
+msgid "Role Description Template"
+msgstr ""
+
+#: lib/first_days/email.ex:9
+msgid "Welcome to First Days!"
+msgstr ""
+
+#: lib/first_days/email.ex:36
+msgid "First Days - Document list"
+msgstr ""
+
+#: lib/first_days/email.ex:65
+msgid "First Days - Feedback"
+msgstr ""
+
+#: lib/first_days/email.ex:46
+msgid "First Days - First day preparation"
+msgstr ""
+
+#: lib/first_days/email.ex:26
+msgid "First Days - Role description"
+msgstr ""
+
+#: lib/first_days/email.ex:56
+msgid "First Days - Volunteer agreement"
+msgstr ""
+
+#: lib/first_days/email.ex:18
+msgid "Reset passwords instructions"
+msgstr ""
+
+#: lib/first_days/email.ex:19
+msgid "Please visit"
+msgstr ""
+
+#: lib/first_days/email.ex:19
+msgid "to reset your password"
 msgstr ""
