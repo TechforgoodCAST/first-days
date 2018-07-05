@@ -1,6 +1,6 @@
-<h2 class="<%= "#{headline_font()} tc mv4" %>">"<%= gettext("Role Description Template(") %>")</h2>
+<h2 class="<%= "#{headline_font()} tc mv4" %>"><%= gettext("Role Description Template") %></h2>
 <section class="ma4">
-  <h3 class="<%= "#{title_bold_font()}" %>">"<%= gettext("Role Description (please edit as you see fit)(") %>")</h3>
+  <h3 class="<%= "#{title_bold_font()}" %>"><%= gettext("Role Description (please edit as you see fit)") %></h3>
   <div class="mv2">
     <p class="<%= "#{title_bold_font()} dib" %>"><%= gettext("Role") %></p><p class="<%= "#{title_black_font()} dib" %>">: <%= @answers.area %></p>
   </div>

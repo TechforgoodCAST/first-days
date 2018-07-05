@@ -6,7 +6,7 @@
   <div class="<%= "#{body_font()}" %>">
     <p><%= gettext("Now that your volunteer has agreed to take up the role you can begin the preparations.") %></p>
     <br>
-    <p><%= gettext("Before your volunteer can start, you'll likely need them to provide certatin paperwork. What is needed varies for different organisations and different roles. Completing this process ahead of time is really important as it can often slow down the volunteering process and create frustrations on both sides.") %></p>
+    <p><%= gettext("Before your volunteer can start, you'll likely need them to provide certain paperwork. What is needed varies for different organisations and different roles. Completing this process ahead of time is really important as it can often slow down the volunteering process and create frustrations on both sides.") %></p>
     <br>
     <p><%= gettext("It's important your volunteer is prepared for their first day and has completed or sent through any paperwork they need to fill out for the role.") %></p>
   </div>
