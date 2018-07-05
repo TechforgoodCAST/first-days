@@ -1143,7 +1143,7 @@ msgstr "Mae yna lawer o ffynonellau cymorth ar gael i sicrhau bod eich cyfle gwi
 
 #: lib/first_days_web/templates/email/role_description_email.html.eex:57
 msgid "Want to speak further? Contact "
-msgstr
+msgstr "Hoffech chi drafod ymhellach? Cysylltwch â "
 
 #: lib/first_days_web/templates/email/preparation_email.html.eex:13
 msgid "We hope you're looking forward to your first day with us on the "
