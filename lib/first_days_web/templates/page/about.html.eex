@@ -3,7 +3,7 @@
   <h2 class="<%= "#{headline_font()} tc mv4" %>">Welcome to First Days</h2>
   <div class="<%= "#{title_black_font()} ph5" %>">
     <p>
-      <%= gettext( """
+      <%= gettext("""
         First days helps you to engage with volunteers from the beginning of the recruitment process right
         through to getting feedback on the volunteer's first day. It will help you to assess the specific
         volunteer needs that your organisation has and will enable you to create really focused volunteer

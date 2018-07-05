@@ -1239,7 +1239,7 @@ msgid "We don't recognise that email, try again?"
 msgstr ""
 
 #: lib/first_days_web/controllers/password_controller.ex:36
-msgid "We've sent you an email with instructions on how to reset your password"
+msgid "We've sent you an email with instructions on how to reset your password."
 msgstr ""
 
 #: lib/first_days_web/controllers/plugs/auth.ex:50
@@ -1287,7 +1287,7 @@ msgid "First Days - Volunteer agreement"
 msgstr ""
 
 #: lib/first_days/email.ex:18
-msgid "Reset passwords instructions"
+msgid "Reset password instructions"
 msgstr ""
 
 #: lib/first_days/email.ex:19
@@ -1295,5 +1295,5 @@ msgid "Please visit"
 msgstr ""
 
 #: lib/first_days/email.ex:19
-msgid "to reset your password"
+msgid "to reset your password."
 msgstr ""

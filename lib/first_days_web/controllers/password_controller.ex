@@ -33,7 +33,7 @@ defmodule FirstDaysWeb.PasswordController do
         |> FirstDays.Mailer.deliver_later()
 
         conn
-        |> put_flash(:info, gettext("We've sent you an email with instructions on how to reset your password"))
+        |> put_flash(:info, gettext("We've sent you an email with instructions on how to reset your password."))
         |> redirect(to: session_path(conn, :new))
     end
   end
