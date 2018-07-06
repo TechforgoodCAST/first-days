@@ -12,7 +12,7 @@
   <div class="<%= "#{input_wrapper_class()}" %>">
     <%= label f, :first_day_date, gettext("When is the volunteer's first day? (if you don't know, please provide us with your best guess)"), class: "#{input_label_class()}" %>
     <div class="my-date">
-      <%= my_datetime_select f, :first_day_date, default: {2018, 2, 13} %>
+      <%= my_datetime_select f, :first_day_date, default: {2018, 9, 13} %>
     </div>
     <%= error_tag f, :first_day_date, class: "#{input_error_class()}" %>
   </div>

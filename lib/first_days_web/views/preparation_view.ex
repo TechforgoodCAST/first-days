@@ -2,6 +2,22 @@ defmodule FirstDaysWeb.PreparationView do
   use FirstDaysWeb, :view
 
   def my_datetime_select(form, field, opts \\ []) do
+    opts =
+      Keyword.put(opts, :month, options: [
+        {gettext("January"), "1"},
+        {gettext("February"), "2"},
+        {gettext("March"), "3"},
+        {gettext("April"), "4"},
+        {gettext("May"), "5"},
+        {gettext("June"), "6"},
+        {gettext("July"), "7"},
+        {gettext("August"), "8"},
+        {gettext("September"), "9"},
+        {gettext("October"), "10"},
+        {gettext("November"), "11"},
+        {gettext("December"), "12"},
+      ])
+      
     builder = fn b ->
       ~e"""
       <%= b.(:day, [ class: "form-control" ]) %> / <%= b.(:month, [ class: "form-control" ]) %> / <%= b.(:year, [ class: "form-control" ]) %>

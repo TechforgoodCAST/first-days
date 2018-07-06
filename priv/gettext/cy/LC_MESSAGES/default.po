@@ -248,7 +248,7 @@ msgstr "Gallwch ei olygu unrhyw bryd."
 
 #: lib/first_days_web/templates/component/success_modal.html.eex:12
 msgid "You can always come back to First Days if you want to"
-msgstr "Gallwch bob amser ddychwelyd i Diwrnodau Cyntaf os"
+msgstr "Gallwch bob amser ddychwelyd i Diwrnodau Cyntaf os byddwch am"
 
 #: lib/first_days_web/templates/component/success_modal.html.eex:9
 msgid "You have now completed"
@@ -265,7 +265,7 @@ msgstr "wedi cael ei anfon atoch trwy e-bost."
 
 #: lib/first_days_web/templates/component/success_modal.html.eex:13
 msgid "revisit the process, making it the best it can be."
-msgstr "byddwch am ailedrych ar y broses, er mwyn sicrhau ei bod y gorau y gall fod."
+msgstr "ailedrych ar y broses, er mwyn sicrhau ei bod y gorau y gall fod."
 
 #: lib/first_days_web/templates/feedback/template.html.eex:11
 msgid "1) Did you enjoy your first day?"
@@ -312,7 +312,8 @@ msgid "9) Do you have everything you need to do your role? e.g. information, equ
 msgstr "9) A oes gennych bopeth y mae arnoch ei angen i gyflawni eich rôl? Er enghraifft, gwybodaeth, offer neu adnoddau."
 
 #: lib/first_days_web/templates/document_checklist/form.html.eex:56
-#: lib/first_days_web/views/document_checklist_view.ex:12
+#: lib/first_days_web/views/document_checklist_view.ex:13
+#: lib/first_days_web/views/email_view.ex:13
 msgid "Bank/Building Society details (for paying expenses)"
 msgstr "Manylion Banc/Cymdeithas Adeiladu (er mwyn talu costau)"
 
@@ -346,7 +347,8 @@ msgid "Could you please send us:"
 msgstr "Byddwch cystal ag anfon y canlynol atom:"
 
 #: lib/first_days_web/templates/document_checklist/form.html.eex:44
-#: lib/first_days_web/views/document_checklist_view.ex:10
+#: lib/first_days_web/views/document_checklist_view.ex:11
+#: lib/first_days_web/views/email_view.ex:11
 msgid "DBS (Disclosure and Barring Service) check"
 msgstr "Gwiriad y DBS"
 
@@ -375,7 +377,8 @@ msgid "Email template"
 msgstr "Templed Neges e-bost"
 
 #: lib/first_days_web/templates/document_checklist/form.html.eex:38
-#: lib/first_days_web/views/document_checklist_view.ex:9
+#: lib/first_days_web/views/document_checklist_view.ex:10
+#: lib/first_days_web/views/email_view.ex:10
 msgid "Emergency contact details"
 msgstr "Manylion cyswllt mewn argyfwng"
 
@@ -430,7 +433,8 @@ msgstr "Arall"
 msgid "Photo Id"
 msgstr "Llun Adnabod"
 
-#: lib/first_days_web/views/document_checklist_view.ex:5
+#: lib/first_days_web/views/document_checklist_view.ex:6
+#: lib/first_days_web/views/email_view.ex:6
 msgid "Photo id"
 msgstr "Llun Adnabod"
 
@@ -440,22 +444,26 @@ msgid "Please also let us know when you are available to start."
 msgstr "Byddwch cystal hefyd â dweud wrthym pryd y byddwch ar gael i ddechrau."
 
 #: lib/first_days_web/templates/document_checklist/form.html.eex:26
-#: lib/first_days_web/views/document_checklist_view.ex:7
+#: lib/first_days_web/views/document_checklist_view.ex:8
+#: lib/first_days_web/views/email_view.ex:8
 msgid "Proof of address"
 msgstr "Prawf o gyfeiriad"
 
 #: lib/first_days_web/templates/document_checklist/form.html.eex:20
-#: lib/first_days_web/views/document_checklist_view.ex:6
+#: lib/first_days_web/views/document_checklist_view.ex:7
+#: lib/first_days_web/views/email_view.ex:7
 msgid "Proof of identity"
 msgstr "Prawf o hunaniaeth"
 
 #: lib/first_days_web/templates/document_checklist/form.html.eex:62
-#: lib/first_days_web/views/document_checklist_view.ex:13
+#: lib/first_days_web/views/document_checklist_view.ex:14
+#: lib/first_days_web/views/email_view.ex:14
 msgid "Proof of qualifications"
 msgstr "Prawf o gymwysterau"
 
 #: lib/first_days_web/templates/document_checklist/form.html.eex:50
-#: lib/first_days_web/views/document_checklist_view.ex:11
+#: lib/first_days_web/views/document_checklist_view.ex:12
+#: lib/first_days_web/views/email_view.ex:12
 msgid "Proof of residency"
 msgstr "Prawf o breswyliaeth"
 
@@ -491,7 +499,8 @@ msgid "Volunteer Feedback Template"
 msgstr "Templed Adborth Gwirfoddolwr"
 
 #: lib/first_days_web/templates/document_checklist/form.html.eex:32
-#: lib/first_days_web/views/document_checklist_view.ex:8
+#: lib/first_days_web/views/document_checklist_view.ex:9
+#: lib/first_days_web/views/email_view.ex:9
 msgid "Volunteer requirements e.g. dietary, medical or religious needs"
 msgstr "Anghenion y gwirfoddolwr, e.e. anghenion deietegol, meddygol neu grefyddol"
 
@@ -651,7 +660,9 @@ msgstr "Mae angen gwirfoddolwr "
 msgid "About the role"
 msgstr "Gwybodaeth am y rôl"
 
-#: lib/first_days_web/views/preparation_view.ex:17
+#: lib/first_days_web/views/email_view.ex:30
+#: lib/first_days_web/views/preparation_view.ex:10
+#: lib/first_days_web/views/preparation_view.ex:33
 msgid "April"
 msgstr "Ebrill"
 
@@ -663,7 +674,9 @@ msgstr "A oes yna unrhyw ofynion o ran gwisg? (Gallai hyn gynnwys cod gwisg ar g
 msgid "Are there any other details you'd like them to know ahead of time?"
 msgstr "A oes yna unrhyw fanylion eraill yr hoffech iddo eu gwybod o flaen llaw?"
 
-#: lib/first_days_web/views/preparation_view.ex:21
+#: lib/first_days_web/views/email_view.ex:34
+#: lib/first_days_web/views/preparation_view.ex:14
+#: lib/first_days_web/views/preparation_view.ex:37
 msgid "August"
 msgstr "Awst"
 
@@ -680,7 +693,9 @@ msgstr "Rhif elusen: "
 msgid "Confirm new password"
 msgstr "Cadarnhewch y cyfrinair newydd"
 
-#: lib/first_days_web/views/preparation_view.ex:25
+#: lib/first_days_web/views/email_view.ex:38
+#: lib/first_days_web/views/preparation_view.ex:18
+#: lib/first_days_web/views/preparation_view.ex:41
 msgid "December"
 msgstr "Rhagfyr"
 
@@ -699,7 +714,9 @@ msgstr "Trwy wneud hyn, gallech gael "
 msgid "Dress code"
 msgstr "Cod gwisg"
 
-#: lib/first_days_web/views/preparation_view.ex:15
+#: lib/first_days_web/views/email_view.ex:28
+#: lib/first_days_web/views/preparation_view.ex:8
+#: lib/first_days_web/views/preparation_view.ex:31
 msgid "February"
 msgstr "Chwefror"
 
@@ -752,15 +769,21 @@ msgstr "Mae'n bwysig bod eich gwirfoddolwr yn barod ar gyfer ei ddiwrnod cyntaf,
 msgid "It's important your volunteer is prepared for their first day. It can be intimidating to start in a new organisation, so help them to prepare by filling out the details below."
 msgstr "Mae'n bwysig bod eich gwirfoddolwr yn barod ar gyfer ei ddiwrnod cyntaf. Gall y syniad o ddechrau mewn sefydliad newydd godi ofn, felly helpwch y gwirfoddolwr i baratoi trwy lenwi'r manylion isod."
 
-#: lib/first_days_web/views/preparation_view.ex:14
+#: lib/first_days_web/views/email_view.ex:27
+#: lib/first_days_web/views/preparation_view.ex:7
+#: lib/first_days_web/views/preparation_view.ex:30
 msgid "January"
 msgstr "Ionawr"
 
-#: lib/first_days_web/views/preparation_view.ex:20
+#: lib/first_days_web/views/email_view.ex:33
+#: lib/first_days_web/views/preparation_view.ex:13
+#: lib/first_days_web/views/preparation_view.ex:36
 msgid "July"
 msgstr "Gorffennaf"
 
-#: lib/first_days_web/views/preparation_view.ex:19
+#: lib/first_days_web/views/email_view.ex:32
+#: lib/first_days_web/views/preparation_view.ex:12
+#: lib/first_days_web/views/preparation_view.ex:35
 msgid "June"
 msgstr "Mehefin"
 
@@ -773,11 +796,15 @@ msgstr "Cyfreithiol"
 msgid "Let's find a volunteer"
 msgstr "Dod o hyd i wirfoddolwr"
 
-#: lib/first_days_web/views/preparation_view.ex:16
+#: lib/first_days_web/views/email_view.ex:29
+#: lib/first_days_web/views/preparation_view.ex:9
+#: lib/first_days_web/views/preparation_view.ex:32
 msgid "March"
 msgstr "Mawrth"
 
-#: lib/first_days_web/views/preparation_view.ex:18
+#: lib/first_days_web/views/email_view.ex:31
+#: lib/first_days_web/views/preparation_view.ex:11
+#: lib/first_days_web/views/preparation_view.ex:34
 msgid "May"
 msgstr "Gall"
 
@@ -785,11 +812,15 @@ msgstr "Gall"
 msgid "New password"
 msgstr "Y cyfrinair newydd"
 
-#: lib/first_days_web/views/preparation_view.ex:24
+#: lib/first_days_web/views/email_view.ex:37
+#: lib/first_days_web/views/preparation_view.ex:17
+#: lib/first_days_web/views/preparation_view.ex:40
 msgid "November"
 msgstr "Tachwedd"
 
-#: lib/first_days_web/views/preparation_view.ex:23
+#: lib/first_days_web/views/email_view.ex:36
+#: lib/first_days_web/views/preparation_view.ex:16
+#: lib/first_days_web/views/preparation_view.ex:39
 msgid "October"
 msgstr "Hydref"
 
@@ -828,12 +859,13 @@ msgstr "Ailosod y cyfrinair"
 msgid "Role"
 msgstr "Rôl"
 
-
 #: lib/first_days_web/templates/password/new.html.eex:17
 msgid "Send reset link"
 msgstr "Anfon dolen i ailosod y cyfrinair"
 
-#: lib/first_days_web/views/preparation_view.ex:22
+#: lib/first_days_web/views/email_view.ex:35
+#: lib/first_days_web/views/preparation_view.ex:15
+#: lib/first_days_web/views/preparation_view.ex:38
 msgid "September"
 msgstr "Medi"
 
@@ -1256,6 +1288,7 @@ msgid "Role Description Template"
 msgstr "Templed rôl-ddisgrifiad"
 
 #: lib/first_days/email.ex:9
+#: lib/first_days_web/templates/page/landing.html.eex:62
 msgid "Welcome to First Days!"
 msgstr "Croeso i Diwrnodau Cyntaf!"
 
@@ -1290,3 +1323,23 @@ msgstr "Ewch i"
 #: lib/first_days/email.ex:19
 msgid "to reset your password."
 msgstr "i ailosod eich cyfrinair."
+
+#: lib/first_days_web/templates/role_description/form.html.eex:67
+msgid "About the organisation"
+msgstr ""
+
+#: lib/first_days_web/templates/page/landing.html.eex:63
+msgid "First Days helps you to support volunteers through the recruitment process, from assessing your needs, right through to getting feedback on the volunteer's first day."
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:68
+msgid "It's good for the potential volunteer to understand what your organisation does. Knowing this can really motivate volunteers to apply."
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:102
+msgid "The benefits of the volunteering role"
+msgstr ""
+
+#: lib/first_days_web/templates/role_description/form.html.eex:103
+msgid "Volunteers are motivated not just by the help they can give, but also how volunteering can develop them professionally and personally."
+msgstr ""

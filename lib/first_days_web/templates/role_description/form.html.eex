@@ -64,8 +64,8 @@
   <%= shared_component("divider.html") %>
 
 
-<h3 class="<%= "#{title_bold_font()} mt5" %>">About the organisation</h3>
-  <p class="<%= "#{body_font()} mv2" %>">It's good for the potential volunteer to understand what your organisation does. Knowing this can really motivate volunteers to apply.</p>
+<h3 class="<%= "#{title_bold_font()} mt5" %>"><%= gettext("About the organisation") %></h3>
+  <p class="<%= "#{body_font()} mv2" %>"><%= gettext("It's good for the potential volunteer to understand what your organisation does. Knowing this can really motivate volunteers to apply.") %></p>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
     <%= label f, :organisation_name, gettext("What is the name of your organisation?"), class: "#{input_label_class()}" %>
@@ -99,8 +99,8 @@
   </div>
   <%= shared_component("divider.html") %>
 
-<h3 class="<%= "#{title_bold_font()} mt5" %>">The benefits of the volunteering role</h3>
-  <p class="<%= "#{body_font()} mv2" %>">Volunteers are motivated not just by the help they can give, but also how volunteering can develop them professionally and personally.</p>
+<h3 class="<%= "#{title_bold_font()} mt5" %>"><%= gettext("The benefits of the volunteering role") %></h3>
+  <p class="<%= "#{body_font()} mv2" %>"><%= gettext("Volunteers are motivated not just by the help they can give, but also how volunteering can develop them professionally and personally.") %></p>
 
   <div class="<%= "#{input_wrapper_class()}" %>">
     <%= label f, :how_will_work_help, gettext("How will this work help the organisation? (1 sentence, jargon free)"), class: "#{input_label_class()}" %>
