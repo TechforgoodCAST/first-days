@@ -11,7 +11,7 @@ msgstr ""
 "Language: cy\n"
 
 msgid "can't be blank"
-msgstr ""
+msgstr "ni all hwn fod yn wag"
 
 msgid "has already been taken"
 msgstr "wedi ei ddefnyddio’n barod"
@@ -20,7 +20,7 @@ msgid "is invalid"
 msgstr "yn annilys"
 
 msgid "must be accepted"
-msgstr ""
+msgstr "rhaid ei dderbyn"
 
 msgid "has invalid format"
 msgstr "fformat annilys"
@@ -32,13 +32,13 @@ msgid "is reserved"
 msgstr "wedi ei gadw"
 
 msgid "does not match confirmation"
-msgstr ""
+msgstr "nid yw’n cyfateb i’r cadarnhad"
 
 msgid "is still associated with this entry"
-msgstr ""
+msgstr "yn dal i fod yn gysylltiedig â’r cofnod hwn"
 
 msgid "are still associated with this entry"
-msgstr ""
+msgstr "yn dal i fod yn gysylltiedig â’r cofnod hwn"
 
 msgid "should be %{count} character(s)"
 msgid_plural "should be %{count} character(s)"

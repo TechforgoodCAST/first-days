@@ -118,8 +118,8 @@ msgstr "Annwyl [ENW],"
 #: lib/first_days_web/templates/email/preparation_email.html.eex:8
 #: lib/first_days_web/templates/email/role_description_email.html.eex:12
 #: lib/first_days_web/templates/email/welcome_email.html.eex:8
-#: lib/first_days_web/templates/layout/app.html.eex:10
-#: lib/first_days_web/templates/layout/signed_out_layout.html.eex:10
+#: lib/first_days_web/templates/layout/app.html.eex:19
+#: lib/first_days_web/templates/layout/signed_out_layout.html.eex:19
 #: lib/first_days_web/templates/password/edit.html.eex:3
 #: lib/first_days_web/templates/password/new.html.eex:3
 #: lib/first_days_web/templates/session/new.html.eex:10
@@ -1049,7 +1049,7 @@ msgstr "Teipiwch eich Cyfeiriad E-bost a'ch Cyfrinair isod"
 
 #: lib/first_days_web/templates/user/form.html.eex:3
 msgid "Enter your details below to sign up"
-msgstr ""
+msgstr "Nodwch eich manylion isod i gofrestru"
 
 #: lib/first_days_web/templates/email/feedback_email.html.eex:5
 msgid "First Days has been created through funding provided by Big Lottery Fund Wales. The project is a partnership between Wales Co-operative Centre, Business in the Community Cymru, CAST and WCVA. Further information about the work of these organisations can be found here:"
@@ -1131,7 +1131,7 @@ msgstr "Pan fyddwch wedi dewis yr unigolyn priodol, gallwch ailfewngofnodi i'ch 
 
 #: lib/first_days_web/templates/user/form.html.eex:34
 msgid "Password confirmation"
-msgstr ""
+msgstr "Cadarnhau cyfrinair"
 
 #: lib/first_days_web/templates/email/role_description_email.html.eex:5
 msgid "Please study the role description and edit to ensure it captures exactly the information you want to give to a potential volunteer."
@@ -1148,7 +1148,7 @@ msgstr "Rôl-ddisgrifiad (golygwch fel y gwelwch yn dda)"
 
 #: lib/first_days_web/templates/user/form.html.eex:2
 msgid "Sign up to First Days"
-msgstr ""
+msgstr "Cofrestrwch ar gyfer Diwrnodau Cyntaf"
 
 #: lib/first_days_web/controllers/confirmation_agreement_controller.ex:23
 #: lib/first_days_web/controllers/document_checklist_controller.ex:20
@@ -1326,20 +1326,24 @@ msgstr "i ailosod eich cyfrinair."
 
 #: lib/first_days_web/templates/role_description/form.html.eex:67
 msgid "About the organisation"
-msgstr ""
+msgstr "Ynglŷn â’r sefydliad"
 
 #: lib/first_days_web/templates/page/landing.html.eex:63
 msgid "First Days helps you to support volunteers through the recruitment process, from assessing your needs, right through to getting feedback on the volunteer's first day."
-msgstr ""
+msgstr "Mae Diwrnodau Cyntaf yn eich helpu chi i gefnogi gwirfoddolwyr trwy’r broses recriwtio, o asesu’ch anghenion i gael adborth ar ddiwrnod cyntaf y gwirfoddolwr."
 
 #: lib/first_days_web/templates/role_description/form.html.eex:68
 msgid "It's good for the potential volunteer to understand what your organisation does. Knowing this can really motivate volunteers to apply."
-msgstr ""
+msgstr "Mae’n dda i’r darpar wirfoddolwr ddeall beth mae’ch sefydliad yn ei wneud. Mae gwybod hyn yn gallu ysgogi gwirfoddolwyr i wneud cais."
 
 #: lib/first_days_web/templates/role_description/form.html.eex:102
 msgid "The benefits of the volunteering role"
-msgstr ""
+msgstr "Manteision y rôl wirfoddoli"
 
 #: lib/first_days_web/templates/role_description/form.html.eex:103
 msgid "Volunteers are motivated not just by the help they can give, but also how volunteering can develop them professionally and personally."
-msgstr ""
+msgstr "Mae gwirfoddolwyr yn cael eu hysgogi gan yr help y gallan nhw ei roi a sut gall gwirfoddoli eu datblygu nhw yn broffesiynol ac yn bersonol."
+
+#: lib/first_days_web/templates/page/about.html.eex:3
+msgid "Welcome to First Days"
+msgstr "Croeso i Diwrnodau Cyntaf"
