@@ -12,10 +12,9 @@ config :first_days,
 # Configures the endpoint
 config :first_days, FirstDaysWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "WDxUWlSp1ZnfuhbtcfoKYH9ufS7Uhw92VPZ7Txn6h46HbxAep0X7R9ItHnJlxJH6",
+  secret_key_base: System.get_env("SECRET_KEY_BASE"),
   render_errors: [view: FirstDaysWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: FirstDays.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: FirstDays.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
@@ -34,4 +33,4 @@ config :first_days, FirstDaysWeb.Gettext, default_locale: "en", locales: ~w(en c
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
-import_config "#{Mix.env}.exs"
+import_config "#{Mix.env()}.exs"
