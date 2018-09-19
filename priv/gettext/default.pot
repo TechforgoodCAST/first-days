@@ -118,8 +118,8 @@ msgstr ""
 #: lib/first_days_web/templates/email/preparation_email.html.eex:8
 #: lib/first_days_web/templates/email/role_description_email.html.eex:12
 #: lib/first_days_web/templates/email/welcome_email.html.eex:8
-#: lib/first_days_web/templates/layout/app.html.eex:10
-#: lib/first_days_web/templates/layout/signed_out_layout.html.eex:10
+#: lib/first_days_web/templates/layout/app.html.eex:19
+#: lib/first_days_web/templates/layout/signed_out_layout.html.eex:19
 #: lib/first_days_web/templates/password/edit.html.eex:3
 #: lib/first_days_web/templates/password/new.html.eex:3
 #: lib/first_days_web/templates/session/new.html.eex:10
@@ -1342,4 +1342,8 @@ msgstr ""
 
 #: lib/first_days_web/templates/role_description/form.html.eex:103
 msgid "Volunteers are motivated not just by the help they can give, but also how volunteering can develop them professionally and personally."
+msgstr ""
+
+#: lib/first_days_web/templates/page/about.html.eex:3
+msgid "Welcome to First Days"
 msgstr ""

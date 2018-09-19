@@ -3,18 +3,17 @@ defmodule FirstDays.Accounts.User do
   import Ecto.Changeset
   alias FirstDays.{Accounts.User, RoleDescription, DocumentChecklist, Preparation}
 
-
   schema "users" do
-    field :name, :string
-    field :email, :string
-    field :password, :string, virtual: true
-    field :password_hash, :string
-    field :stages, {:map, :boolean}
-    embeds_one :role_description, RoleDescription, on_replace: :update
-    embeds_one :document_checklist, DocumentChecklist, on_replace: :update
-    embeds_one :preparation, Preparation, on_replace: :update
-    field :reset_password_token, :string
-    field :reset_token_sent_at, :utc_datetime
+    field(:name, :string)
+    field(:email, :string)
+    field(:password, :string, virtual: true)
+    field(:password_hash, :string)
+    field(:stages, {:map, :boolean})
+    embeds_one(:role_description, RoleDescription, on_replace: :update)
+    embeds_one(:document_checklist, DocumentChecklist, on_replace: :update)
+    embeds_one(:preparation, Preparation, on_replace: :update)
+    field(:reset_password_token, :string)
+    field(:reset_token_sent_at, :utc_datetime)
 
     timestamps()
   end
@@ -71,20 +70,19 @@ defmodule FirstDays.Accounts.User do
   end
 
   defp validate_password(changeset) do
-    message = "Passwords do not match"
     changeset
     |> validate_required([:password])
     |> validate_length(:password, min: 6, max: 100)
-    |> validate_confirmation(:password, required: true, message: message)
+    |> validate_confirmation(:password, required: true)
   end
-
 
   defp put_pass_hash(changeset) do
     case changeset do
       %Ecto.Changeset{valid?: true, changes: %{password: pass}} ->
         put_change(changeset, :password_hash, Comeonin.Bcrypt.hashpwsalt(pass))
+
       _ ->
-      changeset
+        changeset
     end
   end
 end
