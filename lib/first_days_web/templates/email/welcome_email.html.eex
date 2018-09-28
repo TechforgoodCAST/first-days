@@ -1,8 +1,8 @@
-<p>Hello <%= @current_user.name %>,</p>
+<p><%= gettext("Hello ") %><span><%= @current_user.name %></span>,</p>
 
-<p>Congratulations, you have successfully registered for First Days. We will guide you through the process of recruiting your volunteers, from assessing your needs through to getting feedback from your volunteer once they have commenced volunteering.</p>
-<p>You will also be shown helpful tips and links to help you in your volunteer recruitment and management process.</p>
-<p>First Days has been made possible by funding received from the Big Lottery Fund. It is a partnership between Wales Co-operative Centre, Business in the Community, Wales Council for Voluntary Action and CAST.</p>
+<p><%= gettext("Congratulations, you have successfully registered for First Days. We will guide you through the process of recruiting your volunteers, from assessing your needs through to getting feedback from your volunteer once they have commenced volunteering.") %></p>
+<p><%= gettext("You will also be shown helpful tips and links to help you in your volunteer recruitment and management process.") %></p>
+<p><%= gettext("First Days has been made possible by funding received from the Big Lottery Fund. It is a partnership between Wales Co-operative Centre, Business in the Community, Wales Council for Voluntary Action and CAST.") %></p>
 
-<p>Kind Regards,</p>
-<p>First Days</p>
+<p><%= gettext("Kind Regards,") %></p>
+<p><%= gettext("First Days") %></p>

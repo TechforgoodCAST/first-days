@@ -1,44 +1,44 @@
 <div class="center">
-  <h1 class="blue f2 b mt4">Sign up to First Days</h1>
-  <p class="<%= "#{title_black_font()} mv2" %>">Enter your details below to sign up</p>
+  <h1 class="blue f2 b mt4"><%= gettext("Sign up to First Days") %></h1>
+  <p class="<%= "#{title_black_font()} mv2" %>"><%= gettext("Enter your details below to sign up") %></p>
 </div>
 
 <div class="<%= "v-mid tc ph3 pa4-ns pa3 br2 shadow-1 w-60 mw6 h7 center mt3 #{card_class()}" %>">
   <div class="tl">
-<%= form_for @changeset, @action, fn f -> %>
-  <%= if @changeset.action do %>
-    <div class="alert alert-danger">
-      <p>Oops, something went wrong! Please check the errors below.</p>
-    </div>
-  <% end %>
+    <%= form_for @changeset, @action, fn f -> %>
+      <%= if @changeset.action do %>
+        <div class="alert alert-danger">
+          <p><%= gettext("Oops, something went wrong! Please check the errors below.") %></p>
+        </div>
+      <% end %>
 
-  <div class="form-group">
-    <%= label f, :name, class: "control-label #{input_label_class()}" %>
-    <%= text_input f, :name, class: "form-control #{input_class_100()}" %>
-    <%= error_tag f, :name, class: "#{input_error_class()}"%>
-  </div>
+      <div>
+        <%= label f, :name, gettext("Name"), class: "#{input_label_class()}" %>
+        <%= text_input f, :name, class: "#{input_class_100()}" %>
+        <%= error_tag f, :name, class: "#{input_error_class()}"%>
+      </div>
 
-  <div class="mt3 form-group">
-    <%= label f, :email, class: "control-label #{input_label_class()}" %>
-    <%= email_input f, :email, class: "form-control #{input_class_100()}" %>
-    <%= error_tag f, :email, class: "#{input_error_class()}" %>
-  </div>
+      <div class="mt3">
+        <%= label f, :email, gettext("Email"), class: "#{input_label_class()}" %>
+        <%= email_input f, :email, class: "#{input_class_100()}" %>
+        <%= error_tag f, :email, class: "#{input_error_class()}" %>
+      </div>
 
-  <div class="mt3 form-group">
-    <%= label f, :password, class: "control-label #{input_label_class()}" %>
-    <%= password_input f, :password, class: "form-control #{input_class_100()}" %>
-    <%= error_tag f, :password, class: "#{input_error_class()}" %>
-  </div>
+      <div class="mt3">
+        <%= label f, :password, gettext("Password"), class: "#{input_label_class()}" %>
+        <%= password_input f, :password, class: "#{input_class_100()}" %>
+        <%= error_tag f, :password, class: "#{input_error_class()}" %>
+      </div>
 
-  <div class="mt3 form-group">
-    <%= label f, :password_confirmation, class: "control-label #{input_label_class()}" %>
-    <%= password_input f, :password_confirmation, class: "form-control #{input_class_100()}" %>
-    <%= error_tag f, :password_confirmation, class: "#{input_error_class()}" %>
-  </div>
+      <div class="mt3">
+        <%= label f, :password_confirmation, gettext("Password confirmation"), class: "#{input_label_class()}" %>
+        <%= password_input f, :password_confirmation, class: "#{input_class_100()}" %>
+        <%= error_tag f, :password_confirmation, class: "#{input_error_class()}" %>
+      </div>
 
-  <div class="form-group">
-    <input class="mt4" type="submit" name="" value="Sign up" id="submit">
+      <div>
+        <input class="mt4" type="submit" value="<%= gettext("Sign up") %>" id="submit">
+      </div>
+    <% end %>
   </div>
-<% end %>
-</div>
 </div>

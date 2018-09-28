@@ -1,0 +1,1349 @@
+## `msgid`s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove `msgid`s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use `mix gettext.extract --merge` or `mix gettext.merge`
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: cy\n"
+
+#: lib/first_days_web/templates/password/new.html.eex:11
+#: lib/first_days_web/templates/role_description/form.html.eex:61
+#: lib/first_days_web/templates/session/new.html.eex:2
+#: lib/first_days_web/templates/user/form.html.eex:22
+msgid "Email"
+msgstr "E-bost"
+
+#: lib/first_days_web/templates/session/new.html.eex:5
+msgid "Forgot password?"
+msgstr "Anghofio cyfrinair?"
+
+#: lib/first_days_web/templates/component/logged_out_nav.html.eex:8
+#: lib/first_days_web/templates/session/new.html.eex:4
+msgid "Log in"
+msgstr "Mewngofnodi"
+
+#: lib/first_days_web/templates/session/new.html.eex:3
+#: lib/first_days_web/templates/user/form.html.eex:28
+msgid "Password"
+msgstr "Cyfrinair"
+
+#: lib/first_days_web/templates/component/success_modal.html.eex:9
+msgid " all the First Days steps!"
+msgstr " holl gamau Diwrnodau Cyntaf!"
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:25
+msgid "1. to provide regular meetings with your manager so that you can tell us if you are happy with how your work is organised and get feedback from us. Your manager’s name is [name of manager]"
+msgstr "1. darparu cyfarfodydd rheolaidd â'ch rheolwr, fel y gallwch ddweud wrthym a ydych yn fodlon ar y modd y mae eich gwaith yn cael ei drefnu, ac er mwyn i chi gael adborth gennym ni. Enw eich rheolwr yw [enw'r rheolwr]."
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:26
+msgid "2. to respect your skills, dignity and individual wishes and to do our best to meet them."
+msgstr "2. parchu eich sgiliau, eich urddas a'ch dymuniadau unigol, gan wneud ein gorau i fodloni'r rheiny."
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:27
+msgid "3. to reimburse your travel and meal costs up to our current maximum."
+msgstr "3. ad-dalu eich costau teithio a bwyd hyd at ein huchafswm cyfredol."
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:28
+msgid "4. to consult with you and keep you informed of possible changes."
+msgstr "4. ymgynghori â chi, a rhoi gwybod i chi am unrhyw newidiadau posibl."
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:29
+msgid "5. to insure you against injury you suffer or cause due to negligence."
+msgstr "5. eich yswirio yn erbyn unrhyw anaf y byddwch yn ei ddioddef neu yn ei achosi, o ganlyniad i esgeulustod."
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:30
+msgid "6. to provide a safe environment."
+msgstr "6. darparu amgylchedd diogel."
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:31
+msgid "7. to apply our equal opportunities policy"
+msgstr "7. rhoi ein polisi cyfle cyfartal ar waith."
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:32
+msgid "8. to apply our complaints procedure if there is any problem"
+msgstr "8. rhoi ein gweithdrefn gŵynion ar waith, os bydd unrhyw broblem."
+
+#: lib/first_days_web/templates/component/logged_in_nav.html.eex:6
+#: lib/first_days_web/templates/component/logged_out_nav.html.eex:6
+msgid "About"
+msgstr "Gwybodaeth"
+
+#: lib/first_days_web/templates/confirmation_agreement/tips.html.eex:13
+msgid "An important part of building your volunteer relationship is in ensuring that there is a clear understanding of what is expected from each party. This is particularly important when a private sector individual is working in the third sector for the first time. It's quite common for there to be differences in working cultures that may surprise the volunteers."
+msgstr "Rhan bwysig o feithrin eich perthynas wirfoddoli yw sicrhau bod yna ddealltwriaeth glir o ran yr hyn a ddisgwylir gan y ddwy ochr. Mae hyn yn eithriadol o bwysig pan fydd unigolyn o'r sector preifat yn gweithio yn y trydydd sector am y tro cyntaf. Mae gwahaniaethau o ran y diwylliannau gweithio yn eithaf cyffredin, a gallai hyn beri syndod i'r gwirfoddolwyr."
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:7
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:23
+msgid "As part of the process we find it’s useful to set up a agreement between you and the organisation so that it’s clear what you can expect from us, and us from you.  We’ve created an non-legal honour bound agreement below. Please read this, and if you’re happy, sign it and send it back to us by [DATE]"
+msgstr "Yn rhan o'r broses, ystyriwn ei bod yn ddefnyddiol i greu cytundeb rhyngoch chi a'r sefydliad, fel ei bod yn glir beth y gallwch ei ddisgwyl gennym ni, a ninnau gennych chithau. Rydym wedi creu cytundeb anrhydedd nad yw'n gyfreithiol isod. Darllenwch hwn, ac, os ydych yn hapus, ewch ati i'w lofnodi a'i anfon yn ôl atom erbyn [DYDDIAD]."
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:1
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:19
+#: lib/first_days_web/templates/confirmation_agreement/tips.html.eex:4
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:17
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:35
+msgid "Confirmation & Agreement"
+msgstr "Cadarnhad a Chytundeb"
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:3
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:19
+msgid "Confirmation & Agreement (to edit and send to the volunteer)"
+msgstr "Cadarnhad a Chytundeb (i'w olygu a'i anfon at y gwirfoddolwr)"
+
+#: lib/first_days_web/templates/confirmation_agreement/tips.html.eex:7
+msgid "Congratulations on recruiting your volunteer!"
+msgstr "Llongyfarchiadau ar lwyddo i recriwtio eich gwirfoddolwr!"
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:41
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:55
+msgid "Date:"
+msgstr "Dyddiad:"
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:4
+#: lib/first_days_web/templates/document_checklist/template.html.eex:5
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:20
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:13
+msgid "Dear [NAME],"
+msgstr "Annwyl [ENW],"
+
+#: lib/first_days_web/templates/component/logged_in_nav.html.eex:3
+#: lib/first_days_web/templates/component/logged_out_nav.html.eex:3
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:14
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:8
+#: lib/first_days_web/templates/email/feedback_email.html.eex:24
+#: lib/first_days_web/templates/email/preparation_email.html.eex:8
+#: lib/first_days_web/templates/email/role_description_email.html.eex:12
+#: lib/first_days_web/templates/email/welcome_email.html.eex:8
+#: lib/first_days_web/templates/layout/app.html.eex:19
+#: lib/first_days_web/templates/layout/signed_out_layout.html.eex:19
+#: lib/first_days_web/templates/password/edit.html.eex:3
+#: lib/first_days_web/templates/password/new.html.eex:3
+#: lib/first_days_web/templates/session/new.html.eex:10
+msgid "First Days"
+msgstr "Diwrnodau Cyntaf"
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:37
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:51
+msgid "For the volunteer"
+msgstr "Ar gyfer y gwirfoddolwr"
+
+#: lib/first_days_web/templates/confirmation_agreement/show.html.eex:10
+#: lib/first_days_web/templates/document_checklist/edit.html.eex:10
+#: lib/first_days_web/templates/document_checklist/new.html.eex:10
+#: lib/first_days_web/templates/document_checklist/show.html.eex:10
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:59
+#: lib/first_days_web/templates/page/landing.html.eex:43
+#: lib/first_days_web/templates/preparation/edit.html.eex:10
+#: lib/first_days_web/templates/preparation/new.html.eex:10
+#: lib/first_days_web/templates/preparation/show.html.eex:10
+msgid "Getting them ready"
+msgstr "Eu paratoi nhw"
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:38
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:52
+msgid "I [name of volunteer], agree to do my best, to work reliably to the best of my ability, and to give as much warning as possible whenever I cannot volunteer as expected to follow [name of organisation]’s rules and procedures, including health and safety, equal opportunities and confidentially."
+msgstr "Rwyf i, [enw'r gwirfoddolwr], yn cytuno i wneud fy ngorau, i weithio'n ddibynadwy hyd eithaf fy ngallu, ac i roi cymaint o rybudd ag sy'n bosibl pan na allaf wirfoddoli yn ôl y disgwyl, yn ogystal â dilyn rheolau a gweithdrefnau [enw'r sefydliad], gan gynnwys iechyd a diogelwch, cyfleoedd cyfartal, a chyfrinachedd."
+
+#: lib/first_days_web/templates/confirmation_agreement/tips.html.eex:19
+#: lib/first_days_web/templates/document_checklist/template_tips.html.eex:13
+#: lib/first_days_web/templates/feedback/tips.html.eex:18
+#: lib/first_days_web/templates/preparation/template_tips.html.eex:13
+#: lib/first_days_web/templates/role_description/template_tips.html.eex:13
+msgid "I have completed this step, I am happy to say that it is done."
+msgstr "Rwyf wedi cwblhau'r cam hwn, ac rwy'n hapus i ddweud ei fod wedi'i orffen."
+
+#: lib/first_days_web/templates/confirmation_agreement/tips.html.eex:15
+msgid "It's good to get a signed agreement up front to help with this process."
+msgstr "Mae'n fanteisiol cael cytundeb wedi'i lofnodi o flaen llaw, i helpu gyda'r broses hon."
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:10
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:26
+msgid "Linked to this, if you’ve not volunteered in third sector before, you might find some differences in working culture to other sectors.  To help you prepare for this, we’ve given you a few links that it may be useful for you to look at."
+msgstr "Yn gysylltiedig â hyn, os nad ydych wedi gwirfoddoli yn y trydydd sector o'r blaen, efallai y byddwch yn canfod bod yna rai gwahaniaethau o ran y diwylliant gweithio, o gymharu â sectorau eraill. Er mwyn eich helpu i baratoi ar gyfer hynny, rydym wedi cynnwys rhai dolenni a allai fod yn ddefnyddiol i chi fwrw golwg arnynt."
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:15
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:31
+msgid "Many Thanks"
+msgstr "Diolch yn fawr"
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:39
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:53
+msgid "Note: this agreement is in honour only and is not itended to be a legally binding contract of employment"
+msgstr "Nodwch: mae'r cytundeb hwn yn un er anrhydedd yn unig, ac nid yw wedi'i fwriadu i fod yn gytundeb cyflogaeth sy'n gyfreithiol-rwym."
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:47
+#: lib/first_days_web/templates/document_checklist/template.html.eex:35
+#: lib/first_days_web/templates/feedback/template.html.eex:32
+#: lib/first_days_web/templates/preparation/template.html.eex:21
+#: lib/first_days_web/templates/role_description/template.html.eex:43
+msgid "Send to myself"
+msgstr "Anfon ataf fy hun"
+
+#: lib/first_days_web/templates/component/logged_out_nav.html.eex:9
+#: lib/first_days_web/templates/user/form.html.eex:40
+msgid "Sign up"
+msgstr "Cofrestrwch"
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:40
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:54
+msgid "Signed:"
+msgstr "Llofnodwyd:"
+
+#: lib/first_days_web/templates/confirmation_agreement/tips.html.eex:9
+msgid "The volunteer agreement template is here on the left. Please copy it into a new document so that you can edit it as you see fit, then share it with your network. You can also email it to yourself."
+msgstr "Mae templed y cytundeb gwirfoddolwr i'w weld ar yr ochr chwith. Copïwch y templed i mewn i ddogfen newydd, fel y gallwch ei olygu yn ôl yr angen, ac yna ewch ati i'w rannu â'ch rhwydwaith. Gallwch hefyd ei anfon atoch eich hun trwy e-bost."
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:21
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:37
+msgid "This agreement tells you what you can expect from us, and what we hope from you. We aim to be flexible, so please let us know if you would like to make any changes and we will do our best."
+msgstr "Mae'r cytundeb hwn yn dweud wrthych beth y gallwch ei ddisgwyl gennym ni, yn ogystal â'r hyn yr ydym yn ei obeithio amdano gennych chithau. Ein nod yw bod yn hyblyg, felly rhowch wybod i ni os hoffech wneud unrhyw newidiadau, a byddwn yn gwneud ein gorau."
+
+#: lib/first_days_web/templates/component/email_sent_modal.html.eex:9
+msgid "This template"
+msgstr "Mae'r templed hwn"
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:20
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:36
+msgid "Volunteers are an important and valued part of [name of organisation]. We hope that you enjoy volunteering with us and feel a full part of our team."
+msgstr "Mae gwirfoddolwyr yn rhan bwysig a gwerthfawr o waith [enw'r sefydliad]. Rydym yn gobeithio y byddwch yn mwynhau gwirfoddoli gyda ni, ac y byddwch yn teimlo bod gennych ran lawn yn y tîm."
+
+#: lib/first_days_web/templates/component/success_modal.html.eex:9
+msgid "WELL DONE!"
+msgstr "DA IAWN!"
+
+#: lib/first_days_web/templates/component/success_modal.html.eex:11
+msgid "We hope that your volunteer had a great start."
+msgstr "Gobeithio bod eich gwirfoddolwr wedi cael dechrau da."
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:14
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:30
+msgid "We look forward to working with you."
+msgstr "Edrychwn ymlaen at weithio gyda chi."
+
+#: lib/first_days_web/templates/confirmation_agreement/tips.html.eex:17
+msgid "We'd recommend you personalise and send the agreement below to the volunteer as part of the confirmation process. We've also included some links that you might want to send through to them as they may help you prepare."
+msgstr "Byddem yn eich argymell i bersonoli'r cytundeb isod, a'i anfon at y gwirfoddolwr yn rhan o'r broses gadarnhau. Rydym hefyd wedi cynnwys rhai dolenni y mae'n bosibl y byddwch am eu hanfon at y gwirfoddolwr gan y gallent fod o gymorth wrth baratoi."
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:5
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:21
+msgid "We're delighted that you've agreed to volunteer with us."
+msgstr "Rydym yn falch eich bod wedi cytuno i wirfoddoli gyda ni."
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:22
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:38
+msgid "We, [name of organisation], will do our best to introduce you to how the organisation works and your role in it and to provide any training you need. The initial training agreed is:"
+msgstr "Byddwn ni, [enw'r sefydliad], yn gwneud ein gorau i'ch cyflwyno i'r modd y mae'r sefydliad yn gweithio a beth yw eich rôl ynddo, yn ogystal â darparu unrhyw hyfforddiant y mae arnoch ei angen. Mae'r hyfforddiant cychwynnol y cytunwyd arno yn cynnwys:"
+
+#: lib/first_days_web/templates/confirmation_agreement/tips.html.eex:11
+msgid "Why should I do this?"
+msgstr "Pam y dylwn wneud hyn?"
+
+#: lib/first_days_web/templates/component/email_sent_modal.html.eex:11
+msgid "You can always come back and edit this template."
+msgstr "Gallwch ei olygu unrhyw bryd."
+
+#: lib/first_days_web/templates/component/success_modal.html.eex:12
+msgid "You can always come back to First Days if you want to"
+msgstr "Gallwch bob amser ddychwelyd i Diwrnodau Cyntaf os byddwch am"
+
+#: lib/first_days_web/templates/component/success_modal.html.eex:9
+msgid "You have now completed"
+msgstr "Rydych 'nawr wedi cwblhau"
+
+#: lib/first_days_web/templates/confirmation_agreement/template.html.eex:12
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:28
+msgid "[LINKS]"
+msgstr "[DOLENNI]"
+
+#: lib/first_days_web/templates/component/email_sent_modal.html.eex:9
+msgid "has been sent to your email."
+msgstr "wedi cael ei anfon atoch trwy e-bost."
+
+#: lib/first_days_web/templates/component/success_modal.html.eex:13
+msgid "revisit the process, making it the best it can be."
+msgstr "ailedrych ar y broses, er mwyn sicrhau ei bod y gorau y gall fod."
+
+#: lib/first_days_web/templates/feedback/template.html.eex:11
+msgid "1) Did you enjoy your first day?"
+msgstr "1) A wnaethoch chi fwynhau eich diwrnod cyntaf?"
+
+#: lib/first_days_web/templates/feedback/template.html.eex:20
+msgid "10) Would you like to volunteer with us again?"
+msgstr "10) A hoffech wirfoddoli gyda ni eto?"
+
+#: lib/first_days_web/templates/feedback/template.html.eex:21
+msgid "11) Would you recommend our organisation to your friends and family?"
+msgstr "11) A fyddech yn argymell ein sefydliad i'ch ffrindiau a'ch teulu?"
+
+#: lib/first_days_web/templates/feedback/template.html.eex:12
+msgid "2) Did you get introduced to colleagues?"
+msgstr "2) A gawsoch eich cyflwyno i gyd-weithwyr?"
+
+#: lib/first_days_web/templates/feedback/template.html.eex:13
+msgid "3) How welcome did you feel, on a scale of 1-10 (1 being not welcome, 10 being like family)?"
+msgstr "3) Faint o groeso a gawsoch, ar raddfa o 1-10? (1 – yn teimlo na chawsoch ddim croeso, 10 – yn teimlo'n rhan o'r teulu)"
+
+#: lib/first_days_web/templates/feedback/template.html.eex:14
+msgid "4) What would have helped to make you feel more welcome?"
+msgstr "4) Beth allai fod wedi helpu i wneud i chi deimlo'n fwy cartrefol?"
+
+#: lib/first_days_web/templates/feedback/template.html.eex:15
+msgid "5) How well do you feel you understand what the organisation does and who it works with?"
+msgstr "5) Pa mor dda, yn eich barn chi, yr ydych yn deall gwaith y sefydliad, a phwy y mae'n gweithio gyda nhw?"
+
+#: lib/first_days_web/templates/feedback/template.html.eex:16
+msgid "6) What else would be useful to know?"
+msgstr "6) Beth arall a fyddai'n ddefnyddiol i'w wybod?"
+
+#: lib/first_days_web/templates/feedback/template.html.eex:17
+msgid "7) How clear do you feel about your role?"
+msgstr "7) Pa mor eglur yr ydych yn teimlo ynghylch eich rôl?"
+
+#: lib/first_days_web/templates/feedback/template.html.eex:18
+msgid "8) What would help to make you more clear about your role?"
+msgstr "8) Beth a allai helpu i'ch gwneud yn fwy eglur ynghylch eich rôl?"
+
+#: lib/first_days_web/templates/feedback/template.html.eex:19
+msgid "9) Do you have everything you need to do your role? e.g. information, equipment or resources"
+msgstr "9) A oes gennych bopeth y mae arnoch ei angen i gyflawni eich rôl? Er enghraifft, gwybodaeth, offer neu adnoddau."
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:56
+#: lib/first_days_web/views/document_checklist_view.ex:13
+#: lib/first_days_web/views/email_view.ex:13
+msgid "Bank/Building Society details (for paying expenses)"
+msgstr "Manylion Banc/Cymdeithas Adeiladu (er mwyn talu costau)"
+
+#: lib/first_days_web/templates/document_checklist/form_tips.html.eex:9
+msgid "Before your volunteer can start, you'll likely need them to provide certain paperwork. What is needed varies for different organisations and different roles. Completing this process ahead of time is really important as it can often slow down the volunteering process and create frustrations on both sides."
+msgstr "Cyn y gall eich gwirfoddolwr ddechrau, mae'n debyg y bydd angen iddo ddarparu gwaith papur penodol. Mae'r hyn sy'n ofynnol yn amrywio ar gyfer sefydliadau gwahanol a rolau gwahanol. Mae cwblhau'r broses hon o flaen llaw yn bwysig iawn oherwydd gall arafu'r broses wirfoddoli a chreu rhwystredigaeth, a hynny ar y naill ochr a'r llall."
+
+#: lib/first_days_web/templates/document_checklist/template_tips.html.eex:4
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:71
+msgid "Collect important documents"
+msgstr "Casglu dogfennau pwysig"
+
+#: lib/first_days_web/templates/feedback/show.html.eex:10
+msgid "Collecting Feedback"
+msgstr "Casglu adborth"
+
+#: lib/first_days_web/templates/feedback/tips.html.eex:4
+#: lib/first_days_web/templates/page/landing.html.eex:44
+#: lib/first_days_web/templates/page/landing.html.eex:77
+msgid "Collecting feedback"
+msgstr "Casglu adborth"
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:32
+#: lib/first_days_web/templates/feedback/template.html.eex:6
+msgid "Congratulations on completing your first day volunteering with us!"
+msgstr "Llongyfarchiadau ar gwblhau eich diwrnod cyntaf yn gwirfoddoli gyda ni!"
+
+#: lib/first_days_web/templates/document_checklist/template.html.eex:9
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:17
+msgid "Could you please send us:"
+msgstr "Byddwch cystal ag anfon y canlynol atom:"
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:44
+#: lib/first_days_web/views/document_checklist_view.ex:11
+#: lib/first_days_web/views/email_view.ex:11
+msgid "DBS (Disclosure and Barring Service) check"
+msgstr "Gwiriad y DBS"
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:30
+#: lib/first_days_web/templates/email/preparation_email.html.eex:12
+#: lib/first_days_web/templates/feedback/template.html.eex:4
+#: lib/first_days_web/templates/preparation/template.html.eex:3
+msgid "Dear [NAME]"
+msgstr "Annwyl [ENW]"
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:3
+#: lib/first_days_web/templates/document_checklist/template.html.eex:1
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:10
+msgid "Document Checklist"
+msgstr "Rhestr Wirio Dogfennau"
+
+#: lib/first_days_web/templates/document_checklist/template.html.eex:32
+#: lib/first_days_web/templates/preparation/template.html.eex:18
+#: lib/first_days_web/templates/role_description/template.html.eex:40
+msgid "Edit Template"
+msgstr "Golygu'r templed"
+
+#: lib/first_days_web/templates/document_checklist/template.html.eex:3
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:12
+msgid "Email template"
+msgstr "Templed Neges e-bost"
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:38
+#: lib/first_days_web/views/document_checklist_view.ex:10
+#: lib/first_days_web/views/email_view.ex:10
+msgid "Emergency contact details"
+msgstr "Manylion cyswllt mewn argyfwng"
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:34
+#: lib/first_days_web/templates/feedback/template.html.eex:8
+msgid "It's helpful to get feedback from you on your first day. So we'd be grateful if you could take 5 minutes to tell us your thoughts on these questions:"
+msgstr "Mae'n ddefnyddiol cael adborth gennych am eich diwrnod cyntaf. Felly, byddem yn ddiolchgar pe gallech dreulio pum munud yn rhoi eich barn, gan ateb y cwestiynau canlynol:"
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:51
+#: lib/first_days_web/templates/feedback/template.html.eex:24
+msgid "It's important that we get better at the things we do not so well and keep doing the things that are working, so your feedback is really appreciated!"
+msgstr "Mae'n bwysig ein bod yn gwella'r pethau nad ydym cystal am eu gwneud, ac yn parhau i wneud y pethau sy'n gweithio'n dda, felly gwerthfawrogir eich adborth yn fawr!"
+
+#: lib/first_days_web/templates/feedback/tips.html.eex:9
+msgid "It's important to get feedback from volunteers after their first day. Not only does it help you understand their experience, but also helps identify ways you can improve your induction processes. We've prepared this email that you can send out to the volunteer, which contains a link to the questions we'll ask them."
+msgstr "Mae'n bwysig cael adborth gan wirfoddolwyr ar ôl eu diwrnod cyntaf. Nid yn unig y mae'n eich helpu i ddeall eu profiadau nhw, ond mae o gymorth hefyd i adnabod y ffyrdd y gallwch wella eich prosesau cynefino. Rydym wedi paratoi'r neges e-bost hon, y gallwch ei hanfon at y gwirfoddolwr, ac mae hefyd yn cynnwys dolen i'r cwestiynau y byddwn ninnau yn eu gofyn iddynt."
+
+#: lib/first_days_web/templates/document_checklist/form_tips.html.eex:11
+msgid "It's important your volunteer is prepared for their first day and has completed or sent through any paperwork they need to fill out for the role."
+msgstr "Mae'n bwysig bod eich gwirfoddolwr yn barod ar gyfer ei ddiwrnod cyntaf, a'i fod wedi llenwi neu ddychwelyd unrhyw waith papur y mae angen iddo ei lenwi ar gyfer y rôl."
+
+#: lib/first_days_web/templates/document_checklist/template.html.eex:7
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:15
+msgid "It’s important that we get this process underway so we’d be grateful if you could send us the documents we need by the [DATE]."
+msgstr "Mae'n bwysig ein bod yn rhoi'r broses hon ar waith, felly byddem yn ddiolchgar pe gallech anfon y dogfennau y mae arnom eu hangen erbyn [DYDDIAD]."
+
+#: lib/first_days_web/templates/document_checklist/template.html.eex:24
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:31
+#: lib/first_days_web/templates/email/feedback_email.html.eex:52
+#: lib/first_days_web/templates/email/preparation_email.html.eex:23
+#: lib/first_days_web/templates/feedback/template.html.eex:25
+#: lib/first_days_web/templates/preparation/template.html.eex:11
+msgid "Many thanks"
+msgstr "Diolch yn fawr"
+
+#: lib/first_days_web/templates/document_checklist/form_tips.html.eex:7
+msgid "Now that your volunteer has agreed to take up the role you can begin the preparations."
+msgstr "Nawr bod eich gwirfoddolwr wedi cytuno i ymgymryd â'r rôl, gallwch ddechrau ar y paratoadau."
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:8
+#: lib/first_days_web/templates/preparation/form.html.eex:8
+#: lib/first_days_web/templates/role_description/form.html.eex:6
+#: lib/first_days_web/templates/user/form.html.eex:11
+msgid "Oops, something went wrong! Please check the errors below."
+msgstr "Mae'n ddrwg gennym, aeth rhywbeth o'i le! Gwiriwch y gwallau isod."
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:67
+msgid "Other"
+msgstr "Arall"
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:14
+msgid "Photo Id"
+msgstr "Llun Adnabod"
+
+#: lib/first_days_web/views/document_checklist_view.ex:6
+#: lib/first_days_web/views/email_view.ex:6
+msgid "Photo id"
+msgstr "Llun Adnabod"
+
+#: lib/first_days_web/templates/document_checklist/template.html.eex:22
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:30
+msgid "Please also let us know when you are available to start."
+msgstr "Byddwch cystal hefyd â dweud wrthym pryd y byddwch ar gael i ddechrau."
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:26
+#: lib/first_days_web/views/document_checklist_view.ex:8
+#: lib/first_days_web/views/email_view.ex:8
+msgid "Proof of address"
+msgstr "Prawf o gyfeiriad"
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:20
+#: lib/first_days_web/views/document_checklist_view.ex:7
+#: lib/first_days_web/views/email_view.ex:7
+msgid "Proof of identity"
+msgstr "Prawf o hunaniaeth"
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:62
+#: lib/first_days_web/views/document_checklist_view.ex:14
+#: lib/first_days_web/views/email_view.ex:14
+msgid "Proof of qualifications"
+msgstr "Prawf o gymwysterau"
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:50
+#: lib/first_days_web/views/document_checklist_view.ex:12
+#: lib/first_days_web/views/email_view.ex:12
+msgid "Proof of residency"
+msgstr "Prawf o breswyliaeth"
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:29
+#: lib/first_days_web/templates/feedback/template.html.eex:3
+msgid "Sample email with example questions"
+msgstr "Neges e-bost enghreifftiol, gyda chwestiynau enghreifftiol"
+
+#: lib/first_days_web/templates/feedback/tips.html.eex:15
+msgid "Thanks again, and congratulations on getting the volunteer for the post!"
+msgstr "Diolch unwaith eto, a llongyfarchiadau ar gael gwirfoddolwr ar gyfer y swydd!"
+
+#: lib/first_days_web/templates/document_checklist/template_tips.html.eex:7
+msgid "Thanks for completing the preparation checklist."
+msgstr "Diolch am gwblhau'r rhestr wirio paratoi."
+
+#: lib/first_days_web/templates/feedback/tips.html.eex:7
+msgid "Thanks for using First Days to help with your succesful volunteer recruitment."
+msgstr "Diolch am ddefnyddio Diwrnodau Cyntaf i helpu gyda'ch gwaith o recriwtio gwirfoddolwr yn llwyddiannus."
+
+#: lib/first_days_web/templates/document_checklist/template.html.eex:6
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:14
+msgid "Thanks very much for signing up to be a volunteer. As you may expect, there is some paperwork involved in starting the position.  We’ve listed what we need to receive from you below."
+msgstr "Diolch yn fawr am gofrestru i fod yn wirfoddolwr. Fel y gallech ddisgwyl, mae yna beth gwaith papur i'w lenwi cyn dechrau'r rôl. Rydym wedi rhestru'r hyn y mae angen i ni ei gael gennych isod."
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:79
+msgid "View Document Checklist"
+msgstr "Gweld y Rhestr Wirio Dogfennau"
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:27
+#: lib/first_days_web/templates/feedback/template.html.eex:1
+msgid "Volunteer Feedback Template"
+msgstr "Templed Adborth Gwirfoddolwr"
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:32
+#: lib/first_days_web/views/document_checklist_view.ex:9
+#: lib/first_days_web/views/email_view.ex:9
+msgid "Volunteer requirements e.g. dietary, medical or religious needs"
+msgstr "Anghenion y gwirfoddolwr, e.e. anghenion deietegol, meddygol neu grefyddol"
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:33
+#: lib/first_days_web/templates/feedback/template.html.eex:7
+msgid "We're grateful to you for joining the team and we hope you found your first day an enjoyable experience."
+msgstr "Rydym yn ddiolchgar i chi am ymuno â'r tîm, ac rydym yn gobeithio y bu eich diwrnod cyntaf yn brofiad pleserus."
+
+#: lib/first_days_web/templates/document_checklist/form.html.eex:4
+msgid "What documents or paperwork do you need from the volunteer to be able to start the role? (Please tick all that apply)"
+msgstr "Pa ddogfennau neu waith papur y mae arnoch eu hangen gan y gwirfoddolwr cyn y gall ddechrau ar ei rôl? (Ticiwch bob un sy'n berthnasol)"
+
+#: lib/first_days_web/templates/feedback/tips.html.eex:11
+msgid "What you need to do"
+msgstr "Yr hyn y mae angen i chi ei wneud"
+
+#: lib/first_days_web/templates/document_checklist/template_tips.html.eex:11
+msgid "When you have completed the paperwork part of the process, please log back on and we'll help you prepare a personalised email to support the volunteer on their first day."
+msgstr "Pan fyddwch wedi llenwi'r rhan o'r broses sy'n ymwneud â gwaith papur, cofiwch ailfewngofnodi, a byddwn yn eich helpu i lunio neges e-bost personol i gefnogi'r gwirfoddolwr ar ei ddiwrnod cyntaf."
+
+#: lib/first_days_web/templates/feedback/tips.html.eex:13
+msgid "Write an email to your volunteer asking for their feedback - we've put some example questions in the sample email here on the left to help you. Or you might like to use a free survey tool for this, like Google Forms, Survey Monkey or TypeForm. This can make volunteers give more honest answers, as they wont' need to send it directly back to you."
+msgstr "Ysgrifennwch ac anfonwch neges e-bost at eich gwirfoddolwr, yn gofyn am ei adborth – rydym wedi cynnwys ambell gwestiwn enghreifftiol yn y neges e-bost enghreifftiol, sydd i'w gweld ar yr ochr chwith, er mwyn eich helpu. Neu, efallai y byddwch am ddefnyddio offeryn arolygon am ddim ar gyfer hyn, e.e. Google Forms, SurveyMonkey neu TypeForm. Gall hyn annog gwirfoddolwyr i roi atebion sy'n fwy gonest, am na fydd yn rhaid iddynt eu hanfon yn ôl yn uniongyrchol atoch chi."
+
+#: lib/first_days_web/templates/document_checklist/template_tips.html.eex:9
+msgid "Your email text to send to the volunteer is here on the left. Please copy it into a new document so that you can edit it as you see fit, then share it with your network. You can also email it to yourself."
+msgstr "Mae'r testun ar gyfer y neges e-bost sydd i'w hanfon at y gwirfoddolwr yma ar y chwith. Copïwch y templed i ddogfen newydd fel y gallwch ei olygu yn ôl yr angen. Yna, ewch ati i'w rannu â'ch rhwydwaith. Gallwch hefyd ei anfon atoch chi eich hun trwy e-bost."
+
+#: lib/first_days_web/templates/page/about.html.eex:25
+msgid "  First Days has been made possible with funding from The Big Lottery Fund, and is a partnership\n  between the Wales Co-operative Centre, Wales Council for Voluntary Action (WCVA), Business in\n  The Community (BITC) Cymru and CAST.\n"
+msgstr "  Gwnaed Diwrnodau Cyntaf yn bosibl trwy gyllid gan y Gronfa Loteri Fawr; ac mae'n bartneriaeth\n rhwng Canolfan Cydweithredol Cymru, Cyngor Gweithredu Gwirfoddol Cymru, Busnes yn\n y Gymuned Cymru (BITC), a CAST.\n"
+
+#: lib/first_days_web/templates/page/landing.html.eex:91
+msgid "  First Days is made up of three easy to use sections. At the end of each section a template of your\n  responses will be sent to your e-mail with the completed information, links and resources to assist\n  you. You can then edit this template until it is exactly as you want.\n  Once you have completed a section and you are ready to move onto the next section you can log in\n  again at any time.\n"
+msgstr "  Mae Diwrnodau Cyntaf yn cynnwys tair adran hawdd eu defnyddio. Ar ddiwedd pob adran, bydd templed o'ch\n ymatebion yn cael ei anfon i'ch cyfrif e-bost, ynghyd â'r wybodaeth a lenwyd, dolenni, ac adnoddau i'ch cynorthwyo.\n Gallwch olygu'r templed hwn wedyn, tan y bydd yn union fel yr ydych am iddo fod.\n Pan fyddwch wedi cwblhau un adran, ac yn barod i symud ymlaen at y nesaf, gallwch fewngofnodi unwaith eto,\n ar unrhyw adeg.\n"
+
+#: lib/first_days_web/templates/page/about.html.eex:6
+msgid "  First days helps you to engage with volunteers from the beginning of the recruitment process right\n  through to getting feedback on the volunteer's first day. It will help you to assess the specific\n  volunteer needs that your organisation has and will enable you to create really focused volunteer\n  role descriptions that will attract the necessary skills and experience to support and develop your\n  organisation. First Days also provides you with the necessary information to keep in touch with your\n  potential volunteers, and gives you access to a wealth of tips, resources and support.\n"
+msgstr "  Mae Diwrnodau Cyntaf yn eich helpu i ymgysylltu â gwirfoddolwyr, a hynny o ddechrau'r broses recriwtio\n hyd at gael adborth am ddiwrnod cyntaf y gwirfoddolwr. Bydd yn eich helpu i asesu'r anghenion gwirfoddoli\n penodol sydd gan eich sefydliad, yn ogystal â'ch galluogi i lunio disgrifiadau o rolau\n gwirfoddoli sydd wedi'u ffocysu'n dda, ac a fydd yn denu'r sgiliau a'r profiadau angenrheidiol i gefnogi a datblygu\n eich sefydliad. Mae Diwrnodau Cyntaf hefyd yn darparu'r wybodaeth angenrheidiol ar eich cyfer i gadw mewn cysylltiad â\n gwirfoddolwyr posibl, yn ogystal â'ch cyflwyno i gyfoeth o awgrymiadau, adnoddau, a chymorth.\n"
+
+#: lib/first_days_web/templates/page/about.html.eex:17
+msgid "  We hope that you find using First Days a simple and helpful experience and that you recommend it\n  to your colleagues and networks in the third sector. If you have any queries please contact\n  Geoff.jones@wales.coop. We would love to hear your feedback.\n"
+msgstr "  Rydym yn gobeithio y bydd defnyddio Diwrnodau Cyntaf yn brofiad hawdd a defnyddiol i chi, ac y byddwch yn ei argymell i'ch\n cyd-weithwyr a'ch rhwydweithiau yn y trydydd sector. Os oes gennych unrhyw ymholiadau, cysylltwch\n â Geoff.jones@wales.coop. Byddem wrth ein bodd yn clywed eich adborth.\n"
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:86
+msgid "Back to Home"
+msgstr "’Nôl i'r Hafan"
+
+#: lib/first_days_web/templates/page/landing.html.eex:36
+msgid "Create description"
+msgstr "Creu disgrifiad "
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:37
+msgid "Create document list"
+msgstr "Creu rhestr o'r dogfennau"
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:51
+msgid "Create email"
+msgstr "Llunio'r neges e-bost"
+
+#: lib/first_days_web/templates/page/landing.html.eex:42
+#: lib/first_days_web/templates/role_description/edit.html.eex:10
+#: lib/first_days_web/templates/role_description/new.html.eex:10
+#: lib/first_days_web/templates/role_description/show.html.eex:10
+msgid "Find a volunteer"
+msgstr "Dod o hyd i wirfoddolwr"
+
+#: lib/first_days_web/templates/page/landing.html.eex:75
+msgid "Finding a volunteer"
+msgstr "Dod o hyd i wirfoddolwr"
+
+#: lib/first_days_web/templates/page/landing.html.eex:76
+msgid "Get them ready"
+msgstr "Eu paratoi nhw"
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:80
+msgid "Getting ready for your volunteer to start"
+msgstr "Paratoi ar gyfer eich gwirfoddolwr"
+
+#: lib/first_days_web/templates/page/landing.html.eex:76
+msgid "Getting your volunteer ready to start"
+msgstr "Paratoi eich gwirfoddolwr erbyn y bydd yn dechrau"
+
+#: lib/first_days_web/templates/component/logged_in_nav.html.eex:9
+msgid "Log out"
+msgstr "Allgofnodi"
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:83
+msgid "Some organisations already have most of these things ready for their volunteers to start. However, if your organisation is relatively new to using volunteers then you may ﬁnd some things here useful."
+msgstr "Mae'r rhan fwyaf o'r pethau hyn ar waith yn barod gan rai sefydliadau, a hynny cyn y bydd eu gwirfoddolwyr yn dechrau. Fodd bynnag, os yw eich sefydliad yn gymharol newydd i'r arfer o ddefnyddio gwirfoddolwyr, mae'n bosibl y bydd rhai o'r pethau hyn yn ddefnyddiol i chi."
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:72
+#: lib/first_days_web/templates/preparation/form_tips.html.eex:4
+msgid "Start date preparation email"
+msgstr "Neges e-bost i baratoi ar gyfer y dyddiad dechrau"
+
+#: lib/first_days_web/templates/page/landing.html.eex:86
+msgid "Tips"
+msgstr "Awgrymiadau"
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:70
+msgid "View Template"
+msgstr "Gweld y templed"
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:35
+msgid "View document list"
+msgstr "Gweld y rhestr o'r dogfennau "
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:49
+msgid "View email"
+msgstr "Gweld y e-bost "
+
+#: lib/first_days_web/templates/page/landing.html.eex:34
+#: lib/first_days_web/templates/page/landing.html.eex:77
+msgid "View template"
+msgstr "Gweld y templed"
+
+#: lib/first_days_web/templates/page/get_them_ready.html.eex:70
+msgid "Volunteer agreement template"
+msgstr "Templed cytundeb gwirfoddolwr"
+
+#: lib/first_days_web/templates/page/about.html.eex:36
+msgid "With the kind support of:"
+msgstr "Trwy garedigrwydd:"
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:43
+#: lib/first_days_web/templates/role_description/template.html.eex:16
+msgid " and will involve working "
+msgstr " a bydd yn cynnwys gweithio "
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:24
+#: lib/first_days_web/templates/role_description/template.html.eex:7
+msgid " to help us with "
+msgstr " er mwyn ein helpu gyda "
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:22
+#: lib/first_days_web/templates/role_description/template.html.eex:7
+msgid " volunteer is needed for "
+msgstr " ar gyfer "
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:30
+#: lib/first_days_web/templates/role_description/template.html.eex:8
+msgid ". As well as these aspects of the role, the volunteer will be able to learn about the charity’s work (and) "
+msgstr ". Yn ogystal â'r agweddau hyn ar y rôl, bydd y gwirfoddolwr yn gallu dysgu am waith yr elusen (a) "
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:45
+#: lib/first_days_web/templates/role_description/template.html.eex:16
+msgid ". Travel expenses will be paid."
+msgstr ". Telir costau teithio."
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:20
+#: lib/first_days_web/templates/role_description/template.html.eex:7
+msgid "A(n) "
+msgstr "Mae angen gwirfoddolwr "
+
+#: lib/first_days_web/templates/role_description/form.html.eex:3
+msgid "About the role"
+msgstr "Gwybodaeth am y rôl"
+
+#: lib/first_days_web/views/email_view.ex:30
+#: lib/first_days_web/views/preparation_view.ex:10
+#: lib/first_days_web/views/preparation_view.ex:33
+msgid "April"
+msgstr "Ebrill"
+
+#: lib/first_days_web/templates/preparation/form.html.eex:21
+msgid "Are there any dress code requirements? (This could include dress code for the organisation, or health and safety requirements. For example footwear, wearing of jewellery, dressing for certain weather if they will be working outside)"
+msgstr "A oes yna unrhyw ofynion o ran gwisg? (Gallai hyn gynnwys cod gwisg ar gyfer y sefydliad, neu ofynion iechyd a diogelwch. Er enghraifft, esgidiau, gwisgo gemwaith, gwisgo ar gyfer tywydd penodol os bydd yn gweithio yn yr awyr agored.)"
+
+#: lib/first_days_web/templates/preparation/form.html.eex:33
+msgid "Are there any other details you'd like them to know ahead of time?"
+msgstr "A oes yna unrhyw fanylion eraill yr hoffech iddo eu gwybod o flaen llaw?"
+
+#: lib/first_days_web/views/email_view.ex:34
+#: lib/first_days_web/views/preparation_view.ex:14
+#: lib/first_days_web/views/preparation_view.ex:37
+msgid "August"
+msgstr "Awst"
+
+#: lib/first_days_web/templates/preparation/form_tips.html.eex:7
+msgid "Before your volunteer starts you'll probably want to send them information so that they can settle in quickly."
+msgstr "Cyn i'ch gwirfoddolwr ddechrau, mae'n debyg y byddwch am anfon gwybodaeth ato er mwyn iddo allu ymgartrefu'n gyflym."
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:59
+#: lib/first_days_web/templates/role_description/template.html.eex:29
+msgid "Charity number: "
+msgstr "Rhif elusen: "
+
+#: lib/first_days_web/templates/password/edit.html.eex:16
+msgid "Confirm new password"
+msgstr "Cadarnhewch y cyfrinair newydd"
+
+#: lib/first_days_web/views/email_view.ex:38
+#: lib/first_days_web/views/preparation_view.ex:18
+#: lib/first_days_web/views/preparation_view.ex:41
+msgid "December"
+msgstr "Rhagfyr"
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:38
+#: lib/first_days_web/templates/role_description/template.html.eex:14
+msgid "Details of the role"
+msgstr "Manylion y rôl"
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:51
+#: lib/first_days_web/templates/role_description/template.html.eex:21
+msgid "Doing this you could gain "
+msgstr "Trwy wneud hyn, gallech gael "
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:15
+#: lib/first_days_web/templates/preparation/template.html.eex:6
+msgid "Dress code"
+msgstr "Cod gwisg"
+
+#: lib/first_days_web/views/email_view.ex:28
+#: lib/first_days_web/views/preparation_view.ex:8
+#: lib/first_days_web/views/preparation_view.ex:31
+msgid "February"
+msgstr "Chwefror"
+
+#: lib/first_days_web/templates/role_description/form.html.eex:24
+msgid "Finance"
+msgstr "Cyllid"
+
+#: lib/first_days_web/templates/password/new.html.eex:4
+msgid "Forgot your password?"
+msgstr "Wedi anghofio'ch cyfrinair?"
+
+#: lib/first_days_web/templates/role_description/form.html.eex:24
+msgid "HR"
+msgstr "Adnoddau Dynol"
+
+#: lib/first_days_web/templates/preparation/template_tips.html.eex:11
+msgid "Hopefully your volunteer is due to start in the next 2 weeks or so. It's helpful to send them a reminder email, together with useful information."
+msgstr "Gobeithio y bydd eich gwirfoddolwr yn dechrau yn ystod y pythefnos nesaf. Mae'n ddefnyddiol anfon neges e-bost atgoffa ato, ynghyd â gwybodaeth ddefnyddiol."
+
+#: lib/first_days_web/templates/role_description/form.html.eex:41
+msgid "How frequently will the volunteer be needed to work? (for example, once a week, once a month, quarterly board meetings etc)"
+msgstr "Pa mor aml y bydd yn ofynnol i'r gwirfoddolwr weithio? (Er enghraifft, unwaith yr wythnos, unwaith y mis, cyfarfodydd bwrdd chwarterol, ac ati)"
+
+#: lib/first_days_web/templates/role_description/form.html.eex:106
+msgid "How will this work help the organisation? (1 sentence, jargon free)"
+msgstr "Sut y bydd y gwaith hwn yn helpu'r sefydliad? (Un frawddeg, heb jargon)"
+
+#: lib/first_days_web/templates/role_description/form.html.eex:24
+msgid "IT"
+msgstr "TG"
+
+#: lib/first_days_web/templates/role_description/form.html.eex:78
+msgid "In a few sentences, what does your organisation do?"
+msgstr "Nodwch, mewn ychydig frawddegau, yr hyn y mae eich sefydliad yn ei wneud?"
+
+#: lib/first_days_web/templates/role_description/form.html.eex:35
+msgid "Is there any other info you'd like to add?"
+msgstr "A oes yna unrhyw wybodaeth arall yr hoffech ei hychwanegu?"
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:47
+#: lib/first_days_web/templates/role_description/template.html.eex:17
+msgid "It will be based in "
+msgstr "Bydd y rôl wedi'i lleoli yn "
+
+#: lib/first_days_web/templates/preparation/form_tips.html.eex:9
+msgid "It's important that your volunteer is prepared for their first day and has completed or sent through any paperwork they need to fill out for the role."
+msgstr "Mae'n bwysig bod eich gwirfoddolwr yn barod ar gyfer ei ddiwrnod cyntaf, a'i fod wedi llenwi neu ddychwelyd unrhyw waith papur y mae angen iddo ei lenwi ar gyfer y rôl."
+
+#: lib/first_days_web/templates/preparation/form.html.eex:4
+msgid "It's important your volunteer is prepared for their first day. It can be intimidating to start in a new organisation, so help them to prepare by filling out the details below."
+msgstr "Mae'n bwysig bod eich gwirfoddolwr yn barod ar gyfer ei ddiwrnod cyntaf. Gall y syniad o ddechrau mewn sefydliad newydd godi ofn, felly helpwch y gwirfoddolwr i baratoi trwy lenwi'r manylion isod."
+
+#: lib/first_days_web/views/email_view.ex:27
+#: lib/first_days_web/views/preparation_view.ex:7
+#: lib/first_days_web/views/preparation_view.ex:30
+msgid "January"
+msgstr "Ionawr"
+
+#: lib/first_days_web/views/email_view.ex:33
+#: lib/first_days_web/views/preparation_view.ex:13
+#: lib/first_days_web/views/preparation_view.ex:36
+msgid "July"
+msgstr "Gorffennaf"
+
+#: lib/first_days_web/views/email_view.ex:32
+#: lib/first_days_web/views/preparation_view.ex:12
+#: lib/first_days_web/views/preparation_view.ex:35
+msgid "June"
+msgstr "Mehefin"
+
+#: lib/first_days_web/templates/role_description/form.html.eex:24
+msgid "Legal"
+msgstr "Cyfreithiol"
+
+#: lib/first_days_web/templates/role_description/form_tips.html.eex:4
+#: lib/first_days_web/templates/role_description/template_tips.html.eex:4
+msgid "Let's find a volunteer"
+msgstr "Dod o hyd i wirfoddolwr"
+
+#: lib/first_days_web/views/email_view.ex:29
+#: lib/first_days_web/views/preparation_view.ex:9
+#: lib/first_days_web/views/preparation_view.ex:32
+msgid "March"
+msgstr "Mawrth"
+
+#: lib/first_days_web/views/email_view.ex:31
+#: lib/first_days_web/views/preparation_view.ex:11
+#: lib/first_days_web/views/preparation_view.ex:34
+msgid "May"
+msgstr "Gall"
+
+#: lib/first_days_web/templates/password/edit.html.eex:10
+msgid "New password"
+msgstr "Y cyfrinair newydd"
+
+#: lib/first_days_web/views/email_view.ex:37
+#: lib/first_days_web/views/preparation_view.ex:17
+#: lib/first_days_web/views/preparation_view.ex:40
+msgid "November"
+msgstr "Tachwedd"
+
+#: lib/first_days_web/views/email_view.ex:36
+#: lib/first_days_web/views/preparation_view.ex:16
+#: lib/first_days_web/views/preparation_view.ex:39
+msgid "October"
+msgstr "Hydref"
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:19
+#: lib/first_days_web/templates/preparation/template.html.eex:8
+msgid "Other things helpful to know"
+msgstr "Pethau eraill y gallai fod yn ddefnyddiol i chi eu gwybod"
+
+#: lib/first_days_web/templates/role_description/form.html.eex:90
+msgid "Please confirm your charity number/company number (if applicable)"
+msgstr "Cadarnhewch eich rhif elusen/rhif y cwmni (os yw'n berthnasol)"
+
+#: lib/first_days_web/templates/password/edit.html.eex:4
+msgid "Please enter a new password for your account."
+msgstr "Teipiwch gyfrinair newydd ar gyfer eich cyfrif."
+
+#: lib/first_days_web/templates/role_description/form.html.eex:17
+msgid "Please give a one sentence description of the role"
+msgstr "Rhowch ddisgrifiad o'r rôl, mewn brawddeg"
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:10
+#: lib/first_days_web/templates/preparation/template.html.eex:1
+msgid "Preparation Email"
+msgstr "Neges E-bost Paratoi"
+
+#: lib/first_days_web/templates/preparation/form.html.eex:3
+msgid "Preparing the volunteer for their first day"
+msgstr "Paratoi'r gwirfoddolwr ar gyfer ei ddiwrnod cyntaf"
+
+#: lib/first_days_web/templates/password/edit.html.eex:22
+msgid "Reset password"
+msgstr "Ailosod y cyfrinair"
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:17
+#: lib/first_days_web/templates/role_description/template.html.eex:5
+msgid "Role"
+msgstr "Rôl"
+
+#: lib/first_days_web/templates/password/new.html.eex:17
+msgid "Send reset link"
+msgstr "Anfon dolen i ailosod y cyfrinair"
+
+#: lib/first_days_web/views/email_view.ex:35
+#: lib/first_days_web/views/preparation_view.ex:15
+#: lib/first_days_web/views/preparation_view.ex:38
+msgid "September"
+msgstr "Medi"
+
+#: lib/first_days_web/templates/preparation/template_tips.html.eex:4
+msgid "Start date preparation"
+msgstr "Paratoi ar gyfer y dyddiad dechrau"
+
+#: lib/first_days_web/templates/preparation/template_tips.html.eex:7
+msgid "Thanks for answering the questions for the preparation email."
+msgstr "Diolch am ateb y cwestiynau ar gyfer y neges e-bost paratoi."
+
+#: lib/first_days_web/templates/role_description/template_tips.html.eex:7
+msgid "Thanks very much for telling us about the role."
+msgstr "Diolch yn fawr am ddweud wrthym am y rôl."
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:53
+#: lib/first_days_web/templates/role_description/template.html.eex:23
+msgid "The impact for us"
+msgstr "Yr effaith arnom ni"
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:41
+#: lib/first_days_web/templates/role_description/template.html.eex:16
+msgid "The role is needed for "
+msgstr "Mae angen y rôl ar gyfer "
+
+#: lib/first_days_web/templates/role_description/template_tips.html.eex:9
+msgid "The text for your role description is here on the left. Please copy it into a new document so that you can edit it as you see fit, then share it with your network. You can also email it to yourself."
+msgstr "Mae'r testun ar gyfer eich rôl-ddisgrifiad yma ar y chwith. Copïwch y templed i ddogfen newydd fel y gallwch ei olygu yn ôl yr angen, ac yna ewch ati i'w rannu â'ch rhwydwaith. Gallwch hefyd ei anfon atoch chi eich hun trwy e-bost."
+
+#: lib/first_days_web/templates/role_description/form_tips.html.eex:7
+msgid "This form will help you understand what your organisation needs from a volunteer by guiding you through all the steps in creating a great volunteer role description."
+msgstr "Bydd y ffurflen hon yn eich helpu i ddeall yr hyn y mae ar eich sefydliad ei angen gan wirfoddolwr, a hynny trwy eich arwain, fesul cam, i greu disgrifiad gwych o'r rôl wirfoddol."
+
+#: lib/first_days_web/templates/preparation/form.html.eex:42
+msgid "View Email Template"
+msgstr "Gweld y Templed E-bost"
+
+#: lib/first_days_web/templates/role_description/form.html.eex:121
+msgid "View Role Description Template"
+msgstr "Gweld y Templed Disgrifiad Rôl"
+
+#: lib/first_days_web/templates/role_description/template.html.eex:27
+msgid "Want to speak further? Contact"
+msgstr "Hoffech chi drafod ymhellach? Cysylltwch â"
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:28
+#: lib/first_days_web/templates/role_description/template.html.eex:8
+msgid "We are looking for an individual with skills in "
+msgstr "Rydym yn chwilio am unigolyn sy'n meddu ar sgiliau "
+
+#: lib/first_days_web/templates/preparation/template.html.eex:4
+msgid "We hope you're looking forward to your first day with us on the"
+msgstr "Gobeithio eich bod yn edrych ymlaen at eich diwrnod cyntaf gyda ni ar"
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:22
+#: lib/first_days_web/templates/preparation/template.html.eex:10
+msgid "We look forward to seeing you then,"
+msgstr "Edrychwn ymlaen at eich gweld bryd hynny,"
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:14
+#: lib/first_days_web/templates/preparation/template.html.eex:5
+msgid "We wanted to offer some helpful information."
+msgstr "Roeddem am gynnig rhywfaint o wybodaeth ddefnyddiol."
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:62
+#: lib/first_days_web/templates/role_description/template.html.eex:32
+msgid "Website: "
+msgstr "Gwefan: "
+
+#: lib/first_days_web/templates/role_description/form.html.eex:60
+msgid "What are the contact details if a potential volunteer wants to speak further?"
+msgstr "Beth yw'r manylion cyswllt pe bai gwirfoddolwr posibl am drafod ymhellach?"
+
+#: lib/first_days_web/templates/role_description/form.html.eex:29
+msgid "What are the specific skills you require?"
+msgstr "Pa sgiliau penodol yr ydych yn gofyn amdanynt?"
+
+#: lib/first_days_web/templates/role_description/form.html.eex:71
+msgid "What is the name of your organisation?"
+msgstr "Beth yw enw eich sefydliad?"
+
+#: lib/first_days_web/templates/role_description/form.html.eex:11
+msgid "What is the role title?"
+msgstr "Beth yw teitl y rôl?"
+
+#: lib/first_days_web/templates/role_description/form.html.eex:47
+msgid "What is the total length of the opportunity? (e.g. 1 month, 6 months, 1 year, ongoing)"
+msgstr "Beth yw cyfanswm hyd y cyfle? (Er enghraifft, un mis, chwe mis, un flwyddyn, parhaus)"
+
+#: lib/first_days_web/templates/role_description/form.html.eex:84
+msgid "What notable achievements has your organisation had? e.g. awards, membership of professional bodies (this can help attract volunteers to your organisation)"
+msgstr "Pa lwyddiannau nodedig y mae eich sefydliad wedi'u cael? Er enghraifft, gwobrau, aelodaeth o gyrff proffesiynol (gallai hyn fod o gymorth wrth ddenu gwirfoddolwyr at eich sefydliad)"
+
+#: lib/first_days_web/templates/role_description/form.html.eex:23
+msgid "What skill area is the volunteer role in?"
+msgstr "Pa faes sgiliau y mae'r rôl yn perthyn iddo?"
+
+#: lib/first_days_web/templates/role_description/form.html.eex:112
+msgid "What skills or experience will the volunteer gain from doing this role?"
+msgstr "Pa sgiliau neu brofiadau y bydd y gwirfoddolwr yn eu hennill wrth gyflawni'r rôl hon?"
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:34
+#: lib/first_days_web/templates/role_description/template.html.eex:10
+msgid "What we do"
+msgstr "Yr hyn a wnawn"
+
+#: lib/first_days_web/templates/preparation/form.html.eex:27
+msgid "What will be the nature of the work that they will be undertaking? (For example, will they meet the team? Have a tour? What will they likely be working on?)"
+msgstr "Beth fydd natur y gwaith y bydd yn ei wneud? (Er enghraifft, a fydd yn cwrdd â'r tîm? Yn cael taith dywys? Ar beth y bydd yn debygol o fod yn gweithio?)"
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:17
+#: lib/first_days_web/templates/preparation/template.html.eex:7
+msgid "What you'll be doing on your first day"
+msgstr "Yr hyn y byddwch yn ei wneud ar eich diwrnod cyntaf"
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:49
+#: lib/first_days_web/templates/role_description/template.html.eex:19
+msgid "What you'll gain"
+msgstr "Yr hyn y byddwch yn elwa arno"
+
+#: lib/first_days_web/templates/preparation/form.html.eex:13
+msgid "When is the volunteer's first day? (if you don't know, please provide us with your best guess)"
+msgstr "Pa ddiwrnod fydd diwrnod cyntaf y gwirfoddolwr? (os nad ydych yn gwybod, rhowch eich amcan gorau)"
+
+#: lib/first_days_web/templates/role_description/template_tips.html.eex:11
+msgid "When you've selected the appropriate person, simply sign back on and we'll take you through the remaining steps of the process!"
+msgstr "Pan fyddwch wedi dewis yr unigolyn priodol, mewngofnodwch eto, a byddwn yn eich tywys trwy'r camau sy'n weddill o'r broses!"
+
+#: lib/first_days_web/templates/role_description/form.html.eex:53
+msgid "Where will the volunteer be based? (in a certain office location, working from home?)"
+msgstr "Ble fydd y gwirfoddolwr wedi'i leoli? (Mewn lleoliad swyddfa penodol, neu'n gweithio o gartref?)"
+
+#: lib/first_days_web/templates/preparation/template_tips.html.eex:9
+msgid "Your email text to send to the volunteer is here on the left. Please copy it into a new document so that you can edit it as you see fit. You can also email it to yourself."
+msgstr "Mae'r testun ar gyfer y neges e-bost sydd i'w hanfon at y gwirfoddolwr yma ar y chwith. Copïwch y testun i ddogfen newydd, er mwyn i chi allu ei olygu fel y gwelwch yn dda. Gallwch hefyd ei anfon atoch eich hun trwy e-bost."
+
+#: lib/first_days_web/templates/role_description/form.html.eex:96
+msgid "and a link to your website (if you have one)"
+msgstr "ac ychwanegwch ddolen i'ch gwefan (os oes un gennych)"
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:4
+msgid "A really focused and engaging role description is key to attracting the right volunteer to take your organisation to the next level, so it is important that you make a clear ask of what skills and experiences you require, and also show what is really great about your organisations and what the volunteer would gain from volunteering with you."
+msgstr "Mae disgrifiad diddorol o'r rôl, ac iddo ffocws pendant, yn allweddol  i ddenu'r gwirfoddolwr iawn i fynd â'ch sefydliad i'r lefel nesaf. Felly mae'n bwysig eich bod yn nodi'n glir y sgiliau a'r profiadau sy'n ofynnol, yn ogystal ag amlygu'r hyn sy'n wirioneddol wych am eich sefydliad a'r hyn y byddai'r gwirfoddolwr yn elwa arno pe byddai'n gwirfoddoli gyda chi."
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:4
+msgid "A volunteer agreement helps both the organisation and its volunteers by making expectations clear. They also address the unlikely possibility of volunteers being considered employees in the eyes of the law."
+msgstr "Mae cytundeb gwirfoddolwr yn helpu'r sefydliad a'i wirfoddolwyr trwy bennu'r disgwyliadau yn glir. Maent hefyd yn mynd i'r afael â'r posibilrwydd annhebygol y caiff gwirfoddolwyr eu hystyried yn weithwyr yn ôl y gyfraith."
+
+#: lib/first_days_web/templates/component/email_sent_modal.html.eex:12
+#: lib/first_days_web/templates/component/success_modal.html.eex:14
+msgid "Back"
+msgstr "Yn ôl"
+
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:3
+msgid "Before your volunteer can start, it is likely that they will need to provide certain paperwork. Here is a template of the documents that you have indicated that your organisation will require. It is important that both the volunteer and the host organisation are clear in understanding these requirements and that everyone is clear about the requirements in respect of paperwork needed before they commence the role. Good communication between the volunteer and host organisation is key to establishing a positive and professional relationship between all parties."
+msgstr "Cyn y gall eich gwirfoddolwr ddechrau, mae'n debyg y bydd angen iddo ddarparu gwaith papur penodol. Dyma dempled ar gyfer y dogfennau y nodwyd gennych y bydd ar eich sefydliad eu hangen. Mae'n bwysig bod y gwirfoddolwr a'r sefydliad lletyol yn deall y gofynion hyn yn glir, a bod pawb hefyd yn glir ynghylch y gofynion o ran y gwaith papur sy'n ofynnol cyn i'r gwirfoddolwr ddechrau'r rôl. Mae cyfathrebu da rhwng y gwirfoddolwr a'r sefydliad lletyol yn allweddol i feithrin perthynas gadarnhaol a phroffesiynol rhwng pawb dan sylw."
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:4
+msgid "Before your volunteer starts you’ll want to send them information so that they know what to expect and can settle in quickly. It is important that your volunteer is prepared for their first day and has completed any necessary paperwork. Volunteers will feel more supported and valued if they are communicated with fully in the time between them expressing an interest in your organisation and actually commencing volunteering with you."
+msgstr "Cyn i'ch gwirfoddolwr ddechrau, byddwch am anfon gwybodaeth ato fel ei fod yn gwybod beth i'w ddisgwyl ac yn gallu ymgartrefu'n gyflym. Mae'n bwysig bod eich gwirfoddolwr yn barod ar gyfer ei ddiwrnod cyntaf, a'i fod wedi llenwi unrhyw waith papur angenrheidiol. Bydd gwirfoddolwyr yn teimlo eu bod yn cael eu cefnogi a'u gwerthfawrogi'n fwy os byddwch yn cyfathrebu'n llawn â nhw rhwng yr adeg yr oeddent wedi mynegi diddordeb a'r adeg y byddant yn dechrau gwirfoddoli gyda chi mewn gwirionedd."
+
+#: lib/first_days_web/templates/email/welcome_email.html.eex:3
+msgid "Congratulations, you have successfully registered for First Days. We will guide you through the process of recruiting your volunteers, from assessing your needs through to getting feedback from your volunteer once they have commenced volunteering."
+msgstr "Llongyfarchiadau, rydych wedi cofrestru'n llwyddiannus ar gyfer Diwrnodau Cyntaf. Byddwn yn eich tywys trwy'r broses o recriwtio eich gwirfoddolwyr, a hynny bob cam o'r ffordd o asesu eich anghenion, i gael adborth gan eich gwirfoddolwyr ar ôl iddynt ddechrau gwirfoddoli."
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:38
+msgid "Did you enjoy your first day?"
+msgstr "A wnaethoch chi fwynhau eich diwrnod cyntaf?"
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:39
+msgid "Did you get introduced to colleagues?"
+msgstr "A gawsoch eich cyflwyno i gyd-weithwyr?"
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:46
+msgid "Do you have everything you need to do your role? e.g. information, equipment or resources"
+msgstr "A oes gennych bopeth y mae arnoch ei angen i gyflawni eich rôl? Er enghraifft, gwybodaeth, offer neu adnoddau"
+
+#: lib/first_days_web/templates/session/new.html.eex:11
+msgid "Enter your Email and Password below"
+msgstr "Teipiwch eich Cyfeiriad E-bost a'ch Cyfrinair isod"
+
+#: lib/first_days_web/templates/user/form.html.eex:3
+msgid "Enter your details below to sign up"
+msgstr "Nodwch eich manylion isod i gofrestru"
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:5
+msgid "First Days has been created through funding provided by Big Lottery Fund Wales. The project is a partnership between Wales Co-operative Centre, Business in the Community Cymru, CAST and WCVA. Further information about the work of these organisations can be found here:"
+msgstr "Crëwyd Diwrnodau Cyntaf trwy arian gan Gronfa Loteri Fawr Cymru. Mae'r prosiect yn bartneriaeth rhwng Canolfan Cydweithredol Cymru, Busnes yn y Gymuned Cymru, CAST a Chyngor Gweithredu Gwirfoddol Cymru. Gallwch gael rhagor o wybodaeth am waith y sefydliadau hyn yma:"
+
+#: lib/first_days_web/templates/email/welcome_email.html.eex:5
+msgid "First Days has been made possible by funding received from the Big Lottery Fund. It is a partnership between Wales Co-operative Centre, Business in the Community, Wales Council for Voluntary Action and CAST."
+msgstr "Gwnaed Diwrnodau Cyntaf yn bosibl trwy gyllid gan y Gronfa Loteri Fawr. Mae'n bartneriaeth rhwng Canolfan Cydweithredol Cymru, Busnes yn y Gymuned Cymru, Cyngor Gweithredu Gwirfoddol Cymru a CAST."
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:9
+msgid "Good luck finding the right candidate."
+msgstr "Pob lwc wrth geisio dod o hyd i'r ymgeisydd iawn."
+
+#: lib/first_days_web/controllers/user_controller.ex:25
+msgid "Great! You are now signed up to First Days"
+msgstr "Gwych! Rydych 'nawr wedi cofrestru ar gyfer Diwrnodau Cyntaf"
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:1
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:1
+#: lib/first_days_web/templates/email/feedback_email.html.eex:1
+#: lib/first_days_web/templates/email/preparation_email.html.eex:1
+#: lib/first_days_web/templates/email/role_description_email.html.eex:1
+#: lib/first_days_web/templates/email/welcome_email.html.eex:1
+msgid "Hello "
+msgstr "Helô "
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:3
+msgid "Here is a confirmation agreement template that you can use to ensure that there is a clear understanding of what is expected from the volunteer and also from you as the host organisation. An important part of this understanding and communication can be putting in a place a volunteering agreement. This is particularly important when a private sector individual is engaging with the voluntary sector for the first time. It’s quite common for there to be differences in working culture that may surprise the volunteer."
+msgstr "Dyma dempled ar gyfer cytundeb gwirfoddolwr y gallwch ei ddefnyddio i sicrhau bod yna ddealltwriaeth glir o'r hyn a ddisgwylir gan y gwirfoddolwr, yn ogystal â gennych chi fel y sefydliad lletyol. Gall rhoi cytundeb gwirfoddolwr ar waith fod yn rhan bwysig o'r ddealltwriaeth hon. Mae hyn yn arbennig o bwysig pan fydd unigolyn o'r sector preifat yn gweithio gyda'r sector gwirfoddol am y tro cyntaf. Mae gwahaniaethau o ran y diwylliant gweithio yn eithaf cyffredin, a gallai hyn beri syndod i'r gwirfoddolwr."
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:3
+msgid "Here is the role description template that has been created based on the answers that you have provided. The specific answers that you have given helps you to really understand what your organisation needs from a volunteer by guiding you through all the steps in creating a great volunteer role description."
+msgstr "Dyma dempled y rôl-ddisgrifiad, sy'n seiliedig ar yr atebion yr ydych wedi'u rhoi. Mae'r atebion penodol yr ydych wedi'u rhoi yn eich helpu i ddeall yn iawn yr hyn y mae ar eich sefydliad ei angen gan wirfoddolwr, a hynny trwy eich tywys trwy'r holl gamau wrth i chi greu disgrifiad gwych o rôl wirfoddol."
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:3
+msgid "Here is the template of an e-mail that can be sent to your volunteers to get feedback from them about their volunteer experience with your organisation. It is important to get feedback from volunteers after their first day. Not only does it help you understand their experience, but also it helps identify ways you can improve your volunteer recruitment, retention and induction processes."
+msgstr "Dyma'r templed ar gyfer neges e-bost y gellir ei hanfon at eich gwirfoddolwyr i gael adborth ganddynt am eu profiad fel gwirfoddolwyr gyda'ch sefydliad.  Mae'n bwysig cael adborth gan wirfoddolwyr ar ôl eu diwrnod cyntaf. Nid yn unig y mae hyn yn eich helpu i ddeall eu profiadau, ond mae hefyd yn helpu i nodi'r ffyrdd y gallwch wella eich prosesau ar gyfer recriwtio, cadw ac ymsefydlu gwirfoddolwyr."
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:3
+msgid "Here is the template of the volunteer first day preparation e-mail."
+msgstr "Dyma dempled y neges e-bost paratoi ar gyfer diwrnod cyntaf y gwirfoddolwr."
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:44
+msgid "How clear do you feel about your role?"
+msgstr "Pa mor eglur yr ydych yn teimlo ynghylch eich rôl?"
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:40
+msgid "How welcome did you feel, on a scale of 1-10 (1 being not welcome, 10 being like family)?"
+msgstr "Faint o groeso a gawsoch, ar raddfa o 1-10? (1 – yn teimlo na chawsoch ddim croeso, 10 – yn teimlo'n rhan o'r teulu)?"
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:42
+msgid "How well do you feel you understand what the organisation does and who it works with?"
+msgstr "Pa mor dda, yn eich barn chi, yr ydych yn deall gwaith y sefydliad, a phwy y mae'n gweithio gyda nhw?"
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:13
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:7
+#: lib/first_days_web/templates/email/feedback_email.html.eex:23
+#: lib/first_days_web/templates/email/preparation_email.html.eex:7
+#: lib/first_days_web/templates/email/role_description_email.html.eex:11
+#: lib/first_days_web/templates/email/welcome_email.html.eex:7
+msgid "Kind Regards,"
+msgstr "Cofion cynnes,"
+
+#: lib/first_days_web/templates/user/form.html.eex:16
+msgid "Name"
+msgstr "Enw"
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:5
+msgid "Once you have edited this template as required, please send to the volunteer. You can then sign back into First days, and we will take you through the final step of the process!"
+msgstr "Pan fyddwch wedi golygu'r templed hwn yn ôl yr angen, anfonwch ef at y gwirfoddolwr. Yna, gallwch ailfewngofnodi i'ch cyfrif Diwrnodau Cyntaf, a byddwn yn eich tywys trwy'r camau sy'n weddill o'r broses!"
+
+#: lib/first_days_web/templates/email/document_checklist_email.html.eex:5
+msgid "Once you have edited this template as required, please send to the volunteer. You can then sign back into first Days, and we will take you through the remaining steps of the process!"
+msgstr "Pan fyddwch wedi golygu'r templed hwn yn ôl yr angen, anfonwch ef at y gwirfoddolwr. Yna, gallwch ailfewngofnodi i'ch cyfrif Diwrnodau Cyntaf, a byddwn yn eich tywys trwy'r camau sy'n weddill o'r broses!"
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:6
+msgid "Once you have selected an appropriate person, you can sign back into First Days, and we will take you through the remaining steps of the process!"
+msgstr "Pan fyddwch wedi dewis yr unigolyn priodol, gallwch ailfewngofnodi i'ch cyfrif Diwrnodau Cyntaf, a byddwn yn eich tywys trwy'r camau sy'n weddill o'r broses!"
+
+#: lib/first_days_web/templates/user/form.html.eex:34
+msgid "Password confirmation"
+msgstr "Cadarnhau cyfrinair"
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:5
+msgid "Please study the role description and edit to ensure it captures exactly the information you want to give to a potential volunteer."
+msgstr "Ewch ati i ddarllen a golygu'r rôl-ddisgrifiad, er mwyn sicrhau ei fod yn nodi yn union yr wybodaeth yr ydych am ei rhoi i ddarpar wirfoddolwr."
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:18
+msgid "Remember that support is always available from local and national support organisations. The following link would be a good place to start in identifying local support and resources."
+msgstr "Cofiwch fod yna gymorth bob amser ar gael gan sefydliadau cymorth lleol a chenedlaethol. Byddai'r ddolen ganlynol yn lle da i ddechrau wrth geisio dod o hyd i gymorth ac adnoddau lleol."
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:14
+#: lib/first_days_web/templates/role_description/template.html.eex:3
+msgid "Role Description (please edit as you see fit)"
+msgstr "Rôl-ddisgrifiad (golygwch fel y gwelwch yn dda)"
+
+#: lib/first_days_web/templates/user/form.html.eex:2
+msgid "Sign up to First Days"
+msgstr "Cofrestrwch ar gyfer Diwrnodau Cyntaf"
+
+#: lib/first_days_web/controllers/confirmation_agreement_controller.ex:23
+#: lib/first_days_web/controllers/document_checklist_controller.ex:20
+#: lib/first_days_web/controllers/document_checklist_controller.ex:51
+#: lib/first_days_web/controllers/document_checklist_controller.ex:73
+#: lib/first_days_web/controllers/feedback_controller.ex:23
+#: lib/first_days_web/controllers/preparation_controller.ex:20
+#: lib/first_days_web/controllers/preparation_controller.ex:51
+#: lib/first_days_web/controllers/preparation_controller.ex:73
+#: lib/first_days_web/controllers/role_description_controller.ex:21
+#: lib/first_days_web/controllers/role_description_controller.ex:52
+#: lib/first_days_web/controllers/role_description_controller.ex:74
+#: lib/first_days_web/controllers/stage_controller.ex:30
+msgid "Something went wrong, please try again"
+msgstr "Aeth rhywbeth o'i le, felly rhowch gynnig arall arni."
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:5
+msgid "The agreement template can be personalised and sent to the potential volunteer as part of the induction process. Please also see the following links that may be helpful to you and also your potential volunteer."
+msgstr "Gellir personoli'r templed a'i anfon at y darpar wirfoddolwr yn rhan o'r broses ymsefydlu. Gweler hefyd y dolenni canlynol a allai fod o gymorth i chi a'ch darpar wirfoddolwr."
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:7
+msgid "There are many sources of support to ensure that your volunteering opportunity is the best it can be. The following link would be good place to start:"
+msgstr "Mae yna lawer o ffynonellau cymorth ar gael i sicrhau bod eich cyfle gwirfoddoli y gorau y gall fod. Byddai'r ddolen ganlynol yn lle da i ddechrau:"
+
+#: lib/first_days_web/templates/email/role_description_email.html.eex:57
+msgid "Want to speak further? Contact "
+msgstr "Hoffech chi drafod ymhellach? Cysylltwch â "
+
+#: lib/first_days_web/templates/email/preparation_email.html.eex:13
+msgid "We hope you're looking forward to your first day with us on the "
+msgstr "Gobeithio eich bod yn edrych ymlaen at eich diwrnod cyntaf gyda ni ar "
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:43
+msgid "What else would be useful to know?"
+msgstr "Beth arall a fyddai'n ddefnyddiol i'w wybod?"
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:41
+msgid "What would have helped to make you feel more welcome?"
+msgstr "Beth allai fod wedi helpu i wneud i chi deimlo'n fwy cartrefol?"
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:45
+msgid "What would help to make you more clear about your role?"
+msgstr "Beth a allai helpu i'ch gwneud yn fwy eglur ynghylch eich rôl?"
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:47
+msgid "Would you like to volunteer with us again?"
+msgstr "A hoffech wirfoddoli gyda ni eto?"
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:48
+msgid "Would you recommend our organisation to your friends and family?"
+msgstr "A fyddech yn argymell ein sefydliad i'ch ffrindiau a'ch teulu?"
+
+#: lib/first_days_web/templates/email/feedback_email.html.eex:4
+msgid "You have now completed the First Days process, and we would hope that you have found it helpful, and will use it in future as part of your volunteer recruitment, induction and management process. If you found the tool helpful, please make your networks and colleagues in the sector aware of it."
+msgstr "Rydych chi 'nawr wedi cwblhau'r broses Diwrnodau Cyntaf, a byddem yn gobeithio ei bod wedi bod o fudd i chi, ac y byddwch yn ei defnyddio yn y dyfodol, yn rhan o'ch prosesau ar gyfer recriwtio, ymsefydlu a rheoli gwirfoddolwyr. Os bu'r offeryn o fudd i chi, dywedwch wrth eich rhwydweithiau a'ch cyd-weithwyr yn y sector amdano."
+
+#: lib/first_days_web/templates/email/welcome_email.html.eex:4
+msgid "You will also be shown helpful tips and links to help you in your volunteer recruitment and management process."
+msgstr "Byddwch hefyd yn cael dolenni ac awgrymiadau defnyddiol i'ch helpu i recriwtio a rheoli gwirfoddolwyr."
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:48
+msgid "to apply our complaints procedure if there is any problem"
+msgstr "rhoi ein gweithdrefn gŵynion ar waith, os bydd unrhyw broblem."
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:47
+msgid "to apply our equal opportunities policy"
+msgstr "rhoi ein polisi cyfle cyfartal ar waith."
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:44
+msgid "to consult with you and keep you informed of possible changes."
+msgstr "ymgynghori â chi, a rhoi gwybod i chi am unrhyw newidiadau posibl."
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:45
+msgid "to insure you against injury you suffer or cause due to negligence."
+msgstr "eich yswirio yn erbyn unrhyw anaf y byddwch yn ei ddioddef neu yn ei achosi, o ganlyniad i esgeulustod."
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:46
+msgid "to provide a safe environment."
+msgstr "darparu amgylchedd diogel."
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:41
+msgid "to provide regular meetings with your manager so that you can tell us if you are happy with how your work is organised and get feedback from us. Your manager’s name is [name of manager]"
+msgstr "darparu cyfarfodydd rheolaidd â'ch rheolwr, fel y gallwch ddweud wrthym a ydych yn fodlon ar y modd y mae eich gwaith yn cael ei drefnu, ac er mwyn i chi gael adborth gennym ni. Enw eich rheolwr yw [enw'r rheolwr]."
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:43
+msgid "to reimburse your travel and meal costs up to our current maximum."
+msgstr "ad-dalu eich costau teithio a bwyd hyd at ein huchafswm cyfredol."
+
+#: lib/first_days_web/templates/email/confirmation_agreement_email.html.eex:42
+msgid "to respect your skills, dignity and individual wishes and to do our best to meet them."
+msgstr "parchu eich sgiliau, eich urddas a'ch dymuniadau unigol, gan wneud ein gorau i fodloni'r rheiny."
+
+#: lib/first_days_web/controllers/session_controller.ex:22
+msgid "Invalid email/password combination"
+msgstr "Cyfuniad annilys o gyfeiriad e-bost/cyfrinair"
+
+#: lib/first_days_web/controllers/password_controller.ex:46
+#: lib/first_days_web/controllers/password_controller.ex:71
+msgid "Invalid reset token"
+msgstr "Tocyn annilys ar gyfer ailosod cyfrinair"
+
+#: lib/first_days_web/controllers/password_controller.ex:95
+msgid "Password reset successfully!"
+msgstr "Y cyfrinair wedi ei ailosod yn llwyddiannus!"
+
+#: lib/first_days_web/controllers/password_controller.ex:56
+#: lib/first_days_web/controllers/password_controller.ex:82
+msgid "Password reset token expired"
+msgstr "Tocyn ailosod cyfrinair wedi dod i ben"
+
+#: lib/first_days_web/controllers/password_controller.ex:27
+msgid "We don't recognise that email, try again?"
+msgstr "Nid ydym yn adnabod y cyfeiriad e-bost hwnnw. Rhowch gynnig arall arni."
+
+#: lib/first_days_web/controllers/password_controller.ex:36
+msgid "We've sent you an email with instructions on how to reset your password."
+msgstr "Rydym wedi anfon neges e-bost atoch yn cynnwys cyfarwyddiadau ar sut i ailosod eich cyfrinair."
+
+#: lib/first_days_web/controllers/plugs/auth.ex:50
+msgid "You must be logged in to access that page"
+msgstr "Rhaid i chi fewngofnodi er mwyn cael mynediad i'r dudalen honno"
+
+#: lib/first_days_web/controllers/session_controller.ex:30
+msgid "You've logged out"
+msgstr "Rydych wedi allgofnodi"
+
+#: lib/first_days_web/templates/feedback/tips.html.eex:7
+msgid "Thanks for using First Days to help with your successful volunteer recruitment."
+msgstr "Diolch am ddefnyddio Diwrnodau Cyntaf i helpu gyda'ch gwaith o recriwtio gwirfoddolwr yn llwyddiannus."
+
+#: lib/first_days_web/templates/component/post.html.eex:4
+msgid "Done"
+msgstr "Wedi gorffen"
+
+#: lib/first_days_web/templates/role_description/template.html.eex:1
+msgid "Role Description Template"
+msgstr "Templed rôl-ddisgrifiad"
+
+#: lib/first_days/email.ex:9
+#: lib/first_days_web/templates/page/landing.html.eex:62
+msgid "Welcome to First Days!"
+msgstr "Croeso i Diwrnodau Cyntaf!"
+
+#: lib/first_days/email.ex:36
+msgid "First Days - Document list"
+msgstr "Dyddiau Cyntaf – Rhestr Dogfennau"
+
+#: lib/first_days/email.ex:65
+msgid "First Days - Feedback"
+msgstr "Dyddiau Cyntaf – Adborth"
+
+#: lib/first_days/email.ex:46
+msgid "First Days - First day preparation"
+msgstr "Diwrnodau Cyntaf – Paratoi ar gyfer y diwrnod cyntaf"
+
+#: lib/first_days/email.ex:26
+msgid "First Days - Role description"
+msgstr "Diwrnodau Cyntaf – Rôl-ddisgrifiad"
+
+#: lib/first_days/email.ex:56
+msgid "First Days - Volunteer agreement"
+msgstr "Dyddiau Cyntaf – Cytundeb gwirfoddolwr"
+
+#: lib/first_days/email.ex:18
+msgid "Reset password instructions"
+msgstr "Cyfarwyddiadau ar gyfer ailosod cyfrineiriau"
+
+#: lib/first_days/email.ex:19
+msgid "Please visit"
+msgstr "Ewch i"
+
+#: lib/first_days/email.ex:19
+msgid "to reset your password."
+msgstr "i ailosod eich cyfrinair."
+
+#: lib/first_days_web/templates/role_description/form.html.eex:67
+msgid "About the organisation"
+msgstr "Ynglŷn â’r sefydliad"
+
+#: lib/first_days_web/templates/page/landing.html.eex:63
+msgid "First Days helps you to support volunteers through the recruitment process, from assessing your needs, right through to getting feedback on the volunteer's first day."
+msgstr "Mae Diwrnodau Cyntaf yn eich helpu chi i gefnogi gwirfoddolwyr trwy’r broses recriwtio, o asesu’ch anghenion i gael adborth ar ddiwrnod cyntaf y gwirfoddolwr."
+
+#: lib/first_days_web/templates/role_description/form.html.eex:68
+msgid "It's good for the potential volunteer to understand what your organisation does. Knowing this can really motivate volunteers to apply."
+msgstr "Mae’n dda i’r darpar wirfoddolwr ddeall beth mae’ch sefydliad yn ei wneud. Mae gwybod hyn yn gallu ysgogi gwirfoddolwyr i wneud cais."
+
+#: lib/first_days_web/templates/role_description/form.html.eex:102
+msgid "The benefits of the volunteering role"
+msgstr "Manteision y rôl wirfoddoli"
+
+#: lib/first_days_web/templates/role_description/form.html.eex:103
+msgid "Volunteers are motivated not just by the help they can give, but also how volunteering can develop them professionally and personally."
+msgstr "Mae gwirfoddolwyr yn cael eu hysgogi gan yr help y gallan nhw ei roi a sut gall gwirfoddoli eu datblygu nhw yn broffesiynol ac yn bersonol."
+
+#: lib/first_days_web/templates/page/about.html.eex:3
+msgid "Welcome to First Days"
+msgstr "Croeso i Diwrnodau Cyntaf"

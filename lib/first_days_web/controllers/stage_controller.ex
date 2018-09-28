@@ -1,7 +1,7 @@
 defmodule FirstDaysWeb.StageController do
   use FirstDaysWeb, :controller
   alias FirstDays.Accounts
-  plug :authenticate_user 
+  plug :authenticate_user
 
   def update_stage(%{assigns: %{current_user: user}} = conn, params) do
     update_stages =
@@ -27,7 +27,7 @@ defmodule FirstDaysWeb.StageController do
         |> redirect(to: page_path(conn, redirect_to))
       {:error, _changeset} ->
         conn
-        |> put_flash(:error, "Something went wrong, please try again")
+        |> put_flash(:error, gettext("Something went wrong, please try again"))
         |> redirect(to: page_path(conn, :landing))
     end
   end

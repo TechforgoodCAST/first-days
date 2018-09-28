@@ -1,21 +1,24 @@
-<p>Hello <%= @current_user.name %>,</p>
+<p><%= gettext("Hello ") %><span><%= @current_user.name %></span>,</p>
 
-<p>Here is the template of the volunteer first day preparation e-mail.</p>
-<p>Before your volunteer starts you’ll want to send them information so that they know what to expect and can settle in quickly. It is important that your volunteer is prepared for their first day and has completed any necessary paperwork. Volunteers will feel more supported and valued if they are communicated with fully in the time between them expressing an interest in your organisation and actually commencing volunteering with you.</p>
-<p>Once you have edited this template as required, please send to the volunteer. You can then sign back into First days, and we will take you through the final step of the process!</p>
+<p><%= gettext("Here is the template of the volunteer first day preparation e-mail.") %></p>
+<p><%= gettext("Before your volunteer starts you’ll want to send them information so that they know what to expect and can settle in quickly. It is important that your volunteer is prepared for their first day and has completed any necessary paperwork. Volunteers will feel more supported and valued if they are communicated with fully in the time between them expressing an interest in your organisation and actually commencing volunteering with you.") %></p>
+<p><%= gettext("Once you have edited this template as required, please send to the volunteer. You can then sign back into First days, and we will take you through the final step of the process!") %></p>
 
-<p>Kind Regards,</p>
-<p>First Days</p>
+<p><%= gettext("Kind Regards,") %></p>
+<p><%= gettext("First Days") %></p>
 <br>
-<h2 class="<%= "#{headline_font()} tc mv4" %>">Preparation Email</h2>
-<section class="ma4">
-  <p class="<%= "#{body_font()} mb2" %>">Dear [NAME]</p>
-  <p class="<%= "#{body_font()} mb2 dib" %>">We hope you're looking forward to your first day with us on the <b><%= "#{@answers.first_day_date.day} #{digitsToMonth(@answers.first_day_date.month)} #{@answers.first_day_date.year}" %>.</b></p>
-  <p class="<%= "#{body_font()} mb2" %>">We wanted to offer some helpful information.</p>
-  <p><b>Dress code</b></p><p class= "<%= "#{body_font()}" %>"><%= @answers.dress_code %></p>
-  <p><b>What you'll be doing on your first day</b></p><p class= "<%= "#{body_font()}" %>"><%= @answers.first_day_expectations %></p>
-  <p><b>Other things helpful to know</b></p><p class= "<%= "#{body_font()}" %>"><%= @answers.other_details %></p>
+<h2><%= gettext("Preparation Email") %></h2>
+<section>
+  <p><%= gettext("Dear [NAME]") %></p>
+  <p><%= gettext("We hope you're looking forward to your first day with us on the ") %><b><%= "#{@answers.first_day_date.day} #{digitsToMonth(@answers.first_day_date.month)} #{@answers.first_day_date.year}" %>.</b></p>
+  <p><%= gettext("We wanted to offer some helpful information.") %></p>
+  <p><b><%= gettext("Dress code") %></b></p>
+  <p><%= @answers.dress_code %></p>
+  <p><b><%= gettext("What you'll be doing on your first day") %></b></p>
+  <p><%= @answers.first_day_expectations %></p>
+  <p><b><%= gettext("Other things helpful to know") %></b></p>
+  <p><%= @answers.other_details %></p>
 
-  <p class="<%= "#{body_font()} mb2 mt4" %>">We look forward to seeing you then,</p>
-  <p class="<%= "#{body_font()} mb2" %>">Many thanks</p>
+  <p><%= gettext("We look forward to seeing you then,") %></p>
+  <p><%= gettext("Many thanks") %></p>
 </section>

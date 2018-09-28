@@ -17,7 +17,7 @@ defmodule FirstDaysWeb.PreparationController do
             |> redirect(to: preparation_path(conn, :show))
           {:error, _changeset} ->
             conn
-            |> put_flash(:error, "Something went wrong, please try again")
+            |> put_flash(:error, gettext("Something went wrong, please try again"))
             |> render("new.html", changeset: preparation_changeset)
         end
       {:error, preparation_changeset} ->
@@ -48,7 +48,7 @@ defmodule FirstDaysWeb.PreparationController do
             |> redirect(to: preparation_path(conn, :show))
           {:error, _changeset} ->
             conn
-            |> put_flash(:error, "Something went wrong, please try again")
+            |> put_flash(:error, gettext("Something went wrong, please try again"))
             |> render("edit.html", changeset: preparation_changeset)
         end
       {:error, preparation_changeset} ->
@@ -70,7 +70,7 @@ defmodule FirstDaysWeb.PreparationController do
         |> redirect(to: page_path(conn, :get_them_ready))
       {:error, _changeset} ->
         conn
-        |> put_flash(:error, "Something went wrong, please try again")
+        |> put_flash(:error, gettext("Something went wrong, please try again"))
         |> redirect(to: page_path(conn, :get_them_ready))
     end
   end

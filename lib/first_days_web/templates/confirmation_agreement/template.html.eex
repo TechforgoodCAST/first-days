@@ -1,50 +1,50 @@
-<h2 class="<%= "#{headline_font()} tc mv4" %>">Confirmation & Agreement</h2>
+<h2 class="<%= "#{headline_font()} tc mv4" %>"><%= gettext("Confirmation & Agreement") %></h2>
 <section class="ma4">
-<h3 class="<%= "#{title_bold_font()}" %>">Confirmation & Agreement (to edit and send to the volunteer)</h3>
-<p class="<%= "#{body_font()} mb2 mt2" %>">Dear [NAME],</p>
-<p class="<%= "#{body_font()} mb2" %>">We're delighted that you've agreed to volunteer with us.</p>
-<div class="<%= "#{body_font()} mb2" %>">
-<p>As part of the process we find it’s useful to set up a agreement between you and the organisation so that it’s clear what you can expect from us, and us from you.  We’ve created an non-legal honour bound agreement below. Please read this, and if you’re happy, sign it and send it back to us by [DATE]</p>
-</div>
-<div class="<%= "#{body_font()} mb2" %>">
-<p>Linked to this, if you’ve not volunteered in third sector before, you might find some differences in working culture to other sectors.  To help you prepare for this, we’ve given you a few links that it may be useful for you to look at.</p>
-</div>
-<p class="<%= "#{body_font()} mb2" %>">[LINKS]</p>
+  <h3 class="<%= "#{title_bold_font()}" %>"><%= gettext("Confirmation & Agreement (to edit and send to the volunteer)") %></h3>
+  <p class="<%= "#{body_font()} mb2 mt2" %>"><%= gettext("Dear [NAME],") %></p>
+  <p class="<%= "#{body_font()} mb2" %>"><%= gettext("We're delighted that you've agreed to volunteer with us.") %></p>
+  <div class="<%= "#{body_font()} mb2" %>">
+    <p><%= gettext("As part of the process we find it’s useful to set up a agreement between you and the organisation so that it’s clear what you can expect from us, and us from you.  We’ve created an non-legal honour bound agreement below. Please read this, and if you’re happy, sign it and send it back to us by [DATE]") %></p>
+  </div>
+  <div class="<%= "#{body_font()} mb2" %>">
+    <p><%= gettext("Linked to this, if you’ve not volunteered in third sector before, you might find some differences in working culture to other sectors.  To help you prepare for this, we’ve given you a few links that it may be useful for you to look at.") %></p>
+  </div>
+  <p class="<%= "#{body_font()} mb2" %>"><%= gettext("[LINKS]") %></p>
 
-<p class="<%= "#{body_font()} mb2" %>">We look forward to working with you.</p>
-<p class="<%= "#{body_font()} mb4" %>">Many Thanks</p>
+  <p class="<%= "#{body_font()} mb2" %>"><%= gettext("We look forward to working with you.") %></p>
+  <p class="<%= "#{body_font()} mb4" %>"><%= gettext("Many Thanks") %></p>
 
-<%= shared_component("divider.html") %>
+  <%= shared_component("divider.html") %>
 
-<h3 class="<%= "#{title_bold_font()} mt4 mb2" %>">Confirmation & Agreement</h3>
-<p class="<%= "#{body_font()} mb2 mt2" %>">Volunteers are an important and valued part of [name of organisation]. We hope that you enjoy volunteering with us and feel a full part of our team.</p>
-<p class="<%= "#{body_font()} mb2 mt2" %>">This agreement tells you what you can expect from us, and what we hope from you. We aim to be flexible, so please let us know if you would like to make any changes and we will do our best.</p>
-<p class="<%= "#{body_font()} mb2 mt2" %>">We, [name of organisation], will do our best to introduce you to how the organisation works and your role in it and to provide any training you need. The initial training agreed is:</p>
+  <h3 class="<%= "#{title_bold_font()} mt4 mb2" %>"><%= gettext("Confirmation & Agreement") %></h3>
+  <p class="<%= "#{body_font()} mb2 mt2" %>"><%= gettext("Volunteers are an important and valued part of [name of organisation]. We hope that you enjoy volunteering with us and feel a full part of our team.") %></p>
+  <p class="<%= "#{body_font()} mb2 mt2" %>"><%= gettext("This agreement tells you what you can expect from us, and what we hope from you. We aim to be flexible, so please let us know if you would like to make any changes and we will do our best.") %></p>
+  <p class="<%= "#{body_font()} mb2 mt2" %>"><%= gettext("We, [name of organisation], will do our best to introduce you to how the organisation works and your role in it and to provide any training you need. The initial training agreed is:") %></p>
 
-<ol class="<%= "#{body_font()} ml3 mb4 mt2" %>">
-  <li>1. to provide regular meetings with your manager so that you can tell us if you are happy with how your work is organised and get feedback from us. Your manager’s name is [name of manager]</li>
-  <li>2. to respect your skills, dignity and individual wishes and to do our best to meet them.</li>
-  <li>3. to reimburse your travel and meal costs up to our current maximum.</li>
-  <li>4. to consult with you and keep you informed of possible changes.</li>
-  <li>5. to insure you against injury you suffer or cause due to negligence.</li>
-  <li>6. to provide a safe environment.</li>
-  <li>7. to apply our equal opportunities policy</li>
-  <li>8. to apply our complaints procedure if there is any problem</li>
-</ol>
+  <ol class="<%= "#{body_font()} ml3 mb4 mt2" %>">
+    <li><%= gettext("1. to provide regular meetings with your manager so that you can tell us if you are happy with how your work is organised and get feedback from us. Your manager’s name is [name of manager]") %></li>
+    <li><%= gettext("2. to respect your skills, dignity and individual wishes and to do our best to meet them.") %></li>
+    <li><%= gettext("3. to reimburse your travel and meal costs up to our current maximum.") %></li>
+    <li><%= gettext("4. to consult with you and keep you informed of possible changes.") %></li>
+    <li><%= gettext("5. to insure you against injury you suffer or cause due to negligence.") %></li>
+    <li><%= gettext("6. to provide a safe environment.") %></li>
+    <li><%= gettext("7. to apply our equal opportunities policy") %></li>
+    <li><%= gettext("8. to apply our complaints procedure if there is any problem") %></li>
+  </ol>
 
-<%= shared_component("divider.html") %>
+  <%= shared_component("divider.html") %>
 
-<h3 class="<%= "#{title_bold_font()} mt4 mb2" %>">For the volunteer</h3>
-<p class="<%= "#{body_font()} mb2 mt2" %>">I [name of volunteer], agree to do my best, to work reliably to the best of my ability, and to give as much warning as possible whenever I cannot volunteer as expected to follow [name of organisation]’s rules and procedures, including health and safety, equal opportunities and confidentially.</p>
-<p class="<%= "#{body_font()} mb2 mt2" %>">Note: this agreement is in honour only and is not itended to be a legally binding contract of employment</p>
-<p class="<%= "#{body_font()} mb2 mt2" %>">Signed:</p>
-<p class="<%= "#{body_font()} mb2 mt2" %>">Date:</p>
+  <h3 class="<%= "#{title_bold_font()} mt4 mb2" %>"><%= gettext("For the volunteer") %></h3>
+  <p class="<%= "#{body_font()} mb2 mt2" %>"><%= gettext("I [name of volunteer], agree to do my best, to work reliably to the best of my ability, and to give as much warning as possible whenever I cannot volunteer as expected to follow [name of organisation]’s rules and procedures, including health and safety, equal opportunities and confidentially.") %></p>
+  <p class="<%= "#{body_font()} mb2 mt2" %>"><%= gettext("Note: this agreement is in honour only and is not itended to be a legally binding contract of employment") %></p>
+  <p class="<%= "#{body_font()} mb2 mt2" %>"><%= gettext("Signed:") %></p>
+  <p class="<%= "#{body_font()} mb2 mt2" %>"><%= gettext("Date:") %></p>
 </section>
 
 <!-- template_buttons -->
 <div class="flex items-center justify-end w-100">
   <div class="flex flex-row items-center">
-    <p class="<%= "#{title_blue_font()} mr3" %>">Send to myself</p>
+    <p class="<%= "#{title_blue_font()} mr3" %>"><%= gettext("Send to myself") %></p>
     <%= shared_component("button_square.html", wrapper_class: "mt2", class: "bg-green", icon: "/images/send.svg" , alt: "send to myself", link: confirmation_agreement_path(@conn, :email)) %>
   </div>
 </div>

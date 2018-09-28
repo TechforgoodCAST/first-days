@@ -2,7 +2,7 @@ defmodule FirstDaysWeb.PasswordController do
   use FirstDaysWeb, :controller
   alias FirstDays.{Accounts.User, Repo, Accounts}
   plug :put_layout, {FirstDaysWeb.LayoutView, :signed_out_layout}
-  plug :already_signed_in 
+  plug :already_signed_in
 
   use Timex
 
@@ -24,7 +24,7 @@ defmodule FirstDaysWeb.PasswordController do
     case user do
       nil ->
         conn
-        |> put_flash(:error, "We don't recognise that email, try again?")
+        |> put_flash(:error, gettext("We don't recognise that email, try again?"))
         |> redirect(to: password_path(conn, :new))
       user ->
         user = reset_password_token(user)
@@ -33,8 +33,8 @@ defmodule FirstDaysWeb.PasswordController do
         |> FirstDays.Mailer.deliver_later()
 
         conn
-        |> put_flash(:info, "We've sent you an email with instructions on how to reset your password")
-        |> redirect(to: page_path(conn, :index))
+        |> put_flash(:info, gettext("We've sent you an email with instructions on how to reset your password."))
+        |> redirect(to: session_path(conn, :new))
     end
   end
 
@@ -43,7 +43,7 @@ defmodule FirstDaysWeb.PasswordController do
     case user do
       nil ->
         conn
-        |> put_flash(:error, "Invalid reset token")
+        |> put_flash(:error, gettext("Invalid reset token"))
       user ->
         if expired?(user.reset_token_sent_at) do
           User.password_token_changeset(user, %{
@@ -53,7 +53,7 @@ defmodule FirstDaysWeb.PasswordController do
           |> Repo.update!
 
           conn
-          |> put_flash(:error, "Password reset token expired")
+          |> put_flash(:error, gettext("Password reset token expired"))
           |> redirect(to: password_path(conn, :new))
         else
           changeset = Accounts.change_user(user)
@@ -68,7 +68,7 @@ defmodule FirstDaysWeb.PasswordController do
     case user do
       nil ->
         conn
-        |> put_flash(:error, "Invalid reset token")
+        |> put_flash(:error, gettext("Invalid reset token"))
         |> redirect(to: password_path(conn, :new))
       user ->
         if expired?(user.reset_token_sent_at) do
@@ -79,7 +79,7 @@ defmodule FirstDaysWeb.PasswordController do
           |> Repo.update!
 
           conn
-          |> put_flash(:error, "Password reset token expired")
+          |> put_flash(:error, gettext("Password reset token expired"))
           |> redirect(to: password_path(conn, :new))
         else
           changeset = User.new_password_changeset(user, pw_params)
@@ -92,8 +92,8 @@ defmodule FirstDaysWeb.PasswordController do
               |> Repo.update!
 
               conn
-              |> put_flash(:info, "Password reset successfully!")
-              |> redirect(to: page_path(conn, :index))
+              |> put_flash(:info, gettext("Password reset successfully!"))
+              |> redirect(to: session_path(conn, :new))
             {:error, changeset} ->
               conn
               |> render("edit.html", changeset: changeset, token: token)

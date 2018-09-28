@@ -1,16 +1,16 @@
 <div class="pa2">
   <div class="flex flex-row items-center pb2">
       <img class="" src="/images/prep_email_small.svg" alt="Prepare">
-      <h1 class="<%= "#{headline_font()} ml2 f4" %>">Start date preparation</h1>
+      <h1 class="<%= "#{headline_font()} ml2 f4" %>"><%= gettext("Start date preparation") %></h1>
   </div>
   <div class="<%= "#{body_font()}" %>">
-    <p class="<%= "#{body_bold_font()} mt4" %>">Thanks for answering the questions for the preparation email.</p>
+    <p class="<%= "#{body_bold_font()} mt4" %>"><%= gettext("Thanks for answering the questions for the preparation email.") %></p>
     <br>
-    <p>Your email text to send to the volunteer is here on the left. Please copy it into a new document so that you can edit it as you see fit. You can also email it to yourself.</p>
+    <p><%= gettext("Your email text to send to the volunteer is here on the left. Please copy it into a new document so that you can edit it as you see fit. You can also email it to yourself.") %></p>
     <br>
-    <p>Hopefully your volunteer is due to start in the next 2 weeks or so. It's helpful to send them a reminder email, together with useful information.</p>
+    <p><%= gettext("Hopefully your volunteer is due to start in the next 2 weeks or so. It's helpful to send them a reminder email, together with useful information.") %></p>
     <br>
-    <p class="<%= "#{body_bold_font()}" %>">I have completed this step, I am happy to say that it is done.</p>
+    <p class="<%= "#{body_bold_font()}" %>"><%= gettext("I have completed this step, I am happy to say that it is done.") %></p>
     <%= shared_component("post.html", action: stage_path(@conn, :update_stage), conn: @conn, stage: :preparation, redirect_to: :get_them_ready) %>
   </div>
 </div>

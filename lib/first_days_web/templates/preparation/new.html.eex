@@ -7,7 +7,7 @@
         "/images/progress_white.svg"
     end
 
-  tab_content = "Getting them ready"
+  tab_content = gettext("Getting them ready")
   form_template_content = render "form.html", Map.merge(assigns, %{action: preparation_path(@conn, :create), method: :post})
   tips_content = render("form_tips.html", assigns)
 %>

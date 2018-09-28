@@ -7,7 +7,7 @@
         "/images/progress_white.svg"
     end
 
-  tab_content = "Find a volunteer"
+  tab_content = gettext("Find a volunteer")
   form_template_content = render("template.html", assigns)
   tips_content = render("template_tips.html", assigns)
 %>

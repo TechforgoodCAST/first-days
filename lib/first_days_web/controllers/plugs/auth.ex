@@ -1,9 +1,10 @@
-defmodule FirstDaysWeb.Auth do
+defmodule FirstDaysWeb.Plugs.Auth do
   import Plug.Conn
   import Comeonin.Bcrypt, only: [checkpw: 2, dummy_checkpw: 0]
   import Phoenix.Controller
   alias FirstDaysWeb.Router.Helpers
   alias FirstDays.Accounts.User
+  import FirstDaysWeb.Gettext
 
   def init(opts) do
     Keyword.fetch!(opts, :repo)
@@ -46,15 +47,15 @@ defmodule FirstDaysWeb.Auth do
       conn
     else
       conn
-      |> put_flash(:error, "You must be logged in to access that page")
-      |> redirect(to: Helpers.page_path(conn, :index))
+      |> put_flash(:error, gettext("You must be logged in to access that page"))
+      |> redirect(to: Helpers.session_path(conn, :new))
       |> halt()
     end
   end
 
   def already_signed_in(%{assigns: %{current_user: %User{}}} = conn, _opts) do
     conn
-    |> redirect(to: Helpers.page_path(conn, :index))
+    |> redirect(to: Helpers.page_path(conn, :landing))
   end
 
   def already_signed_in(conn, _opts) do

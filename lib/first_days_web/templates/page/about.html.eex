@@ -1,33 +1,39 @@
 <section>
   <div class="<%= "#{card_class()} mt2 mb2 mt4 pa4" %>">
-  <h2 class="<%= "#{headline_font()} tc mv4" %>">Welcome to First Days</h2>
+  <h2 class="<%= "#{headline_font()} tc mv4" %>"><%= gettext("Welcome to First Days") %></h2>
   <div class="<%= "#{title_black_font()} ph5" %>">
     <p>
-      First days helps you to engage with volunteers from the beginning of the recruitment process right
-      through to getting feedback on the volunteer's first day. It will help you to assess the specific
-      volunteer needs that your organisation has and will enable you to create really focused volunteer
-      role descriptions that will attract the necessary skills and experience to support and develop your
-      organisation. First Days also provides you with the necessary information to keep in touch with your
-      potential volunteers, and gives you access to a wealth of tips, resources and support.
+      <%= gettext("""
+        First days helps you to engage with volunteers from the beginning of the recruitment process right
+        through to getting feedback on the volunteer's first day. It will help you to assess the specific
+        volunteer needs that your organisation has and will enable you to create really focused volunteer
+        role descriptions that will attract the necessary skills and experience to support and develop your
+        organisation. First Days also provides you with the necessary information to keep in touch with your
+        potential volunteers, and gives you access to a wealth of tips, resources and support.
+      """) %>
     </p>
     <br>
     <p>
-      We hope that you find using First Days a simple and helpful experience and that you recommend it
-      to your colleagues and networks in the third sector. If you have any queries please contact
-      Geoff.jones@wales.coop. We would love to hear your feedback.
+      <%= gettext("""
+        We hope that you find using First Days a simple and helpful experience and that you recommend it
+        to your colleagues and networks in the third sector. If you have any queries please contact
+        Geoff.jones@wales.coop. We would love to hear your feedback.
+      """) %>
     </p>
     <br>
     <p>
-      First Days has been made possible with funding from The Big Lottery Fund, and is a partnership
-      between the Wales Co-operative Centre, Wales Council for Voluntary Action (WCVA), Business in
-      The Community (BITC) Cymru and CAST.
+      <%= gettext("""
+        First Days has been made possible with funding from The Big Lottery Fund, and is a partnership
+        between the Wales Co-operative Centre, Wales Council for Voluntary Action (WCVA), Business in
+        The Community (BITC) Cymru and CAST.
+      """) %>
     </p>
     <div class="mv4">
       <%= shared_component("divider.html") %>
     </div>
   </div>
     <section class="pa4">
-    <h1 class="<%= "#{title_bold_font()} mt2 mb4 tc" %>">With the kind support of:</h1>
+    <h1 class="<%= "#{title_bold_font()} mt2 mb4 tc" %>"><%= gettext("With the kind support of:") %></h1>
     <article class="cf flex items-center">
       <div class="fl w-100 w-50-ns tc">
         <img class="w-40" src="/images/lottery.png" alt="">

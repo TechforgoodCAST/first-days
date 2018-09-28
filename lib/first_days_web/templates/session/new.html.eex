@@ -1,33 +1,37 @@
+<%
+email = gettext("Email")
+password = gettext("Password")
+log_in = gettext("Log in")
+forgot_password = gettext("Forgot password?")
+%>
+
 <article class="dt tc w-100 vh-100 bg-login-gradient white cover ph7" style="background:url(/images/login_flow_bg.png) no-repeat center;">
   <div class="center">
-    <h1 class="blue f2 b mt4">First Days</h1>
-    <p class="<%= "#{title_black_font()} mv2" %>">Enter your Email and Password below</p>
+    <h1 class="blue f2 b mt4"><%= gettext("First Days") %></h1>
+    <p class="<%= "#{title_black_font()} mv2" %>"><%= gettext("Enter your Email and Password below") %></p>
   </div>
 
   <div class="<%= "v-mid tc ph3 pa4-ns pa3 br2 shadow-1 w-60 mw6 h7 center mt3 #{card_class()}" %>">
     <div class="tl">
       <%= form_for @conn, session_path(@conn, :create), [as: :session], fn f -> %>
         <div class="form-group">
-          <%= label f, :email, class: "#{input_label_class()}" %>
-          <%= email_input f, :email, placeholder: "Email", class: "#{input_class_100()}" %>
+          <%= label f, :email, email, class: "#{input_label_class()}" %>
+          <%= email_input f, :email, placeholder: email, class: "#{input_class_100()}" %>
           <%= error_tag f, :email, class: "#{input_error_class()}" %>
         </div>
         <div class="mt3 form-group">
-          <%= label f, :password, class: "#{input_label_class()}" %>
-          <%= password_input f, :password, placeholder: "Password", class: "#{input_class_100()}" %>
+          <%= label f, :password, password, class: "#{input_label_class()}" %>
+          <%= password_input f, :password, placeholder: password, class: "#{input_class_100()}" %>
           <%= error_tag f, :password, class: "#{input_error_class()}" %>
         </div>
-        <input class="mt4" type="submit" name="" value="Log in" id="submit">
+        <input class="mt4" type="submit" name="" value="<%= log_in %>" id="submit">
       <% end %>
-      <div class="tc mt3">
-        <%= link "Forgot password?", to: password_path(@conn, :new) %>
+      <div class="tc mt3 flex flex-column items-center">
+        <%= link forgot_password, to: password_path(@conn, :new) %>
+        <div class="<%= "f5 lh-copy flex flex-row mt2" %>">
+          <p class="black"><%= switch_locale_path(@conn, "en", "eng") %> / <%= switch_locale_path(@conn, "cy", "cym") %></p>
+        </div>
       </div>
     </div>
   </div>
 </article>
-
-
-
-  <!-- <div class="dtc v-mid tc white ph3 ph4-l">
-    <h1 class="f6 f2-m f-subheadline-l fw6 tc">Vertically centering things in c_100ss is easy!</h1>
-  </div> -->

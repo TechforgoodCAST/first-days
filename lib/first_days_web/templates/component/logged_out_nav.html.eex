@@ -1,12 +1,12 @@
 <nav class="mw9 center h3 flex items-center bg-white">
   <div class="mh3 flex justify-between items-center w-100">
-    <%= link("First Days", to: page_path(@conn, :index), class: "f4 lh-copy b blue link no-underline flex items-center dib ml2") %>
+    <%= link(gettext("First Days"), to: session_path(@conn, :new), class: "f4 lh-copy b blue link no-underline flex items-center dib ml2") %>
     <div class="flex flex-row mr2">
       <div class="pointer br2 tc pv3 w4 b--blue bw1 ba flex items-center h2 mr1">
-        <%= link "About", to: page_path(@conn, :about), class: "mv0 blue f5 center link b lh-copy-ns pv3 outline-0" %>
+        <%= link gettext("About"), to: page_path(@conn, :about), class: "mv0 blue f5 center link b lh-copy-ns pv3 outline-0" %>
       </div>
-      <%= shared_component("button_main.html", content: "Log in", wrapper_class: "w4 b--blue bw1 ba flex items-center h2 mr1", content_class: "mv0 blue", link: session_path(@conn, :new)) %>
-      <%= shared_component("button_main.html", content: "Sign up", wrapper_class: "w4 b--blue bw1 ba flex items-center h2", content_class: "mv0 blue", link: user_path(@conn, :new)) %>
+      <%= shared_component("button_main.html", content: gettext("Log in"), wrapper_class: "w4 b--blue bw1 ba flex items-center h2 mr1", content_class: "mv0 blue", link: session_path(@conn, :new)) %>
+      <%= shared_component("button_main.html", content: gettext("Sign up"), wrapper_class: "w4 b--blue bw1 ba flex items-center h2", content_class: "mv0 blue", link: user_path(@conn, :new)) %>
     </div>
   </div>
 </nav>

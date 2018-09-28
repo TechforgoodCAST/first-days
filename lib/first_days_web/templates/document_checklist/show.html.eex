@@ -7,7 +7,7 @@
         "/images/progress_white.svg"
     end
 
-  tab_content = "Getting them ready"
+  tab_content = gettext("Getting them ready")
   form_template_content = render("template.html", assigns)
   tips_content = render("template_tips.html", assigns)
 %>

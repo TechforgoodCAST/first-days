@@ -7,7 +7,8 @@ defmodule FirstDaysWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
-    plug FirstDaysWeb.Auth, repo: FirstDays.Repo
+    plug FirstDaysWeb.Plugs.Auth, repo: FirstDays.Repo
+    plug FirstDaysWeb.Plugs.Locale
   end
 
   pipeline :api do
@@ -21,7 +22,7 @@ defmodule FirstDaysWeb.Router do
   scope "/", FirstDaysWeb do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", SessionController, :new
     get "/landing", PageController, :landing
     get "/get-them-ready", PageController, :get_them_ready
     get "/about", PageController, :about

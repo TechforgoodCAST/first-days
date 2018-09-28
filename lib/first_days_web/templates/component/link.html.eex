@@ -1,3 +1,0 @@
-<div>
-  <%= link assigns[:content], to: assigns[:to] %>
-</div>

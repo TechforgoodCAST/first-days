@@ -6,12 +6,18 @@ defmodule FirstDays.Application do
   def start(_type, _args) do
     import Supervisor.Spec
 
+    # import env variables from .env file
+    unless Mix.env() == :prod do
+      Envy.auto_load()
+      Envy.reload_config()
+    end
+
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
       supervisor(FirstDays.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(FirstDaysWeb.Endpoint, []),
+      supervisor(FirstDaysWeb.Endpoint, [])
       # Start your own worker by calling: FirstDays.Worker.start_link(arg1, arg2, arg3)
       # worker(FirstDays.Worker, [arg1, arg2, arg3]),
     ]
