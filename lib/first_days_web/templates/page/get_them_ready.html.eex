@@ -14,13 +14,13 @@
   progress_bar_image =
     cond do
       @current_user.stages["preparation"] == true ->
-        "/images/progress_bar4.svg"
+        if Gettext.get_locale(FirstDaysWeb.Gettext) == "en", do: "/images/progress_bar4.svg", else: "/images/progress_bar4_welsh.svg"
       @current_user.stages["document_checklist"] == true ->
-        "/images/progress_bar3.svg"
+        if Gettext.get_locale(FirstDaysWeb.Gettext) == "en", do: "/images/progress_bar3.svg", else: "/images/progress_bar3_welsh.svg"
       @current_user.stages["confirmation_agreement"] == true ->
-        "/images/progress_bar2.svg"
+        if Gettext.get_locale(FirstDaysWeb.Gettext) == "en", do: "/images/progress_bar2.svg", else: "/images/progress_bar2_welsh.svg"
       true ->
-        "/images/progress_bar1.svg"
+        if Gettext.get_locale(FirstDaysWeb.Gettext) == "en", do: "/images/progress_bar1.svg", else: "/images/progress_bar1_welsh.svg"
     end
 
     document_checklist_link =
